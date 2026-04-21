@@ -333,120 +333,40 @@
 
     .game-card {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.08fr 0.92fr;
       overflow: hidden;
     }
 
     .game-visual {
-      min-height: 360px;
-      padding: 30px;
+      padding: 24px;
       background:
         radial-gradient(circle at 25% 20%, rgba(255,255,255,0.95), transparent 22%),
         radial-gradient(circle at 75% 18%, rgba(255,255,255,0.9), transparent 18%),
         linear-gradient(180deg, #8fd8ff 0%, #bdeaff 52%, #e6fff4 100%);
-      position: relative;
-      display: flex;
-      align-items: end;
+      border-right: 1px solid rgba(92, 151, 201, 0.14);
     }
 
-    .cloud-logo {
-      position: absolute;
-      inset: 34px 30px auto 30px;
-      background: rgba(255,255,255,0.88);
-      border-radius: 999px;
-      padding: 18px 22px;
-      font-size: clamp(24px, 3vw, 38px);
-      font-weight: 900;
-      letter-spacing: -0.05em;
-      box-shadow: 0 20px 34px rgba(82, 149, 201, 0.18);
-      color: #2690dd;
-      text-align: center;
+    .banner-frame {
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.7);
+      border-radius: 24px;
+      padding: 14px;
+      box-shadow: 0 16px 34px rgba(82, 149, 201, 0.16);
     }
 
-    .cloud-logo small {
+    .banner-image {
       display: block;
-      margin-top: 6px;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      color: #58a8df;
-      font-weight: 800;
-      text-transform: uppercase;
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      background: #eef8ff;
     }
 
-    .cat-chip {
-      position: relative;
-      width: 220px;
-      height: 220px;
-      border-radius: 42% 42% 38% 38%;
-      background: linear-gradient(180deg, #fff7f1 0%, #ffe7d7 100%);
-      box-shadow: 0 24px 36px rgba(90, 125, 160, 0.14);
-      margin-left: 16px;
-    }
-
-    .cat-chip::before,
-    .cat-chip::after {
-      content: "";
-      position: absolute;
-      top: -26px;
-      width: 62px;
-      height: 72px;
-      background: linear-gradient(180deg, #fff7f1 0%, #ffe7d7 100%);
-      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-
-    .cat-chip::before { left: 30px; }
-    .cat-chip::after { right: 30px; }
-
-    .cat-face {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-    }
-
-    .cat-eyes {
-      position: absolute;
-      top: 92px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 110px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .cat-eyes span {
-      width: 15px;
-      height: 22px;
-      background: #3c4d5c;
-      border-radius: 999px;
-    }
-
-    .cat-mouth {
-      position: absolute;
-      top: 132px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 46px;
-      height: 24px;
-      border-bottom: 4px solid #f09ca5;
-      border-radius: 0 0 999px 999px;
-    }
-
-    .cat-blush {
-      position: absolute;
-      top: 126px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 170px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .cat-blush span {
-      width: 28px;
-      height: 16px;
-      background: rgba(255, 152, 175, 0.28);
-      border-radius: 999px;
+    .banner-caption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .game-body {
@@ -571,7 +491,8 @@
       }
 
       .game-visual {
-        min-height: 320px;
+        border-right: none;
+        border-bottom: 1px solid rgba(92, 151, 201, 0.14);
       }
     }
 
@@ -601,24 +522,6 @@
 
       .hero-mini-grid {
         grid-template-columns: 1fr;
-      }
-
-      .cat-chip {
-        width: 180px;
-        height: 180px;
-      }
-
-      .cat-eyes {
-        top: 74px;
-      }
-
-      .cat-mouth {
-        top: 112px;
-      }
-
-      .cat-blush {
-        top: 108px;
-        width: 140px;
       }
     }
   </style>
@@ -701,23 +604,21 @@
           <div>
             <h2>Featured game</h2>
             <p>
-              A brighter front door for the project. This section gives visitors a clear picture of what the game is,
-              without turning the homepage into a cluttered carnival.
+              This section uses a real banner image. Later, you can replace only the image file and keep the page layout intact.
             </p>
           </div>
         </div>
 
         <article class="game-card">
-          <div class="game-visual" aria-hidden="true">
-            <div class="cloud-logo">
-              MalrangNyang
-              <small>Jelly Cat Jump</small>
-            </div>
-            <div class="cat-chip">
-              <div class="cat-face">
-                <div class="cat-eyes"><span></span><span></span></div>
-                <div class="cat-mouth"></div>
-                <div class="cat-blush"><span></span><span></span></div>
+          <div class="game-visual">
+            <div class="banner-frame">
+              <img
+                class="banner-image"
+                src="./images/jelly-cat-jump-banner.png"
+                alt="MalrangNyang Jelly Cat Jump banner"
+              />
+              <div class="banner-caption">
+                Replace <strong>images/jelly-cat-jump-banner.png</strong> with a new banner anytime.
               </div>
             </div>
           </div>
@@ -755,7 +656,7 @@
           <div>
             <h2>Official links</h2>
             <p>
-              The practical corridor. These are the pages most likely to be needed for platform submissions,
+              These are the pages most likely to be needed for platform submissions,
               customer support, and public reference.
             </p>
           </div>
