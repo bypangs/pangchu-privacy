@@ -5,535 +5,382 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PangChu Studio | MalrangNyang</title>
   <meta name="description" content="Official website of PangChu Studio, featuring MalrangNyang (Jelly Cat Jump), a cute casual mobile game." />
-  <meta property="og:title" content="PangChu Studio | MalrangNyang" />
-  <meta property="og:description" content="Official introduction page for MalrangNyang (Jelly Cat Jump)." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bypangs.github.io/pangchu-privacy/" />
-  <meta name="theme-color" content="#7cc9ff" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
       --bg1: #dff4ff;
-      --bg2: #f6fbff;
-      --card: rgba(255, 255, 255, 0.82);
-      --card-strong: rgba(255, 255, 255, 0.92);
-      --line: rgba(92, 151, 201, 0.18);
+      --bg2: #f0f9ff;
+      --card: rgba(255,255,255,0.84);
+      --card-strong: rgba(255,255,255,0.96);
+      --line: rgba(92,151,201,0.16);
+      --line-hover: rgba(51,153,238,0.28);
       --text: #17324d;
-      --muted: #587089;
-      --primary: #59b8ff;
-      --primary-deep: #3399ee;
-      --accent: #8ae4c5;
-      --shadow: 0 20px 60px rgba(67, 133, 193, 0.14);
-      --radius-xl: 28px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --max: 1120px;
+      --muted: #5a7289;
+      --primary: #4db8ff;
+      --primary-deep: #2299ee;
+      --accent: #7de0bc;
+      --accent-deep: #18926b;
+      --shadow-card: 0 8px 40px rgba(67,133,193,0.11), 0 2px 8px rgba(67,133,193,0.07);
+      --shadow-btn: 0 8px 24px rgba(51,153,238,0.22);
+      --r-xl: 28px;
+      --r-lg: 22px;
+      --r-md: 16px;
+      --max: 1100px;
+      --font: 'Inter', ui-sans-serif, system-ui, sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: var(--font);
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(137, 212, 255, 0.42), transparent 30%),
-        radial-gradient(circle at top right, rgba(164, 239, 214, 0.32), transparent 24%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
+        radial-gradient(ellipse 60% 40% at 10% 0%, rgba(125,208,255,0.36) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 35% at 92% 4%, rgba(138,228,197,0.28) 0%, transparent 55%),
+        linear-gradient(175deg, var(--bg1) 0%, #eaf6ff 45%, var(--bg2) 100%);
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     .wrap {
-      width: min(calc(100% - 32px), var(--max));
+      width: min(calc(100% - 40px), var(--max));
       margin: 0 auto;
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: rgba(246, 251, 255, 0.7);
-      border-bottom: 1px solid rgba(92, 151, 201, 0.12);
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(20px) saturate(1.4);
+      -webkit-backdrop-filter: blur(20px) saturate(1.4);
+      background: rgba(240,249,255,0.72);
+      border-bottom: 1px solid rgba(92,151,201,0.10);
     }
 
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-      gap: 16px;
+    .nav-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 13px 0; gap: 16px;
     }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      display: flex; align-items: center; gap: 11px;
+      font-weight: 800; font-size: 16px; letter-spacing: -0.03em; color: var(--text);
     }
 
-    .brand-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, #7fd0ff, #8be7c7);
-      box-shadow: 0 12px 30px rgba(64, 145, 210, 0.24);
-      color: white;
-      font-size: 18px;
-      font-weight: 900;
+    .brand-mark {
+      width: 40px; height: 40px; border-radius: 13px; flex-shrink: 0;
+      background: linear-gradient(135deg, #7fd0ff 0%, #8ae4c5 100%);
+      box-shadow: 0 6px 20px rgba(64,145,210,0.22);
+      display: grid; place-items: center;
+      color: white; font-size: 17px; font-weight: 900;
     }
 
-    .nav {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+    .nav-links { display: flex; gap: 2px; }
 
-    .nav a {
-      padding: 10px 14px;
-      color: var(--muted);
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 700;
+    .nav-links a {
+      padding: 9px 13px; border-radius: 999px; font-size: 14px; font-weight: 700;
+      color: var(--muted); transition: background 0.14s, color 0.14s;
     }
+    .nav-links a:hover { background: rgba(89,184,255,0.11); color: var(--primary-deep); }
 
-    .nav a:hover {
-      background: rgba(89, 184, 255, 0.12);
-      color: var(--primary-deep);
-    }
-
-    .hero {
-      padding: 56px 0 24px;
-    }
+    /* ── HERO ── */
+    .hero { padding: 64px 0 32px; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: stretch;
+      grid-template-columns: 1fr 360px;
+      gap: 24px; align-items: start;
     }
 
-    .hero-card,
-    .panel,
-    .feature,
-    .link-card,
-    .status-card,
-    .game-card {
+    .hero-main {
       background: var(--card);
       border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius-xl);
+      border-radius: var(--r-xl);
+      box-shadow: var(--shadow-card);
+      padding: 40px 44px 40px;
+      position: relative; overflow: hidden;
     }
 
-    .hero-card {
-      padding: 34px;
-      position: relative;
-      overflow: hidden;
-      min-height: 420px;
+    /* Soft cloud blobs */
+    .hero-main::before {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 200px 80px at 78% 18%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(ellipse 140px 60px at 20% 82%, rgba(255,255,255,0.55), transparent);
     }
 
-    .hero-card::before,
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(2px);
-      opacity: 0.9;
-      pointer-events: none;
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 14px; border-radius: 999px;
+      background: rgba(77,184,255,0.11); color: var(--primary-deep);
+      font-size: 12px; font-weight: 800; letter-spacing: 0.04em;
+      text-transform: uppercase; margin-bottom: 22px;
     }
 
-    .hero-card::before {
-      width: 190px;
-      height: 64px;
-      right: 34px;
-      top: 42px;
-      background: rgba(255, 255, 255, 0.86);
-      box-shadow:
-        -36px 14px 0 10px rgba(255, 255, 255, 0.72),
-        46px 10px 0 8px rgba(255, 255, 255, 0.74);
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--primary-deep); opacity: 0.7;
     }
 
-    .hero-card::after {
-      width: 160px;
-      height: 56px;
-      left: 52px;
-      bottom: 52px;
-      background: rgba(255, 255, 255, 0.78);
-      box-shadow:
-        -28px 10px 0 8px rgba(255, 255, 255, 0.66),
-        38px 12px 0 10px rgba(255, 255, 255, 0.7);
+    .hero-title {
+      font-size: clamp(44px, 5.5vw, 72px);
+      font-weight: 900; line-height: 0.92;
+      letter-spacing: -0.055em; color: var(--text);
+      margin-bottom: 8px;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(89, 184, 255, 0.12);
-      color: var(--primary-deep);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      margin-bottom: 16px;
+    .hero-title span {
+      background: linear-gradient(135deg, #4db8ff, #2299ee);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(38px, 5vw, 68px);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
+    .hero-sub {
+      margin: 20px 0 0; font-size: 17px; line-height: 1.72;
+      color: var(--muted); max-width: 500px;
     }
 
-    .hero p {
-      margin: 18px 0 0;
-      max-width: 640px;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
+    .hero-cta {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 50px;
-      padding: 0 20px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 15px;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 0 22px; border-radius: 999px;
+      font-weight: 800; font-size: 14px; font-family: var(--font);
+      cursor: pointer; border: none; transition: transform 0.14s, box-shadow 0.14s;
     }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
-      color: white;
-      background: linear-gradient(135deg, var(--primary), var(--primary-deep));
-      box-shadow: 0 14px 28px rgba(51, 153, 238, 0.24);
+      background: linear-gradient(135deg, #4db8ff, #2299ee);
+      color: white; box-shadow: var(--shadow-btn);
     }
+    .btn-primary:hover { box-shadow: 0 12px 32px rgba(51,153,238,0.32); }
 
-    .btn-secondary {
+    .btn-ghost {
+      background: rgba(255,255,255,0.86);
       color: var(--primary-deep);
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(89, 184, 255, 0.2);
+      border: 1px solid rgba(77,184,255,0.22) !important;
+      box-shadow: 0 2px 10px rgba(67,133,193,0.08);
     }
 
-    .hero-side {
-      display: grid;
-      gap: 18px;
+    /* Hero side stack */
+    .hero-side { display: flex; flex-direction: column; gap: 16px; }
+
+    .status-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-card);
+      padding: 22px 24px;
     }
 
-    .status-card,
-    .panel {
-      padding: 24px;
+    .live-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 12px; font-weight: 800; color: #13a368;
+      margin-bottom: 10px;
     }
-
-    .status-label {
-      font-size: 13px;
-      font-weight: 800;
-      color: #14a56b;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-
-    .status-label::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
+    .live-dot {
+      width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0;
       background: #16c47f;
-      box-shadow: 0 0 0 6px rgba(22, 196, 127, 0.12);
+      box-shadow: 0 0 0 5px rgba(22,196,127,0.13);
     }
 
-    .panel-title,
-    h2 {
-      margin: 0 0 10px;
-      font-size: 28px;
-      letter-spacing: -0.03em;
+    .status-title {
+      font-size: 17px; font-weight: 800; letter-spacing: -0.03em;
+      color: var(--text); margin-bottom: 8px;
     }
 
-    .panel p,
-    .status-card p,
-    .game-copy,
-    .link-card p,
-    .foot p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
+    .status-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+    .mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+
+    .mini-tile {
+      padding: 12px 13px; border-radius: var(--r-md);
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(89,184,255,0.10);
+    }
+    .mini-tile strong { display: block; font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 3px; }
+    .mini-tile span { font-size: 12px; color: var(--muted); }
+
+    .about-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-card);
+      padding: 22px 24px;
+    }
+    .about-card h3 { font-size: 17px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 8px; }
+    .about-card p { font-size: 13px; color: var(--muted); line-height: 1.68; }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(92,151,201,0.18) 30%, rgba(92,151,201,0.18) 70%, transparent);
     }
 
-    .hero-mini-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
+    /* ── GAME SECTION ── */
+    .game-section { padding: 32px 0; }
 
-    .mini {
-      padding: 16px;
-      border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid rgba(89, 184, 255, 0.12);
+    .section-label {
+      font-size: 12px; font-weight: 800; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
     }
-
-    .mini strong {
-      display: block;
-      font-size: 20px;
-      margin-bottom: 6px;
+    .section-title {
+      font-size: 30px; font-weight: 800; letter-spacing: -0.04em;
+      color: var(--text); margin-bottom: 4px;
     }
-
-    .mini span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    section {
-      padding: 18px 0;
-    }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 720px;
-      line-height: 1.7;
-    }
+    .section-sub { font-size: 15px; color: var(--muted); line-height: 1.65; }
 
     .game-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--r-xl);
+      box-shadow: var(--shadow-card);
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
+      grid-template-columns: 1fr 1fr;
       overflow: hidden;
+      margin-top: 20px;
     }
 
     .game-visual {
-      padding: 24px;
+      padding: 28px;
       background:
-        radial-gradient(circle at 25% 20%, rgba(255,255,255,0.95), transparent 22%),
-        radial-gradient(circle at 75% 18%, rgba(255,255,255,0.9), transparent 18%),
-        linear-gradient(180deg, #8fd8ff 0%, #bdeaff 52%, #e6fff4 100%);
-      border-right: 1px solid rgba(92, 151, 201, 0.14);
+        radial-gradient(ellipse 55% 35% at 22% 18%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(ellipse 45% 28% at 78% 22%, rgba(255,255,255,0.85), transparent),
+        linear-gradient(175deg, #93daff 0%, #bdeaff 52%, #dffff5 100%);
+      border-right: 1px solid rgba(92,151,201,0.12);
+      display: flex; flex-direction: column; justify-content: center;
     }
 
     .banner-frame {
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(255,255,255,0.7);
-      border-radius: 24px;
-      padding: 14px;
-      box-shadow: 0 16px 34px rgba(82, 149, 201, 0.16);
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.85);
+      border-radius: 22px; padding: 12px;
+      box-shadow: 0 12px 40px rgba(82,149,201,0.14), 0 2px 8px rgba(82,149,201,0.08);
     }
 
-    .banner-image {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 18px;
-      background: #eef8ff;
-    }
-
-    .banner-caption {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.6;
+    .banner-frame img {
+      display: block; width: 100%; border-radius: 14px; height: auto;
     }
 
     .game-body {
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
+      padding: 36px 36px;
+      display: flex; flex-direction: column; justify-content: center; gap: 18px;
     }
 
-    .game-label {
-      display: inline-flex;
-      width: fit-content;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(138, 228, 197, 0.18);
-      color: #19936d;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
+    .game-tag {
+      display: inline-flex; width: fit-content;
+      padding: 7px 13px; border-radius: 999px;
+      background: rgba(125,224,188,0.16); color: var(--accent-deep);
+      font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
     }
 
     .game-title {
-      margin: 0;
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 900; line-height: 1.0; letter-spacing: -0.04em; color: var(--text);
     }
+    .game-title em { font-style: normal; color: var(--muted); font-weight: 700; font-size: 0.62em; display: block; margin-top: 4px; letter-spacing: -0.02em; }
 
-    .game-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
+    .game-desc { font-size: 15px; color: var(--muted); line-height: 1.72; }
 
-    .feature {
-      padding: 18px;
-      border-radius: var(--radius-lg);
+    .features-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+
+    .feature-tile {
       background: var(--card-strong);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      padding: 16px 15px;
     }
+    .feature-tile strong { display: block; font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+    .feature-tile span { font-size: 12px; color: var(--muted); line-height: 1.6; }
 
-    .feature strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 16px;
-    }
+    /* ── LINKS SECTION ── */
+    .links-section { padding: 32px 0 24px; }
 
-    .feature span {
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 14px;
-    }
-
-    .links-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
+    .links-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 20px; }
 
     .link-card {
-      padding: 22px;
-      border-radius: var(--radius-lg);
-      transition: transform 0.15s ease, border-color 0.15s ease;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-card);
+      padding: 24px 22px;
+      display: flex; flex-direction: column;
+      transition: transform 0.14s, border-color 0.14s, box-shadow 0.14s;
+      cursor: pointer;
     }
-
     .link-card:hover {
       transform: translateY(-2px);
-      border-color: rgba(51, 153, 238, 0.3);
+      border-color: var(--line-hover);
+      box-shadow: 0 14px 48px rgba(67,133,193,0.14), 0 2px 8px rgba(67,133,193,0.08);
     }
 
-    .link-card strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 18px;
+    .link-icon {
+      width: 42px; height: 42px; border-radius: 13px; margin-bottom: 14px;
+      display: grid; place-items: center; font-size: 18px;
+      background: rgba(77,184,255,0.10); border: 1px solid rgba(77,184,255,0.14);
     }
 
-    .link-arrow {
-      margin-top: 16px;
-      font-weight: 800;
-      color: var(--primary-deep);
-      font-size: 14px;
-    }
+    .link-title { font-size: 16px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 7px; }
+    .link-desc { font-size: 13px; color: var(--muted); line-height: 1.65; flex: 1; }
+    .link-arrow { margin-top: 16px; font-size: 13px; font-weight: 800; color: var(--primary-deep); }
 
-    .foot {
-      padding: 42px 0 70px;
-    }
+    /* ── FOOTER ── */
+    .footer { padding: 24px 0 64px; }
 
-    .foot-card {
-      padding: 26px;
-      background: rgba(255,255,255,0.72);
+    .footer-card {
+      background: rgba(255,255,255,0.68);
       border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
+      border-radius: var(--r-xl);
+      box-shadow: var(--shadow-card);
+      padding: 24px 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px; flex-wrap: wrap;
     }
 
-    .foot-title {
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 6px;
+    .footer-brand { display: flex; align-items: center; gap: 11px; }
+    .footer-brand-name { font-size: 15px; font-weight: 800; letter-spacing: -0.03em; }
+    .footer-tagline { font-size: 13px; color: var(--muted); margin-top: 3px; }
+    .footer-copy { font-size: 13px; color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .game-card { grid-template-columns: 1fr; }
+      .game-visual { border-right: none; border-bottom: 1px solid rgba(92,151,201,0.12); }
+      .links-grid { grid-template-columns: 1fr 1fr; }
     }
 
-    .foot-meta {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 960px) {
-      .hero-grid,
-      .game-card,
-      .links-grid,
-      .game-list {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        min-height: auto;
-      }
-
-      .game-visual {
-        border-right: none;
-        border-bottom: 1px solid rgba(92, 151, 201, 0.14);
-      }
-    }
-
-    @media (max-width: 720px) {
-      .topbar-inner,
-      .section-head,
-      .foot-card {
-        align-items: flex-start;
-      }
-
-      .nav {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 30px;
-      }
-
-      .hero-card,
-      .status-card,
-      .panel,
-      .game-body,
-      .game-visual,
-      .link-card {
-        padding: 22px;
-      }
-
-      .hero-mini-grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 640px) {
+      .hero { padding: 40px 0 24px; }
+      .hero-main { padding: 28px 24px; }
+      .game-body { padding: 26px 24px; }
+      .features-row { grid-template-columns: 1fr; }
+      .links-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .section-title { font-size: 24px; }
+      .hero-title { font-size: 40px; }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#top" aria-label="PangChu Studio home">
-        <span class="brand-badge">P</span>
-        <span>PangChu Studio</span>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <div class="brand-mark">P</div>
+        PangChu Studio
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav-links">
         <a href="#game">Game</a>
         <a href="#links">Links</a>
         <a href="#about">About</a>
@@ -542,159 +389,165 @@
   </header>
 
   <main id="top">
+
+    <!-- HERO -->
     <section class="hero">
       <div class="wrap hero-grid">
-        <article class="hero-card">
-          <span class="eyebrow">Official Website</span>
-          <h1>PangChu Studio</h1>
-          <p>
-            A small studio building cute and approachable mobile game experiences.
-            This site is the official home for studio information, policy pages, and the featured game
-            <strong>MalrangNyang (Jelly Cat Jump)</strong>.
+
+        <article class="hero-main">
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-dot"></span>
+            Official Studio Website
+          </div>
+          <h1 class="hero-title">
+            PangChu<br>
+            <span>Studio</span>
+          </h1>
+          <p class="hero-sub">
+            A small indie studio crafting cute, cozy mobile game experiences. This is the official home for studio information, game details, and policy pages.
           </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#game">View Game</a>
-            <a class="btn btn-secondary" href="./privacy.html">Privacy Policy</a>
-            <a class="btn btn-secondary" href="./terms.html">Terms of Service</a>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#game">View Featured Game</a>
+            <a class="btn btn-ghost" href="#links">Official Links</a>
           </div>
         </article>
 
         <div class="hero-side">
-          <aside class="status-card">
-            <div class="status-label">Active Website</div>
-            <h2 class="panel-title">Official links are ready</h2>
-            <p>
-              This website can be used as the studio homepage for store listings, policy links,
-              and future game updates.
-            </p>
-            <div class="hero-mini-grid">
-              <div class="mini">
+          <div class="status-card" id="about">
+            <div class="live-badge">
+              <span class="live-dot"></span>
+              Website Active
+            </div>
+            <div class="status-title">Official links are live</div>
+            <p class="status-body">Ready for use in app store submissions, support contacts, and public-facing policy references.</p>
+            <div class="mini-grid">
+              <div class="mini-tile">
                 <strong>Game</strong>
-                <span>MalrangNyang / Jelly Cat Jump</span>
+                <span>MalrangNyang</span>
               </div>
-              <div class="mini">
+              <div class="mini-tile">
                 <strong>Genre</strong>
-                <span>Cute casual mobile game</span>
+                <span>Cute casual</span>
               </div>
-              <div class="mini">
+              <div class="mini-tile">
                 <strong>Studio</strong>
                 <span>PangChu Studio</span>
               </div>
-              <div class="mini">
-                <strong>Pages</strong>
-                <span>Home, Privacy, Terms</span>
+              <div class="mini-tile">
+                <strong>Platform</strong>
+                <span>Mobile</span>
               </div>
             </div>
-          </aside>
+          </div>
 
-          <aside class="panel" id="about">
-            <h2 class="panel-title">About the studio</h2>
-            <p>
-              PangChu Studio focuses on clean, friendly, easy-to-enjoy game experiences with soft visuals,
-              simple controls, and charming presentation.
-            </p>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="game">
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Featured game</h2>
-            <p>
-              This section uses a real banner image. Later, you can replace only the image file and keep the page layout intact.
-            </p>
+          <div class="about-card">
+            <h3>About the studio</h3>
+            <p>PangChu Studio builds clean, friendly game experiences with soft visuals, approachable controls, and a charming, welcoming feel.</p>
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- GAME SECTION -->
+    <section class="game-section" id="game">
+      <div class="wrap">
+        <div class="section-label">Featured Game</div>
+        <div class="section-title">Jelly Cat Jump</div>
+        <div class="section-sub">Our current title — soft, cheerful, and built for everyone.</div>
+
         <article class="game-card">
+
           <div class="game-visual">
             <div class="banner-frame">
-              <img
-                class="banner-image"
-                src="./images/jelly-cat-jump-banner.png"
-                alt="MalrangNyang Jelly Cat Jump banner"
-              />
-              <div class="banner-caption">
-               
-              </div>
+              <img src="assets/jelly-cat-jump-banner.png" alt="MalrangNyang — Jelly Cat Jump banner" />
             </div>
           </div>
 
           <div class="game-body">
-            <span class="game-label">Cute Casual Mobile Game</span>
-            <h3 class="game-title">MalrangNyang (Jelly Cat Jump)</h3>
-            <p class="game-copy">
-              A soft and cheerful jumping game built around cute cat energy, approachable controls,
-              and a light, playful mood. Designed for quick sessions and easy enjoyment.
+            <span class="game-tag">Cute Casual Mobile Game</span>
+            <h2 class="game-title">
+              Jelly Cat Jump
+              <em>MalrangNyang</em>
+            </h2>
+            <p class="game-desc">
+              A soft, cheerful jumping game built around playful cat characters, cloud-filled skies, and simple one-touch controls. Designed for quick sessions and easy, satisfying fun.
             </p>
-
-            <div class="game-list">
-              <div class="feature">
+            <div class="features-row">
+              <div class="feature-tile">
                 <strong>Simple controls</strong>
-                <span>Easy to pick up and comfortable for casual mobile play.</span>
+                <span>One-touch gameplay, comfortable for all ages.</span>
               </div>
-              <div class="feature">
-                <strong>Charming style</strong>
-                <span>Cloudy skies, soft colors, and a cozy cat-themed identity.</span>
+              <div class="feature-tile">
+                <strong>Soft visuals</strong>
+                <span>Clouds, pastels, and cute cat characters.</span>
               </div>
-              <div class="feature">
+              <div class="feature-tile">
                 <strong>Arcade rhythm</strong>
-                <span>Quick runs, repeatable challenge, and score-focused fun.</span>
+                <span>Quick runs and score-focused challenge.</span>
               </div>
             </div>
           </div>
+
         </article>
       </div>
     </section>
 
-    <section id="links">
+    <div class="section-divider"></div>
+
+    <!-- LINKS SECTION -->
+    <section class="links-section" id="links">
       <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Official links</h2>
-            <p>
-              These are the pages most likely to be needed for platform submissions,
-              customer support, and public reference.
-            </p>
-          </div>
-        </div>
+        <div class="section-label">Official Links</div>
+        <div class="section-title">Pages & policies</div>
+        <div class="section-sub">Everything needed for platform submissions, customer support, and public reference.</div>
 
         <div class="links-grid">
+
           <a class="link-card" href="./privacy.html">
-            <strong>Privacy Policy</strong>
-            <p>Read the privacy policy for PangChu Studio services and the featured game.</p>
-            <div class="link-arrow">Open page →</div>
+            <div class="link-icon">📄</div>
+            <div class="link-title">Privacy Policy</div>
+            <p class="link-desc">Our privacy policy for PangChu Studio services and the featured game.</p>
+            <div class="link-arrow">Read policy →</div>
           </a>
 
           <a class="link-card" href="./terms.html">
-            <strong>Terms of Service</strong>
-            <p>Read the terms and conditions governing the use of this website and related services.</p>
-            <div class="link-arrow">Open page →</div>
+            <div class="link-icon">📋</div>
+            <div class="link-title">Terms of Service</div>
+            <p class="link-desc">Terms and conditions governing the use of this website and related services.</p>
+            <div class="link-arrow">Read terms →</div>
           </a>
 
-          <a class="link-card" href="https://github.com/bypangs/pangchu-privacy" target="_blank" rel="noopener noreferrer">
-            <strong>GitHub Repository</strong>
-            <p>View the public repository that hosts this website and supporting files.</p>
+          <a class="link-card" href="https://github.com/bypangs/pangchu-privacy" target="_blank" rel="noopener">
+            <div class="link-icon">⌨️</div>
+            <div class="link-title">GitHub Repository</div>
+            <p class="link-desc">The public repository hosting this website and supporting files.</p>
             <div class="link-arrow">Open repository →</div>
           </a>
+
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="foot">
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="wrap">
-      <div class="foot-card">
-        <div>
-          <div class="foot-title">PangChu Studio</div>
-          <p>Official website for studio information and game-related policy pages.</p>
+      <div class="footer-card">
+        <div class="footer-brand">
+          <div class="brand-mark" style="width:36px;height:36px;border-radius:11px;font-size:15px;">P</div>
+          <div>
+            <div class="footer-brand-name">PangChu Studio</div>
+            <div class="footer-tagline">Cute &amp; cozy mobile games</div>
+          </div>
         </div>
-        <div class="foot-meta">© 2026 PangChu Studio. All rights reserved.</div>
+        <div class="footer-copy">© 2026 PangChu Studio. All rights reserved.</div>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
