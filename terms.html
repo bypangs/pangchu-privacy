@@ -3,167 +3,480 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service - PangChu Studio</title>
+  <title>Terms of Service | PangChu Studio</title>
+  <meta name="description" content="Terms of Service for PangChu Studio and MalrangNyang (Jelly Cat Jump)." />
+  <meta property="og:title" content="Terms of Service | PangChu Studio" />
+  <meta property="og:description" content="Terms of Service for PangChu Studio and MalrangNyang (Jelly Cat Jump)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bypangs.github.io/pangchu-privacy/terms.html" />
+  <meta name="theme-color" content="#7cc9ff" />
   <style>
+    :root {
+      --bg1: #dff4ff;
+      --bg2: #f6fbff;
+      --card: rgba(255, 255, 255, 0.84);
+      --line: rgba(92, 151, 201, 0.18);
+      --text: #17324d;
+      --muted: #5f7890;
+      --primary: #59b8ff;
+      --primary-deep: #3399ee;
+      --shadow: 0 20px 60px rgba(67, 133, 193, 0.14);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      background: #f7f7f7;
-      color: #222;
-    }
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 40px 20px 80px;
-      background: #fff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(137, 212, 255, 0.42), transparent 30%),
+        radial-gradient(circle at top right, rgba(164, 239, 214, 0.28), transparent 24%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
       min-height: 100vh;
-      box-sizing: border-box;
     }
-    h1, h2 {
-      color: #111;
-    }
-    h1 {
-      margin-top: 0;
-      font-size: 32px;
-    }
-    h2 {
-      margin-top: 32px;
-      font-size: 22px;
-    }
-    p, li {
-      font-size: 16px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .muted {
-      color: #666;
-    }
+
     a {
-      color: #1565c0;
+      color: inherit;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
     }
-    .footer {
-      margin-top: 48px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(246, 251, 255, 0.72);
+      border-bottom: 1px solid rgba(92, 151, 201, 0.12);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #7fd0ff, #8be7c7);
+      box-shadow: 0 12px 30px rgba(64, 145, 210, 0.24);
+      color: white;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
       font-size: 14px;
-      color: #666;
+      font-weight: 700;
+    }
+
+    .nav a:hover {
+      background: rgba(89, 184, 255, 0.12);
+      color: var(--primary-deep);
+    }
+
+    .hero {
+      padding: 42px 0 18px;
+    }
+
+    .hero-card,
+    .content-card,
+    .toc-card,
+    .foot-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
+    }
+
+    .hero-card {
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      right: 34px;
+      top: 28px;
+      width: 160px;
+      height: 54px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      box-shadow:
+        -30px 12px 0 8px rgba(255,255,255,0.7),
+        40px 10px 0 8px rgba(255,255,255,0.68);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(89, 184, 255, 0.12);
+      color: var(--primary-deep);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-card p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+      max-width: 760px;
+    }
+
+    .hero-meta {
+      margin-top: 22px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .meta-pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(89, 184, 255, 0.12);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+      padding: 18px 0 42px;
+      align-items: start;
+    }
+
+    .toc-card {
+      padding: 20px;
+      position: sticky;
+      top: 86px;
+    }
+
+    .toc-title {
+      margin: 0 0 12px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .toc-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .toc-list a {
+      padding: 10px 12px;
+      border-radius: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .toc-list a:hover {
+      background: rgba(89, 184, 255, 0.1);
+      color: var(--primary-deep);
+    }
+
+    .content-card {
+      padding: 30px;
+    }
+
+    .section + .section {
+      margin-top: 30px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(92, 151, 201, 0.14);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 0 0 10px;
+      line-height: 1.8;
+    }
+
+    .foot {
+      padding: 0 0 70px;
+    }
+
+    .foot-card {
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .foot-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .foot-meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .toc-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero-card,
+      .content-card,
+      .toc-card,
+      .foot-card {
+        padding: 22px;
+      }
+
+      .nav {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Terms of Service</h1>
-    <p class="muted">Last updated: April 18, 2026</p>
-
-    <p>
-      Welcome to the games and services provided by PangChu Studio.
-      By downloading, accessing, or using our game or related services, you agree to these Terms of Service.
-      If you do not agree to these Terms, please do not use our services.
-    </p>
-
-    <h2>1. Service Provider</h2>
-    <p>
-      This service is operated by PangChu Studio.
-      For support or inquiries, please contact:
-      <a href="mailto:bypangs@naver.com">bypangs@naver.com</a>
-    </p>
-
-    <h2>2. Use of the Service</h2>
-    <p>You agree to use the service only for lawful purposes and in a fair manner.</p>
-    <ul>
-      <li>You must not exploit bugs, cheats, automation tools, or unauthorized third-party software.</li>
-      <li>You must not interfere with the operation or security of the service.</li>
-      <li>You must not use offensive, abusive, or inappropriate names or content where user-generated names or profiles are allowed.</li>
-    </ul>
-
-    <h2>3. Accounts and Access</h2>
-    <p>
-      Some features may require account authentication or platform sign-in.
-      You are responsible for maintaining access to your platform account and device environment.
-      We may suspend or restrict access if misuse, abuse, or policy violations are detected.
-    </p>
-
-    <h2>4. Virtual Items and In-App Purchases</h2>
-    <p>
-      The service may include virtual currency, cosmetic items, consumables, rewards, advertisements, or in-app purchases.
-      Virtual items are licensed, not sold, and have no real-world monetary value unless required by applicable law.
-    </p>
-    <ul>
-      <li>All purchases are handled by the relevant platform store.</li>
-      <li>Refunds, if available, are subject to the store platform’s policies.</li>
-      <li>We may modify, rebalance, replace, or discontinue virtual items or rewards at any time.</li>
-    </ul>
-
-    <h2>5. Advertisements and Rewards</h2>
-    <p>
-      The service may provide optional rewarded advertisements.
-      Reward availability may vary by region, platform, device status, network condition, or ad inventory.
-      We do not guarantee that rewarded ads will always be available or successfully completed.
-    </p>
-
-    <h2>6. Updates and Service Changes</h2>
-    <p>
-      We may update, modify, suspend, or discontinue any part of the service at any time, with or without notice.
-      This includes gameplay systems, difficulty, content, events, rankings, account features, and online functionality.
-    </p>
-
-    <h2>7. Leaderboards, Nicknames, and Online Features</h2>
-    <p>
-      If the service includes leaderboards, nicknames, or online profiles, you agree not to use names or content that are unlawful, misleading, infringing, abusive, hateful, or otherwise inappropriate.
-      We reserve the right to remove, reset, hide, or restrict such content or related access.
-    </p>
-
-    <h2>8. Intellectual Property</h2>
-    <p>
-      All content, including but not limited to game assets, logos, UI, artwork, sounds, text, and software, is owned by or licensed to PangChu Studio and is protected by applicable intellectual property laws.
-      You may not copy, distribute, modify, reverse engineer, or commercially exploit the service except as permitted by law.
-    </p>
-
-    <h2>9. Disclaimer</h2>
-    <p>
-      The service is provided on an “as is” and “as available” basis.
-      To the maximum extent permitted by applicable law, PangChu Studio makes no warranties regarding uninterrupted availability, error-free operation, compatibility, or fitness for a particular purpose.
-    </p>
-
-    <h2>10. Limitation of Liability</h2>
-    <p>
-      To the maximum extent permitted by applicable law, PangChu Studio shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of progress, data, access, virtual items, or business opportunity arising from use of the service.
-    </p>
-
-    <h2>11. Termination</h2>
-    <p>
-      We may suspend or terminate access to the service if necessary for maintenance, legal compliance, abuse prevention, security, or violations of these Terms.
-    </p>
-
-    <h2>12. Privacy</h2>
-    <p>
-      Your use of the service is also governed by our Privacy Policy.
-      Please review it here:
-      <a href="https://bypangs.github.io/pangchu-privacy/">Privacy Policy</a>
-    </p>
-
-    <h2>13. Changes to These Terms</h2>
-    <p>
-      We may revise these Terms from time to time.
-      Updated versions will be posted on this page with a revised effective date.
-      Continued use of the service after changes become effective means you accept the updated Terms.
-    </p>
-
-    <h2>14. Contact</h2>
-    <p>
-      If you have any questions about these Terms, please contact:
-      <a href="mailto:bypangs@naver.com">bypangs@naver.com</a>
-    </p>
-
-    <div class="footer">
-      <p>PangChu Studio</p>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./index.html" aria-label="PangChu Studio home">
+        <span class="brand-badge">P</span>
+        <span>PangChu Studio</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="./index.html">Home</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <article class="hero-card">
+          <span class="eyebrow">Official Policy Page</span>
+          <h1>Terms of Service</h1>
+          <p>
+            These Terms of Service govern access to and use of PangChu Studio’s website, games, and related services,
+            including <strong>MalrangNyang (Jelly Cat Jump)</strong>.
+          </p>
+          <div class="hero-meta">
+            <span class="meta-pill">Effective Date: April 21, 2026</span>
+            <span class="meta-pill">Studio: PangChu Studio</span>
+            <span class="meta-pill">Service Scope: Website and Game Services</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap main-grid">
+        <aside class="toc-card" aria-label="Table of contents">
+          <div class="toc-title">Contents</div>
+          <nav class="toc-list">
+            <a href="#acceptance">1. Acceptance of Terms</a>
+            <a href="#use-of-services">2. Use of Services</a>
+            <a href="#accounts">3. Accounts and Access</a>
+            <a href="#virtual-items">4. Virtual Items and Purchases</a>
+            <a href="#prohibited-conduct">5. Prohibited Conduct</a>
+            <a href="#intellectual-property">6. Intellectual Property</a>
+            <a href="#termination">7. Suspension or Termination</a>
+            <a href="#disclaimers">8. Disclaimers</a>
+            <a href="#liability">9. Limitation of Liability</a>
+            <a href="#changes">10. Changes to Terms</a>
+            <a href="#contact">11. Contact</a>
+          </nav>
+        </aside>
+
+        <article class="content-card">
+          <section class="section" id="acceptance">
+            <h2>1. Acceptance of Terms</h2>
+            <p>
+              By accessing or using PangChu Studio’s website, games, or related services, you agree to be bound
+              by these Terms of Service. If you do not agree, you should not use the services.
+            </p>
+          </section>
+
+          <section class="section" id="use-of-services">
+            <h2>2. Use of Services</h2>
+            <p>
+              The services are provided for personal, non-exclusive use unless otherwise expressly stated.
+              PangChu Studio may update, modify, suspend, or discontinue any part of the services at any time.
+            </p>
+          </section>
+
+          <section class="section" id="accounts">
+            <h2>3. Accounts and Access</h2>
+            <p>
+              Some features may require account authentication, cloud save, platform login, or similar access methods.
+              You are responsible for maintaining the security of your account credentials and access methods where applicable.
+            </p>
+          </section>
+
+          <section class="section" id="virtual-items">
+            <h2>4. Virtual Items and Purchases</h2>
+            <p>
+              Games operated by PangChu Studio may offer in-app purchases, virtual goods, entitlements, or digital content.
+              Such items are licensed, not sold, unless otherwise required by law or platform policy.
+            </p>
+            <p>
+              Availability, pricing, and functionality of virtual items may change. Refunds, if any, are generally subject
+              to the rules of the platform through which the purchase was made.
+            </p>
+          </section>
+
+          <section class="section" id="prohibited-conduct">
+            <h2>5. Prohibited Conduct</h2>
+            <p>You agree not to:</p>
+            <ul>
+              <li>Use the services in any unlawful, abusive, fraudulent, or harmful manner.</li>
+              <li>Interfere with normal gameplay, rankings, servers, or service operations.</li>
+              <li>Exploit bugs, cheats, automation tools, reverse engineering, or unauthorized modifications where prohibited by law.</li>
+              <li>Attempt to gain unauthorized access to accounts, systems, or data.</li>
+            </ul>
+          </section>
+
+          <section class="section" id="intellectual-property">
+            <h2>6. Intellectual Property</h2>
+            <p>
+              Unless otherwise stated, the website, games, designs, text, visuals, audio, branding, and related content
+              are owned by PangChu Studio or its licensors and are protected by applicable intellectual property laws.
+            </p>
+          </section>
+
+          <section class="section" id="termination">
+            <h2>7. Suspension or Termination</h2>
+            <p>
+              PangChu Studio may suspend or terminate access to the services if necessary to protect the service,
+              comply with law, enforce these terms, investigate abuse, or address technical or security issues.
+            </p>
+          </section>
+
+          <section class="section" id="disclaimers">
+            <h2>8. Disclaimers</h2>
+            <p>
+              The services are provided on an “as is” and “as available” basis to the fullest extent permitted by law.
+              PangChu Studio does not guarantee uninterrupted availability, error-free operation, or universal compatibility
+              with every device or platform environment.
+            </p>
+          </section>
+
+          <section class="section" id="liability">
+            <h2>9. Limitation of Liability</h2>
+            <p>
+              To the fullest extent permitted by applicable law, PangChu Studio shall not be liable for indirect,
+              incidental, special, consequential, or punitive damages arising from or related to the use of the services.
+            </p>
+          </section>
+
+          <section class="section" id="changes">
+            <h2>10. Changes to Terms</h2>
+            <p>
+              PangChu Studio may revise these Terms of Service from time to time. Updated versions will be posted on this page,
+              and continued use of the services after updates may constitute acceptance of the revised terms.
+            </p>
+          </section>
+
+          <section class="section" id="contact">
+            <h2>11. Contact</h2>
+            <p>
+              For questions regarding these Terms of Service, please use the official contact channel provided on the website
+              or app listing, if available.
+            </p>
+            <p>
+              Later, you can replace this with a direct support email or formal business contact address.
+            </p>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-card">
+        <div>
+          <div class="foot-title">PangChu Studio</div>
+          <div class="foot-meta">Official terms page for website and game-related services.</div>
+        </div>
+        <div class="foot-meta">© 2026 PangChu Studio. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
