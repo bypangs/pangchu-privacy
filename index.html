@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PangChu Studio | MalrangNyang</title>
-  <meta name="description" content="Official website of PangChu Studio, featuring MalrangNyang (Jelly Cat Jump), a cute casual mobile game." />
+  <title>PangChu Studio | Jelly Cat Jump</title>
+  <meta name="description" content="Official website of PangChu Studio, featuring Jelly Cat Jump, a cute casual mobile game." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <style>
@@ -38,8 +38,8 @@
       font-family: var(--font);
       color: var(--text);
       background:
-        radial-gradient(ellipse 60% 40% at 10% 0%, rgba(125,208,255,0.36) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 35% at 92% 4%, rgba(138,228,197,0.28) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 10% 0%, rgba(125,208,255,0.34) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 35% at 92% 4%, rgba(138,228,197,0.26) 0%, transparent 55%),
         linear-gradient(175deg, var(--bg1) 0%, #eaf6ff 45%, var(--bg2) 100%);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
@@ -47,30 +47,24 @@
 
     a { color: inherit; text-decoration: none; }
 
-    .wrap {
-      width: min(calc(100% - 40px), var(--max));
-      margin: 0 auto;
-    }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
 
     /* ── NAV ── */
     .nav {
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(20px) saturate(1.4);
       -webkit-backdrop-filter: blur(20px) saturate(1.4);
-      background: rgba(240,249,255,0.72);
+      background: rgba(240,249,255,0.75);
       border-bottom: 1px solid rgba(92,151,201,0.10);
     }
-
     .nav-inner {
       display: flex; justify-content: space-between; align-items: center;
       padding: 13px 0; gap: 16px;
     }
-
     .brand {
       display: flex; align-items: center; gap: 11px;
       font-weight: 800; font-size: 16px; letter-spacing: -0.03em; color: var(--text);
     }
-
     .brand-mark {
       width: 40px; height: 40px; border-radius: 13px; flex-shrink: 0;
       background: linear-gradient(135deg, #7fd0ff 0%, #8ae4c5 100%);
@@ -78,180 +72,122 @@
       display: grid; place-items: center;
       color: white; font-size: 17px; font-weight: 900;
     }
-
     .nav-links { display: flex; gap: 2px; }
-
     .nav-links a {
       padding: 9px 13px; border-radius: 999px; font-size: 14px; font-weight: 700;
       color: var(--muted); transition: background 0.14s, color 0.14s;
     }
     .nav-links a:hover { background: rgba(89,184,255,0.11); color: var(--primary-deep); }
 
-    /* ── HERO ── */
-    .hero { padding: 64px 0 32px; }
+    /* ── SECTION UTILITIES ── */
+    .section-label {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 5px;
+    }
+    .section-title {
+      font-size: 28px; font-weight: 800; letter-spacing: -0.04em;
+      color: var(--text); margin-bottom: 5px;
+    }
+    .section-sub { font-size: 15px; color: var(--muted); line-height: 1.65; }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 24px; align-items: start;
+    .section-divider {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(92,151,201,0.16) 30%, rgba(92,151,201,0.16) 70%, transparent);
     }
 
-    .hero-main {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--r-xl);
-      box-shadow: var(--shadow-card);
-      padding: 40px 44px 40px;
-      position: relative; overflow: hidden;
-    }
-
-    /* Soft cloud blobs */
-    .hero-main::before {
-      content: '';
-      position: absolute; inset: 0; pointer-events: none;
-      background:
-        radial-gradient(ellipse 200px 80px at 78% 18%, rgba(255,255,255,0.7), transparent),
-        radial-gradient(ellipse 140px 60px at 20% 82%, rgba(255,255,255,0.55), transparent);
-    }
-
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 7px 14px; border-radius: 999px;
-      background: rgba(77,184,255,0.11); color: var(--primary-deep);
-      font-size: 12px; font-weight: 800; letter-spacing: 0.04em;
-      text-transform: uppercase; margin-bottom: 22px;
-    }
-
-    .hero-eyebrow-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--primary-deep); opacity: 0.7;
-    }
-
-    .hero-title {
-      font-size: clamp(44px, 5.5vw, 72px);
-      font-weight: 900; line-height: 0.92;
-      letter-spacing: -0.055em; color: var(--text);
-      margin-bottom: 8px;
-    }
-
-    .hero-title span {
-      background: linear-gradient(135deg, #4db8ff, #2299ee);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-sub {
-      margin: 20px 0 0; font-size: 17px; line-height: 1.72;
-      color: var(--muted); max-width: 500px;
-    }
-
-    .hero-cta {
-      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;
-    }
-
+    /* ── BUTTONS ── */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      min-height: 48px; padding: 0 22px; border-radius: 999px;
+      min-height: 46px; padding: 0 22px; border-radius: 999px;
       font-weight: 800; font-size: 14px; font-family: var(--font);
       cursor: pointer; border: none; transition: transform 0.14s, box-shadow 0.14s;
     }
     .btn:hover { transform: translateY(-1px); }
-
     .btn-primary {
       background: linear-gradient(135deg, #4db8ff, #2299ee);
       color: white; box-shadow: var(--shadow-btn);
     }
     .btn-primary:hover { box-shadow: 0 12px 32px rgba(51,153,238,0.32); }
-
     .btn-ghost {
-      background: rgba(255,255,255,0.86);
-      color: var(--primary-deep);
+      background: rgba(255,255,255,0.86); color: var(--primary-deep);
       border: 1px solid rgba(77,184,255,0.22) !important;
       box-shadow: 0 2px 10px rgba(67,133,193,0.08);
     }
 
-    /* Hero side stack */
-    .hero-side { display: flex; flex-direction: column; gap: 16px; }
-
-    .status-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--r-lg);
-      box-shadow: var(--shadow-card);
-      padding: 22px 24px;
+    /* ── HERO ── */
+    .hero { padding: 44px 0 20px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 340px;
+      gap: 20px; align-items: start;
     }
+    .hero-main {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--r-xl); box-shadow: var(--shadow-card);
+      padding: 36px 40px; position: relative; overflow: hidden;
+    }
+    .hero-main::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 200px 80px at 78% 18%, rgba(255,255,255,0.65), transparent),
+        radial-gradient(ellipse 140px 60px at 18% 85%, rgba(255,255,255,0.5), transparent);
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 6px 13px; border-radius: 999px;
+      background: rgba(77,184,255,0.10); color: var(--primary-deep);
+      font-size: 11px; font-weight: 800; letter-spacing: 0.05em;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-eyebrow-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--primary-deep); opacity: 0.7; }
+    .hero-title {
+      font-size: clamp(42px, 5.2vw, 68px); font-weight: 900;
+      line-height: 0.92; letter-spacing: -0.055em; color: var(--text); margin-bottom: 6px;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, #4db8ff, #2299ee);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-sub { margin: 18px 0 0; font-size: 16px; line-height: 1.72; color: var(--muted); max-width: 480px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 
+    /* Hero side */
+    .hero-side { display: flex; flex-direction: column; gap: 12px; }
+    .status-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--r-lg); box-shadow: var(--shadow-card); padding: 18px 20px;
+    }
     .live-badge {
       display: inline-flex; align-items: center; gap: 7px;
-      font-size: 12px; font-weight: 800; color: #13a368;
-      margin-bottom: 10px;
+      font-size: 11px; font-weight: 800; color: #13a368; margin-bottom: 9px;
     }
     .live-dot {
-      width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0;
-      background: #16c47f;
-      box-shadow: 0 0 0 5px rgba(22,196,127,0.13);
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+      background: #16c47f; box-shadow: 0 0 0 4px rgba(22,196,127,0.13);
     }
-
-    .status-title {
-      font-size: 17px; font-weight: 800; letter-spacing: -0.03em;
-      color: var(--text); margin-bottom: 8px;
-    }
-
-    .status-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
-
-    .mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
-
-    .mini-tile {
-      padding: 12px 13px; border-radius: var(--r-md);
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(89,184,255,0.10);
-    }
-    .mini-tile strong { display: block; font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 3px; }
-    .mini-tile span { font-size: 12px; color: var(--muted); }
+    .status-title { font-size: 15px; font-weight: 800; letter-spacing: -0.03em; color: var(--text); margin-bottom: 6px; }
+    .status-body { font-size: 12px; color: var(--muted); line-height: 1.65; }
+    .mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 12px; }
+    .mini-tile { padding: 10px 12px; border-radius: var(--r-md); background: rgba(255,255,255,0.7); border: 1px solid rgba(89,184,255,0.10); }
+    .mini-tile strong { display: block; font-size: 11px; font-weight: 800; color: var(--text); margin-bottom: 2px; }
+    .mini-tile span { font-size: 11px; color: var(--muted); }
 
     .about-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--r-lg);
-      box-shadow: var(--shadow-card);
-      padding: 22px 24px;
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--r-lg); box-shadow: var(--shadow-card); padding: 16px 20px;
     }
-    .about-card h3 { font-size: 17px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 8px; }
-    .about-card p { font-size: 13px; color: var(--muted); line-height: 1.68; }
-
-    /* ── DIVIDER ── */
-    .section-divider {
-      width: min(calc(100% - 40px), var(--max));
-      margin: 0 auto; height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(92,151,201,0.18) 30%, rgba(92,151,201,0.18) 70%, transparent);
-    }
+    .about-card h3 { font-size: 14px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+    .about-card p { font-size: 12px; color: var(--muted); line-height: 1.65; }
 
     /* ── GAME SECTION ── */
-    .game-section { padding: 32px 0; }
-
-    .section-label {
-      font-size: 12px; font-weight: 800; letter-spacing: 0.06em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
-    }
-    .section-title {
-      font-size: 30px; font-weight: 800; letter-spacing: -0.04em;
-      color: var(--text); margin-bottom: 4px;
-    }
-    .section-sub { font-size: 15px; color: var(--muted); line-height: 1.65; }
-
+    .game-section { padding: 20px 0; }
     .game-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--r-xl);
-      box-shadow: var(--shadow-card);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      overflow: hidden;
-      margin-top: 20px;
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--r-xl); box-shadow: var(--shadow-card);
+      display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; margin-top: 18px;
     }
-
     .game-visual {
-      padding: 28px;
+      padding: 26px;
       background:
         radial-gradient(ellipse 55% 35% at 22% 18%, rgba(255,255,255,0.9), transparent),
         radial-gradient(ellipse 45% 28% at 78% 22%, rgba(255,255,255,0.85), transparent),
@@ -259,115 +195,154 @@
       border-right: 1px solid rgba(92,151,201,0.12);
       display: flex; flex-direction: column; justify-content: center;
     }
-
     .banner-frame {
-      background: rgba(255,255,255,0.75);
-      border: 1px solid rgba(255,255,255,0.85);
-      border-radius: 22px; padding: 12px;
+      background: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.85);
+      border-radius: 20px; padding: 11px;
       box-shadow: 0 12px 40px rgba(82,149,201,0.14), 0 2px 8px rgba(82,149,201,0.08);
     }
-
-    .banner-frame img {
-      display: block; width: 100%; border-radius: 14px; height: auto;
-    }
-
-    .game-body {
-      padding: 36px 36px;
-      display: flex; flex-direction: column; justify-content: center; gap: 18px;
-    }
-
+    .banner-frame img { display: block; width: 100%; border-radius: 12px; height: auto; }
+    .game-body { padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
     .game-tag {
-      display: inline-flex; width: fit-content;
-      padding: 7px 13px; border-radius: 999px;
+      display: inline-flex; width: fit-content; padding: 6px 12px; border-radius: 999px;
       background: rgba(125,224,188,0.16); color: var(--accent-deep);
-      font-size: 12px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
     }
-
     .game-title {
-      font-size: clamp(26px, 3.2vw, 40px);
-      font-weight: 900; line-height: 1.0; letter-spacing: -0.04em; color: var(--text);
+      font-size: clamp(24px, 3vw, 36px); font-weight: 900;
+      line-height: 1.0; letter-spacing: -0.04em; color: var(--text);
     }
     .game-title em { font-style: normal; color: var(--muted); font-weight: 700; font-size: 0.62em; display: block; margin-top: 4px; letter-spacing: -0.02em; }
-
-    .game-desc { font-size: 15px; color: var(--muted); line-height: 1.72; }
-
-    .features-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
-
+    .game-desc { font-size: 14px; color: var(--muted); line-height: 1.72; }
+    .features-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 9px; }
     .feature-tile {
-      background: var(--card-strong);
-      border: 1px solid var(--line);
-      border-radius: var(--r-md);
-      padding: 16px 15px;
+      background: var(--card-strong); border: 1px solid var(--line);
+      border-radius: var(--r-md); padding: 14px;
     }
-    .feature-tile strong { display: block; font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
-    .feature-tile span { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .feature-tile strong { display: block; font-size: 12px; font-weight: 800; color: var(--text); margin-bottom: 5px; }
+    .feature-tile span { font-size: 11px; color: var(--muted); line-height: 1.6; }
+
+    /* ── ANNOUNCEMENTS ── */
+    .announce-section { padding: 20px 0; }
+    .announce-list { margin-top: 18px; display: flex; flex-direction: column; gap: 1px; background: var(--line); border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-card); }
+    .announce-item {
+      background: var(--card-strong); padding: 18px 22px;
+      display: flex; align-items: flex-start; gap: 18px;
+      transition: background 0.14s;
+    }
+    .announce-item:hover { background: white; }
+    .announce-badge {
+      flex-shrink: 0; padding: 4px 10px; border-radius: 999px;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .badge-update { background: rgba(77,184,255,0.12); color: var(--primary-deep); }
+    .badge-notice { background: rgba(125,224,188,0.16); color: var(--accent-deep); }
+    .badge-new { background: rgba(255,180,100,0.14); color: #c07020; }
+    .announce-content { flex: 1; }
+    .announce-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .announce-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .announce-date { flex-shrink: 0; font-size: 12px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .announce-empty {
+      background: var(--card-strong); padding: 40px 22px; text-align: center;
+      color: var(--muted); font-size: 14px; line-height: 1.7;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 20px 0; }
+    .faq-list { margin-top: 18px; display: flex; flex-direction: column; gap: 9px; }
+    .faq-item {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--r-lg); box-shadow: var(--shadow-card); overflow: hidden;
+      transition: border-color 0.14s;
+    }
+    .faq-item.open { border-color: rgba(77,184,255,0.28); }
+    .faq-q {
+      width: 100%; padding: 17px 22px; display: flex; justify-content: space-between;
+      align-items: center; gap: 16px; cursor: pointer; border: none; background: none;
+      font-family: var(--font); font-size: 14px; font-weight: 700; color: var(--text); text-align: left;
+    }
+    .faq-q:hover { color: var(--primary-deep); }
+    .faq-chevron { width: 18px; height: 18px; flex-shrink: 0; color: var(--muted); transition: transform 0.2s ease; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--primary-deep); }
+    .faq-a {
+      max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.2s ease;
+      font-size: 13px; color: var(--muted); line-height: 1.72; padding: 0 22px;
+    }
+    .faq-item.open .faq-a { max-height: 160px; padding: 0 22px 17px; }
+
+    /* ── CONTACT ── */
+    .contact-section { padding: 20px 0; }
+    .contact-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--r-xl); box-shadow: var(--shadow-card);
+      padding: 30px 34px; display: flex; justify-content: space-between;
+      align-items: center; gap: 24px; flex-wrap: wrap;
+    }
+    .contact-left h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 7px; }
+    .contact-left p { font-size: 14px; color: var(--muted); line-height: 1.68; max-width: 420px; }
+    .contact-email-row { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+    .contact-email-icon { color: var(--primary-deep); flex-shrink: 0; }
+    .contact-email-link { font-size: 14px; font-weight: 700; color: var(--primary-deep); text-decoration: underline; text-underline-offset: 3px; }
+    .contact-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      min-height: 46px; padding: 0 22px; border-radius: 999px;
+      font-weight: 800; font-size: 14px; font-family: var(--font);
+      background: linear-gradient(135deg, #4db8ff, #2299ee);
+      color: white; box-shadow: var(--shadow-btn); border: none; cursor: pointer;
+      text-decoration: none; transition: transform 0.14s, box-shadow 0.14s; flex-shrink: 0;
+    }
+    .contact-btn:hover { transform: translateY(-1px); box-shadow: 0 12px 32px rgba(51,153,238,0.3); }
 
     /* ── LINKS SECTION ── */
-    .links-section { padding: 32px 0 24px; }
-
-    .links-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 20px; }
-
+    .links-section { padding: 20px 0 20px; }
+    .links-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 13px; margin-top: 18px; }
     .link-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--r-lg);
-      box-shadow: var(--shadow-card);
-      padding: 24px 22px;
-      display: flex; flex-direction: column;
-      transition: transform 0.14s, border-color 0.14s, box-shadow 0.14s;
-      cursor: pointer;
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--r-lg); box-shadow: var(--shadow-card);
+      padding: 22px 20px; display: flex; flex-direction: column;
+      transition: transform 0.14s, border-color 0.14s, box-shadow 0.14s; cursor: pointer;
     }
     .link-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--line-hover);
+      transform: translateY(-2px); border-color: var(--line-hover);
       box-shadow: 0 14px 48px rgba(67,133,193,0.14), 0 2px 8px rgba(67,133,193,0.08);
     }
-
     .link-icon {
-      width: 42px; height: 42px; border-radius: 13px; margin-bottom: 14px;
-      display: grid; place-items: center; font-size: 18px;
-      background: rgba(77,184,255,0.10); border: 1px solid rgba(77,184,255,0.14);
+      width: 38px; height: 38px; border-radius: 11px; margin-bottom: 13px;
+      display: grid; place-items: center;
+      background: rgba(77,184,255,0.09); border: 1px solid rgba(77,184,255,0.13);
+      color: var(--primary-deep);
     }
-
-    .link-title { font-size: 16px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 7px; }
+    .link-title { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 6px; }
     .link-desc { font-size: 13px; color: var(--muted); line-height: 1.65; flex: 1; }
-    .link-arrow { margin-top: 16px; font-size: 13px; font-weight: 800; color: var(--primary-deep); }
+    .link-arrow { margin-top: 14px; font-size: 12px; font-weight: 800; color: var(--primary-deep); display: flex; align-items: center; gap: 4px; }
 
     /* ── FOOTER ── */
-    .footer { padding: 24px 0 64px; }
-
+    .footer { padding: 20px 0 60px; }
     .footer-card {
-      background: rgba(255,255,255,0.68);
-      border: 1px solid var(--line);
-      border-radius: var(--r-xl);
-      box-shadow: var(--shadow-card);
-      padding: 24px 30px;
-      display: flex; justify-content: space-between; align-items: center;
-      gap: 16px; flex-wrap: wrap;
+      background: rgba(255,255,255,0.68); border: 1px solid var(--line);
+      border-radius: var(--r-xl); box-shadow: var(--shadow-card);
+      padding: 22px 28px; display: flex; justify-content: space-between;
+      align-items: center; gap: 16px; flex-wrap: wrap;
     }
-
     .footer-brand { display: flex; align-items: center; gap: 11px; }
-    .footer-brand-name { font-size: 15px; font-weight: 800; letter-spacing: -0.03em; }
-    .footer-tagline { font-size: 13px; color: var(--muted); margin-top: 3px; }
-    .footer-copy { font-size: 13px; color: var(--muted); }
+    .footer-brand-name { font-size: 14px; font-weight: 800; letter-spacing: -0.03em; }
+    .footer-tagline { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .footer-copy { font-size: 12px; color: var(--muted); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .game-card { grid-template-columns: 1fr; }
+      .hero-grid, .game-card { grid-template-columns: 1fr; }
       .game-visual { border-right: none; border-bottom: 1px solid rgba(92,151,201,0.12); }
       .links-grid { grid-template-columns: 1fr 1fr; }
     }
-
     @media (max-width: 640px) {
-      .hero { padding: 40px 0 24px; }
-      .hero-main { padding: 28px 24px; }
-      .game-body { padding: 26px 24px; }
+      .hero { padding: 32px 0 16px; }
+      .hero-main { padding: 24px 22px; }
+      .game-body { padding: 22px; }
       .features-row { grid-template-columns: 1fr; }
       .links-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
-      .section-title { font-size: 24px; }
-      .hero-title { font-size: 40px; }
+      .contact-card { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -382,8 +357,10 @@
       </a>
       <nav class="nav-links">
         <a href="#game">Game</a>
+        <a href="#announcements">Updates</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
         <a href="#links">Links</a>
-        <a href="#about">About</a>
       </nav>
     </div>
   </header>
@@ -393,19 +370,13 @@
     <!-- HERO -->
     <section class="hero">
       <div class="wrap hero-grid">
-
         <article class="hero-main">
           <div class="hero-eyebrow">
             <span class="hero-eyebrow-dot"></span>
             Official Studio Website
           </div>
-          <h1 class="hero-title">
-            PangChu<br>
-            <span>Studio</span>
-          </h1>
-          <p class="hero-sub">
-            A small indie studio crafting cute, cozy mobile game experiences. This is the official home for studio information, game details, and policy pages.
-          </p>
+          <h1 class="hero-title">PangChu<br><span>Studio</span></h1>
+          <p class="hero-sub">A small indie studio crafting cute, cozy mobile game experiences. Official home for studio information, game details, and policy pages.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#game">View Featured Game</a>
             <a class="btn btn-ghost" href="#links">Official Links</a>
@@ -414,44 +385,27 @@
 
         <div class="hero-side">
           <div class="status-card" id="about">
-            <div class="live-badge">
-              <span class="live-dot"></span>
-              Website Active
-            </div>
+            <div class="live-badge"><span class="live-dot"></span>Website Active</div>
             <div class="status-title">Official links are live</div>
-            <p class="status-body">Ready for use in app store submissions, support contacts, and public-facing policy references.</p>
+            <p class="status-body">Ready for app store submissions, support contacts, and public-facing policy references.</p>
             <div class="mini-grid">
-              <div class="mini-tile">
-                <strong>Game</strong>
-                <span>MalrangNyang</span>
-              </div>
-              <div class="mini-tile">
-                <strong>Genre</strong>
-                <span>Cute casual</span>
-              </div>
-              <div class="mini-tile">
-                <strong>Studio</strong>
-                <span>PangChu Studio</span>
-              </div>
-              <div class="mini-tile">
-                <strong>Platform</strong>
-                <span>Mobile</span>
-              </div>
+              <div class="mini-tile"><strong>Game</strong><span>Jelly Cat Jump</span></div>
+              <div class="mini-tile"><strong>Genre</strong><span>Cute casual</span></div>
+              <div class="mini-tile"><strong>Studio</strong><span>PangChu Studio</span></div>
+              <div class="mini-tile"><strong>Platform</strong><span>Mobile</span></div>
             </div>
           </div>
-
           <div class="about-card">
             <h3>About the studio</h3>
             <p>PangChu Studio builds clean, friendly game experiences with soft visuals, approachable controls, and a charming, welcoming feel.</p>
           </div>
         </div>
-
       </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- GAME SECTION -->
+    <!-- GAME -->
     <section class="game-section" id="game">
       <div class="wrap">
         <div class="section-label">Featured Game</div>
@@ -459,72 +413,181 @@
         <div class="section-sub">Our current title — soft, cheerful, and built for everyone.</div>
 
         <article class="game-card">
-
           <div class="game-visual">
             <div class="banner-frame">
-              <img src="images/jelly-cat-jump-banner.png" alt="MalrangNyang — Jelly Cat Jump banner" />
+              <img src="images/jelly-cat-jump-banner.png" alt="Jelly Cat Jump banner" />
             </div>
           </div>
-
           <div class="game-body">
             <span class="game-tag">Cute Casual Mobile Game</span>
             <h2 class="game-title">
               Jelly Cat Jump
-              <em>MalrangNyang</em>
             </h2>
-            <p class="game-desc">
-              A soft, cheerful jumping game built around playful cat characters, cloud-filled skies, and simple one-touch controls. Designed for quick sessions and easy, satisfying fun.
-            </p>
+            <p class="game-desc">A soft, cheerful jumping game built around playful cat characters, cloud-filled skies, and simple one-touch controls. Designed for quick sessions and easy, satisfying fun.</p>
             <div class="features-row">
-              <div class="feature-tile">
-                <strong>Simple controls</strong>
-                <span>One-touch gameplay, comfortable for all ages.</span>
-              </div>
-              <div class="feature-tile">
-                <strong>Soft visuals</strong>
-                <span>Clouds, pastels, and cute cat characters.</span>
-              </div>
-              <div class="feature-tile">
-                <strong>Arcade rhythm</strong>
-                <span>Quick runs and score-focused challenge.</span>
-              </div>
+              <div class="feature-tile"><strong>Simple controls</strong><span>One-touch gameplay, comfortable for all ages.</span></div>
+              <div class="feature-tile"><strong>Soft visuals</strong><span>Clouds, pastels, and cute cat characters.</span></div>
+              <div class="feature-tile"><strong>Arcade rhythm</strong><span>Quick runs and score-focused challenge.</span></div>
             </div>
           </div>
-
         </article>
       </div>
     </section>
 
     <div class="section-divider"></div>
 
-    <!-- LINKS SECTION -->
+    <!-- ANNOUNCEMENTS -->
+    <section class="announce-section" id="announcements">
+      <div class="wrap">
+        <div class="section-label">Announcements</div>
+        <div class="section-title">Updates &amp; Notices</div>
+        <div class="section-sub">Latest news and updates from PangChu Studio.</div>
+
+        <div class="announce-list">
+          <div class="announce-item">
+            <span class="announce-badge badge-new">New</span>
+            <div class="announce-content">
+              <div class="announce-title">Official website is now live</div>
+              <div class="announce-desc">The PangChu Studio official website is now live. Policy pages, contact information, and game details are all available here.</div>
+            </div>
+            <div class="announce-date">2026.04</div>
+          </div>
+          <div class="announce-item">
+            <span class="announce-badge badge-notice">Notice</span>
+            <div class="announce-content">
+              <div class="announce-title">Privacy Policy and Terms of Service published</div>
+              <div class="announce-desc">Our Privacy Policy and Terms of Service documents have been published and are accessible from the Links section.</div>
+            </div>
+            <div class="announce-date">2026.04</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+      <div class="wrap">
+        <div class="section-label">FAQ</div>
+        <div class="section-title">Frequently Asked Questions</div>
+        <div class="section-sub">Quick answers to common questions about our game and studio.</div>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              What is Jelly Cat Jump?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a">Jelly Cat Jump is a cute casual mobile jumping game created by PangChu Studio. It features soft visuals, playful cat-themed charm, and simple, approachable gameplay.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              Where can I find the Privacy Policy?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a">You can find the Privacy Policy through the official links section on this website.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              Where can I find the Terms of Service?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a">You can find the Terms of Service through the official links section on this website.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              Is the game available now?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a">Availability may vary depending on the current release or testing stage. Please check the official store listing or future updates for the latest status.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              How can I contact PangChu Studio?
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a">You can contact PangChu Studio by email at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0c6dbd4d3d28182f0d7ddd1d9dc9ed3dfdd">[email&#160;protected]</a>.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="wrap">
+        <div class="contact-card">
+          <div class="contact-left">
+            <h2>Contact PangChu Studio</h2>
+            <p>For questions, support inquiries, or official contact related to PangChu Studio and Jelly Cat Jump, please use the email below.</p>
+            <div class="contact-email-row">
+              <svg class="contact-email-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              <a class="contact-email-link" href="/cdn-cgi/l/email-protection#f1879a959293c0c3b1969c90989ddf929e9c"><span class="__cf_email__" data-cfemail="582e333c3b3a696a183f35393134763b3735">[email&#160;protected]</span></a>
+            </div>
+          </div>
+          <a class="contact-btn" href="/cdn-cgi/l/email-protection#57213c333435666517303a363e3b7934383a">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            Send an Email
+          </a>
+        </div>
+        <p style="margin-top:10px; font-size:13px; color:var(--muted); text-align:right;">or email directly: <a href="/cdn-cgi/l/email-protection#96e0fdf2f5f4a7a4d6f1fbf7fffab8f5f9fb" style="color:var(--primary-deep); font-weight:700;"><span class="__cf_email__" data-cfemail="50263b343332616210373d31393c7e333f3d">[email&#160;protected]</span></a></p>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- LINKS -->
     <section class="links-section" id="links">
       <div class="wrap">
         <div class="section-label">Official Links</div>
-        <div class="section-title">Pages & policies</div>
-        <div class="section-sub">Everything needed for platform submissions, customer support, and public reference.</div>
+        <div class="section-title">Pages &amp; Policies</div>
+        <div class="section-sub">Official documents for platform submissions, customer support, and public reference.</div>
 
         <div class="links-grid">
 
           <a class="link-card" href="./privacy.html">
-            <div class="link-icon">📄</div>
+            <div class="link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
             <div class="link-title">Privacy Policy</div>
-            <p class="link-desc">Our privacy policy for PangChu Studio services and the featured game.</p>
-            <div class="link-arrow">Read policy →</div>
+            <p class="link-desc">Our privacy policy for PangChu Studio services and Jelly Cat Jump.</p>
+            <div class="link-arrow">
+              Read policy
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
           </a>
 
           <a class="link-card" href="./terms.html">
-            <div class="link-icon">📋</div>
+            <div class="link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+            </div>
             <div class="link-title">Terms of Service</div>
             <p class="link-desc">Terms and conditions governing the use of this website and related services.</p>
-            <div class="link-arrow">Read terms →</div>
+            <div class="link-arrow">
+              Read terms
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
           </a>
 
           <a class="link-card" href="https://github.com/bypangs/pangchu-privacy" target="_blank" rel="noopener">
-            <div class="link-icon">⌨️</div>
+            <div class="link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
             <div class="link-title">GitHub Repository</div>
             <p class="link-desc">The public repository hosting this website and supporting files.</p>
-            <div class="link-arrow">Open repository →</div>
+            <div class="link-arrow">
+              Open repository
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
           </a>
 
         </div>
@@ -538,7 +601,7 @@
     <div class="wrap">
       <div class="footer-card">
         <div class="footer-brand">
-          <div class="brand-mark" style="width:36px;height:36px;border-radius:11px;font-size:15px;">P</div>
+          <div class="brand-mark" style="width:34px;height:34px;border-radius:10px;font-size:14px;">P</div>
           <div>
             <div class="footer-brand-name">PangChu Studio</div>
             <div class="footer-tagline">Cute &amp; cozy mobile games</div>
@@ -548,6 +611,15 @@
       </div>
     </div>
   </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
 
 </body>
 </html>
