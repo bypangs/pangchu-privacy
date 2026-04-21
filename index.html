@@ -1,144 +1,799 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PangChu Studio</title>
-  <meta name="description" content="Official website for PangChu Jump and PangChu Studio.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PangChu Studio | MalrangNyang</title>
+  <meta name="description" content="Official website of PangChu Studio, featuring MalrangNyang (Jelly Cat Jump), a cute casual mobile game." />
+  <meta property="og:title" content="PangChu Studio | MalrangNyang" />
+  <meta property="og:description" content="Official introduction page for MalrangNyang (Jelly Cat Jump)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bypangs.github.io/pangchu-privacy/" />
+  <meta name="theme-color" content="#7cc9ff" />
   <style>
-    :root{
-      --bg:#fff8fc;
-      --card:#ffffff;
-      --text:#1f1f1f;
-      --muted:#666;
-      --line:#f0d7e5;
-      --accent:#ff5fa2;
-      --accent2:#ff8fc0;
+    :root {
+      --bg1: #dff4ff;
+      --bg2: #f6fbff;
+      --card: rgba(255, 255, 255, 0.82);
+      --card-strong: rgba(255, 255, 255, 0.92);
+      --line: rgba(92, 151, 201, 0.18);
+      --text: #17324d;
+      --muted: #587089;
+      --primary: #59b8ff;
+      --primary-deep: #3399ee;
+      --accent: #8ae4c5;
+      --shadow: 0 20px 60px rgba(67, 133, 193, 0.14);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1120px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:linear-gradient(180deg,#fff8fc 0%,#fffdfd 100%);
-      color:var(--text);
-      line-height:1.65;
+
+    * {
+      box-sizing: border-box;
     }
-    .wrap{
-      max-width:920px;
-      margin:0 auto;
-      padding:24px;
+
+    html {
+      scroll-behavior: smooth;
     }
-    .hero, .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:24px;
-      box-shadow:0 10px 30px rgba(0,0,0,.04);
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(137, 212, 255, 0.42), transparent 30%),
+        radial-gradient(circle at top right, rgba(164, 239, 214, 0.32), transparent 24%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
     }
-    .hero{
-      padding:36px 28px;
-      margin-top:20px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    .badge{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:999px;
-      background:#fff0f7;
-      border:1px solid #ffd0e4;
-      font-size:13px;
-      font-weight:700;
-      color:#c7417f;
-      margin-bottom:14px;
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
     }
-    h1,h2,h3{margin:0 0 14px}
-    h1{font-size:38px; line-height:1.15}
-    h2{font-size:24px}
-    p{margin:0 0 14px}
-    .muted{color:var(--muted)}
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-      margin-top:18px;
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(246, 251, 255, 0.7);
+      border-bottom: 1px solid rgba(92, 151, 201, 0.12);
     }
-    .card{
-      padding:22px;
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      gap: 16px;
     }
-    .btns{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:18px;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
     }
-    .btn{
-      display:inline-block;
-      text-decoration:none;
-      padding:12px 16px;
-      border-radius:14px;
-      font-weight:700;
-      border:1px solid var(--line);
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #7fd0ff, #8be7c7);
+      box-shadow: 0 12px 30px rgba(64, 145, 210, 0.24);
+      color: white;
+      font-size: 18px;
+      font-weight: 900;
     }
-    .btn.primary{
-      background:linear-gradient(90deg,var(--accent),var(--accent2));
-      color:#fff;
-      border:none;
+
+    .nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
     }
-    .footer{
-      text-align:center;
-      color:var(--muted);
-      font-size:14px;
-      padding:28px 0 8px;
+
+    .nav a {
+      padding: 10px 14px;
+      color: var(--muted);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
     }
-    ul{padding-left:20px; margin:10px 0 0}
-    li{margin:6px 0}
-    @media (max-width:700px){
-      .grid{grid-template-columns:1fr}
-      h1{font-size:31px}
-      .hero{padding:28px 20px}
+
+    .nav a:hover {
+      background: rgba(89, 184, 255, 0.12);
+      color: var(--primary-deep);
+    }
+
+    .hero {
+      padding: 56px 0 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .panel,
+    .feature,
+    .link-card,
+    .status-card,
+    .game-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
+    }
+
+    .hero-card {
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+      min-height: 420px;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(2px);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card::before {
+      width: 190px;
+      height: 64px;
+      right: 34px;
+      top: 42px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow:
+        -36px 14px 0 10px rgba(255, 255, 255, 0.72),
+        46px 10px 0 8px rgba(255, 255, 255, 0.74);
+    }
+
+    .hero-card::after {
+      width: 160px;
+      height: 56px;
+      left: 52px;
+      bottom: 52px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow:
+        -28px 10px 0 8px rgba(255, 255, 255, 0.66),
+        38px 12px 0 10px rgba(255, 255, 255, 0.7);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(89, 184, 255, 0.12);
+      color: var(--primary-deep);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .hero p {
+      margin: 18px 0 0;
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 15px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--primary-deep));
+      box-shadow: 0 14px 28px rgba(51, 153, 238, 0.24);
+    }
+
+    .btn-secondary {
+      color: var(--primary-deep);
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(89, 184, 255, 0.2);
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .status-card,
+    .panel {
+      padding: 24px;
+    }
+
+    .status-label {
+      font-size: 13px;
+      font-weight: 800;
+      color: #14a56b;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .status-label::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #16c47f;
+      box-shadow: 0 0 0 6px rgba(22, 196, 127, 0.12);
+    }
+
+    .panel-title,
+    h2 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      letter-spacing: -0.03em;
+    }
+
+    .panel p,
+    .status-card p,
+    .game-copy,
+    .link-card p,
+    .foot p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .hero-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .mini {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(89, 184, 255, 0.12);
+    }
+
+    .mini strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .mini span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      padding: 18px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 720px;
+      line-height: 1.7;
+    }
+
+    .game-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+
+    .game-visual {
+      min-height: 360px;
+      padding: 30px;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(255,255,255,0.95), transparent 22%),
+        radial-gradient(circle at 75% 18%, rgba(255,255,255,0.9), transparent 18%),
+        linear-gradient(180deg, #8fd8ff 0%, #bdeaff 52%, #e6fff4 100%);
+      position: relative;
+      display: flex;
+      align-items: end;
+    }
+
+    .cloud-logo {
+      position: absolute;
+      inset: 34px 30px auto 30px;
+      background: rgba(255,255,255,0.88);
+      border-radius: 999px;
+      padding: 18px 22px;
+      font-size: clamp(24px, 3vw, 38px);
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      box-shadow: 0 20px 34px rgba(82, 149, 201, 0.18);
+      color: #2690dd;
+      text-align: center;
+    }
+
+    .cloud-logo small {
+      display: block;
+      margin-top: 6px;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: #58a8df;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .cat-chip {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      border-radius: 42% 42% 38% 38%;
+      background: linear-gradient(180deg, #fff7f1 0%, #ffe7d7 100%);
+      box-shadow: 0 24px 36px rgba(90, 125, 160, 0.14);
+      margin-left: 16px;
+    }
+
+    .cat-chip::before,
+    .cat-chip::after {
+      content: "";
+      position: absolute;
+      top: -26px;
+      width: 62px;
+      height: 72px;
+      background: linear-gradient(180deg, #fff7f1 0%, #ffe7d7 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    .cat-chip::before { left: 30px; }
+    .cat-chip::after { right: 30px; }
+
+    .cat-face {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    .cat-eyes {
+      position: absolute;
+      top: 92px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cat-eyes span {
+      width: 15px;
+      height: 22px;
+      background: #3c4d5c;
+      border-radius: 999px;
+    }
+
+    .cat-mouth {
+      position: absolute;
+      top: 132px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 46px;
+      height: 24px;
+      border-bottom: 4px solid #f09ca5;
+      border-radius: 0 0 999px 999px;
+    }
+
+    .cat-blush {
+      position: absolute;
+      top: 126px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cat-blush span {
+      width: 28px;
+      height: 16px;
+      background: rgba(255, 152, 175, 0.28);
+      border-radius: 999px;
+    }
+
+    .game-body {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .game-label {
+      display: inline-flex;
+      width: fit-content;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(138, 228, 197, 0.18);
+      color: #19936d;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .game-title {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .game-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .feature {
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background: var(--card-strong);
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .feature span {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .link-card {
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(51, 153, 238, 0.3);
+    }
+
+    .link-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .link-arrow {
+      margin-top: 16px;
+      font-weight: 800;
+      color: var(--primary-deep);
+      font-size: 14px;
+    }
+
+    .foot {
+      padding: 42px 0 70px;
+    }
+
+    .foot-card {
+      padding: 26px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .foot-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .foot-meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .game-card,
+      .links-grid,
+      .game-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .game-visual {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar-inner,
+      .section-head,
+      .foot-card {
+        align-items: flex-start;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 30px;
+      }
+
+      .hero-card,
+      .status-card,
+      .panel,
+      .game-body,
+      .game-visual,
+      .link-card {
+        padding: 22px;
+      }
+
+      .hero-mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cat-chip {
+        width: 180px;
+        height: 180px;
+      }
+
+      .cat-eyes {
+        top: 74px;
+      }
+
+      .cat-mouth {
+        top: 112px;
+      }
+
+      .cat-blush {
+        top: 108px;
+        width: 140px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="PangChu Studio home">
+        <span class="brand-badge">P</span>
+        <span>PangChu Studio</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#game">Game</a>
+        <a href="#links">Links</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
     <section class="hero">
-      <div class="badge">Official Website</div>
-      <h1>PangChu Studio</h1>
-      <p class="muted">Official website for PangChu Jump and related mobile game projects.</p>
-      <p>PangChu Studio creates cute, casual mobile games focused on simple controls, bright visuals, and satisfying gameplay.</p>
-      <div class="btns">
-        <a class="btn primary" href="./privacy.html">Privacy Policy</a>
-        <a class="btn" href="mailto:vkdcb12@gmail.com">Contact</a>
+      <div class="wrap hero-grid">
+        <article class="hero-card">
+          <span class="eyebrow">Official Website</span>
+          <h1>PangChu Studio</h1>
+          <p>
+            A small studio building cute and approachable mobile game experiences.
+            This site is the official home for studio information, policy pages, and the featured game
+            <strong>MalrangNyang (Jelly Cat Jump)</strong>.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#game">View Game</a>
+            <a class="btn btn-secondary" href="./privacy.html">Privacy Policy</a>
+            <a class="btn btn-secondary" href="./terms.html">Terms of Service</a>
+          </div>
+        </article>
+
+        <div class="hero-side">
+          <aside class="status-card">
+            <div class="status-label">Active Website</div>
+            <h2 class="panel-title">Official links are ready</h2>
+            <p>
+              This website can be used as the studio homepage for store listings, policy links,
+              and future game updates.
+            </p>
+            <div class="hero-mini-grid">
+              <div class="mini">
+                <strong>Game</strong>
+                <span>MalrangNyang / Jelly Cat Jump</span>
+              </div>
+              <div class="mini">
+                <strong>Genre</strong>
+                <span>Cute casual mobile game</span>
+              </div>
+              <div class="mini">
+                <strong>Studio</strong>
+                <span>PangChu Studio</span>
+              </div>
+              <div class="mini">
+                <strong>Pages</strong>
+                <span>Home, Privacy, Terms</span>
+              </div>
+            </div>
+          </aside>
+
+          <aside class="panel" id="about">
+            <h2 class="panel-title">About the studio</h2>
+            <p>
+              PangChu Studio focuses on clean, friendly, easy-to-enjoy game experiences with soft visuals,
+              simple controls, and charming presentation.
+            </p>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <div class="grid">
-      <section class="card">
-        <h2>About</h2>
-        <p>PangChu Jump is a casual jump game where players climb upward, collect rewards, and unlock fun content such as skins and visual effects.</p>
-        <p class="muted">This site is used as the official information page for the developer and the app.</p>
-      </section>
+    <section id="game">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Featured game</h2>
+            <p>
+              A brighter front door for the project. This section gives visitors a clear picture of what the game is,
+              without turning the homepage into a cluttered carnival.
+            </p>
+          </div>
+        </div>
 
-      <section class="card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:vkdcb12@gmail.com">vkdcb12@gmail.com</a></p>
-        <p class="muted">For support, privacy questions, or business inquiries, please contact us by email.</p>
-      </section>
+        <article class="game-card">
+          <div class="game-visual" aria-hidden="true">
+            <div class="cloud-logo">
+              MalrangNyang
+              <small>Jelly Cat Jump</small>
+            </div>
+            <div class="cat-chip">
+              <div class="cat-face">
+                <div class="cat-eyes"><span></span><span></span></div>
+                <div class="cat-mouth"></div>
+                <div class="cat-blush"><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
 
-      <section class="card">
-        <h2>Available Pages</h2>
-        <ul>
-          <li><a href="./privacy.html">Privacy Policy</a></li>
-        </ul>
-      </section>
+          <div class="game-body">
+            <span class="game-label">Cute Casual Mobile Game</span>
+            <h3 class="game-title">MalrangNyang (Jelly Cat Jump)</h3>
+            <p class="game-copy">
+              A soft and cheerful jumping game built around cute cat energy, approachable controls,
+              and a light, playful mood. Designed for quick sessions and easy enjoyment.
+            </p>
 
-      <section class="card">
-        <h2>Developer Notice</h2>
-        <p class="muted">If this site is connected to Google Play Console, use this homepage URL as the website URL and use the privacy page URL as the privacy policy URL.</p>
-      </section>
+            <div class="game-list">
+              <div class="feature">
+                <strong>Simple controls</strong>
+                <span>Easy to pick up and comfortable for casual mobile play.</span>
+              </div>
+              <div class="feature">
+                <strong>Charming style</strong>
+                <span>Cloudy skies, soft colors, and a cozy cat-themed identity.</span>
+              </div>
+              <div class="feature">
+                <strong>Arcade rhythm</strong>
+                <span>Quick runs, repeatable challenge, and score-focused fun.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="links">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Official links</h2>
+            <p>
+              The practical corridor. These are the pages most likely to be needed for platform submissions,
+              customer support, and public reference.
+            </p>
+          </div>
+        </div>
+
+        <div class="links-grid">
+          <a class="link-card" href="./privacy.html">
+            <strong>Privacy Policy</strong>
+            <p>Read the privacy policy for PangChu Studio services and the featured game.</p>
+            <div class="link-arrow">Open page →</div>
+          </a>
+
+          <a class="link-card" href="./terms.html">
+            <strong>Terms of Service</strong>
+            <p>Read the terms and conditions governing the use of this website and related services.</p>
+            <div class="link-arrow">Open page →</div>
+          </a>
+
+          <a class="link-card" href="https://github.com/bypangs/pangchu-privacy" target="_blank" rel="noopener noreferrer">
+            <strong>GitHub Repository</strong>
+            <p>View the public repository that hosts this website and supporting files.</p>
+            <div class="link-arrow">Open repository →</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-card">
+        <div>
+          <div class="foot-title">PangChu Studio</div>
+          <p>Official website for studio information and game-related policy pages.</p>
+        </div>
+        <div class="foot-meta">© 2026 PangChu Studio. All rights reserved.</div>
+      </div>
     </div>
-
-    <div class="footer">
-      © 2026 PangChu Studio. All rights reserved.
-    </div>
-  </div>
+  </footer>
 </body>
 </html>
