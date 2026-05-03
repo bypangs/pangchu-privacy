@@ -1,4 +1,4 @@
-﻿# AGENTS
+# AGENTS
 
 ## 고정 규칙
 - 홈페이지의 기준 도메인은 항상 `https://bypangs.github.io/pangchu-privacy`로 통일한다.
@@ -18,9 +18,32 @@
 ### 앱 이름/브랜드 표기
 - 한국어 앱 이름은 `말랑냥이점프`로 통일한다.
 - 영어/글로벌 앱 이름은 `Jelly Cat Jump`로 통일한다.
+- 번체/홍콩 앱 표시명은 `啫喱貓跳跳`로 통일한다.
+- 브라질 포르투갈어 앱 표시명은 `Gatinho Pula-Pula`로 통일한다.
 - 일본어 앱 이름은 `ネコニャンジャンプ`로 통일한다.
 - 과거 후보명인 `ぷにねこジャンプ`는 앱 이름으로 다시 사용하지 않는다.
 - 단, 일반 설명 문장 안의 형용 표현까지 무조건 교체하지 말고, 앱 이름/타이틀/메타/JSON-LD/alt/OG/Twitter 문구일 때만 교체한다.
+
+### 국가/언어별 앱명 고정 규칙
+- 현재 앱은 `말랑냥이점프` / `Jelly Cat Jump` 계열의 점프 게임이다.
+- 한국어/한국 스토어 앱명은 `말랑냥이점프`로 고정한다.
+- 영어/글로벌 기본 앱명은 `Jelly Cat Jump`로 고정한다.
+- 일본어/일본 스토어 앱명은 `ネコニャンジャンプ`로 고정한다.
+- 홍콩/번체 앱명은 `啫喱貓跳跳`로 고정한다.
+- 브라질 포르투갈어 앱명은 `Gatinho Pula-Pula`로 고정한다.
+- 국가별 앱명은 사용자의 명시 요청 없이 임의 변경하지 않는다.
+- `/` 영어 기본 페이지에서는 대표 앱명 `Jelly Cat Jump`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
+- `/ko/` 한국어 페이지에서는 대표 앱명 `말랑냥이점프`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
+- `/ja/` 일본어 페이지에서는 대표 앱명 `ネコニャンジャンプ`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
+- `/zh-hk/` 홍콩/번체 페이지에서는 대표 앱명 `啫喱貓跳跳`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
+- `/pt-br/` 브라질 포르투갈어 페이지에서는 대표 앱명 `Gatinho Pula-Pula`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
+- JSON-LD의 `name`은 해당 언어/지역 대표 앱명을 사용하고, `alternateName`에는 확정된 다른 언어/지역 앱명을 함께 포함할 수 있다.
+- 홍콩/번체 앱명을 임의로 `Jelly Cat Jump`, `貓咪跳跳`, `果凍貓跳躍`, `軟萌喵跳跳` 등으로 변경하지 않는다.
+- 브라질 앱명을 임의로 `Jelly Cat Jump`, `Pulo do Gato`, `Gato Gelatinoso`, `Gatinho Saltitante` 등으로 변경하지 않는다.
+- `Jelly Cat Jump`를 모든 나라에 일괄 적용하지 않는다.
+- 기존 Play Console 맞춤 등록정보 이름과 홈페이지 표기가 충돌하면, 사용자가 확정한 국가별 표기명을 우선한다.
+- 향후 시리즈명은 참고용으로만 취급하고, 현재 홈페이지 작업에서는 점프 게임명만 수정 대상으로 삼는다.
+- 향후 달리기 게임 후보명은 한국어 `말랑냥이런`, 영어/글로벌 `Jelly Cat Run`, 일본어 후보 `ネコニャンラン`이며, 사용자가 명시적으로 요청하기 전까지 현재 페이지에 추가하지 않는다.
 
 ### 언어별 페이지 경로 고정
 - 언어별 공개 경로는 아래 기준으로 유지한다.
@@ -79,6 +102,13 @@
 - 완료 보고에는 수정한 파일명, 변경 요약, 확인한 URL/항목, 남은 확인 필요사항만 적는다.
 - 사용자가 요청하지 않으면 전체 파일을 출력하지 않는다.
 
+### 검토/의견 요청 처리 규칙
+- 사용자가 "괜찮은지 봐줘", "의견 줘", "이렇게 하면 되는지 체크", "분석해봐", "어떤지 봐줘"처럼 검토나 판단을 요청하면 파일을 바로 수정하지 않는다.
+- 검토 요청에서는 구조 파악, 검색, 비교, 문제점 정리, 추천 방향 제시까지만 수행한다.
+- 검토 요청 중에는 `apply_patch`, 파일 저장, 일괄 치환, 자동 생성 같은 실제 수정 작업을 하지 않는다.
+- 사용자가 "수정해줘", "적용해줘", "추가해줘", "고쳐줘", "반영해줘"처럼 명시적으로 변경을 요청한 경우에만 파일을 수정한다.
+- 의견을 물어본 뒤 사용자가 수정 요청으로 전환하면, 그때 변경 대상 파일과 수정 범위를 짧게 설명한 뒤 최소 변경으로 반영한다.
+
 ## 홈페이지 UI/브랜딩 고정 규칙
 
 ### 사이트 정체성
@@ -101,10 +131,12 @@
 - 디자인 수정이 필요한 경우 먼저 영어 루트 페이지를 기준으로 수정하고, 그 구조를 다른 언어 페이지에 동기화한다.
 
 ### Featured Game 영역 정책
-- `Jelly Cat Jump`는 PangChu Studio의 Featured Game으로 표시한다.
+- 글로벌 기준 게임명은 `Jelly Cat Jump`이며, 각 언어/지역 페이지에서는 해당 지역의 확정 앱명을 PangChu Studio의 Featured Game으로 표시한다.
 - 한국어 페이지에서는 Featured Game 안의 앱명을 `말랑냥이점프`로 표시한다.
 - 일본어 페이지에서는 Featured Game 안의 앱명을 `ネコニャンジャンプ`로 표시한다.
-- 영어, 번체, 브라질 포르투갈어 페이지에서는 Featured Game 안의 앱명을 `Jelly Cat Jump`로 표시한다.
+- 영어 페이지에서는 Featured Game 안의 앱명을 `Jelly Cat Jump`로 표시한다.
+- 번체/홍콩 페이지에서는 Featured Game 안의 앱명을 `啫喱貓跳跳`로 표시한다.
+- 브라질 포르투갈어 페이지에서는 Featured Game 안의 앱명을 `Gatinho Pula-Pula`로 표시한다.
 - 게임 소개를 강화하더라도 Featured Game 섹션 내부에서만 강화한다.
 - 전체 홈페이지를 게임 전용 판매 페이지처럼 바꾸지 않는다.
 
