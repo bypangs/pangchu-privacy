@@ -400,7 +400,7 @@
         <a href="#links" data-i18n="nav.links">Links</a>
       </nav>
   <div class="lang-switcher">
-    <a class="lang-btn active" href="./index.html">EN</a>
+    <a class="lang-btn active" href="./index.html?lang=en">EN</a>
     <a class="lang-btn" href="./ko/">한국어</a>
     <a class="lang-btn" href="./ja/">日本語</a>
     <a class="lang-btn" href="./zh-hk/">繁體</a>
@@ -882,10 +882,25 @@
     };
 
     // index.html은 항상 영어(en)가 기본 — 언어별 전용 페이지(/ko/, /ja/ 등)가 따로 있음
+    function getManualLandingLang() {
+      const lang = new URLSearchParams(location.search).get('lang');
+      if (!lang) return null;
+      const v = lang.toLowerCase();
+      if (v === 'en' || v === 'ko' || v === 'ja' || v === 'pt' || v === 'pt-br' || v === 'zh' || v === 'zh-hk' || v === 'zh-hant') return v;
+      return null;
+    }
+
     function detectLandingLanguage() {
       const path = location.pathname.replace(/\/+/g, '/').toLowerCase();
       const isBasePath = path === '/pangchu-privacy/' || path === '/pangchu-privacy' || path === '/pangchu-privacy/index.html';
       if (!isBasePath) return;
+
+      const manualLang = getManualLandingLang();
+      if (manualLang) {
+        sessionStorage.setItem('pangchu_auto_landing_done', '1');
+        return;
+      }
+
       if (sessionStorage.getItem('pangchu_auto_landing_done') === '1') return;
       sessionStorage.setItem('pangchu_auto_landing_done', '1');
 

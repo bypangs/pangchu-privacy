@@ -1,88 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-03T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="en"         href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
-    <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bypangs.github.io/pangchu-privacy/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bypangs.github.io/pangchu-privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bypangs.github.io/pangchu-privacy/pt-br/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bypangs.github.io/pangchu-privacy/zh-hk/" />
   </url>
-
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/ko/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-03T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="en"         href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
-    <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bypangs.github.io/pangchu-privacy/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bypangs.github.io/pangchu-privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bypangs.github.io/pangchu-privacy/pt-br/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bypangs.github.io/pangchu-privacy/zh-hk/" />
   </url>
-
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/ja/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-03T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="en"         href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
-    <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bypangs.github.io/pangchu-privacy/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bypangs.github.io/pangchu-privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bypangs.github.io/pangchu-privacy/pt-br/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bypangs.github.io/pangchu-privacy/zh-hk/" />
   </url>
-
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/pt-br/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-03T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="en"         href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
-    <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bypangs.github.io/pangchu-privacy/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bypangs.github.io/pangchu-privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bypangs.github.io/pangchu-privacy/pt-br/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bypangs.github.io/pangchu-privacy/zh-hk/" />
   </url>
-
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/zh-hk/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-03T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="en"         href="https://bypangs.github.io/pangchu-privacy/"/>
-    <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
-    <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bypangs.github.io/pangchu-privacy/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bypangs.github.io/pangchu-privacy/ja/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bypangs.github.io/pangchu-privacy/pt-br/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bypangs.github.io/pangchu-privacy/zh-hk/" />
   </url>
-
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/privacy.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-03T00:00:00+09:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/privacy.html" />
   </url>
-
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/terms.html</loc>
-    <lastmod>2026-05-03</lastmod>
+    <lastmod>2026-05-03T00:00:00+09:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/terms.html" />
   </url>
-
 </urlset>
