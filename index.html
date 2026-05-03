@@ -882,6 +882,48 @@
     };
 
     // index.html은 항상 영어(en)가 기본 — 언어별 전용 페이지(/ko/, /ja/ 등)가 따로 있음
+    function detectLandingLanguage() {
+      const path = location.pathname.replace(/\/+/g, '/').toLowerCase();
+      const isBasePath = path === '/pangchu-privacy/' || path === '/pangchu-privacy' || path === '/pangchu-privacy/index.html';
+      if (!isBasePath) return;
+
+      const langs = [];
+      if (Array.isArray(navigator.languages) && navigator.languages.length) {
+        langs.push(...navigator.languages);
+      }
+      if (navigator.language) {
+        langs.push(navigator.language);
+      }
+
+      let target = 'en';
+      const lower = Array.from(new Set(langs.map(v => (v || '').toLowerCase())));
+      for (const code of lower) {
+        if (!code) continue;
+        if (code === 'ko' || code.startsWith('ko-')) {
+          target = 'ko';
+          break;
+        }
+        if (code === 'ja' || code.startsWith('ja-')) {
+          target = 'ja';
+          break;
+        }
+        if (code === 'pt' || code.startsWith('pt-')) {
+          target = 'pt-br';
+          break;
+        }
+        if (code === 'zh' || code.startsWith('zh-')) {
+          target = 'zh-hk';
+          break;
+        }
+      }
+
+      if (target !== 'en') {
+        location.replace('/pangchu-privacy/' + target + '/');
+      }
+    }
+
+    detectLandingLanguage();
+
     let currentLang = 'en';
 
     function setLang(lang) {
