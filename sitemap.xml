@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- ══ 글로벌 메인 (영어 / x-default) ══ -->
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/</loc>
     <lastmod>2026-05-03</lastmod>
@@ -13,32 +12,9 @@
     <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
     <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-HK"      href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
   </url>
 
-  <!-- ══ 개인정보처리방침 ══ -->
-  <url>
-    <loc>https://bypangs.github.io/pangchu-privacy/privacy.html</loc>
-    <lastmod>2026-05-03</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en"         href="https://bypangs.github.io/pangchu-privacy/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
-    <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-HK"      href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
-  </url>
-
-  <!-- ══ 이용약관 ══ -->
-  <url>
-    <loc>https://bypangs.github.io/pangchu-privacy/terms.html</loc>
-    <lastmod>2026-05-03</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ══ 한국어 랜딩 ══ -->
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/ko/</loc>
     <lastmod>2026-05-03</lastmod>
@@ -49,10 +25,9 @@
     <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
     <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-HK"      href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
   </url>
 
-  <!-- ══ 일본어 랜딩 ══ -->
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/ja/</loc>
     <lastmod>2026-05-03</lastmod>
@@ -63,10 +38,9 @@
     <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
     <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-HK"      href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
   </url>
 
-  <!-- ══ 브라질 포르투갈어 랜딩 ══ -->
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/pt-br/</loc>
     <lastmod>2026-05-03</lastmod>
@@ -77,10 +51,9 @@
     <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
     <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-HK"      href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
   </url>
 
-  <!-- ══ 홍콩 번체 랜딩 ══ -->
   <url>
     <loc>https://bypangs.github.io/pangchu-privacy/zh-hk/</loc>
     <lastmod>2026-05-03</lastmod>
@@ -91,7 +64,25 @@
     <xhtml:link rel="alternate" hreflang="ko"         href="https://bypangs.github.io/pangchu-privacy/ko/"/>
     <xhtml:link rel="alternate" hreflang="ja"         href="https://bypangs.github.io/pangchu-privacy/ja/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR"      href="https://bypangs.github.io/pangchu-privacy/pt-br/"/>
-    <xhtml:link rel="alternate" hreflang="zh-HK"      href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"    href="https://bypangs.github.io/pangchu-privacy/zh-hk/"/>
+  </url>
+
+  <url>
+    <loc>https://bypangs.github.io/pangchu-privacy/privacy.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/privacy.html"/>
+  </url>
+
+  <url>
+    <loc>https://bypangs.github.io/pangchu-privacy/terms.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bypangs.github.io/pangchu-privacy/terms.html"/>
   </url>
 
 </urlset>

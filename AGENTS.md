@@ -1,0 +1,79 @@
+﻿# AGENTS
+
+## 고정 규칙
+- 홈페이지의 기준 도메인은 항상 `https://bypangs.github.io/pangchu-privacy`로 통일한다.
+- 검색엔진 제출 항목(Google Search Console, sitemap, robots, canonical, og:url 등)은 로컬 주소(`localhost`, `127.0.0.1`, `file://`)를 절대 사용하지 않는다.
+- 로컬 웹 서버(`py -m http.server`, 127.0.0.1 기반)는 오직 개발 미리보기용으로만 사용하고, 공개 공개 배포 URL과 섞어 쓰지 않는다.
+- 사용자가 "홈페이지 기준"이라고 지시한 경우, 모든 분석/점검/수정의 기준은 라이브 페이지 기준으로 수행한다.
+- `AGENTS.md` 규칙은 작업 전/중/후 판단 우선순위에서 준수해야 한다.
+- index 페이지의 SEO/메타 보강을 수정할 때 `privacy.html`, `terms.html`도 같은 라운드에서 함께 점검·동기화한다. (`sitemap.xml` 등록 포함)
+
+## 운영 체크리스트
+- 수정 후에는 `index.html`, `privacy.html`, `terms.html`, `ko/`, `ja/`, `pt-br/`, `zh-hk/`의 링크/메타가 라이브 도메인인지 우선 확인한다.
+- `sitemap.xml`의 `<loc>`/`<xhtml:link>`는 실제 공개 URL인지 확인하고, 존재하지 않거나 로컬 주소가 있으면 즉시 수정한다.
+- 배포 전/후 Search Console에서는 사이트맵 URL을 `https://bypangs.github.io/pangchu-privacy/sitemap.xml`로만 제출한다.
+
+## 말랑냥이 홈페이지 전용 규칙
+
+### 앱 이름/브랜드 표기
+- 한국어 앱 이름은 `말랑냥이점프`로 통일한다.
+- 영어/글로벌 앱 이름은 `Jelly Cat Jump`로 통일한다.
+- 일본어 앱 이름은 `ネコニャンジャンプ`로 통일한다.
+- 과거 후보명인 `ぷにねこジャンプ`는 앱 이름으로 다시 사용하지 않는다.
+- 단, 일반 설명 문장 안의 형용 표현까지 무조건 교체하지 말고, 앱 이름/타이틀/메타/JSON-LD/alt/OG/Twitter 문구일 때만 교체한다.
+
+### 언어별 페이지 경로 고정
+- 언어별 공개 경로는 아래 기준으로 유지한다.
+- 영어 기본: `https://bypangs.github.io/pangchu-privacy/`
+- 한국어: `https://bypangs.github.io/pangchu-privacy/ko/`
+- 일본어: `https://bypangs.github.io/pangchu-privacy/ja/`
+- 홍콩/번체: `https://bypangs.github.io/pangchu-privacy/zh-hk/`
+- 브라질 포르투갈어: `https://bypangs.github.io/pangchu-privacy/pt-br/`
+- 경로명을 임의로 `/zh-hant/`, `/jp/`, `/br/`, `/en/` 등으로 변경하지 않는다.
+
+### hreflang / lang 표기 정책
+- `/ko/`는 `html lang="ko"` 및 `hreflang="ko"`를 사용한다.
+- `/ja/`는 `html lang="ja"` 및 `hreflang="ja"`를 사용한다.
+- `/pt-br/`는 `html lang="pt-BR"` 및 `hreflang="pt-BR"`를 사용한다.
+- `/zh-hk/`는 홍콩/번체 페이지로 취급한다.
+- `/zh-hk/`의 표기는 한 프로젝트 안에서 `zh-HK` 또는 `zh-Hant` 중 하나로 일관되게 유지한다.
+- 현재 경로가 `/zh-hk/`이므로 홍콩 타깃을 우선하면 `zh-HK` 사용을 선호한다.
+- hreflang alternate는 실제 존재하는 공개 URL만 가리켜야 한다.
+- canonical은 각 페이지 자기 자신의 공개 URL을 가리켜야 한다.
+
+### privacy.html / terms.html 정책
+- `privacy.html`과 `terms.html`은 현재 별도 언어 URL이 없는 단일 정책 페이지다.
+- 별도 `/ko/privacy.html`, `/ja/privacy.html` 같은 실제 페이지를 만들기 전까지는 `privacy.html`, `terms.html`의 hreflang alternate를 각 언어 홈 페이지(`/ko/`, `/ja/`, `/zh-hk/`, `/pt-br/`)로 연결하지 않는다.
+- 정책 페이지의 canonical은 반드시 자기 자신이어야 한다.
+- 정책 페이지의 hreflang은 단일 정책 페이지 기준으로 `x-default`와 `en`만 자기 자신을 가리키게 유지한다.
+- 정책 문구 수정 시 법적 의미가 크게 바뀌지 않도록 최소 변경한다.
+
+### JS 번역 데이터 수정 규칙
+- `privacy.html`, `terms.html` 안의 translations 객체를 수정할 때는 중복 키와 중복 콤마를 만들지 않는다.
+- 같은 객체 안에서 `s3_p2` 같은 키가 중복되면 뒤쪽 값이 앞쪽 값을 덮어쓰므로 반드시 고유 키로 정리한다.
+- 문자열 끝에 `",,` 같은 문법 오류가 생기지 않게 확인한다.
+- 일본어/중국어/포르투갈어 문장을 수정할 때 깨진 조각이 붙어 있지 않은지 확인한다.
+- 수정 후 브라우저 콘솔에서 script 문법 오류가 없어야 한다.
+- 가능하면 HTML 안의 script만 따로 추출하거나 브라우저에서 열어 문법 오류를 확인한다.
+
+### sitemap / robots / app-ads 보호 규칙
+- `sitemap.xml`의 모든 `<loc>`와 `<xhtml:link>`는 `https://bypangs.github.io/pangchu-privacy` 기준의 공개 URL이어야 한다.
+- 존재하지 않는 URL을 sitemap에 추가하지 않는다.
+- 단순 수정 때 `lastmod`를 의미 없이 대량 변경하지 않는다.
+- `robots.txt`는 전체 차단하지 않는다.
+- `robots.txt`의 Sitemap 위치는 `https://bypangs.github.io/pangchu-privacy/sitemap.xml`로 유지한다.
+- `app-ads.txt`는 광고 수익과 연결되는 파일이므로 사용자가 명시적으로 요청하지 않으면 수정하지 않는다.
+- `app-ads.txt`의 AdMob publisher ID를 임의로 변경하지 않는다.
+
+### GitHub Pages 경로 규칙
+- 이 사이트는 루트 도메인이 아니라 `/pangchu-privacy/` 하위 경로에서 배포된다.
+- 절대 경로를 사용할 때 `/assets/...`처럼 사이트 루트를 기준으로 쓰면 GitHub Pages에서 깨질 수 있다.
+- 공개 링크, 이미지, canonical, og:image, twitter:image, sitemap URL은 `/pangchu-privacy/` 경로를 포함해야 한다.
+- 로컬 미리보기에서만 맞는 경로로 수정하지 않는다.
+
+### 수정 범위 원칙
+- 홈페이지 작업은 기본적으로 최소 변경으로 수행한다.
+- 디자인/레이아웃/문구 톤/색상/이미지 배치는 사용자가 요청하지 않으면 바꾸지 않는다.
+- SEO 수정 중에도 기존 개인정보처리방침, 이용약관, app-ads.txt, sitemap, robots 링크가 깨지지 않게 확인한다.
+- 완료 보고에는 수정한 파일명, 변경 요약, 확인한 URL/항목, 남은 확인 필요사항만 적는다.
+- 사용자가 요청하지 않으면 전체 파일을 출력하지 않는다.
