@@ -907,6 +907,7 @@
 
     function setLang(lang) {
       currentLang = lang;
+      localStorage.setItem('pangchu_lang', currentLang);
       const labelMap = { en: 'EN', ko: '한국어', ja: '日本語', zh: '繁體', pt: 'PT' };
       document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.textContent.trim() === labelMap[lang]);

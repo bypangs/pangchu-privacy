@@ -565,6 +565,24 @@
 
   let currentLang = localStorage.getItem('pangchu_lang') || 'en';
 
+  function getHomeHref(lang) {
+    const homeHrefMap = {
+      en: './index.html',
+      ko: './ko/',
+      ja: './ja/',
+      zh: './zh-hk/',
+      pt: './pt-br/'
+    };
+    return homeHrefMap[lang] || homeHrefMap.en;
+  }
+
+  function syncHomeLinks() {
+    const homeHref = getHomeHref(currentLang);
+    document.querySelectorAll('.brand, a[data-i18n="nav_home"]').forEach(link => {
+      link.setAttribute('href', homeHref);
+    });
+  }
+
   function applyLang(lang) {
     const langAttrMap = { en: 'en', ko: 'ko', ja: 'ja', zh: 'zh-Hant', pt: 'pt-BR' };
     currentLang = I18N[lang] ? lang : 'en';
@@ -578,6 +596,7 @@
       btn.classList.toggle('active', btn.dataset.lang === currentLang);
     });
     document.documentElement.lang = langAttrMap[currentLang] || 'en';
+    syncHomeLinks();
   }
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
