@@ -886,6 +886,8 @@
       const path = location.pathname.replace(/\/+/g, '/').toLowerCase();
       const isBasePath = path === '/pangchu-privacy/' || path === '/pangchu-privacy' || path === '/pangchu-privacy/index.html';
       if (!isBasePath) return;
+      if (sessionStorage.getItem('pangchu_auto_landing_done') === '1') return;
+      sessionStorage.setItem('pangchu_auto_landing_done', '1');
 
       const langs = [];
       if (Array.isArray(navigator.languages) && navigator.languages.length) {
