@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--bg2); font-family: var(--font-sans); padding: 20px 24px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .pill { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border-radius: 999px; font-size: 13px; font-weight: 800; letter-spacing: 0.02em; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .live { background: rgba(22,196,127,0.1); color: #14a56b; }
+  .live .dot { background: #16c47f; box-shadow: 0 0 0 5px rgba(22,196,127,0.14); }
+  .blue { background: rgba(89,184,255,0.12); color: #3399ee; }
+  .blue .dot { background: #59b8ff; }
+  .mint { background: rgba(138,228,197,0.18); color: #19936d; }
+  .mint .dot { background: #8ae4c5; }
+  .official { background: rgba(89,184,255,0.1); color: #3399ee; }
+  .tag { background: rgba(92,151,201,0.1); color: #587089; }
+  .new { background: linear-gradient(135deg, #59b8ff22, #8ae4c522); color: #3399ee; border: 1px solid rgba(89,184,255,0.2); }
+</style></head><body>
+<div class="row">
+  <div class="pill live"><div class="dot"></div>Active Website</div>
+  <div class="pill blue">Official Website</div>
+  <div class="pill mint">Cute Casual Mobile Game</div>
+  <div class="pill official">PangChu Studio</div>
+  <div class="pill tag">Casual</div>
+  <div class="pill tag">Mobile</div>
+  <div class="pill new">New ✦</div>
+</div>
+</body></html>

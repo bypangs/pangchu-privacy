@@ -1,0 +1,329 @@
+/**
+ * PangChu Studio — Design Tokens
+ * colors_and_type.css
+ *
+ * Import this file in any PangChu Studio HTML artifact to get
+ * the full color + typography system.
+ *
+ * Usage:
+ *   <link rel="stylesheet" href="../../colors_and_type.css">
+ */
+
+/* ─────────────────────────────────────────────
+   FONT IMPORT
+   Using Inter from Google Fonts (matches the
+   live site's Inter font-stack exactly)
+───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ─────────────────────────────────────────────
+   BASE COLOR TOKENS
+───────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg1: #dff4ff;              /* Sky blue — primary page background */
+  --bg2: #f6fbff;              /* Near-white — secondary background, bottom of page */
+
+  /* Card surfaces */
+  --card: rgba(255, 255, 255, 0.82);       /* Standard frosted-glass card */
+  --card-strong: rgba(255, 255, 255, 0.92); /* Elevated card (inner tiles) */
+
+  /* Borders */
+  --line: rgba(92, 151, 201, 0.18);        /* Standard card/divider border */
+  --line-hover: rgba(51, 153, 238, 0.30);  /* Hover state border */
+  --line-nav: rgba(92, 151, 201, 0.12);    /* Nav bottom border */
+
+  /* Text */
+  --text: #17324d;             /* Primary text — deep navy */
+  --muted: #587089;            /* Secondary text, captions, body */
+
+  /* Brand primaries */
+  --primary: #59b8ff;          /* Sky blue — buttons, links, accents */
+  --primary-deep: #3399ee;     /* Deeper blue — hover, active */
+  --primary-light: rgba(89, 184, 255, 0.12); /* Tinted background for hover/badge */
+
+  /* Accent */
+  --accent: #8ae4c5;           /* Mint green — secondary accent */
+  --accent-deep: #19936d;      /* Deep green — text on mint bg */
+  --accent-light: rgba(138, 228, 197, 0.18); /* Mint tinted background */
+
+  /* Status / Live */
+  --status-green: #16c47f;     /* Live indicator dot */
+  --status-green-text: #14a56b;/* Live indicator label */
+  --status-green-halo: rgba(22, 196, 127, 0.12); /* Glow ring */
+
+  /* ─── Shadows ─── */
+  --shadow: 0 20px 60px rgba(67, 133, 193, 0.14);    /* Standard card shadow */
+  --shadow-badge: 0 12px 30px rgba(64, 145, 210, 0.24);
+  --shadow-btn: 0 14px 28px rgba(51, 153, 238, 0.24);
+  --shadow-banner: 0 16px 34px rgba(82, 149, 201, 0.16);
+
+  /* ─── Corner Radii ─── */
+  --radius-xl: 28px;  /* Cards, hero, large containers */
+  --radius-lg: 22px;  /* Feature blocks, link cards */
+  --radius-md: 16px;  /* Mini tiles, inner elements, banner */
+  --radius-sm: 10px;  /* Small internal elements */
+  --radius-pill: 999px; /* Buttons, badges, pills, status dot */
+
+  /* ─── Spacing Scale ─── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+
+  /* ─── Layout ─── */
+  --max-width: 1120px;
+
+  /* ─── Gradients ─── */
+  --grad-page:
+    radial-gradient(circle at top left, rgba(137, 212, 255, 0.42), transparent 30%),
+    radial-gradient(circle at top right, rgba(164, 239, 214, 0.32), transparent 24%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+
+  --grad-sky:
+    linear-gradient(180deg, #8fd8ff 0%, #bdeaff 52%, #e6fff4 100%);
+
+  --grad-badge:
+    linear-gradient(135deg, #7fd0ff, #8be7c7);
+
+  --grad-btn-primary:
+    linear-gradient(135deg, var(--primary), var(--primary-deep));
+}
+
+/* ─────────────────────────────────────────────
+   SEMANTIC COLOR ALIASES
+───────────────────────────────────────────── */
+:root {
+  --color-bg-page: var(--grad-page);    /* Full page background */
+  --color-bg-card: var(--card);
+  --color-bg-card-elevated: var(--card-strong);
+
+  --color-fg1: var(--text);             /* Primary foreground */
+  --color-fg2: var(--muted);            /* Secondary foreground */
+
+  --color-brand: var(--primary);
+  --color-brand-dark: var(--primary-deep);
+  --color-brand-tint: var(--primary-light);
+
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-deep);
+  --color-accent-tint: var(--accent-light);
+
+  --color-border: var(--line);
+  --color-border-hover: var(--line-hover);
+
+  --color-shadow: var(--shadow);
+}
+
+/* ─────────────────────────────────────────────
+   BASE TYPOGRAPHY
+───────────────────────────────────────────── */
+:root {
+  /* Font families */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system,
+               BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Font sizes */
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+
+  /* Font weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+
+  /* Line heights */
+  --lh-tight: 0.95;
+  --lh-snug: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* Letter spacing */
+  --ls-tight: -0.05em;   /* Display / H1 */
+  --ls-tighter: -0.04em; /* H3 game title */
+  --ls-snug: -0.03em;    /* H2, brand name */
+  --ls-normal: 0em;
+  --ls-wide: 0.02em;     /* Labels, eyebrows */
+}
+
+/* ─────────────────────────────────────────────
+   SEMANTIC TYPOGRAPHY
+───────────────────────────────────────────── */
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--color-fg1);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Display heading (hero) */
+h1, .h1 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-fg1);
+}
+
+/* Section heading */
+h2, .h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-sans);
+  font-size: var(--text-3xl);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--color-fg1);
+}
+
+/* Game / card title */
+h3, .h3 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tighter);
+  color: var(--color-fg1);
+}
+
+h4, .h4 {
+  margin: 0 0 8px;
+  font-size: var(--text-xl);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: var(--ls-snug);
+  color: var(--color-fg1);
+}
+
+/* Body text */
+p, .body {
+  font-size: var(--text-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--color-fg2);
+  margin: 0;
+}
+
+/* Small body */
+.body-sm {
+  font-size: var(--text-base);
+  line-height: var(--lh-relaxed);
+  color: var(--color-fg2);
+}
+
+/* Eyebrow / label */
+.eyebrow, .label {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-tint);
+  color: var(--color-brand-dark);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: var(--ls-wide);
+}
+
+/* Caption */
+.caption {
+  font-size: var(--text-base);
+  line-height: var(--lh-relaxed);
+  color: var(--color-fg2);
+}
+
+/* Link */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ─────────────────────────────────────────────
+   UTILITY CLASSES
+───────────────────────────────────────────── */
+
+/* Page background */
+.page-bg {
+  background: var(--grad-page);
+  min-height: 100vh;
+}
+
+/* Standard card */
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-xl);
+}
+
+/* Wrap (centered max-width) */
+.wrap {
+  width: min(calc(100% - 32px), var(--max-width));
+  margin: 0 auto;
+}
+
+/* Primary button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 20px;
+  border-radius: var(--radius-pill);
+  font-weight: var(--fw-extrabold);
+  font-size: var(--text-md);
+  background: var(--grad-btn-primary);
+  color: white;
+  box-shadow: var(--shadow-btn);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover { transform: translateY(-1px); }
+
+/* Secondary button */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 20px;
+  border-radius: var(--radius-pill);
+  font-weight: var(--fw-extrabold);
+  font-size: var(--text-md);
+  color: var(--color-brand-dark);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(89, 184, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-border-hover);
+}

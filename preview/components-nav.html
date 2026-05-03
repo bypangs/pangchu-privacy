@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--bg2); font-family: var(--font-sans); padding: 16px; }
+  nav { background: rgba(246,251,255,0.88); backdrop-filter: blur(18px); border: 1px solid rgba(92,151,201,0.12); border-radius: 18px; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; height: 62px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.03em; font-size: 16px; color: #17324d; }
+  .badge { width: 38px; height: 38px; border-radius: 12px; background: linear-gradient(135deg, #7fd0ff, #8be7c7); box-shadow: 0 8px 20px rgba(64,145,210,0.22); display: grid; place-items: center; color: white; font-size: 16px; font-weight: 900; }
+  .navlinks { display: flex; gap: 4px; }
+  .navlinks a { padding: 9px 14px; border-radius: 999px; font-size: 14px; font-weight: 700; color: #587089; cursor: pointer; transition: background 0.15s, color 0.15s; }
+  .navlinks a:hover { background: rgba(89,184,255,0.12); color: #3399ee; }
+  .navlinks a.active { background: rgba(89,184,255,0.12); color: #3399ee; }
+</style></head><body>
+<nav>
+  <div class="brand">
+    <div class="badge">P</div>
+    PangChu Studio
+  </div>
+  <div class="navlinks">
+    <a class="active">Game</a>
+    <a>Links</a>
+    <a>About</a>
+  </div>
+</nav>
+</body></html>

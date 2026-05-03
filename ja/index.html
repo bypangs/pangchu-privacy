@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>ぷにねこジャンプ - かわいい猫ジャンプゲーム | PangChu Studio</title>
+  <meta name="description" content="ぷにねこジャンプは、ぷにぷにした猫と雲を跳び上がる、かわいいカジュアルアーケードゲームです。コインを集めてスキンをアンロックし、ハイスコアに挑戦できます。" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bypangs.github.io/pangchu-privacy/ja/" />
+
+  <!-- ═══ HREFLANG ═══ -->
+  <link rel="alternate" hreflang="x-default" href="https://bypangs.github.io/pangchu-privacy/" />
+  <link rel="alternate" hreflang="en"    href="https://bypangs.github.io/pangchu-privacy/" />
+  <link rel="alternate" hreflang="ko"    href="https://bypangs.github.io/pangchu-privacy/ko/" />
+  <link rel="alternate" hreflang="ja"    href="https://bypangs.github.io/pangchu-privacy/ja/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://bypangs.github.io/pangchu-privacy/pt-br/" />
+  <link rel="alternate" hreflang="zh-HK" href="https://bypangs.github.io/pangchu-privacy/zh-hk/" />
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://bypangs.github.io/pangchu-privacy/ja/" />
+  <meta property="og:title"       content="ぷにねこジャンプ - かわいい猫ジャンプゲーム | PangChu Studio" />
+  <meta property="og:description" content="ぷにぷにした猫と雲を跳び上がる、かわいいカジュアルアーケードゲーム。コインを集めてスキンをアンロックし、ハイスコアに挑戦しよう！" />
+  <meta property="og:image"       content="https://bypangs.github.io/pangchu-privacy/images/jelly-cat-jump-banner.png" />
+  <meta property="og:image:alt"   content="ぷにねこジャンプ ゲームバナー" />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="PangChu Studio" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="ぷにねこジャンプ - かわいい猫ジャンプゲーム | PangChu Studio" />
+  <meta name="twitter:description" content="ぷにぷにした猫と雲を跳び上がるカジュアルゲーム。コイン収集・スキン・ハイスコア挑戦！" />
+  <meta name="twitter:image"       content="https://bypangs.github.io/pangchu-privacy/images/jelly-cat-jump-banner.png" />
+  <meta name="twitter:image:alt"   content="ぷにねこジャンプ ゲームバナー" />
+
+  <!-- ═══ MISC ═══ -->
+  <meta name="theme-color" content="#7cc9ff" />
+  <meta name="author" content="PangChu Studio" />
+
+  <!-- ═══ JSON-LD ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ぷにねこジャンプ",
+    "alternateName": ["Jelly Cat Jump", "말랑냥이점프", "Gatinho Pula-Pula", "啫喱貓跳跳"],
+    "applicationCategory": "GameApplication",
+    "applicationSubCategory": "CasualGame",
+    "operatingSystem": "Android, iOS",
+    "description": "ぷにねこジャンプは、ぷにぷにした猫と雲を跳び上がる、かわいいカジュアルアーケードゲームです。コインを集めてスキンをアンロックし、ハイスコアに挑戦できます。",
+    "inLanguage": "ja",
+    "audience": {
+      "@type": "PeopleAudience",
+      "suggestedMinAge": 3
+    },
+    "genre": ["カジュアル", "アーケード", "ジャンプ"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PangChu Studio",
+      "url": "https://bypangs.github.io/pangchu-privacy/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "pangchustudio@gmail.com",
+        "contactType": "customer support"
+      }
+    },
+    "url": "https://bypangs.github.io/pangchu-privacy/ja/"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg1: #dff4ff; --bg2: #f0f9ff;
+      --card: rgba(255,255,255,0.88);
+      --line: rgba(92,151,201,0.16);
+      --text: #17324d; --muted: #5a7289;
+      --primary: #4db8ff; --primary-deep: #2299ee;
+      --shadow: 0 8px 40px rgba(67,133,193,0.11), 0 2px 8px rgba(67,133,193,0.07);
+      --r-xl: 28px; --r-lg: 22px;
+      --font: 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font); color: var(--text);
+      background:
+        radial-gradient(ellipse 60% 40% at 10% 0%, rgba(125,208,255,0.34) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 35% at 92% 4%, rgba(138,228,197,0.26) 0%, transparent 55%),
+        linear-gradient(175deg, var(--bg1) 0%, #eaf6ff 45%, var(--bg2) 100%);
+      min-height: 100vh; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(calc(100% - 40px), 900px); margin: 0 auto; }
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(20px) saturate(1.4);
+      background: rgba(240,249,255,0.78);
+      border-bottom: 1px solid rgba(92,151,201,0.10);
+    }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 13px 0; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 15px; letter-spacing: -0.03em; }
+    .brand-mark {
+      width: 36px; height: 36px; border-radius: 11px;
+      background: linear-gradient(135deg, #7fd0ff 0%, #8ae4c5 100%);
+      box-shadow: 0 4px 16px rgba(64,145,210,0.22);
+      display: grid; place-items: center; color: white; font-size: 15px; font-weight: 900;
+    }
+    .lang-pills { display: flex; gap: 4px; }
+    .lang-pill { padding: 5px 11px; border-radius: 999px; font-size: 11px; font-weight: 800; color: var(--muted); background: rgba(255,255,255,0.7); border: 1px solid var(--line); text-decoration: none; transition: background 0.13s, color 0.13s; white-space: nowrap; }
+    .lang-pill:hover { background: rgba(77,184,255,0.1); color: var(--primary-deep); }
+    .lang-pill.cur { background: linear-gradient(135deg,#4db8ff,#2299ee); color: white; border-color: transparent; box-shadow: 0 2px 8px rgba(51,153,238,0.2); }
+    .hero { padding: 52px 0 16px; }
+    .hero-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow); padding: 40px 44px; position: relative; overflow: hidden; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px; border-radius: 999px; background: rgba(77,184,255,0.10); color: var(--primary-deep); font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px; }
+    .eyebrow-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--primary-deep); opacity: 0.7; }
+    h1 { font-size: clamp(36px, 5.5vw, 60px); font-weight: 900; line-height: 1.0; letter-spacing: -0.04em; color: var(--text); margin-bottom: 8px; }
+    h1 span { background: linear-gradient(135deg,#4db8ff,#2299ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-desc { font-size: 16px; color: var(--muted); line-height: 1.8; max-width: 560px; margin-top: 16px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 24px; border-radius: 999px; font-weight: 800; font-size: 14px; font-family: var(--font); cursor: pointer; border: none; transition: transform 0.14s, box-shadow 0.14s; text-decoration: none; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg,#4db8ff,#2299ee); color: white; box-shadow: 0 8px 24px rgba(51,153,238,0.22); }
+    .btn-ghost { background: rgba(255,255,255,0.86); color: var(--primary-deep); border: 1px solid rgba(77,184,255,0.22) !important; }
+    .banner-wrap { margin-top: 24px; border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); position: relative; }
+    .banner-wrap img { display: block; width: 100%; height: auto; }
+    .banner-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(23,50,77,0.55) 0%, transparent 60%); display: flex; align-items: center; padding: 36px 44px; }
+    .banner-text { max-width: 380px; }
+    .banner-tag { display: inline-flex; padding: 5px 12px; border-radius: 999px; background: rgba(77,184,255,0.22); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; backdrop-filter: blur(6px); }
+    .banner-title { font-size: clamp(20px, 3vw, 36px); font-weight: 900; line-height: 1.1; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.25); margin-bottom: 8px; }
+    .banner-desc { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.7; }
+    .features { padding: 24px 0 8px; }
+    .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 18px; }
+    .feat-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow); padding: 22px 20px; }
+    .feat-icon { font-size: 22px; margin-bottom: 10px; }
+    .feat-title { font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+    .feat-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .section-label { font-size: 11px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .section-title { font-size: 26px; font-weight: 900; letter-spacing: -0.03em; color: var(--text); }
+    .info { padding: 16px 0 48px; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+    .info-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow); padding: 22px 24px; }
+    .info-card h3 { font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .info-card p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+    .contact-link { color: var(--primary-deep); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+    .footer { padding: 0 0 56px; }
+    .footer-card { background: rgba(255,255,255,0.7); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow); padding: 20px 28px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-name { font-size: 14px; font-weight: 800; }
+    .footer-tag { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .footer-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .footer-links a { padding: 6px 13px; border-radius: 999px; background: rgba(255,255,255,0.72); border: 1px solid var(--line); font-size: 12px; font-weight: 700; color: var(--muted); transition: background 0.13s, color 0.13s; }
+    .footer-links a:hover { background: rgba(77,184,255,0.1); color: var(--primary-deep); }
+    .divider { height: 1px; background: linear-gradient(90deg,transparent,rgba(92,151,201,0.16) 30%,rgba(92,151,201,0.16) 70%,transparent); }
+    @media (max-width: 700px) { .hero-card { padding: 28px 24px; } .features-grid { grid-template-columns: 1fr 1fr; } .info-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .features-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../">
+      <div class="brand-mark">P</div>
+      PangChu Studio
+    </a>
+    <div class="lang-pills">
+      <a class="lang-pill" href="../">EN</a>
+      <a class="lang-pill" href="../ko/">한국어</a>
+      <a class="lang-pill cur" href="../ja/">日本語</a>
+      <a class="lang-pill" href="../zh-hk/">繁體</a>
+      <a class="lang-pill" href="../pt-br/">PT</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-card">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> PangChu Studio 公式サイト</div>
+        <h1>ぷにねこ<br><span>ジャンプ</span></h1>
+        <p class="hero-desc">ぷにぷにした猫と一緒に雲の上をジャンプするカジュアルアーケードゲーム。コインを集めてスキンをアンロックし、ハイスコアに挑戦しよう！</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="../#game">ゲームを見る</a>
+          <a class="btn btn-ghost" href="../privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+
+      <div class="banner-wrap">
+        <img src="../images/jelly-cat-jump-banner.png" alt="ぷにねこジャンプ — かわいい猫ジャンプゲームのバナー" />
+        <div class="banner-overlay">
+          <div class="banner-text">
+            <div class="banner-tag">かわいいカジュアルゲーム</div>
+            <div class="banner-title">ぷにねこジャンプ</div>
+            <div class="banner-desc">雲ジャンプ・コイン収集・スキン &amp; エフェクト・ハイスコア挑戦</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" style="width:min(calc(100% - 40px),900px);margin:8px auto;"></div>
+
+  <section class="features">
+    <div class="wrap">
+      <div class="section-label">ゲーム特徴</div>
+      <div class="section-title">こんな楽しさがいっぱい</div>
+      <div class="features-grid">
+        <div class="feat-card">
+          <div class="feat-icon">☁️</div>
+          <div class="feat-title">雲ジャンプ</div>
+          <div class="feat-desc">ふわふわの雲の上をジャンプする爽快なアクション</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🪙</div>
+          <div class="feat-title">コイン収集</div>
+          <div class="feat-desc">コインを集めてスキンやエフェクトをアンロック</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🐱</div>
+          <div class="feat-title">かわいいスキン</div>
+          <div class="feat-desc">様々な猫スキンでオリジナルキャラクターを作ろう</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🏆</div>
+          <div class="feat-title">ハイスコア挑戦</div>
+          <div class="feat-desc">ベストスコアを更新してランキング上位を目指そう</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">☁️</div>
+          <div class="feat-title">クラウドセーブ</div>
+          <div class="feat-desc">ゲームデータをクラウドに保存していつでも再開</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">👨‍👩‍👧</div>
+          <div class="feat-title">全年齢対象</div>
+          <div class="feat-desc">3歳以上のお子様から大人まで楽しめるゲーム</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" style="width:min(calc(100% - 40px),900px);margin:8px auto;"></div>
+
+  <section class="info">
+    <div class="wrap">
+      <div class="section-label">スタジオ情報</div>
+      <div class="section-title">PangChu Studio</div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>スタジオについて</h3>
+          <p>PangChu Studioは、かわいくて居心地のいいモバイルゲームを制作する小さなインディースタジオです。柔らかなビジュアルと直感的な操作を大切にしています。</p>
+        </div>
+        <div class="info-card">
+          <h3>お問い合わせ</h3>
+          <p>ゲームに関するご質問・サポートのご依頼はメールにてお気軽にどうぞ。<br><br>
+          <a class="contact-link" href="mailto:pangchustudio@gmail.com">pangchustudio@gmail.com</a></p>
+        </div>
+        <div class="info-card">
+          <h3>公式ポリシー</h3>
+          <p>
+            <a class="contact-link" href="../privacy.html">プライバシーポリシー</a>・
+            <a class="contact-link" href="../terms.html">利用規約</a>をご確認ください。
+          </p>
+        </div>
+        <div class="info-card">
+          <h3>ゲーム情報</h3>
+          <p>パッケージ名: malrang.nayong<br>ジャンル: カジュアルアーケード<br>対象: 3歳以上 / ファミリー向け<br>プラットフォーム: Android · iOS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-card">
+      <div class="footer-brand">
+        <div class="brand-mark" style="width:32px;height:32px;border-radius:10px;font-size:13px;">P</div>
+        <div>
+          <div class="footer-name">PangChu Studio</div>
+          <div class="footer-tag">かわいくて居心地のいいモバイルゲーム</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="../privacy.html">プライバシーポリシー</a>
+        <a href="../terms.html">利用規約</a>
+        <a href="../">English</a>
+      </div>
+    </div>
+    <p style="margin-top:10px;font-size:12px;color:var(--muted);text-align:center;">© 2026 PangChu Studio. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

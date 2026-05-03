@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--bg2); font-family: var(--font-sans); padding: 20px 24px; }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 0 22px; border-radius: 999px; font-weight: 800; font-size: 15px; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; border: none; font-family: var(--font-sans); }
+  .btn:hover { transform: translateY(-1px); }
+  .primary { background: linear-gradient(135deg, #59b8ff, #3399ee); color: white; box-shadow: 0 14px 28px rgba(51,153,238,0.24); }
+  .secondary { background: rgba(255,255,255,0.9); color: #3399ee; border: 1px solid rgba(89,184,255,0.22)!important; box-shadow: 0 4px 14px rgba(67,133,193,0.10); }
+  .ghost { background: transparent; color: #3399ee; border: 1.5px solid rgba(89,184,255,0.35)!important; }
+  .sm { min-height: 38px; padding: 0 16px; font-size: 13px; }
+  .lg { min-height: 58px; padding: 0 28px; font-size: 16px; }
+</style></head><body>
+<div class="row">
+  <button class="btn primary lg">View Game</button>
+  <button class="btn primary">Download</button>
+  <button class="btn primary sm">Learn More</button>
+</div>
+<div class="row" style="margin-top:12px">
+  <button class="btn secondary lg">Privacy Policy</button>
+  <button class="btn secondary">Open Page →</button>
+  <button class="btn secondary sm">Terms</button>
+</div>
+<div class="row" style="margin-top:12px">
+  <button class="btn ghost">Ghost Button</button>
+  <button class="btn ghost sm">Ghost SM</button>
+</div>
+</body></html>

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow design system preview pages (not public content)
+Disallow: /preview/
+Disallow: /screenshots/
+Disallow: /ui_kits/
+Disallow: /uploads/
+
+Sitemap: https://bypangs.github.io/pangchu-privacy/sitemap.xml

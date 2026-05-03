@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: var(--bg2); font-family: var(--font-sans); padding: 20px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .swatch { flex: 1; min-width: 80px; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(67,133,193,0.12); }
+  .swatch-color { height: 70px; border: 1px solid rgba(92,151,201,0.15); }
+  .swatch-info { background: white; padding: 10px 12px; }
+  .swatch-name { font-size: 12px; font-weight: 700; color: #17324d; }
+  .swatch-val { font-size: 11px; color: #587089; margin-top: 2px; font-family: monospace; }
+</style></head><body>
+<div class="row">
+  <div class="swatch"><div class="swatch-color" style="background:#17324d"></div><div class="swatch-info"><div class="swatch-name">Text</div><div class="swatch-val">#17324d</div></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#587089"></div><div class="swatch-info"><div class="swatch-name">Muted</div><div class="swatch-val">#587089</div></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:rgba(92,151,201,0.18)"></div><div class="swatch-info"><div class="swatch-name">Border</div><div class="swatch-val">rgba(92,151,201,.18)</div></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:rgba(255,255,255,0.82)"></div><div class="swatch-info"><div class="swatch-name">Card</div><div class="swatch-val">rgba(255,255,255,.82)</div></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#dff4ff"></div><div class="swatch-info"><div class="swatch-name">BG1</div><div class="swatch-val">#dff4ff</div></div></div>
+  <div class="swatch"><div class="swatch-color" style="background:#f6fbff"></div><div class="swatch-info"><div class="swatch-name">BG2</div><div class="swatch-val">#f6fbff</div></div></div>
+</div>
+</body></html>
