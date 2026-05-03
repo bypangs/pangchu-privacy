@@ -24,8 +24,12 @@
   <meta property="og:title"       content="Jelly Cat Jump - Jogo fofo de gato pulando nas nuvens | PangChu Studio" />
   <meta property="og:description" content="Jelly Cat Jump é um jogo casual e fofo em que você controla um gatinho macio pulando pelas nuvens com toques para a esquerda e para a direita. Colete moedas, desbloqueie skins e efeitos, e desafie os rankings globais." />
   <meta property="og:image"       content="https://bypangs.github.io/pangchu-privacy/images/jelly-cat-jump-banner.png" />
-  <meta property="og:image:alt"   content="Gatinho Pula-Pula — banner do jogo" />
+  <meta property="og:image:alt"   content="Jelly Cat Jump banner do jogo" />
   <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:locale:alternate" content="zh_Hant" />
   <meta property="og:site_name"   content="PangChu Studio" />
 
   <!-- ═══ TWITTER CARD ═══ -->
@@ -33,38 +37,38 @@
   <meta name="twitter:title"       content="Jelly Cat Jump - Jogo fofo de gato pulando nas nuvens | PangChu Studio" />
   <meta name="twitter:description" content="Jelly Cat Jump é um jogo casual e fofo em que você controla um gatinho macio pulando pelas nuvens com toques para a esquerda e para a direita. Colete moedas, desbloqueie skins e efeitos, e desafie os rankings globais." />
   <meta name="twitter:image"       content="https://bypangs.github.io/pangchu-privacy/images/jelly-cat-jump-banner.png" />
-  <meta name="twitter:image:alt"   content="Gatinho Pula-Pula — banner do jogo" />
+  <meta name="twitter:image:alt"   content="Jelly Cat Jump banner do jogo" />
 
   <!-- ═══ MISC ═══ -->
   <meta name="theme-color" content="#7cc9ff" />
   <meta name="author" content="PangChu Studio" />
 
-  <!-- ═══ JSON-LD ═══ -->
+  <!-- ═══ JSON-LD: SoftwareApplication ═══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Gatinho Pula-Pula",
-    "alternateName": ["Jelly Cat Jump", "말랑냥이점프", "ぷにねこジャンプ", "啫喱貓跳跳"],
+    "name": "Jelly Cat Jump",
+    "alternateName": ["Jelly Cat Jump", "말랑냥이점프", "ネコニャンジャンプ"],
     "applicationCategory": "GameApplication",
     "applicationSubCategory": "CasualGame",
     "operatingSystem": "Android, iOS",
-    "description": "Gatinho Pula-Pula é um jogo casual de pular com um gatinho fofo. Salte pelas nuvens, colete moedas, desbloqueie skins e tente bater seu recorde.",
+    "description": "Jelly Cat Jump é um jogo arcade casual e fofo em que você pula pelas nuvens, coleta moedas, desbloqueia skins e tenta alcançar sua melhor pontuação.",
     "inLanguage": "pt-BR",
     "audience": {
       "@type": "PeopleAudience",
       "suggestedMinAge": 3
     },
-    "genre": ["Casual", "Arcade", "Pulo"],
+    "genre": ["Casual", "Arcade", "Jumping"],
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "BRL"
+      "priceCurrency": "USD"
     },
     "publisher": {
       "@type": "Organization",
       "name": "PangChu Studio",
-      "url": "https://bypangs.github.io/pangchu-privacy/",
+      "url": "https://bypangs.github.io/pangchu-privacy/pt-br/",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "pangchustudio@gmail.com",
@@ -76,220 +80,833 @@
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Noto+Sans+KR:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --bg1: #dff4ff; --bg2: #f0f9ff;
-      --card: rgba(255,255,255,0.88);
+      color-scheme: light only;
+      --bg1: #dff4ff;
+      --bg2: #f0f9ff;
+      --card: rgba(255,255,255,0.84);
+      --card-strong: rgba(255,255,255,0.96);
       --line: rgba(92,151,201,0.16);
-      --text: #17324d; --muted: #5a7289;
+      --line-hover: rgba(51,153,238,0.28);
+      --text: #17324d;
+      --muted: #5a7289;
+      --primary: #4db8ff;
       --primary-deep: #2299ee;
-      --shadow: 0 8px 40px rgba(67,133,193,0.11), 0 2px 8px rgba(67,133,193,0.07);
-      --r-xl: 28px; --r-lg: 22px;
-      --font: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      --accent: #7de0bc;
+      --accent-deep: #18926b;
+      --shadow-card: 0 8px 40px rgba(67,133,193,0.11), 0 2px 8px rgba(67,133,193,0.07);
+      --shadow-btn: 0 8px 24px rgba(51,153,238,0.22);
+      --r-xl: 28px;
+      --r-lg: 22px;
+      --r-md: 16px;
+      --max: 1100px;
+      --font: 'Inter', 'Noto Sans KR', 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif;
     }
+
     html { scroll-behavior: smooth; }
+
     body {
-      font-family: var(--font); color: var(--text);
+      font-family: var(--font);
+      color: var(--text);
       background:
         radial-gradient(ellipse 60% 40% at 10% 0%, rgba(125,208,255,0.34) 0%, transparent 60%),
         radial-gradient(ellipse 50% 35% at 92% 4%, rgba(138,228,197,0.26) 0%, transparent 55%),
         linear-gradient(175deg, var(--bg1) 0%, #eaf6ff 45%, var(--bg2) 100%);
-      min-height: 100vh; -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
+
     a { color: inherit; text-decoration: none; }
-    .wrap { width: min(calc(100% - 40px), 900px); margin: 0 auto; }
-    .nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(20px) saturate(1.4); background: rgba(240,249,255,0.78); border-bottom: 1px solid rgba(92,151,201,0.10); }
-    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 13px 0; gap: 12px; }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 15px; letter-spacing: -0.03em; }
-    .brand-mark { width: 36px; height: 36px; border-radius: 11px; background: linear-gradient(135deg, #7fd0ff 0%, #8ae4c5 100%); box-shadow: 0 4px 16px rgba(64,145,210,0.22); display: grid; place-items: center; color: white; font-size: 15px; font-weight: 900; }
-    .lang-pills { display: flex; gap: 4px; }
-    .lang-pill { padding: 5px 11px; border-radius: 999px; font-size: 11px; font-weight: 800; color: var(--muted); background: rgba(255,255,255,0.7); border: 1px solid var(--line); text-decoration: none; transition: background 0.13s, color 0.13s; white-space: nowrap; }
-    .lang-pill:hover { background: rgba(77,184,255,0.1); color: var(--primary-deep); }
-    .lang-pill.cur { background: linear-gradient(135deg,#4db8ff,#2299ee); color: white; border-color: transparent; }
-    .hero { padding: 52px 0 16px; }
-    .hero-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow); padding: 40px 44px; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px; border-radius: 999px; background: rgba(77,184,255,0.10); color: var(--primary-deep); font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px; }
-    .eyebrow-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--primary-deep); opacity: 0.7; }
-    h1 { font-size: clamp(34px, 5vw, 58px); font-weight: 900; line-height: 0.95; letter-spacing: -0.05em; color: var(--text); margin-bottom: 8px; }
-    h1 span { background: linear-gradient(135deg,#4db8ff,#2299ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-desc { font-size: 16px; color: var(--muted); line-height: 1.75; max-width: 540px; margin-top: 16px; }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 24px; border-radius: 999px; font-weight: 800; font-size: 14px; font-family: var(--font); cursor: pointer; border: none; transition: transform 0.14s, box-shadow 0.14s; text-decoration: none; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(20px) saturate(1.4);
+      -webkit-backdrop-filter: blur(20px) saturate(1.4);
+      background: rgba(240,249,255,0.75);
+      border-bottom: 1px solid rgba(92,151,201,0.10);
+    }
+    .nav-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 0; gap: 12px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 11px;
+      font-weight: 800; font-size: 16px; letter-spacing: -0.03em; color: var(--text);
+      flex-shrink: 0;
+    }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 12px; flex-shrink: 0;
+      background: linear-gradient(135deg, #7fd0ff 0%, #8ae4c5 100%);
+      box-shadow: 0 6px 20px rgba(64,145,210,0.22);
+      display: grid; place-items: center;
+      color: white; font-size: 16px; font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 2px; }
+    .nav-links a {
+      padding: 8px 12px; border-radius: 999px; font-size: 13px; font-weight: 700;
+      color: var(--muted); transition: background 0.14s, color 0.14s; white-space: nowrap;
+    }
+    .nav-links a:hover { background: rgba(89,184,255,0.11); color: var(--primary-deep); }
+
+    /* ── LANG SWITCHER ── */
+    .lang-switcher {
+      display: flex; gap: 3px; align-items: center; flex-shrink: 0;
+      background: rgba(255,255,255,0.7); border: 1px solid var(--line);
+      border-radius: 999px; padding: 3px;
+    }
+    .lang-btn {
+      padding: 5px 11px; border-radius: 999px; border: none; background: none;
+      font-size: 12px; font-weight: 700; color: var(--muted); cursor: pointer;
+      transition: background 0.14s, color 0.14s; font-family: var(--font);
+      white-space: nowrap;
+    }
+    .lang-btn.active {
+      background: linear-gradient(135deg, #4db8ff, #2299ee);
+      color: white; box-shadow: 0 2px 8px rgba(51,153,238,0.2);
+    }
+    .lang-btn:not(.active):hover { background: rgba(77,184,255,0.1); color: var(--primary-deep); }
+
+    /* ── SECTION UTILITIES ── */
+    .section-label {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 5px;
+    }
+    .section-title { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; color: var(--text); margin-bottom: 5px; }
+    .section-sub { font-size: 15px; color: var(--muted); line-height: 1.65; }
+
+    .section-divider {
+      width: min(calc(100% - 40px), var(--max)); margin: 0 auto; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(92,151,201,0.16) 30%, rgba(92,151,201,0.16) 70%, transparent);
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 0 22px; border-radius: 999px;
+      font-weight: 800; font-size: 14px; font-family: var(--font);
+      cursor: pointer; border: none; transition: transform 0.14s, box-shadow 0.14s;
+    }
     .btn:hover { transform: translateY(-1px); }
-    .btn-primary { background: linear-gradient(135deg,#4db8ff,#2299ee); color: white; box-shadow: 0 8px 24px rgba(51,153,238,0.22); }
-    .btn-ghost { background: rgba(255,255,255,0.86); color: var(--primary-deep); border: 1px solid rgba(77,184,255,0.22) !important; }
-    .banner-wrap { margin-top: 24px; border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); position: relative; }
-    .banner-wrap img { display: block; width: 100%; height: auto; }
-    .banner-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(23,50,77,0.55) 0%, transparent 60%); display: flex; align-items: center; padding: 36px 44px; }
-    .banner-text { max-width: 380px; }
-    .banner-tag { display: inline-flex; padding: 5px 12px; border-radius: 999px; background: rgba(77,184,255,0.22); color: #fff; font-size: 11px; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; backdrop-filter: blur(6px); }
-    .banner-title { font-size: clamp(20px, 3vw, 34px); font-weight: 900; line-height: 1.05; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.25); margin-bottom: 8px; }
-    .banner-desc { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.7; }
-    .features { padding: 24px 0 8px; }
-    .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 18px; }
-    .feat-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow); padding: 22px 20px; }
-    .feat-icon { font-size: 22px; margin-bottom: 10px; }
-    .feat-title { font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
-    .feat-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
-    .section-label { font-size: 11px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-    .section-title { font-size: 26px; font-weight: 900; letter-spacing: -0.04em; color: var(--text); }
-    .info { padding: 16px 0 48px; }
-    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
-    .info-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow); padding: 22px 24px; }
-    .info-card h3 { font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
-    .info-card p { font-size: 13px; color: var(--muted); line-height: 1.75; }
-    .contact-link { color: var(--primary-deep); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
-    .footer { padding: 0 0 56px; }
-    .footer-card { background: rgba(255,255,255,0.7); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow); padding: 20px 28px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-    .footer-brand { display: flex; align-items: center; gap: 10px; }
-    .footer-name { font-size: 14px; font-weight: 800; }
-    .footer-tag { font-size: 12px; color: var(--muted); margin-top: 2px; }
-    .footer-links { display: flex; gap: 8px; flex-wrap: wrap; }
-    .footer-links a { padding: 6px 13px; border-radius: 999px; background: rgba(255,255,255,0.72); border: 1px solid var(--line); font-size: 12px; font-weight: 700; color: var(--muted); transition: background 0.13s, color 0.13s; }
-    .footer-links a:hover { background: rgba(77,184,255,0.1); color: var(--primary-deep); }
-    .divider { height: 1px; background: linear-gradient(90deg,transparent,rgba(92,151,201,0.16) 30%,rgba(92,151,201,0.16) 70%,transparent); }
-    @media (max-width: 700px) { .hero-card { padding: 28px 24px; } .features-grid { grid-template-columns: 1fr 1fr; } .info-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 480px) { .features-grid { grid-template-columns: 1fr; } }
+    .btn-primary { background: linear-gradient(135deg, #4db8ff, #2299ee); color: white; box-shadow: var(--shadow-btn); }
+    .btn-primary:hover { box-shadow: 0 12px 32px rgba(51,153,238,0.32); }
+    .btn-ghost { background: rgba(255,255,255,0.86); color: var(--primary-deep); border: 1px solid rgba(77,184,255,0.22) !important; box-shadow: 0 2px 10px rgba(67,133,193,0.08); }
+
+    /* ── HERO ── */
+    .hero { padding: 44px 0 20px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 340px; gap: 20px; align-items: start; }
+    .hero-main {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--r-xl); box-shadow: var(--shadow-card);
+      padding: 36px 40px; position: relative; overflow: hidden;
+    }
+    .hero-main::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 200px 80px at 78% 18%, rgba(255,255,255,0.65), transparent),
+        radial-gradient(ellipse 140px 60px at 18% 85%, rgba(255,255,255,0.5), transparent);
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px; border-radius: 999px;
+      background: rgba(77,184,255,0.10); color: var(--primary-deep);
+      font-size: 11px; font-weight: 800; letter-spacing: 0.04em;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-eyebrow-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--primary-deep); opacity: 0.7; }
+    .hero-title {
+      font-size: clamp(42px, 5.2vw, 68px); font-weight: 900;
+      line-height: 0.92; letter-spacing: -0.055em; color: var(--text); margin-bottom: 6px;
+    }
+    .hero-title span { background: linear-gradient(135deg, #4db8ff, #2299ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { margin: 18px 0 0; font-size: 16px; line-height: 1.72; color: var(--muted); max-width: 480px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+
+    /* Hero side */
+    .hero-side { display: flex; flex-direction: column; gap: 12px; }
+    .status-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); padding: 18px 20px; }
+    .live-badge { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 800; color: #13a368; margin-bottom: 9px; }
+    .live-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: #16c47f; box-shadow: 0 0 0 4px rgba(22,196,127,0.13); }
+    .status-title { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 6px; }
+    .status-body { font-size: 12px; color: var(--muted); line-height: 1.65; }
+    .mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 12px; }
+    .mini-tile { padding: 10px 12px; border-radius: var(--r-md); background: rgba(255,255,255,0.7); border: 1px solid rgba(89,184,255,0.10); }
+    .mini-tile strong { display: block; font-size: 11px; font-weight: 800; color: var(--text); margin-bottom: 2px; }
+    .mini-tile span { font-size: 11px; color: var(--muted); }
+    .about-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); padding: 16px 20px; }
+    .about-card h3 { font-size: 14px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+    .about-card p { font-size: 12px; color: var(--muted); line-height: 1.65; }
+
+    /* ── GAME ── */
+    .game-section { padding: 20px 0; }
+    .game-banner {
+      margin-top: 16px;
+      border-radius: var(--r-xl); overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+    .game-banner img {
+      display: block; width: 100%; height: auto;
+    }
+    .game-banner-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(23,50,77,0.55) 0%, transparent 55%);
+      display: flex; align-items: center; padding: 40px 48px;
+    }
+    .game-banner-text { max-width: 420px; }
+    .game-banner-tag {
+      display: inline-flex; padding: 6px 13px; border-radius: 999px;
+      background: rgba(77,184,255,0.22); color: #fff;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.05em;
+      text-transform: uppercase; margin-bottom: 14px;
+      backdrop-filter: blur(6px);
+    }
+    .game-banner-title {
+      font-size: clamp(28px, 3.5vw, 48px); font-weight: 900;
+      line-height: 1.0; letter-spacing: -0.04em;
+      color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.28);
+      margin-bottom: 10px;
+    }
+    .game-banner-desc {
+      font-size: 15px; color: rgba(255,255,255,0.82);
+      line-height: 1.7; margin-bottom: 20px;
+    }
+    .game-banner-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 22px; border-radius: 999px;
+      background: linear-gradient(135deg, #4db8ff, #2299ee);
+      color: #fff; font-size: 13px; font-weight: 800;
+      box-shadow: 0 8px 24px rgba(51,153,238,0.32);
+      transition: transform 0.14s, box-shadow 0.14s;
+      text-decoration: none;
+    }
+    .game-banner-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(51,153,238,0.42); }
+    @media (max-width: 600px) {
+      .game-banner-overlay { padding: 24px; }
+      .game-banner-tag { display: none; }
+    }
+    .game-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow-card); display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; margin-top: 18px; }
+    .game-visual {
+      padding: 26px;
+      background: radial-gradient(ellipse 55% 35% at 22% 18%, rgba(255,255,255,0.9), transparent),
+        radial-gradient(ellipse 45% 28% at 78% 22%, rgba(255,255,255,0.85), transparent),
+        linear-gradient(175deg, #93daff 0%, #bdeaff 52%, #dffff5 100%);
+      border-right: 1px solid rgba(92,151,201,0.12);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .banner-frame { background: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.85); border-radius: 20px; padding: 11px; box-shadow: 0 12px 40px rgba(82,149,201,0.14), 0 2px 8px rgba(82,149,201,0.08); }
+    .banner-frame img { display: block; width: 100%; border-radius: 12px; height: auto; }
+    .game-body { padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+    .game-tag { display: inline-flex; width: fit-content; padding: 6px 12px; border-radius: 999px; background: rgba(125,224,188,0.16); color: var(--accent-deep); font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
+    .game-title { font-size: clamp(24px, 3vw, 36px); font-weight: 900; line-height: 1.0; letter-spacing: -0.04em; color: var(--text); }
+    .game-desc { font-size: 14px; color: var(--muted); line-height: 1.72; }
+    .features-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 9px; }
+    .feature-tile { background: var(--card-strong); border: 1px solid var(--line); border-radius: var(--r-md); padding: 14px; }
+    .feature-tile strong { display: block; font-size: 12px; font-weight: 800; color: var(--text); margin-bottom: 5px; }
+    .feature-tile span { font-size: 11px; color: var(--muted); line-height: 1.6; }
+
+    /* ── ANNOUNCEMENTS ── */
+    .announce-section { padding: 20px 0; }
+    .announce-list { margin-top: 18px; display: flex; flex-direction: column; gap: 1px; background: var(--line); border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-card); }
+    .announce-item { background: var(--card-strong); padding: 18px 22px; display: flex; align-items: flex-start; gap: 18px; transition: background 0.14s; }
+    .announce-item:hover { background: white; }
+    .announce-badge { flex-shrink: 0; padding: 4px 10px; border-radius: 999px; font-size: 10px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px; }
+    .badge-notice { background: rgba(125,224,188,0.16); color: var(--accent-deep); }
+    .badge-new { background: rgba(255,180,100,0.14); color: #c07020; }
+    .announce-content { flex: 1; }
+    .announce-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .announce-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .announce-date { flex-shrink: 0; font-size: 12px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 20px 0; }
+    .faq-list { margin-top: 18px; display: flex; flex-direction: column; gap: 9px; }
+    .faq-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); overflow: hidden; transition: border-color 0.14s; }
+    .faq-item.open { border-color: rgba(77,184,255,0.28); }
+    .faq-q { width: 100%; padding: 17px 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; border: none; background: none; font-family: var(--font); font-size: 14px; font-weight: 700; color: var(--text); text-align: left; }
+    .faq-q:hover { color: var(--primary-deep); }
+    .faq-chevron { width: 18px; height: 18px; flex-shrink: 0; color: var(--muted); transition: transform 0.2s ease; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--primary-deep); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.2s ease; font-size: 13px; color: var(--muted); line-height: 1.72; padding: 0 22px; }
+    .faq-item.open .faq-a { max-height: 200px; padding: 0 22px 17px; }
+
+    /* ── CONTACT ── */
+    .contact-section { padding: 20px 0; }
+    .contact-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow-card); padding: 30px 34px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .contact-left h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 7px; }
+    .contact-left p { font-size: 14px; color: var(--muted); line-height: 1.68; max-width: 420px; }
+    .contact-email-row { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
+    .contact-email-icon { color: var(--primary-deep); flex-shrink: 0; }
+    .contact-email-link { font-size: 14px; font-weight: 700; color: var(--primary-deep); text-decoration: underline; text-underline-offset: 3px; }
+    .contact-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 22px; border-radius: 999px; font-weight: 800; font-size: 14px; font-family: var(--font); background: linear-gradient(135deg, #4db8ff, #2299ee); color: white; box-shadow: var(--shadow-btn); border: none; cursor: pointer; text-decoration: none; transition: transform 0.14s, box-shadow 0.14s; flex-shrink: 0; }
+    .contact-btn:hover { transform: translateY(-1px); box-shadow: 0 12px 32px rgba(51,153,238,0.3); }
+
+    /* ── LINKS ── */
+    .links-section { padding: 20px 0 20px; }
+    .links-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 13px; margin-top: 18px; }
+    .link-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); padding: 22px 20px; display: flex; flex-direction: column; transition: transform 0.14s, border-color 0.14s, box-shadow 0.14s; cursor: pointer; }
+    .link-card:hover { transform: translateY(-2px); border-color: var(--line-hover); box-shadow: 0 14px 48px rgba(67,133,193,0.14), 0 2px 8px rgba(67,133,193,0.08); }
+    .link-icon { width: 38px; height: 38px; border-radius: 11px; margin-bottom: 13px; display: grid; place-items: center; background: rgba(77,184,255,0.09); border: 1px solid rgba(77,184,255,0.13); color: var(--primary-deep); }
+    .link-title { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 6px; }
+    .link-desc { font-size: 13px; color: var(--muted); line-height: 1.65; flex: 1; }
+    .link-arrow { margin-top: 14px; font-size: 12px; font-weight: 800; color: var(--primary-deep); display: flex; align-items: center; gap: 4px; }
+
+    /* ── FOOTER ── */
+    .footer { padding: 20px 0 60px; }
+    .footer-card { background: rgba(255,255,255,0.68); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow-card); padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .footer-brand { display: flex; align-items: center; gap: 11px; }
+    .footer-brand-name { font-size: 14px; font-weight: 800; letter-spacing: -0.03em; }
+    .footer-tagline { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .footer-copy { font-size: 12px; color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-grid, .game-card { grid-template-columns: 1fr; }
+      .game-visual { border-right: none; border-bottom: 1px solid rgba(92,151,201,0.12); }
+      .links-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .hero { padding: 32px 0 16px; }
+      .hero-main { padding: 24px 22px; }
+      .game-body { padding: 22px; }
+      .features-row { grid-template-columns: 1fr; }
+      .links-grid { grid-template-columns: 1fr; }
+      .contact-card { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 420px) {
+      .lang-btn { padding: 5px 8px; font-size: 11px; }
+    }
   </style>
 </head>
 <body>
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="../">
-      <div class="brand-mark">P</div>
-      PangChu Studio
-    </a>
-    <div class="lang-pills">
-      <a class="lang-pill" href="../">EN</a>
-      <a class="lang-pill" href="../ko/">한국어</a>
-      <a class="lang-pill" href="../ja/">日本語</a>
-      <a class="lang-pill" href="../zh-hk/">繁體</a>
-      <a class="lang-pill cur" href="../pt-br/">PT</a>
-    </div>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <div class="brand-mark">P</div>
+        PangChu Studio
+      </a>
+      <nav class="nav-links">
+        <a href="#game" data-i18n="nav.game">Jogo</a>
+        <a href="#announcements" data-i18n="nav.updates">Novidades</a>
+        <a href="#faq" data-i18n="nav.faq">Perguntas</a>
+        <a href="#contact" data-i18n="nav.contact">Contato</a>
+        <a href="#links" data-i18n="nav.links">Links</a>
+      </nav>
+  <div class="lang-switcher">
+    <a class="lang-btn active" href="../">EN</a>
+    <a class="lang-btn" href="../ko/">한국어</a>
+    <a class="lang-btn" href="../ja/">日本語</a>
+    <a class="lang-btn" href="../zh-hk/">繁體</a>
+    <a class="lang-btn" href="../pt-br/">PT</a>
   </div>
-</header>
+    </div>
+  </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-card">
-        <div class="eyebrow"><span class="eyebrow-dot"></span> Site Oficial PangChu Studio</div>
-        <h1>Gatinho<br><span>Pula-Pula</span></h1>
-        <p class="hero-desc">Um jogo casual fofo de pular com um gatinho adorável. Salte pelas nuvens, colete moedas, desbloqueie skins exclusivas e tente bater seu recorde!</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="../#game">Ver o Jogo</a>
-          <a class="btn btn-ghost" href="../privacy.html">Política de Privacidade</a>
-        </div>
-      </div>
+  <main id="top">
 
-      <div class="banner-wrap">
-        <img src="../images/jelly-cat-jump-banner.png" alt="Gatinho Pula-Pula — banner do jogo casual de gatinho fofo" />
-        <div class="banner-overlay">
-          <div class="banner-text">
-            <div class="banner-tag">Jogo Casual Fofo</div>
-            <div class="banner-title">Gatinho Pula-Pula</div>
-            <div class="banner-desc">Pular nuvens · Coletar moedas · Skins &amp; efeitos · Bater recorde</div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <article class="hero-main">
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-dot"></span>
+            <span data-i18n="hero.eyebrow">Site Oficial do Estúdio</span>
+          </div>
+          <h1 class="hero-title">PangChu<br><span>Studio</span></h1>
+          <p class="hero-sub" data-i18n="hero.sub">Um pequeno estúdio indie criando jogos mobile fofos e aconchegantes. Informações do estúdio, detalhes do jogo e páginas de políticas.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#game" data-i18n="hero.cta1">Ver o Jogo</a>
+            <a class="btn btn-ghost" href="#links" data-i18n="hero.cta2">Links Oficiais</a>
+          </div>
+        </article>
+
+        <div class="hero-side">
+          <div class="status-card" id="about">
+            <div class="live-badge"><span class="live-dot"></span><span data-i18n="status.badge">Site Ativo</span></div>
+            <div class="status-title" data-i18n="status.title">Links oficiais no ar</div>
+            <p class="status-body" data-i18n="status.body">Pronto para submissões em lojas, contatos de suporte e referências de política pública.</p>
+            <div class="mini-grid">
+              <div class="mini-tile"><strong data-i18n="mini.game">Jogo</strong><span data-i18n="mini.gameVal">Jelly Cat Jump</span></div>
+              <div class="mini-tile"><strong data-i18n="mini.genre">Gênero</strong><span data-i18n="mini.genreVal">Casual fofo</span></div>
+              <div class="mini-tile"><strong data-i18n="mini.studio">Estúdio</strong><span>PangChu Studio</span></div>
+              <div class="mini-tile"><strong data-i18n="mini.platform">Plataforma</strong><span data-i18n="mini.platformVal">Mobile</span></div>
+            </div>
+          </div>
+          <div class="about-card">
+            <h3 data-i18n="about.title">Sobre o estúdio</h3>
+            <p data-i18n="about.body">A PangChu Studio cria experiências de jogo limpas e amigáveis com visuais suaves, controles acessíveis e um charme acolhedor.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="divider" style="width:min(calc(100% - 40px),900px);margin:8px auto;"></div>
+    <div class="section-divider"></div>
 
-  <section class="features">
+    <!-- GAME -->
+    <section class="game-section" id="game">
+      <div class="wrap">
+        <div class="section-label" data-i18n="game.label">Jogo em Destaque</div>
+        <div class="section-title" data-i18n="game.title">Jelly Cat Jump</div>
+        <div class="section-sub" data-i18n="game.sub">Nosso título atual — suave, alegre e feito para todos.</div>
+        <article class="game-card">
+          <div class="game-visual">
+            <div class="banner-frame">
+              <img src="../images/jelly-cat-jump-banner.png" alt="Jelly Cat Jump banner do jogo" />
+            </div>
+          </div>
+          <div class="game-body">
+            <span class="game-tag" data-i18n="game.tag">Jogo Mobile Casual Fofo</span>
+            <h2 class="game-title" data-i18n="game.title">Jelly Cat Jump</h2>
+            <p class="game-desc" data-i18n="game.desc">Um jogo de pulo suave e animado com personagens de gatos, céus cheios de nuvens e controles simples de um toque. Feito para sessões rápidas e diversão fácil e satisfatória.</p>
+            <div class="features-row">
+              <div class="feature-tile"><strong data-i18n="feat1.title">Controles simples</strong><span data-i18n="feat1.desc">Jogo com um toque, confortável para todas as idades.</span></div>
+              <div class="feature-tile"><strong data-i18n="feat2.title">Visuais suaves</strong><span data-i18n="feat2.desc">Nuvens, pastéis e personagens de gatos fofos.</span></div>
+              <div class="feature-tile"><strong data-i18n="feat3.title">Ritmo arcade</strong><span data-i18n="feat3.desc">Corridas rápidas e desafio focado em pontuação.</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BANNER -->
+        <div class="game-banner">
+          <img src="../images/jelly-cat-jump-banner.png" alt="Jelly Cat Jump" />
+          <div class="game-banner-overlay">
+            <div class="game-banner-text">
+              <div class="game-banner-tag" data-i18n="game.tag">Jogo Mobile Casual Fofo</div>
+              <div class="game-banner-title" data-i18n="game.title">Jelly Cat Jump</div>
+              <p class="game-banner-desc" data-i18n="game.desc">Um jogo de pulo suave e animado com personagens de gatos, céus cheios de nuvens e controles simples de um toque. Feito para sessões rápidas e diversão fácil e satisfatória.</p>
+              <a class="game-banner-btn" href="#links" data-i18n="hero.cta1">Ver o Jogo</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ANNOUNCEMENTS -->
+    <section class="announce-section" id="announcements">
+      <div class="wrap">
+        <div class="section-label" data-i18n="ann.label">Comunicados</div>
+        <div class="section-title" data-i18n="ann.title">Novidades e Avisos</div>
+        <div class="section-sub" data-i18n="ann.sub">Últimas notícias e atualizações da PangChu Studio.</div>
+        <div class="announce-list">
+          <div class="announce-item">
+            <span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span>
+            <div class="announce-content">
+              <div class="announce-title" data-i18n="ann1.title">Site oficial no ar</div>
+              <div class="announce-desc" data-i18n="ann1.desc">O site oficial da PangChu Studio está no ar. Páginas de política, informações de contato e detalhes do jogo estão disponíveis aqui.</div>
+            </div>
+            <div class="announce-date">2026.04</div>
+          </div>
+          <div class="announce-item">
+            <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">Aviso</span>
+            <div class="announce-content">
+              <div class="announce-title" data-i18n="ann2.title">Política de Privacidade e Termos de Serviço publicados</div>
+              <div class="announce-desc" data-i18n="ann2.desc">Nossa Política de Privacidade e Termos de Serviço foram publicados e estão acessíveis na seção de Links.</div>
+            </div>
+            <div class="announce-date">2026.04</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+      <div class="wrap">
+        <div class="section-label" data-i18n="faq.label">Perguntas Frequentes</div>
+        <div class="section-title" data-i18n="faq.title">Perguntas Frequentes</div>
+        <div class="section-sub" data-i18n="faq.sub">Respostas rápidas sobre nosso jogo e estúdio.</div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq1.q">O que é Jelly Cat Jump?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq1.a">Jelly Cat Jump é um jogo mobile casual fofo de pulo criado pela PangChu Studio, com visuais suaves, tema de gatos e gameplay simples e acessível.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq2.q">Onde encontro a Política de Privacidade?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq2.a">Você pode encontrá-la na seção de links oficiais neste site.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq3.q">Onde encontro os Termos de Serviço?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq3.a">Você pode encontrá-los na seção de links oficiais neste site.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq4.q">O jogo já está disponível?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq4.a">A disponibilidade pode variar conforme o estágio de lançamento ou teste. Verifique a loja oficial ou atualizações futuras.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq5.q">Como contatar a PangChu Studio?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq5.a">Você pode entrar em contato pelo e-mail pangchustudio@gmail.com.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="wrap">
+        <div class="contact-card">
+          <div class="contact-left">
+            <h2 data-i18n="contact.title">Contatar a PangChu Studio</h2>
+            <p data-i18n="contact.body">Para dúvidas, suporte ou contato oficial relacionado à PangChu Studio e ao Jelly Cat Jump, use o e-mail abaixo.</p>
+            <div class="contact-email-row">
+              <svg class="contact-email-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              <a class="contact-email-link" href="mailto:pangchustudio@gmail.com">pangchustudio@gmail.com</a>
+            </div>
+          </div>
+          <a class="contact-btn" href="mailto:pangchustudio@gmail.com">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            <span data-i18n="contact.btn">Enviar E-mail</span>
+          </a>
+        </div>
+        <p style="margin-top:10px;font-size:13px;color:var(--muted);text-align:right;">
+          <span data-i18n="contact.orEmail">ou envie diretamente:</span>
+          <a href="mailto:pangchustudio@gmail.com" style="color:var(--primary-deep);font-weight:700;margin-left:5px;">pangchustudio@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- LINKS -->
+    <section class="links-section" id="links">
+      <div class="wrap">
+        <div class="section-label" data-i18n="links.label">Links Oficiais</div>
+        <div class="section-title" data-i18n="links.title">Páginas e Políticas</div>
+        <div class="section-sub" data-i18n="links.sub">Documentos oficiais para submissões em plataformas, suporte ao cliente e referência pública.</div>
+        <div class="links-grid">
+          <a class="link-card" href="../privacy.html">
+            <div class="link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div class="link-title" data-i18n="link1.title">Política de Privacidade</div>
+            <p class="link-desc" data-i18n="link1.desc">Nossa política de privacidade para os serviços da PangChu Studio e Jelly Cat Jump.</p>
+            <div class="link-arrow"><span data-i18n="link1.arrow">Ler política</span> <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </a>
+          <a class="link-card" href="../terms.html">
+            <div class="link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
+            <div class="link-title" data-i18n="link2.title">Termos de Serviço</div>
+            <p class="link-desc" data-i18n="link2.desc">Termos e condições para uso deste site e serviços relacionados.</p>
+            <div class="link-arrow"><span data-i18n="link2.arrow">Ler termos</span> <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </a>
+          <a class="link-card" href="https://github.com/bypangs/pangchu-privacy" target="_blank" rel="noopener">
+            <div class="link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+            <div class="link-title" data-i18n="link3.title">Repositório GitHub</div>
+            <p class="link-desc" data-i18n="link3.desc">O repositório público que hospeda este site e arquivos de suporte.</p>
+            <div class="link-arrow"><span data-i18n="link3.arrow">Abrir repositório</span> <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="wrap">
-      <div class="section-label">Características do Jogo</div>
-      <div class="section-title">O que te espera</div>
-      <div class="features-grid">
-        <div class="feat-card">
-          <div class="feat-icon">☁️</div>
-          <div class="feat-title">Pular nas Nuvens</div>
-          <div class="feat-desc">Salte de nuvem em nuvem nesta ação leve e refrescante</div>
+      <div class="footer-card">
+        <div class="footer-brand">
+          <div class="brand-mark" style="width:34px;height:34px;border-radius:10px;font-size:14px;">P</div>
+          <div>
+            <div class="footer-brand-name">PangChu Studio</div>
+            <div class="footer-tagline" data-i18n="footer.tagline">Jogos mobile fofos e aconchegantes</div>
+          </div>
         </div>
-        <div class="feat-card">
-          <div class="feat-icon">🪙</div>
-          <div class="feat-title">Coletar Moedas</div>
-          <div class="feat-desc">Junte moedas para desbloquear skins e efeitos especiais</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🐱</div>
-          <div class="feat-title">Skins Fofas</div>
-          <div class="feat-desc">Personalize seu gatinho com diversas skins exclusivas</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🏆</div>
-          <div class="feat-title">Bater Recorde</div>
-          <div class="feat-desc">Supere sua melhor pontuação e suba no ranking</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">☁️</div>
-          <div class="feat-title">Salvar na Nuvem</div>
-          <div class="feat-desc">Seu progresso salvo na nuvem, jogue de qualquer lugar</div>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">👨‍👩‍👧</div>
-          <div class="feat-title">Para Toda Família</div>
-          <div class="feat-desc">Recomendado para maiores de 3 anos, diversão garantida</div>
-        </div>
+        <div class="footer-copy" data-i18n="footer.copy">© 2026 PangChu Studio. All rights reserved.</div>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <div class="divider" style="width:min(calc(100% - 40px),900px);margin:8px auto;"></div>
+  <script>
+    /* ── TRANSLATIONS ── */
+    const T = {
+      en: {
+        'nav.game': 'Game', 'nav.updates': 'Updates', 'nav.faq': 'FAQ',
+        'nav.contact': 'Contact', 'nav.links': 'Links',
+        'hero.eyebrow': 'Official Studio Website',
+        'hero.sub': 'A small indie studio crafting cute, cozy mobile game experiences. Official home for studio information, game details, and policy pages.',
+        'hero.cta1': 'View Featured Game', 'hero.cta2': 'Official Links',
+        'status.badge': 'Website Active', 'status.title': 'Official links are live',
+        'status.body': 'Ready for app store submissions, support contacts, and public-facing policy references.',
+        'mini.game': 'Game', 'mini.gameVal': 'Jelly Cat Jump', 'mini.genre': 'Genre', 'mini.genreVal': 'Cute casual',
+        'mini.studio': 'Studio', 'mini.platform': 'Platform', 'mini.platformVal': 'Mobile',
+        'about.title': 'About the studio',
+        'about.body': 'PangChu Studio builds clean, friendly game experiences with soft visuals, approachable controls, and a charming, welcoming feel.',
+        'game.title': 'Jelly Cat Jump', 'game.label': 'Featured Game', 'game.sub': 'Our current title — soft, cheerful, and built for everyone.',
+        'game.tag': 'Cute Casual Mobile Game',
+        'game.desc': 'A soft, cheerful jumping game built around playful cat characters, cloud-filled skies, and simple one-touch controls. Designed for quick sessions and easy, satisfying fun.',
+        'feat1.title': 'Simple controls', 'feat1.desc': 'One-touch gameplay, comfortable for all ages.',
+        'feat2.title': 'Soft visuals', 'feat2.desc': 'Clouds, pastels, and cute cat characters.',
+        'feat3.title': 'Arcade rhythm', 'feat3.desc': 'Quick runs and score-focused challenge.',
+        'ann.label': 'Announcements', 'ann.title': 'Updates & Notices',
+        'ann.sub': 'Latest news and updates from PangChu Studio.',
+        'ann.badge.new': 'New', 'ann.badge.notice': 'Notice',
+        'ann1.title': 'Official website is now live',
+        'ann1.desc': 'The PangChu Studio official website is now live. Policy pages, contact information, and game details are all available here.',
+        'ann2.title': 'Privacy Policy and Terms of Service published',
+        'ann2.desc': 'Our Privacy Policy and Terms of Service documents have been published and are accessible from the Links section.',
+        'faq.label': 'FAQ', 'faq.title': 'Frequently Asked Questions',
+        'faq.sub': 'Quick answers to common questions about our game and studio.',
+        'faq1.q': 'What is Jelly Cat Jump?',
+        'faq1.a': 'Jelly Cat Jump is a cute casual mobile jumping game created by PangChu Studio. It features soft visuals, playful cat-themed charm, and simple, approachable gameplay.',
+        'faq2.q': 'Where can I find the Privacy Policy?',
+        'faq2.a': 'You can find the Privacy Policy through the official links section on this website.',
+        'faq3.q': 'Where can I find the Terms of Service?',
+        'faq3.a': 'You can find the Terms of Service through the official links section on this website.',
+        'faq4.q': 'Is the game available now?',
+        'faq4.a': 'Availability may vary depending on the current release or testing stage. Please check the official store listing or future updates for the latest status.',
+        'faq5.q': 'How can I contact PangChu Studio?',
+        'faq5.a': 'You can contact PangChu Studio by email at pangchustudio@gmail.com.',
+        'contact.title': 'Contact PangChu Studio',
+        'contact.body': 'For questions, support inquiries, or official contact related to PangChu Studio and Jelly Cat Jump, please use the email below.',
+        'contact.btn': 'Send an Email', 'contact.orEmail': 'or email directly:',
+        'links.label': 'Official Links', 'links.title': 'Pages & Policies',
+        'links.sub': 'Official documents for platform submissions, customer support, and public reference.',
+        'link1.title': 'Privacy Policy', 'link1.desc': 'Our privacy policy for PangChu Studio services and Jelly Cat Jump.', 'link1.arrow': 'Read policy',
+        'link2.title': 'Terms of Service', 'link2.desc': 'Terms and conditions governing the use of this website and related services.', 'link2.arrow': 'Read terms',
+        'link3.title': 'GitHub Repository', 'link3.desc': 'The public repository hosting this website and supporting files.', 'link3.arrow': 'Open repository',
+        'footer.tagline': 'Cute & cozy mobile games', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+      },
+      ko: {
+        'nav.game': '게임', 'nav.updates': '공지', 'nav.faq': '자주 묻는 질문',
+        'nav.contact': '문의', 'nav.links': '링크',
+        'hero.eyebrow': '공식 스튜디오 웹사이트',
+        'hero.sub': '귀엽고 아늑한 모바일 게임을 만드는 소규모 인디 스튜디오입니다. 스튜디오 소개, 게임 정보, 정책 페이지를 확인하세요.',
+        'hero.cta1': '게임 보기', 'hero.cta2': '공식 링크',
+        'status.badge': '웹사이트 운영 중', 'status.title': '공식 링크가 준비되었습니다',
+        'status.body': '앱스토어 제출, 고객 지원, 공식 정책 안내에 활용할 수 있습니다.',
+        'mini.game': '게임', 'mini.gameVal': '말랑냥이점프', 'mini.genre': '장르', 'mini.genreVal': '캐주얼',
+        'mini.studio': '스튜디오', 'mini.platform': '플랫폼', 'mini.platformVal': '모바일',
+        'about.title': '스튜디오 소개',
+        'about.body': '팡츄 스튜디오는 부드러운 비주얼, 직관적인 조작, 따뜻하고 친근한 느낌의 게임 경험을 만들어갑니다.',
+        'game.title': '말랑냥이점프', 'game.label': '대표 게임', 'game.sub': '현재 서비스 중인 게임 — 부드럽고 귀엽게, 누구나 즐길 수 있도록.',
+        'game.tag': '귀여운 캐주얼 모바일 게임',
+        'game.desc': '귀여운 고양이 캐릭터, 구름 가득한 하늘, 간단한 원터치 조작으로 즐기는 부드럽고 유쾌한 점프 게임입니다. 짧은 플레이에도 만족스러운 재미를 느낄 수 있어요.',
+        'feat1.title': '간단한 조작', 'feat1.desc': '원터치 조작으로 누구나 편하게 즐길 수 있어요.',
+        'feat2.title': '부드러운 비주얼', 'feat2.desc': '구름, 파스텔, 귀여운 고양이 캐릭터.',
+        'feat3.title': '아케이드 리듬', 'feat3.desc': '짧은 런과 점수 도전의 재미.',
+        'ann.label': '공지사항', 'ann.title': '업데이트 및 공지',
+        'ann.sub': '팡츄 스튜디오의 최신 소식을 확인하세요.',
+        'ann.badge.new': '신규', 'ann.badge.notice': '공지',
+        'ann1.title': '공식 웹사이트 오픈',
+        'ann1.desc': '팡츄 스튜디오 공식 웹사이트가 오픈되었습니다. 정책 페이지, 연락처, 게임 정보를 이곳에서 확인하실 수 있습니다.',
+        'ann2.title': '개인정보처리방침 및 이용약관 게재',
+        'ann2.desc': '개인정보처리방침과 이용약관이 공개되었습니다. 하단 링크 섹션에서 확인하실 수 있습니다.',
+        'faq.label': '자주 묻는 질문', 'faq.title': '자주 묻는 질문',
+        'faq.sub': '게임과 스튜디오에 관한 주요 질문에 답변드립니다.',
+        'faq1.q': '말랑냥이점프는 어떤 게임인가요?',
+        'faq1.a': '말랑냥이점프는 팡츄 스튜디오가 만든 귀여운 캐주얼 모바일 점프 게임입니다. 부드러운 비주얼, 귀여운 고양이 테마, 간단한 조작이 특징입니다.',
+        'faq2.q': '개인정보처리방침은 어디서 확인하나요?',
+        'faq2.a': '이 웹사이트 하단의 공식 링크 섹션에서 확인하실 수 있습니다.',
+        'faq3.q': '이용약관은 어디서 확인하나요?',
+        'faq3.a': '이 웹사이트 하단의 공식 링크 섹션에서 확인하실 수 있습니다.',
+        'faq4.q': '게임을 지금 이용할 수 있나요?',
+        'faq4.a': '출시 또는 테스트 단계에 따라 이용 가능 여부가 달라질 수 있습니다. 공식 스토어 페이지나 향후 공지를 확인해 주세요.',
+        'faq5.q': '팡츄 스튜디오에 연락하려면 어떻게 하나요?',
+        'faq5.a': 'pangchustudio@gmail.com 으로 이메일을 보내주시면 됩니다.',
+        'contact.title': '팡츄 스튜디오에 문의하기',
+        'contact.body': '팡츄 스튜디오 및 말랑냥이점프 관련 문의, 지원 요청, 공식 연락은 아래 이메일을 이용해 주세요.',
+        'contact.btn': '이메일 보내기', 'contact.orEmail': '또는 직접 이메일:',
+        'links.label': '공식 링크', 'links.title': '페이지 및 정책',
+        'links.sub': '플랫폼 제출, 고객 지원, 공식 안내에 필요한 문서입니다.',
+        'link1.title': '개인정보처리방침', 'link1.desc': '팡츄 스튜디오 서비스 및 말랑냥이점프의 개인정보처리방침입니다.', 'link1.arrow': '확인하기',
+        'link2.title': '이용약관', 'link2.desc': '이 웹사이트 및 관련 서비스의 이용약관입니다.', 'link2.arrow': '확인하기',
+        'link3.title': 'GitHub 저장소', 'link3.desc': '이 웹사이트를 호스팅하는 공개 저장소입니다.', 'link3.arrow': '열기',
+        'footer.tagline': '귀엽고 아늑한 모바일 게임', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+      },
+      ja: {
+        'nav.game': 'ゲーム', 'nav.updates': 'お知らせ', 'nav.faq': 'よくある質問',
+        'nav.contact': 'お問い合わせ', 'nav.links': 'リンク',
+        'hero.eyebrow': '公式スタジオウェブサイト',
+        'hero.sub': 'かわいくて居心地のいいモバイルゲームを制作する小さなインディースタジオです。スタジオ情報、ゲームの詳細、ポリシーページをご確認ください。',
+        'hero.cta1': 'ゲームを見る', 'hero.cta2': '公式リンク',
+        'status.badge': 'ウェブサイト運営中', 'status.title': '公式リンク公開中',
+        'status.body': 'アプリストア申請、サポート連絡、公式ポリシー参照に対応しています。',
+        'mini.game': 'ゲーム', 'mini.gameVal': 'ネコニャンジャンプ', 'mini.genre': 'ジャンル', 'mini.genreVal': 'カジュアル',
+        'mini.studio': 'スタジオ', 'mini.platform': 'プラットフォーム', 'mini.platformVal': 'モバイル',
+        'about.title': 'スタジオについて',
+        'about.body': 'PangChu Studioは、柔らかなビジュアル、直感的な操作、温かみのあるゲーム体験を大切にしています。',
+        'game.title': 'ネコニャンジャンプ', 'game.label': '注目のゲーム', 'game.sub': '現在のタイトル — やさしく、かわいく、誰でも楽しめる。',
+        'game.tag': 'かわいいカジュアルモバイルゲーム',
+        'game.desc': 'かわいい猫のキャラクター、雲に満ちた空、シンプルなワンタッチ操作が特徴のやわらかくて楽しいジャンプゲームです。短い時間でも気軽に楽しめます。',
+        'feat1.title': '簡単な操作', 'feat1.desc': 'ワンタッチで誰でも快適にプレイできます。',
+        'feat2.title': '柔らかなビジュアル', 'feat2.desc': '雲、パステル、かわいい猫キャラクター。',
+        'feat3.title': 'アーケードリズム', 'feat3.desc': 'テンポよくスコアを狙う楽しさ。',
+        'ann.label': 'お知らせ', 'ann.title': 'アップデート＆お知らせ',
+        'ann.sub': 'PangChu Studioの最新情報をお届けします。',
+        'ann.badge.new': '新着', 'ann.badge.notice': 'お知らせ',
+        'ann1.title': '公式ウェブサイトがオープンしました',
+        'ann1.desc': 'PangChu Studioの公式ウェブサイトが公開されました。ポリシーページ、お問い合わせ先、ゲーム情報をこちらでご確認いただけます。',
+        'ann2.title': 'プライバシーポリシーおよび利用規約を公開しました',
+        'ann2.desc': 'プライバシーポリシーと利用規約を公開しました。リンクセクションよりご確認いただけます。',
+        'faq.label': 'よくある質問', 'faq.title': 'よくある質問',
+        'faq.sub': 'ゲームとスタジオに関するよくある質問にお答えします。',
+        'faq1.q': 'ネコニャンジャンプとはどんなゲームですか？',
+        'faq1.a': 'ネコニャンジャンプはPangChu Studioが制作したかわいいカジュアルモバイルジャンプゲームです。柔らかなビジュアルと猫テーマ、シンプルな操作が特徴です。',
+        'faq2.q': 'プライバシーポリシーはどこで確認できますか？',
+        'faq2.a': 'このウェブサイトの公式リンクセクションよりご確認いただけます。',
+        'faq3.q': '利用規約はどこで確認できますか？',
+        'faq3.a': 'このウェブサイトの公式リンクセクションよりご確認いただけます。',
+        'faq4.q': 'ゲームは今すぐプレイできますか？',
+        'faq4.a': 'リリースまたはテストの段階によって異なります。公式ストアページや今後のお知らせをご確認ください。',
+        'faq5.q': 'PangChu Studioへの連絡方法は？',
+        'faq5.a': 'pangchustudio@gmail.com までメールにてお問い合わせください。',
+        'contact.title': 'PangChu Studioへのお問い合わせ',
+        'contact.body': 'PangChu Studioおよびネコニャンジャンプに関するご質問、サポート依頼、公式連絡は以下のメールアドレスまでご連絡ください。',
+        'contact.btn': 'メールを送る', 'contact.orEmail': 'または直接メール:',
+        'links.label': '公式リンク', 'links.title': 'ページ＆ポリシー',
+        'links.sub': 'プラットフォーム申請、カスタマーサポート、公式参照用のドキュメントです。',
+        'link1.title': 'プライバシーポリシー', 'link1.desc': 'PangChu Studioサービスおよびネコニャンジャンプのプライバシーポリシーです。', 'link1.arrow': '確認する',
+        'link2.title': '利用規約', 'link2.desc': 'このウェブサイトおよび関連サービスの利用規約です。', 'link2.arrow': '確認する',
+        'link3.title': 'GitHubリポジトリ', 'link3.desc': 'このウェブサイトをホスティングする公開リポジトリです。', 'link3.arrow': '開く',
+        'footer.tagline': 'かわいくて居心地のいいモバイルゲーム', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+      },
+      zh: {
+        'nav.game': '遊戲', 'nav.updates': '公告', 'nav.faq': '常見問題',
+        'nav.contact': '聯絡', 'nav.links': '連結',
+        'hero.eyebrow': '官方工作室網站',
+        'hero.sub': '一個專注於製作可愛、溫馨手機遊戲的小型獨立工作室。歡迎瀏覽工作室介紹、遊戲資訊與政策頁面。',
+        'hero.cta1': '查看遊戲', 'hero.cta2': '官方連結',
+        'status.badge': '網站運作中', 'status.title': '官方連結已上線',
+        'status.body': '已準備好供應用程式商店提交、客戶支援及公開政策參考使用。',
+        'mini.game': '遊戲', 'mini.gameVal': 'Jelly Cat Jump', 'mini.genre': '類型', 'mini.genreVal': '休閒',
+        'mini.studio': '工作室', 'mini.platform': '平台', 'mini.platformVal': '手機',
+        'about.title': '關於工作室',
+        'about.body': 'PangChu Studio 致力於打造畫面柔和、操作直覺、充滿溫暖魅力的遊戲體驗。',
+        'game.title': 'Jelly Cat Jump', 'game.label': '主打遊戲', 'game.sub': '目前上線作品 — 柔和、可愛，適合所有人。',
+        'game.tag': '可愛休閒手機遊戲',
+        'game.desc': '一款以可愛貓咪角色、雲朵天空和簡單單點操作為主題的柔和跳躍遊戲，專為輕鬆愉快的短暫遊玩時光而設計。',
+        'feat1.title': '簡單操作', 'feat1.desc': '單點操作，老少皆宜。',
+        'feat2.title': '柔和視覺', 'feat2.desc': '雲朵、粉彩色調與可愛貓咪角色。',
+        'feat3.title': '街機節奏', 'feat3.desc': '快節奏闖關，追求高分挑戰。',
+        'ann.label': '公告', 'ann.title': '更新與公告',
+        'ann.sub': '來自 PangChu Studio 的最新消息。',
+        'ann.badge.new': '新', 'ann.badge.notice': '公告',
+        'ann1.title': '官方網站正式上線',
+        'ann1.desc': 'PangChu Studio 官方網站正式上線。政策頁面、聯絡資訊及遊戲詳情均可在此查閱。',
+        'ann2.title': '隱私政策及服務條款已發布',
+        'ann2.desc': '我們的隱私政策與服務條款文件已正式發布，可於連結區塊查閱。',
+        'faq.label': '常見問題', 'faq.title': '常見問題',
+        'faq.sub': '關於我們遊戲與工作室的常見問題解答。',
+        'faq1.q': 'Jelly Cat Jump是什麼遊戲？',
+        'faq1.a': 'Jelly Cat Jump是 PangChu Studio 製作的可愛休閒手機跳躍遊戲，以柔和視覺、貓咪主題和簡單操作為特色。',
+        'faq2.q': '隱私政策在哪裡查看？',
+        'faq2.a': '可透過本網站下方的官方連結區塊查閱。',
+        'faq3.q': '服務條款在哪裡查看？',
+        'faq3.a': '可透過本網站下方的官方連結區塊查閱。',
+        'faq4.q': '遊戲現在可以玩嗎？',
+        'faq4.a': '可用狀態視目前發布或測試階段而定，請查看官方商店頁面或後續公告以獲取最新資訊。',
+        'faq5.q': '如何聯絡 PangChu Studio？',
+        'faq5.a': '請發送電子郵件至 pangchustudio@gmail.com 與我們聯絡。',
+        'contact.title': '聯絡 PangChu Studio',
+        'contact.body': '如有關於 PangChu Studio 及Jelly Cat Jump的問題、支援需求或官方聯絡事項，請使用以下電子郵件。',
+        'contact.btn': '發送電子郵件', 'contact.orEmail': '或直接寄信至:',
+        'links.label': '官方連結', 'links.title': '頁面與政策',
+        'links.sub': '供平台提交、客戶支援及公開參考的官方文件。',
+        'link1.title': '隱私政策', 'link1.desc': 'PangChu Studio 服務及Jelly Cat Jump的隱私政策。', 'link1.arrow': '查閱政策',
+        'link2.title': '服務條款', 'link2.desc': '本網站及相關服務的使用條款與細則。', 'link2.arrow': '查閱條款',
+        'link3.title': 'GitHub 儲存庫', 'link3.desc': '託管本網站及相關文件的公開儲存庫。', 'link3.arrow': '開啟儲存庫',
+        'footer.tagline': '可愛溫馨的手機遊戲', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+      },
+      pt: {
+        'nav.game': 'Jogo', 'nav.updates': 'Novidades', 'nav.faq': 'Perguntas',
+        'nav.contact': 'Contato', 'nav.links': 'Links',
+        'hero.eyebrow': 'Site Oficial do Estúdio',
+        'hero.sub': 'Um pequeno estúdio indie criando jogos mobile fofos e aconchegantes. Informações do estúdio, detalhes do jogo e páginas de políticas.',
+        'hero.cta1': 'Ver o Jogo', 'hero.cta2': 'Links Oficiais',
+        'status.badge': 'Site Ativo', 'status.title': 'Links oficiais no ar',
+        'status.body': 'Pronto para submissões em lojas, contatos de suporte e referências de política pública.',
+        'mini.game': 'Jogo', 'mini.gameVal': 'Jelly Cat Jump', 'mini.genre': 'Gênero', 'mini.genreVal': 'Casual fofo',
+        'mini.studio': 'Estúdio', 'mini.platform': 'Plataforma', 'mini.platformVal': 'Mobile',
+        'about.title': 'Sobre o estúdio',
+        'about.body': 'A PangChu Studio cria experiências de jogo limpas e amigáveis com visuais suaves, controles acessíveis e um charme acolhedor.',
+        'game.title': 'Jelly Cat Jump', 'game.label': 'Jogo em Destaque', 'game.sub': 'Nosso título atual — suave, alegre e feito para todos.',
+        'game.tag': 'Jogo Mobile Casual Fofo',
+        'game.desc': 'Um jogo de pulo suave e animado com personagens de gatos, céus cheios de nuvens e controles simples de um toque. Feito para sessões rápidas e diversão fácil e satisfatória.',
+        'feat1.title': 'Controles simples', 'feat1.desc': 'Jogo com um toque, confortável para todas as idades.',
+        'feat2.title': 'Visuais suaves', 'feat2.desc': 'Nuvens, pastéis e personagens de gatos fofos.',
+        'feat3.title': 'Ritmo arcade', 'feat3.desc': 'Corridas rápidas e desafio focado em pontuação.',
+        'ann.label': 'Comunicados', 'ann.title': 'Novidades e Avisos',
+        'ann.sub': 'Últimas notícias e atualizações da PangChu Studio.',
+        'ann.badge.new': 'Novo', 'ann.badge.notice': 'Aviso',
+        'ann1.title': 'Site oficial no ar',
+        'ann1.desc': 'O site oficial da PangChu Studio está no ar. Páginas de política, informações de contato e detalhes do jogo estão disponíveis aqui.',
+        'ann2.title': 'Política de Privacidade e Termos de Serviço publicados',
+        'ann2.desc': 'Nossa Política de Privacidade e Termos de Serviço foram publicados e estão acessíveis na seção de Links.',
+        'faq.label': 'Perguntas Frequentes', 'faq.title': 'Perguntas Frequentes',
+        'faq.sub': 'Respostas rápidas sobre nosso jogo e estúdio.',
+        'faq1.q': 'O que é Jelly Cat Jump?',
+        'faq1.a': 'Jelly Cat Jump é um jogo mobile casual fofo de pulo criado pela PangChu Studio, com visuais suaves, tema de gatos e gameplay simples e acessível.',
+        'faq2.q': 'Onde encontro a Política de Privacidade?',
+        'faq2.a': 'Você pode encontrá-la na seção de links oficiais neste site.',
+        'faq3.q': 'Onde encontro os Termos de Serviço?',
+        'faq3.a': 'Você pode encontrá-los na seção de links oficiais neste site.',
+        'faq4.q': 'O jogo já está disponível?',
+        'faq4.a': 'A disponibilidade pode variar conforme o estágio de lançamento ou teste. Verifique a loja oficial ou atualizações futuras.',
+        'faq5.q': 'Como contatar a PangChu Studio?',
+        'faq5.a': 'Você pode entrar em contato pelo e-mail pangchustudio@gmail.com.',
+        'contact.title': 'Contatar a PangChu Studio',
+        'contact.body': 'Para dúvidas, suporte ou contato oficial relacionado à PangChu Studio e ao Jelly Cat Jump, use o e-mail abaixo.',
+        'contact.btn': 'Enviar E-mail', 'contact.orEmail': 'ou envie diretamente:',
+        'links.label': 'Links Oficiais', 'links.title': 'Páginas e Políticas',
+        'links.sub': 'Documentos oficiais para submissões em plataformas, suporte ao cliente e referência pública.',
+        'link1.title': 'Política de Privacidade', 'link1.desc': 'Nossa política de privacidade para os serviços da PangChu Studio e Jelly Cat Jump.', 'link1.arrow': 'Ler política',
+        'link2.title': 'Termos de Serviço', 'link2.desc': 'Termos e condições para uso deste site e serviços relacionados.', 'link2.arrow': 'Ler termos',
+        'link3.title': 'Repositório GitHub', 'link3.desc': 'O repositório público que hospeda este site e arquivos de suporte.', 'link3.arrow': 'Abrir repositório',
+        'footer.tagline': 'Jogos mobile fofos e aconchegantes', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+      },
+    };
 
-  <section class="info">
-    <div class="wrap">
-      <div class="section-label">Sobre o Estúdio</div>
-      <div class="section-title">PangChu Studio</div>
-      <div class="info-grid">
-        <div class="info-card">
-          <h3>Sobre nós</h3>
-          <p>A PangChu Studio é um pequeno estúdio indie dedicado a criar jogos mobile fofos e aconchegantes, com visuais suaves e controles simples que todo mundo pode curtir.</p>
-        </div>
-        <div class="info-card">
-          <h3>Contato e Suporte</h3>
-          <p>Dúvidas, suporte ou contato oficial, envie um e-mail para:<br><br>
-          <a class="contact-link" href="mailto:pangchustudio@gmail.com">pangchustudio@gmail.com</a></p>
-        </div>
-        <div class="info-card">
-          <h3>Políticas Oficiais</h3>
-          <p>
-            <a class="contact-link" href="../privacy.html">Política de Privacidade</a> e
-            <a class="contact-link" href="../terms.html">Termos de Serviço</a> disponíveis.
-          </p>
-        </div>
-        <div class="info-card">
-          <h3>Informações do Jogo</h3>
-          <p>Pacote: malrang.nayong<br>Gênero: Arcade Casual<br>Faixa etária: 3+ / Família<br>Plataformas: Android · iOS</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+    // index.html은 항상 영어(en)가 기본 — 언어별 전용 페이지(/ko/, /ja/ 등)가 따로 있음
+    let currentLang = 'pt';
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-card">
-      <div class="footer-brand">
-        <div class="brand-mark" style="width:32px;height:32px;border-radius:10px;font-size:13px;">P</div>
-        <div>
-          <div class="footer-name">PangChu Studio</div>
-          <div class="footer-tag">Jogos mobile fofos e aconchegantes</div>
-        </div>
-      </div>
-      <div class="footer-links">
-        <a href="../privacy.html">Privacidade</a>
-        <a href="../terms.html">Termos</a>
-        <a href="../">English</a>
-      </div>
-    </div>
-    <p style="margin-top:10px;font-size:12px;color:var(--muted);text-align:center;">© 2026 PangChu Studio. All rights reserved.</p>
-  </div>
-</footer>
+    function setLang(lang) {
+      currentLang = lang;
+      const labelMap = { en: 'EN', ko: '한국어', ja: '日本語', zh: '繁體', pt: 'PT' };
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === labelMap[lang]);
+      });
+      const langAttrMap = { en: 'en', ko: 'ko', ja: 'ja', zh: 'zh-Hant', pt: 'pt-BR' };
+      document.documentElement.lang = langAttrMap[lang] || lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (T[lang] && T[lang][key] !== undefined) el.textContent = T[lang][key];
+      });
+    }
 
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Init
+    setLang(currentLang);
+  </script>
 </body>
 </html>
