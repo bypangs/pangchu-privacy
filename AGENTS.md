@@ -13,6 +13,15 @@
 - `sitemap.xml`의 `<loc>`/`<xhtml:link>`는 실제 공개 URL인지 확인하고, 존재하지 않거나 로컬 주소가 있으면 즉시 수정한다.
 - 배포 전/후 Search Console에서는 사이트맵 URL을 `https://bypangs.github.io/pangchu-privacy/sitemap.xml`로만 제출한다.
 
+## 백업 / 저장 체크포인트
+- 큰 수정 라운드가 안정적으로 끝났거나 사용자가 "백업해줘", "저장해줘", "커밋해줘"처럼 명시하면 먼저 `git status --short`와 `git diff --stat`으로 변경 범위를 확인한다.
+- 미커밋 변경이 있으면 관련 파일만 스테이징하고, 임시 파일·로그·테스트 산출물(`tmp-*`, `test-results/` 등)은 포함하지 않는다.
+- 백업 커밋은 작업 내용을 알아볼 수 있는 짧은 메시지로 남긴다. 예: `Fix localized pages and language switching`.
+- 안정본 기준점은 주석 태그로 남긴다. 태그 형식은 `backup-YYYY-MM-DD-brief` 또는 작업이 분명한 `backup-language-fix-YYYY-MM-DD`처럼 작성한다.
+- 워킹트리가 이미 깨끗하면 새 커밋 없이 현재 `HEAD`에 백업 태그만 붙일 수 있다.
+- 원격/GitHub 백업은 사용자가 명시적으로 "푸시", "원격 백업", "GitHub에 올려"라고 요청한 경우에만 현재 브랜치와 필요한 태그를 push한다.
+- 완료 보고에는 커밋 해시, 태그 이름, 원격 push 여부, 남은 변경 파일 여부를 짧게 적는다.
+
 ## 말랑냥이 홈페이지 전용 규칙
 
 ### 앱 이름/브랜드 표기
