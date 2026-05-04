@@ -83,7 +83,7 @@
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Noto+Sans+KR:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Noto+Sans+KR:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;800&family=Noto+Sans+TC:wght@400;700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -107,7 +107,7 @@
       --r-lg: 22px;
       --r-md: 16px;
       --max: 1100px;
-      --font: 'Inter', 'Noto Sans KR', 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif;
+      --font: 'Inter', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans TC', ui-sans-serif, system-ui, sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -573,6 +573,13 @@
             </button>
             <div class="faq-a" data-i18n="faq5.a">pangchustudio@gmail.com 으로 이메일을 보내주시면 됩니다.</div>
           </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq6.q">게임 관련 건의나 피드백은 어디로 보내면 되나요?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq6.a">게임 이용 중 불편한 점, 버그 제보, 개선 아이디어가 있다면 pangchustudio@gmail.com 으로 보내주세요. 보내주신 의견은 더 나은 게임과 서비스 개선을 위해 참고합니다.</div>
+          </div>
         </div>
       </div>
     </section>
@@ -694,6 +701,8 @@
         'faq4.a': 'Availability may vary depending on the current release or testing stage. Please check the official store listing or future updates for the latest status.',
         'faq5.q': 'How can I contact PangChu Studio?',
         'faq5.a': 'You can contact PangChu Studio by email at pangchustudio@gmail.com.',
+        'faq6.q': 'Where can I send feedback or suggestions about the game?',
+        'faq6.a': 'You can send feedback, bug reports, or improvement ideas to pangchustudio@gmail.com. Your comments may be used to help improve our games and services.',
         'contact.title': 'Contact PangChu Studio',
         'contact.body': 'For questions, support inquiries, or official contact related to PangChu Studio and Jelly Cat Jump, please use the email below.',
         'contact.btn': 'Send an Email', 'contact.orEmail': 'or email directly:',
@@ -743,6 +752,8 @@
         'faq4.a': '출시 또는 테스트 단계에 따라 이용 가능 여부가 달라질 수 있습니다. 공식 스토어 페이지나 향후 공지를 확인해 주세요.',
         'faq5.q': '팡츄 스튜디오에 연락하려면 어떻게 하나요?',
         'faq5.a': 'pangchustudio@gmail.com 으로 이메일을 보내주시면 됩니다.',
+        'faq6.q': '게임 관련 건의나 피드백은 어디로 보내면 되나요?',
+        'faq6.a': '게임 이용 중 불편한 점, 버그 제보, 개선 아이디어가 있다면 pangchustudio@gmail.com 으로 보내주세요. 보내주신 의견은 더 나은 게임과 서비스 개선을 위해 참고합니다.',
         'contact.title': '팡츄 스튜디오에 문의하기',
         'contact.body': '팡츄 스튜디오 및 말랑냥이점프 관련 문의, 지원 요청, 공식 연락은 아래 이메일을 이용해 주세요.',
         'contact.btn': '이메일 보내기', 'contact.orEmail': '또는 직접 이메일:',
@@ -792,6 +803,8 @@
         'faq4.a': 'リリースまたはテストの段階によって異なります。公式ストアページや今後のお知らせをご確認ください。',
         'faq5.q': 'PangChu Studioへの連絡方法は？',
         'faq5.a': 'pangchustudio@gmail.com までメールにてお問い合わせください。',
+        'faq6.q': 'ゲームに関するフィードバックや提案はどこへ送ればよいですか？',
+        'faq6.a': 'ゲーム中に気づいた不具合、改善アイデア、フィードバックは pangchustudio@gmail.com までお送りください。いただいた内容は、ゲームとサービス改善の参考にさせていただきます。',
         'contact.title': 'PangChu Studioへのお問い合わせ',
         'contact.body': 'PangChu Studioおよびネコニャンジャンプに関するご質問、サポート依頼、公式連絡は以下のメールアドレスまでご連絡ください。',
         'contact.btn': 'メールを送る', 'contact.orEmail': 'または直接メール:',
@@ -841,6 +854,8 @@
         'faq4.a': '可用狀態視目前發布或測試階段而定，請查看官方商店頁面或後續公告以獲取最新資訊。',
         'faq5.q': '如何聯絡 PangChu Studio？',
         'faq5.a': '請發送電子郵件至 pangchustudio@gmail.com 與我們聯絡。',
+        'faq6.q': '遊戲相關建議或意見可以寄到哪裡？',
+        'faq6.a': '如有遊戲使用上的不便、錯誤回報或改善建議，請寄至 pangchustudio@gmail.com。我們會參考收到的意見，用於改善遊戲與服務。',
         'contact.title': '聯絡 PangChu Studio',
         'contact.body': '如有關於 PangChu Studio 及啫喱貓跳跳的問題、支援需求或官方聯絡事項，請使用以下電子郵件。',
         'contact.btn': '發送電子郵件', 'contact.orEmail': '或直接寄信至:',
@@ -890,6 +905,8 @@
         'faq4.a': 'A disponibilidade pode variar conforme o estágio de lançamento ou teste. Verifique a loja oficial ou atualizações futuras.',
         'faq5.q': 'Como contatar a PangChu Studio?',
         'faq5.a': 'Você pode entrar em contato pelo e-mail pangchustudio@gmail.com.',
+        'faq6.q': 'Para onde posso enviar feedback ou sugestões sobre o jogo?',
+        'faq6.a': 'Você pode enviar feedback, relatos de bugs ou ideias de melhoria para pangchustudio@gmail.com. Seus comentários podem ser usados como referência para melhorar nossos jogos e serviços.',
         'contact.title': 'Contatar a PangChu Studio',
         'contact.body': 'Para dúvidas, suporte ou contato oficial relacionado à PangChu Studio e ao Gatinho Pula-Pula, use o e-mail abaixo.',
         'contact.btn': 'Enviar E-mail', 'contact.orEmail': 'ou envie diretamente:',
