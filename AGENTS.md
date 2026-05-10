@@ -29,21 +29,21 @@
 - 영어/글로벌 앱 이름은 `Jelly Cat Jump`로 통일한다.
 - 번체/홍콩 앱 표시명은 `啫喱貓跳跳`로 통일한다.
 - 브라질 포르투갈어 앱 표시명은 `Gatinho Pula-Pula`로 통일한다.
-- 일본어 앱 이름은 `ネコニャンジャンプ`로 통일한다.
-- 과거 후보명인 `ぷにねこジャンプ`는 앱 이름으로 다시 사용하지 않는다.
+- 일본어 앱 이름은 `ぷにねこジャンプ`로 통일한다.
+- 이전 표기인 `ネコニャンジャンプ`는 사용자가 다시 확정하기 전까지 앱 이름으로 사용하지 않는다.
 - 단, 일반 설명 문장 안의 형용 표현까지 무조건 교체하지 말고, 앱 이름/타이틀/메타/JSON-LD/alt/OG/Twitter 문구일 때만 교체한다.
 
 ### 국가/언어별 앱명 고정 규칙
 - 현재 앱은 `말랑냥이점프` / `Jelly Cat Jump` 계열의 점프 게임이다.
 - 한국어/한국 스토어 앱명은 `말랑냥이점프`로 고정한다.
 - 영어/글로벌 기본 앱명은 `Jelly Cat Jump`로 고정한다.
-- 일본어/일본 스토어 앱명은 `ネコニャンジャンプ`로 고정한다.
+- 일본어/일본 스토어 앱명은 `ぷにねこジャンプ`로 고정한다.
 - 홍콩/번체 앱명은 `啫喱貓跳跳`로 고정한다.
 - 브라질 포르투갈어 앱명은 `Gatinho Pula-Pula`로 고정한다.
 - 국가별 앱명은 사용자의 명시 요청 없이 임의 변경하지 않는다.
 - `/` 영어 기본 페이지에서는 대표 앱명 `Jelly Cat Jump`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
 - `/ko/` 한국어 페이지에서는 대표 앱명 `말랑냥이점프`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
-- `/ja/` 일본어 페이지에서는 대표 앱명 `ネコニャンジャンプ`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
+- `/ja/` 일본어 페이지에서는 대표 앱명 `ぷにねこジャンプ`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
 - `/zh-hk/` 홍콩/번체 페이지에서는 대표 앱명 `啫喱貓跳跳`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
 - `/pt-br/` 브라질 포르투갈어 페이지에서는 대표 앱명 `Gatinho Pula-Pula`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
 - JSON-LD의 `name`은 해당 언어/지역 대표 앱명을 사용하고, `alternateName`에는 확정된 다른 언어/지역 앱명을 함께 포함할 수 있다.
@@ -68,9 +68,9 @@
 - `/ja/`는 `html lang="ja"` 및 `hreflang="ja"`를 사용한다.
 - `/pt-br/`는 `html lang="pt-BR"` 및 `hreflang="pt-BR"`를 사용한다.
 - `/zh-hk/`는 홍콩/번체 페이지로 취급한다.
-- `/zh-hk/`의 표기는 한 프로젝트 안에서 `zh-HK` 또는 `zh-Hant` 중 하나로 일관되게 유지한다.
-- 번체 페이지는 경로는 `/zh-hk/`를 유지하되, hreflang/html lang 표기는 프로젝트 기존 정책대로 `zh-Hant`를 사용한다. 경로명은 바꾸지 않는다.
-- 현재 경로가 `/zh-hk/`이므로 홍콩 타깃을 우선하면 `zh-HK` 사용을 선호한다.
+- `/zh-hk/`의 표기는 한 프로젝트 안에서 `zh-HK`로 일관되게 유지한다.
+- 번체 페이지는 경로는 `/zh-hk/`를 유지하되, hreflang/html lang 표기는 홍콩 타깃 기준으로 `zh-HK`를 사용한다. 경로명은 바꾸지 않는다.
+- 현재 경로가 `/zh-hk/`이므로 홍콩 타깃을 우선해 `zh-HK`를 사용한다.
 - hreflang alternate는 실제 존재하는 공개 URL만 가리켜야 한다.
 - canonical은 각 페이지 자기 자신의 공개 URL을 가리켜야 한다.
 
@@ -128,7 +128,7 @@
 
 ### H1 / 히어로 영역 보호
 - 메인 히어로의 대표 H1은 `PangChu Studio` 기준을 유지한다.
-- `Jelly Cat Jump`, `말랑냥이점프`, `ネコニャンジャンプ` 같은 게임명은 메인 H1로 올리지 않는다.
+- `Jelly Cat Jump`, `말랑냥이점프`, `ぷにねこジャンプ` 같은 게임명은 메인 H1로 올리지 않는다.
 - 게임명은 Featured Game, Game Card, FAQ, 설명 문구, 메타 태그 안에서만 사용한다.
 - 히어로 영역의 `Official Studio Website`, 스튜디오 소개, 버튼 구성은 사용자가 명시적으로 요청하지 않으면 변경하지 않는다.
 
@@ -149,7 +149,7 @@
 ### Featured Game 영역 정책
 - 글로벌 기준 게임명은 `Jelly Cat Jump`이며, 각 언어/지역 페이지에서는 해당 지역의 확정 앱명을 PangChu Studio의 Featured Game으로 표시한다.
 - 한국어 페이지에서는 Featured Game 안의 앱명을 `말랑냥이점프`로 표시한다.
-- 일본어 페이지에서는 Featured Game 안의 앱명을 `ネコニャンジャンプ`로 표시한다.
+- 일본어 페이지에서는 Featured Game 안의 앱명을 `ぷにねこジャンプ`로 표시한다.
 - 영어 페이지에서는 Featured Game 안의 앱명을 `Jelly Cat Jump`로 표시한다.
 - 번체/홍콩 페이지에서는 Featured Game 안의 앱명을 `啫喱貓跳跳`로 표시한다.
 - 브라질 포르투갈어 페이지에서는 Featured Game 안의 앱명을 `Gatinho Pula-Pula`로 표시한다.
