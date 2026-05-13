@@ -7,4 +7,4 @@ Disallow: /screenshots/
 Disallow: /ui_kits/
 Disallow: /uploads/
 
-Sitemap: https://bypangs.github.io/pangchu-privacy/sitemap.xml
+Sitemap: https://pangchustudio.co.kr/sitemap.xml

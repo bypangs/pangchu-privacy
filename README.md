@@ -6,7 +6,7 @@
 
 ### Sources
 
-- **Live website:** https://bypangs.github.io/pangchu-privacy/index.html
+- **Live website:** https://pangchustudio.co.kr/
 - **GitHub repo:** https://github.com/bypangs/pangchu-privacy (public)
 - **Key visual:** `assets/jelly-cat-jump-banner.png` — the official game banner (white fluffy cats, cloudy sky, green meadow, jelly-style bubbly logo in green/yellow/pink)
 

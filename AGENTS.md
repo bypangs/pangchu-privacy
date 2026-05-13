@@ -1,7 +1,7 @@
 # AGENTS
 
 ## 고정 규칙
-- 홈페이지의 기준 도메인은 항상 `https://bypangs.github.io/pangchu-privacy`로 통일한다.
+- 홈페이지의 기준 도메인은 항상 `https://pangchustudio.co.kr`로 통일한다.
 - 검색엔진 제출 항목(Google Search Console, sitemap, robots, canonical, og:url 등)은 로컬 주소(`localhost`, `127.0.0.1`, `file://`)를 절대 사용하지 않는다.
 - 로컬 웹 서버(`py -m http.server`, 127.0.0.1 기반)는 오직 개발 미리보기용으로만 사용하고, 공개 공개 배포 URL과 섞어 쓰지 않는다.
 - 사용자가 "홈페이지 기준"이라고 지시한 경우, 모든 분석/점검/수정의 기준은 라이브 페이지 기준으로 수행한다.
@@ -11,7 +11,7 @@
 ## 운영 체크리스트
 - 수정 후에는 `index.html`, `privacy.html`, `terms.html`, `ko/`, `ja/`, `pt-br/`, `zh-hk/`의 링크/메타가 라이브 도메인인지 우선 확인한다.
 - `sitemap.xml`의 `<loc>`/`<xhtml:link>`는 실제 공개 URL인지 확인하고, 존재하지 않거나 로컬 주소가 있으면 즉시 수정한다.
-- 배포 전/후 Search Console에서는 사이트맵 URL을 `https://bypangs.github.io/pangchu-privacy/sitemap.xml`로만 제출한다.
+- 배포 전/후 Search Console에서는 사이트맵 URL을 `https://pangchustudio.co.kr/sitemap.xml`로만 제출한다.
 
 ## 백업 / 저장 체크포인트
 - 큰 수정 라운드가 안정적으로 끝났거나 사용자가 "백업해줘", "저장해줘", "커밋해줘"처럼 명시하면 먼저 `git status --short`와 `git diff --stat`으로 변경 범위를 확인한다.
@@ -56,11 +56,11 @@
 
 ### 언어별 페이지 경로 고정
 - 언어별 공개 경로는 아래 기준으로 유지한다.
-- 영어 기본: `https://bypangs.github.io/pangchu-privacy/`
-- 한국어: `https://bypangs.github.io/pangchu-privacy/ko/`
-- 일본어: `https://bypangs.github.io/pangchu-privacy/ja/`
-- 홍콩/번체: `https://bypangs.github.io/pangchu-privacy/zh-hk/`
-- 브라질 포르투갈어: `https://bypangs.github.io/pangchu-privacy/pt-br/`
+- 영어 기본: `https://pangchustudio.co.kr/`
+- 한국어: `https://pangchustudio.co.kr/ko/`
+- 일본어: `https://pangchustudio.co.kr/ja/`
+- 홍콩/번체: `https://pangchustudio.co.kr/zh-hk/`
+- 브라질 포르투갈어: `https://pangchustudio.co.kr/pt-br/`
 - 경로명을 임의로 `/zh-hant/`, `/jp/`, `/br/`, `/en/` 등으로 변경하지 않는다.
 
 ### hreflang / lang 표기 정책
@@ -90,18 +90,18 @@
 - 가능하면 HTML 안의 script만 따로 추출하거나 브라우저에서 열어 문법 오류를 확인한다.
 
 ### sitemap / robots / app-ads 보호 규칙
-- `sitemap.xml`의 모든 `<loc>`와 `<xhtml:link>`는 `https://bypangs.github.io/pangchu-privacy` 기준의 공개 URL이어야 한다.
+- `sitemap.xml`의 모든 `<loc>`와 `<xhtml:link>`는 `https://pangchustudio.co.kr` 기준의 공개 URL이어야 한다.
 - 존재하지 않는 URL을 sitemap에 추가하지 않는다.
 - 단순 수정 때 `lastmod`를 의미 없이 대량 변경하지 않는다.
 - `robots.txt`는 전체 차단하지 않는다.
-- `robots.txt`의 Sitemap 위치는 `https://bypangs.github.io/pangchu-privacy/sitemap.xml`로 유지한다.
+- `robots.txt`의 Sitemap 위치는 `https://pangchustudio.co.kr/sitemap.xml`로 유지한다.
 - `app-ads.txt`는 광고 수익과 연결되는 파일이므로 사용자가 명시적으로 요청하지 않으면 수정하지 않는다.
 - `app-ads.txt`의 AdMob publisher ID를 임의로 변경하지 않는다.
 
-### GitHub Pages 경로 규칙
-- 이 사이트는 루트 도메인이 아니라 `/pangchu-privacy/` 하위 경로에서 배포된다.
-- 절대 경로를 사용할 때 `/assets/...`처럼 사이트 루트를 기준으로 쓰면 GitHub Pages에서 깨질 수 있다.
-- 공개 링크, 이미지, canonical, og:image, twitter:image, sitemap URL은 `/pangchu-privacy/` 경로를 포함해야 한다.
+### 커스텀 도메인 / GitHub Pages 경로 규칙
+- 이 사이트는 커스텀 도메인 `https://pangchustudio.co.kr/`의 루트 경로에서 배포된다.
+- 공개 링크, 이미지, canonical, og:image, twitter:image, sitemap URL은 `https://pangchustudio.co.kr` 기준으로 작성한다.
+- GitHub Pages 저장소 경로(`/pangchu-privacy/`)는 개발·이전 배포 호환성 확인에만 참고하고, 공개 SEO URL에 사용하지 않는다.
 - 로컬 미리보기에서만 맞는 경로로 수정하지 않는다.
 
 ### 수정 범위 원칙
@@ -122,7 +122,7 @@
 
 ### 사이트 정체성
 - 이 사이트의 1차 정체성은 `Jelly Cat Jump` 단독 게임 랜딩페이지가 아니라 `PangChu Studio` 공식 홈페이지다.
-- 루트 기준 페이지는 항상 `https://bypangs.github.io/pangchu-privacy/`의 영어 페이지 구조를 마스터로 삼는다.
+- 루트 기준 페이지는 항상 `https://pangchustudio.co.kr/`의 영어 페이지 구조를 마스터로 삼는다.
 - 다른 언어 페이지는 영어 루트 페이지의 UI/섹션 구조를 그대로 따라가고, 텍스트/메타/alt/JSON-LD만 각 언어에 맞게 현지화한다.
 - SEO 보강 작업을 하더라도 사이트의 정체성을 게임 단독 랜딩페이지로 바꾸지 않는다.
 
@@ -169,5 +169,5 @@
 
 ### 작업 전 확인
 - index 계열 페이지를 수정하기 전, 먼저 영어 루트 `/`의 현재 구조를 기준으로 삼는다.
-- 사용자가 "홈페이지 기준", "EN 기준", "루트 기준"이라고 말하면 `https://bypangs.github.io/pangchu-privacy/`의 UI 구조를 기준으로 판단한다.
+- 사용자가 "홈페이지 기준", "EN 기준", "루트 기준"이라고 말하면 `https://pangchustudio.co.kr/`의 UI 구조를 기준으로 판단한다.
 - 로컬 파일만 보고 구조를 재해석하지 말고, 가능하면 라이브 페이지의 현재 UI 의도를 우선한다.
