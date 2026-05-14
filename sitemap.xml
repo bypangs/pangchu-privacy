@@ -69,6 +69,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/privacy.html" />
   </url>
   <url>
+    <loc>https://pangchustudio.co.kr/support.html</loc>
+    <lastmod>2026-05-14T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/support.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/support.html" />
+  </url>
+  <url>
     <loc>https://pangchustudio.co.kr/terms.html</loc>
     <lastmod>2026-05-03T00:00:00+09:00</lastmod>
     <changefreq>yearly</changefreq>

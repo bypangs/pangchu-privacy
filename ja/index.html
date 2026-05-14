@@ -67,16 +67,19 @@
     },
     "author": {
       "@type": "Organization",
-      "name": "PangChu"
+      "name": "PangChu Studio",
+      "legalName": "Byeol Noraebang"
     },
     "publisher": {
       "@type": "Organization",
       "name": "PangChu Studio",
+      "legalName": "Byeol Noraebang",
       "url": "https://pangchustudio.co.kr/ja/",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "support@pangchustudio.co.kr",
-        "contactType": "customer support"
+        "contactType": "customer support",
+        "url": "https://pangchustudio.co.kr/support.html"
       }
     },
     "url": "https://pangchustudio.co.kr/ja/",
@@ -248,6 +251,11 @@
     .about-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); padding: 16px 20px; }
     .about-card h3 { font-size: 14px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
     .about-card p { font-size: 12px; color: var(--muted); line-height: 1.65; }
+    .about-card .org-note {
+      margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(92,151,201,0.14);
+      font-size: 12px; color: var(--text); line-height: 1.6; font-weight: 700;
+    }
+    .about-card .org-note span { display: block; margin-top: 2px; color: var(--muted); font-weight: 600; }
 
     /* ── GAME ── */
     .game-section { padding: 20px 0; }
@@ -359,6 +367,7 @@
     .contact-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow-card); padding: 30px 34px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
     .contact-left h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 7px; }
     .contact-left p { font-size: 14px; color: var(--muted); line-height: 1.68; max-width: 420px; }
+    .contact-left .contact-org-note { margin-top: 8px; font-size: 13px; color: var(--muted); line-height: 1.6; }
     .contact-email-row { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
     .contact-email-icon { color: var(--primary-deep); flex-shrink: 0; }
     .contact-email-link { font-size: 14px; font-weight: 700; color: var(--primary-deep); text-decoration: underline; text-underline-offset: 3px; }
@@ -384,6 +393,7 @@
     .footer-brand-name { font-size: 14px; font-weight: 800; letter-spacing: -0.03em; }
     .footer-tagline { font-size: 12px; color: var(--muted); margin-top: 2px; }
     .footer-copy { font-size: 12px; color: var(--muted); }
+    .footer-operator { margin-top: 3px; font-size: 11px; color: var(--muted); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
@@ -464,6 +474,10 @@
           <div class="about-card">
             <h3 data-i18n="about.title">スタジオについて</h3>
             <p data-i18n="about.body">PangChu Studioは、柔らかなビジュアル、直感的な操作、温かみのあるゲーム体験を大切にしています。</p>
+            <p class="org-note">
+              Registered organization: Byeol Noraebang
+              <span>PangChu Studio is the official game brand operated by Byeol Noraebang.</span>
+            </p>
           </div>
         </div>
       </div>
@@ -619,6 +633,7 @@
           <div class="contact-left">
             <h2 data-i18n="contact.title">PangChu Studioへのお問い合わせ</h2>
             <p data-i18n="contact.body">PangChu Studioおよびぷにねこジャンプに関するご質問、サポート依頼、公式連絡は以下のメールアドレスまでご連絡ください。</p>
+            <p class="contact-org-note">PangChu Studio is operated by Byeol Noraebang.</p>
             <div class="contact-email-row">
               <svg class="contact-email-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
               <a class="contact-email-link" href="mailto:support@pangchustudio.co.kr">support@pangchustudio.co.kr</a>
@@ -657,6 +672,12 @@
             <p class="link-desc" data-i18n="link2.desc">このウェブサイトおよび関連サービスの利用規約です。</p>
             <div class="link-arrow"><span data-i18n="link2.arrow">確認する</span> <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
           </a>
+          <a class="link-card" href="../support.html">
+            <div class="link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg></div>
+            <div class="link-title">Support</div>
+            <p class="link-desc">Official support contact for PangChu Studio apps, operated by Byeol Noraebang.</p>
+            <div class="link-arrow"><span>Open support</span> <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </a>
           <a class="link-card" href="https://github.com/bypangs/pangchu-privacy" target="_blank" rel="noopener">
             <div class="link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
             <div class="link-title" data-i18n="link3.title">GitHubリポジトリ</div>
@@ -686,7 +707,10 @@
             <div class="footer-tagline" data-i18n="footer.tagline">かわいくて居心地のいいモバイルゲーム</div>
           </div>
         </div>
-        <div class="footer-copy" data-i18n="footer.copy">© 2026 PangChu Studio. All rights reserved.</div>
+        <div>
+          <div class="footer-copy" data-i18n="footer.copy">© 2026 PangChu Studio. All rights reserved.</div>
+          <div class="footer-operator">Operated by Byeol Noraebang.</div>
+        </div>
       </div>
     </div>
   </footer>
