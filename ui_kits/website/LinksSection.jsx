@@ -3,7 +3,7 @@ const LinksSection = () => {
   const links = [
     { title: 'Privacy Policy', desc: 'Read the privacy policy for PangChu Studio services and the featured game.', href: '#' },
     { title: 'Terms of Service', desc: 'Read the terms and conditions governing the use of this website and related services.', href: '#' },
-    { title: 'GitHub Repository', desc: 'View the public repository that hosts this website and supporting files.', href: '#' },
+    { title: 'Official Website', desc: 'Open the canonical PangChu Studio homepage on pangchustudio.co.kr.', href: 'https://pangchustudio.co.kr/' },
   ];
   return (
     <section id="links" style={{ padding: '18px 0' }}>
