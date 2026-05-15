@@ -6,7 +6,7 @@
 
   <!-- ═══ PRIMARY SEO ═══ -->
   <title>PangChu Studio Official Website | Jelly Cat Jump</title>
-  <meta name="description" content="PangChu Studio official website for cute mobile games, including Jelly Cat Jump. Find game details, Google Play links, support, privacy policy, and terms." />
+  <meta name="description" content="PangChu Studio official site for Jelly Cat Jump, support, privacy, and terms." />
   <meta name="keywords" content="PangChu Studio official website, PangChu Studio, Jelly Cat Jump, cat jump game, cute cat game, mobile game studio" />
   <meta name="robots" content="index, follow" />
   <meta name="naver-site-verification" content="01a4801cc7e5c38e085b666c3904743892d576bc" />
@@ -24,7 +24,7 @@
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://pangchustudio.co.kr/" />
   <meta property="og:title"       content="PangChu Studio Official Website | Jelly Cat Jump" />
-  <meta property="og:description" content="PangChu Studio official website for cute mobile games, including Jelly Cat Jump. Find game details, Google Play links, support, privacy policy, and terms." />
+  <meta property="og:description" content="PangChu Studio official site for Jelly Cat Jump, support, privacy, and terms." />
   <meta property="og:image"       content="https://pangchustudio.co.kr/images/jelly-cat-jump-banner.png" />
   <meta property="og:image:alt"   content="Jelly Cat Jump game banner" />
   <meta property="og:locale"      content="en_US" />
@@ -37,7 +37,7 @@
   <!-- ═══ TWITTER CARD ═══ -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="PangChu Studio Official Website | Jelly Cat Jump" />
-  <meta name="twitter:description" content="PangChu Studio official website for cute mobile games, including Jelly Cat Jump. Find game details, Google Play links, support, privacy policy, and terms." />
+  <meta name="twitter:description" content="PangChu Studio official site for Jelly Cat Jump, support, privacy, and terms." />
   <meta name="twitter:image"       content="https://pangchustudio.co.kr/images/jelly-cat-jump-banner.png" />
   <meta name="twitter:image:alt"   content="Jelly Cat Jump game banner" />
 
@@ -55,7 +55,7 @@
     "@type": "WebSite",
     "name": "PangChu Studio",
     "alternateName": ["PangChuStudio", "PangChu", "팡츄 스튜디오"],
-    "description": "PangChu Studio is the official website for cute, cozy mobile games including Jelly Cat Jump.",
+    "description": "PangChu Studio official site for Jelly Cat Jump and cute mobile games.",
     "inLanguage": ["en", "ko", "ja", "pt-BR", "zh-HK"],
     "url": "https://pangchustudio.co.kr/",
     "publisher": {
@@ -1007,80 +1007,6 @@
     };
 
     // 루트 접속 시 브라우저 언어와 한국 시간대를 기준으로 언어별 페이지로 안내한다.
-    function getManualLandingLang() {
-      const lang = new URLSearchParams(location.search).get('lang');
-      if (!lang) return null;
-      const v = lang.toLowerCase();
-      if (v === 'en' || v === 'ko' || v === 'ja' || v === 'pt' || v === 'pt-br' || v === 'zh' || v === 'zh-hk' || v === 'zh-hant') return v;
-      return null;
-    }
-
-    function getLandingBasePath() {
-      const path = location.pathname.replace(/\/+/g, '/').toLowerCase();
-      if (path === '/' || path === '/index.html') return '/';
-      if (path === '/pangchu-privacy/' || path === '/pangchu-privacy' || path === '/pangchu-privacy/index.html') return '/pangchu-privacy/';
-      return null;
-    }
-
-    function detectLandingLanguage() {
-      const basePath = getLandingBasePath();
-      if (!basePath) return;
-
-      const manualLang = getManualLandingLang();
-      if (manualLang) {
-        sessionStorage.setItem('pangchu_auto_landing_done', '1');
-        return;
-      }
-
-      if (sessionStorage.getItem('pangchu_auto_landing_done') === '1') return;
-      sessionStorage.setItem('pangchu_auto_landing_done', '1');
-
-      const langs = [];
-      if (Array.isArray(navigator.languages) && navigator.languages.length) {
-        langs.push(...navigator.languages);
-      }
-      if (navigator.language) {
-        langs.push(navigator.language);
-      }
-
-      let target = 'en';
-      const lower = Array.from(new Set(langs.map(v => (v || '').toLowerCase())));
-      for (const code of lower) {
-        if (!code) continue;
-        if (code === 'ko' || code.startsWith('ko-')) {
-          target = 'ko';
-          break;
-        }
-        if (code === 'ja' || code.startsWith('ja-')) {
-          target = 'ja';
-          break;
-        }
-        if (code === 'pt' || code.startsWith('pt-')) {
-          target = 'pt-br';
-          break;
-        }
-        if (code === 'zh' || code.startsWith('zh-')) {
-          target = 'zh-hk';
-          break;
-        }
-      }
-
-      if (target === 'en') {
-        try {
-          const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-          if (timeZone === 'Asia/Seoul') target = 'ko';
-        } catch (err) {
-          // Time zone detection is a best-effort fallback for static hosting.
-        }
-      }
-
-      if (target !== 'en') {
-        location.replace(basePath + target + '/');
-      }
-    }
-
-    detectLandingLanguage();
-
     let currentLang = 'en';
 
     function setLang(lang) {
