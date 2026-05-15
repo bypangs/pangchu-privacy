@@ -61,27 +61,27 @@
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://pangchustudio.co.kr/zh-hk/" />
   </url>
   <url>
-    <loc>https://pangchustudio.co.kr/privacy.html</loc>
+    <loc>https://pangchustudio.co.kr/privacy/</loc>
     <lastmod>2026-05-15T00:00:00+09:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/privacy.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/privacy/" />
   </url>
   <url>
-    <loc>https://pangchustudio.co.kr/support.html</loc>
+    <loc>https://pangchustudio.co.kr/support/</loc>
     <lastmod>2026-05-14T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/support.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/support.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/support/" />
   </url>
   <url>
-    <loc>https://pangchustudio.co.kr/terms.html</loc>
+    <loc>https://pangchustudio.co.kr/terms/</loc>
     <lastmod>2026-05-15T00:00:00+09:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/terms.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/terms/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/terms/" />
   </url>
 </urlset>
