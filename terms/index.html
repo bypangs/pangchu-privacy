@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:" && location.hostname === "pangchustudio.co.kr") {
+      location.replace("https://" + location.host + location.pathname + location.search + location.hash);
+    }
+  </script>
   <title>Terms of Service | PangChu Studio Official Website</title>
   <meta name="description" content="Terms of Service for PangChu Studio official site and Jelly Cat Jump." />
   <meta name="robots" content="index, follow" />
