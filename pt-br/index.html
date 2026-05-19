@@ -378,6 +378,17 @@
     .announce-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .announce-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
     .announce-date { flex-shrink: 0; font-size: 12px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .announce-actions { margin-top: 16px; display: flex; justify-content: flex-end; }
+    .notice-open-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 44px; padding: 0 18px; border-radius: 999px;
+      border: 1px solid rgba(77,184,255,0.22); background: rgba(255,255,255,0.88);
+      color: var(--primary-deep); font-family: var(--font); font-size: 13px; font-weight: 800;
+      box-shadow: 0 8px 24px rgba(67,133,193,0.10); cursor: pointer;
+      transition: transform 0.14s, box-shadow 0.14s, border-color 0.14s;
+    }
+    .notice-open-btn:hover { transform: translateY(-1px); border-color: var(--line-hover); box-shadow: 0 12px 32px rgba(67,133,193,0.15); }
+    .notice-open-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 
     /* ── FAQ ── */
     .faq-section { padding: 20px 0; }
@@ -402,6 +413,91 @@
     .contact-email-link { font-size: 14px; font-weight: 700; color: var(--primary-deep); text-decoration: underline; text-underline-offset: 3px; }
     .contact-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 22px; border-radius: 999px; font-weight: 800; font-size: 14px; font-family: var(--font); background: linear-gradient(135deg, #4db8ff, #2299ee); color: white; box-shadow: var(--shadow-btn); border: none; cursor: pointer; text-decoration: none; transition: transform 0.14s, box-shadow 0.14s; flex-shrink: 0; }
     .contact-btn:hover { transform: translateY(-1px); box-shadow: 0 12px 32px rgba(51,153,238,0.3); }
+
+    /* ── NOTICE / FEEDBACK MODAL ── */
+    .feedback-modal {
+      position: fixed; inset: 0; z-index: 200;
+      display: grid; place-items: center; padding: 22px;
+      opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.2s ease;
+    }
+    .feedback-modal.is-open { opacity: 1; visibility: visible; pointer-events: auto; }
+    .feedback-backdrop { position: absolute; inset: 0; background: rgba(23,50,77,0.38); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .feedback-dialog {
+      position: relative; width: min(100%, 820px); max-height: min(88vh, 760px); overflow: auto;
+      background: rgba(255,255,255,0.97); border: 1px solid rgba(255,255,255,0.72);
+      border-radius: var(--r-xl); box-shadow: 0 24px 70px rgba(38,91,136,0.24), 0 6px 18px rgba(38,91,136,0.12);
+      transform: translateY(16px) scale(0.98); transition: transform 0.2s ease;
+    }
+    .feedback-dialog:focus { outline: none; }
+    .feedback-modal.is-open .feedback-dialog { transform: translateY(0) scale(1); }
+    .feedback-close {
+      position: absolute; top: 14px; right: 14px; z-index: 2;
+      width: 38px; height: 38px; border: none; border-radius: 50%;
+      background: rgba(255,255,255,0.88); color: var(--muted); display: grid; place-items: center;
+      cursor: pointer; box-shadow: 0 4px 16px rgba(67,133,193,0.12);
+    }
+    .feedback-close:hover { color: var(--primary-deep); }
+    .feedback-inner { display: grid; grid-template-columns: 0.95fr 1.05fr; min-height: 520px; }
+    .feedback-info {
+      padding: 34px; display: flex; flex-direction: column; justify-content: space-between; gap: 22px;
+      background:
+        linear-gradient(145deg, rgba(77,184,255,0.18), rgba(125,224,188,0.20)),
+        linear-gradient(180deg, rgba(255,255,255,0.62), rgba(255,255,255,0.36));
+      border-right: 1px solid rgba(92,151,201,0.13);
+    }
+    .feedback-badge {
+      display: inline-flex; width: fit-content; align-items: center; gap: 7px;
+      padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,0.72);
+      color: var(--primary-deep); font-size: 11px; font-weight: 900; text-transform: uppercase;
+    }
+    .feedback-info h2 { margin-top: 16px; font-size: clamp(26px, 3.8vw, 40px); line-height: 1.04; letter-spacing: -0.04em; font-weight: 900; color: var(--text); }
+    .feedback-info p { margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.72; }
+    .feedback-notice {
+      padding: 18px; border-radius: var(--r-lg); background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.82); box-shadow: 0 10px 28px rgba(67,133,193,0.11);
+    }
+    .feedback-notice-label { font-size: 10px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 8px; }
+    .feedback-notice h3 { font-size: 16px; line-height: 1.3; font-weight: 900; color: var(--text); margin-bottom: 8px; }
+    .feedback-notice p { margin: 0; font-size: 13px; line-height: 1.65; }
+    .feedback-form {
+      padding: 34px; display: grid; gap: 14px; align-content: center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,252,255,0.96));
+    }
+    .feedback-form-title { font-size: 19px; line-height: 1.25; font-weight: 900; letter-spacing: -0.02em; color: var(--text); }
+    .feedback-form-copy { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 2px; }
+    .feedback-board-note { font-size: 12px; color: var(--muted); line-height: 1.55; }
+    .quick-mail-board { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
+    .quick-mail-card {
+      min-height: 96px; padding: 13px 14px; border-radius: var(--r-md);
+      border: 1px solid rgba(92,151,201,0.16); background: rgba(255,255,255,0.82);
+      box-shadow: 0 6px 18px rgba(67,133,193,0.08); cursor: pointer;
+      text-align: left; font-family: var(--font); transition: transform 0.14s, border-color 0.14s, box-shadow 0.14s;
+    }
+    .quick-mail-card:hover { transform: translateY(-1px); border-color: var(--line-hover); box-shadow: 0 10px 26px rgba(67,133,193,0.13); }
+    .quick-mail-kicker { display: block; margin-bottom: 6px; color: var(--accent-deep); font-size: 10px; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase; }
+    .quick-mail-card strong { display: block; min-height: 36px; color: var(--text); font-size: 13px; line-height: 1.38; font-weight: 900; }
+    .quick-mail-card em { display: block; margin-top: 8px; color: var(--primary-deep); font-size: 11px; line-height: 1.3; font-style: normal; font-weight: 900; }
+    .feedback-field { display: grid; gap: 7px; }
+    .feedback-field span { font-size: 12px; font-weight: 800; color: var(--text); }
+    .feedback-field input, .feedback-field select, .feedback-field textarea {
+      width: 100%; border: 1px solid rgba(92,151,201,0.18); border-radius: var(--r-md);
+      background: #fff; color: var(--text); font-family: var(--font); font-size: 14px;
+      padding: 12px 14px; outline: none; transition: border-color 0.14s, box-shadow 0.14s;
+    }
+    .feedback-field textarea { min-height: 124px; resize: vertical; line-height: 1.6; }
+    .feedback-field input:focus, .feedback-field select:focus, .feedback-field textarea:focus {
+      border-color: rgba(77,184,255,0.58); box-shadow: 0 0 0 4px rgba(77,184,255,0.13);
+    }
+    .feedback-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .feedback-submit {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 0 20px; border: none; border-radius: 999px;
+      background: linear-gradient(135deg, #4db8ff, #2299ee); color: white;
+      box-shadow: var(--shadow-btn); cursor: pointer; font-family: var(--font); font-size: 14px; font-weight: 900;
+      transition: transform 0.14s, box-shadow 0.14s;
+    }
+    .feedback-submit:hover { transform: translateY(-1px); box-shadow: 0 12px 32px rgba(51,153,238,0.32); }
+    .feedback-direct { font-size: 12px; font-weight: 800; color: var(--primary-deep); text-decoration: underline; text-underline-offset: 3px; }
 
     /* ── LINKS ── */
     .links-section { padding: 20px 0 20px; }
@@ -438,6 +534,13 @@
       .features-row { grid-template-columns: 1fr; }
       .links-grid { grid-template-columns: 1fr; }
       .contact-card { flex-direction: column; align-items: flex-start; }
+      .announce-actions { justify-content: flex-start; }
+      .feedback-inner { grid-template-columns: 1fr; }
+      .feedback-info { border-right: none; border-bottom: 1px solid rgba(92,151,201,0.13); }
+      .feedback-info, .feedback-form { padding: 26px 22px; }
+      .quick-mail-board { grid-template-columns: 1fr; }
+      .quick-mail-card { min-height: 82px; }
+      .quick-mail-card strong { min-height: 0; }
     }
     @media (max-width: 420px) {
       .lang-btn { padding: 5px 8px; font-size: 11px; }
@@ -508,6 +611,12 @@
               <span>PangChu Studio is the official game brand operated by Byeol Noraebang.</span>
             </p>
           </div>
+        </div>
+        <div class="announce-actions">
+          <button class="notice-open-btn js-open-feedback" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
+            <span data-i18n="ann.feedbackBtn">Ver avisos e enviar feedback</span>
+          </button>
         </div>
       </div>
     </section>
@@ -668,10 +777,10 @@
               <a class="contact-email-link" href="mailto:support@pangchustudio.co.kr">support@pangchustudio.co.kr</a>
             </div>
           </div>
-          <a class="contact-btn" href="mailto:support@pangchustudio.co.kr">
+          <button class="contact-btn js-open-feedback" type="button">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-            <span data-i18n="contact.btn">Enviar E-mail</span>
-          </a>
+            <span data-i18n="contact.btn">Enviar feedback</span>
+          </button>
         </div>
         <p style="margin-top:10px;font-size:13px;color:var(--muted);text-align:right;">
           <span data-i18n="contact.orEmail">ou envie diretamente:</span>
@@ -725,6 +834,78 @@
 
   </main>
 
+  <!-- NOTICE & FEEDBACK POPUP -->
+  <div class="feedback-modal" id="feedbackModal" aria-hidden="true">
+    <div class="feedback-backdrop" data-feedback-close></div>
+    <section class="feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedbackTitle" tabindex="-1">
+      <button class="feedback-close" type="button" data-feedback-close aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div class="feedback-inner">
+        <div class="feedback-info">
+          <div>
+            <div class="feedback-badge" data-i18n="modal.badge">Avisos e Feedback</div>
+            <h2 id="feedbackTitle" data-i18n="modal.title">Ajude-nos a manter o jogo mais confortável</h2>
+            <p data-i18n="modal.body">Para que todos possam jogar sem incômodos, envie qualquer dificuldade, sugestão, relato de bug ou ideia de melhoria. Mesmo pequenos comentários ajudam nas próximas atualizações.</p>
+          </div>
+          <article class="feedback-notice">
+            <div class="feedback-notice-label" data-i18n="modal.noticeLabel">Aviso atual</div>
+            <h3 data-i18n="modal.noticeTitle">Cadastro do Gatinho Pula-Pula na App Store em preparação</h3>
+            <p data-i18n="modal.noticeBody">Gatinho Pula-Pula está disponível no Google Play, e a versão da App Store está em preparação.</p>
+          </article>
+        </div>
+        <form class="feedback-form" onsubmit="sendFeedback(event)">
+          <div>
+            <div class="feedback-form-title" data-i18n="feedback.title">Enviar dúvida ou sugestão</div>
+            <p class="feedback-form-copy" data-i18n="feedback.copy">Escolha um cartão para abrir um e-mail rápido ou escreva uma mensagem detalhada abaixo.</p>
+          </div>
+          <p class="feedback-board-note" data-i18n="feedback.boardNote">Escolha um cartão para abrir um e-mail rápido ou escreva uma mensagem detalhada abaixo.</p>
+          <div class="quick-mail-board" aria-label="Opções rápidas de e-mail de feedback">
+            <button class="quick-mail-card" type="button" data-quick-mail="comfort">
+              <span class="quick-mail-kicker" data-i18n="quick.comfortLabel">Conforto</span>
+              <strong data-i18n="quick.comfortTitle">Senti incômodo ao jogar</strong>
+              <em data-i18n="quick.mailNow">Enviar e-mail rápido</em>
+            </button>
+            <button class="quick-mail-card" type="button" data-quick-mail="suggestion">
+              <span class="quick-mail-kicker" data-i18n="quick.suggestionLabel">Sugestão</span>
+              <strong data-i18n="quick.suggestionTitle">Tenho uma ideia de melhoria</strong>
+              <em data-i18n="quick.mailNow">Enviar e-mail rápido</em>
+            </button>
+            <button class="quick-mail-card" type="button" data-quick-mail="bug">
+              <span class="quick-mail-kicker" data-i18n="quick.bugLabel">Bug</span>
+              <strong data-i18n="quick.bugTitle">Encontrei um problema</strong>
+              <em data-i18n="quick.mailNow">Enviar e-mail rápido</em>
+            </button>
+          </div>
+          <label class="feedback-field" for="feedbackType">
+            <span data-i18n="feedback.typeLabel">Tipo</span>
+            <select id="feedbackType">
+              <option value="inquiry" data-i18n="feedback.typeInquiry">Dúvida</option>
+              <option value="suggestion" data-i18n="feedback.typeSuggestion">Sugestão</option>
+              <option value="bug" data-i18n="feedback.typeBug">Relato de bug</option>
+              <option value="comfort" data-i18n="feedback.typeComfort">Incômodo ao jogar</option>
+            </select>
+          </label>
+          <label class="feedback-field" for="feedbackReply">
+            <span data-i18n="feedback.replyLabel">E-mail para resposta (opcional)</span>
+            <input id="feedbackReply" type="email" autocomplete="email" />
+          </label>
+          <label class="feedback-field" for="feedbackMessage">
+            <span data-i18n="feedback.messageLabel">Mensagem</span>
+            <textarea id="feedbackMessage" required></textarea>
+          </label>
+          <div class="feedback-actions">
+            <button class="feedback-submit" type="submit">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              <span data-i18n="feedback.submit">Abrir app de e-mail</span>
+            </button>
+            <a class="feedback-direct" href="mailto:support@pangchustudio.co.kr" data-i18n="feedback.direct">Enviar e-mail direto</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap">
@@ -775,6 +956,7 @@
         'ann1.desc': 'The PangChu Studio official website is now live. Policy pages, contact information, and game details are all available here.',
         'ann2.title': 'Privacy Policy and Terms of Service published',
         'ann2.desc': 'Our Privacy Policy and Terms of Service documents have been published and are accessible from the Links section.',
+        'ann.feedbackBtn': 'Open notice & feedback box',
         'faq.label': 'FAQ', 'faq.title': 'Frequently Asked Questions',
         'faq.sub': 'Quick answers to common questions about our game and studio.',
         'faq1.q': 'What kind of game is Jelly Cat Jump?',
@@ -791,7 +973,42 @@
         'faq6.a': 'You can send feedback, bug reports, or improvement ideas to support@pangchustudio.co.kr. Your comments may be used to help improve our games and services.',
         'contact.title': 'Contact PangChu Studio',
         'contact.body': 'For questions, support inquiries, or official contact related to PangChu Studio and Jelly Cat Jump, please use the email below.',
-        'contact.btn': 'Send an Email', 'contact.orEmail': 'or email directly:',
+        'contact.btn': 'Send feedback', 'contact.orEmail': 'or email directly:',
+        'modal.badge': 'Notice & Feedback',
+        'modal.title': 'Help us keep the game comfortable',
+        'modal.body': 'To keep play comfortable for everyone, please send any inconvenience, suggestion, bug report, or improvement idea. Even small notes help us improve future updates.',
+        'modal.noticeLabel': 'Current notice',
+        'modal.noticeTitle': 'App Store registration is in progress',
+        'modal.noticeBody': 'Jelly Cat Jump is available on Google Play, and the App Store version is being prepared.',
+        'feedback.title': 'Send an inquiry or suggestion',
+        'feedback.copy': 'Choose a quick board card for one-tap email, or write a detailed message below.',
+        'feedback.boardNote': 'Quick board cards open a prefilled email right away.',
+        'quick.comfortLabel': 'Comfort',
+        'quick.comfortTitle': 'I felt inconvenience while playing',
+        'quick.suggestionLabel': 'Suggestion',
+        'quick.suggestionTitle': 'I have an improvement idea',
+        'quick.bugLabel': 'Bug',
+        'quick.bugTitle': 'I found a problem',
+        'quick.mailNow': 'Send quick email',
+        'quick.subjectComfort': 'Jelly Cat Jump play inconvenience',
+        'quick.subjectSuggestion': 'Jelly Cat Jump improvement suggestion',
+        'quick.subjectBug': 'Jelly Cat Jump bug report',
+        'quick.bodyComfort': 'Please describe what felt inconvenient while playing.\n\nDevice:\nApp version:\nDetails:',
+        'quick.bodySuggestion': 'Please tell us your improvement idea.\n\nWhat would you like to see improved?\nDetails:',
+        'quick.bodyBug': 'Please tell us what problem you found.\n\nDevice:\nApp version:\nWhat happened:',
+        'feedback.typeLabel': 'Type',
+        'feedback.typeInquiry': 'Inquiry',
+        'feedback.typeSuggestion': 'Suggestion',
+        'feedback.typeBug': 'Bug report',
+        'feedback.typeComfort': 'Inconvenience while playing',
+        'feedback.replyLabel': 'Reply email (optional)',
+        'feedback.messageLabel': 'Message',
+        'feedback.submit': 'Open email app',
+        'feedback.direct': 'Email directly',
+        'feedback.mailSubject': 'PangChu Studio feedback',
+        'feedback.mailType': 'Type',
+        'feedback.mailReply': 'Reply email',
+        'feedback.mailMessage': 'Message',
         'links.label': 'Official Links', 'links.title': 'Store & Official Links',
         'links.sub': 'Play the game, review policy pages, or open official support resources.',
         'link1.title': 'Privacy Policy', 'link1.desc': 'Our privacy policy for PangChu Studio services and Jelly Cat Jump.', 'link1.arrow': 'Read policy',
@@ -828,6 +1045,7 @@
         'ann1.desc': '팡츄 스튜디오 공식 웹사이트가 오픈되었습니다. 정책 페이지, 연락처, 게임 정보를 이곳에서 확인하실 수 있습니다.',
         'ann2.title': '개인정보처리방침 및 이용약관 게재',
         'ann2.desc': '개인정보처리방침과 이용약관이 공개되었습니다. 하단 링크 섹션에서 확인하실 수 있습니다.',
+        'ann.feedbackBtn': '공지 확인 및 건의 보내기',
         'faq.label': '자주 묻는 질문', 'faq.title': '자주 묻는 질문',
         'faq.sub': '게임과 스튜디오에 관한 주요 질문에 답변드립니다.',
         'faq1.q': '말랑냥이점프는 어떤 게임인가요?',
@@ -844,7 +1062,42 @@
         'faq6.a': '게임 이용 중 불편한 점, 버그 제보, 개선 아이디어가 있다면 support@pangchustudio.co.kr 으로 보내주세요. 보내주신 의견은 더 나은 게임과 서비스 개선을 위해 참고합니다.',
         'contact.title': '팡츄 스튜디오에 문의하기',
         'contact.body': '팡츄 스튜디오 및 말랑냥이점프 관련 문의, 지원 요청, 공식 연락은 아래 이메일을 이용해 주세요.',
-        'contact.btn': '이메일 보내기', 'contact.orEmail': '또는 직접 이메일:',
+        'contact.btn': '건의사항 보내기', 'contact.orEmail': '또는 직접 이메일:',
+        'modal.badge': '공지와 의견함',
+        'modal.title': '고객님이 더 편하게 즐기실 수 있도록 의견을 들려주세요',
+        'modal.body': '게임을 즐기시는 고객님들이 불편하지 않도록, 불편한 점이나 건의사항을 편하게 보내주세요. 작은 의견도 다음 업데이트를 준비하는 데 큰 도움이 됩니다.',
+        'modal.noticeLabel': '현재 공지',
+        'modal.noticeTitle': '말랑냥이점프 App Store 등록 준비 중',
+        'modal.noticeBody': '말랑냥이점프 Android 버전은 Google Play에서 이용 가능하며, App Store 버전은 준비 중입니다.',
+        'feedback.title': '문의나 건의사항 보내기',
+        'feedback.copy': '아래 카드에서 바로 메일을 열거나, 자세한 내용은 아래 입력칸에 적어 보내주세요.',
+        'feedback.boardNote': '게시판 카드처럼 고르면 제목과 양식이 채워진 메일이 바로 열립니다.',
+        'quick.comfortLabel': '불편사항',
+        'quick.comfortTitle': '게임 중 불편했어요',
+        'quick.suggestionLabel': '건의',
+        'quick.suggestionTitle': '이렇게 개선되면 좋겠어요',
+        'quick.bugLabel': '버그',
+        'quick.bugTitle': '오류를 발견했어요',
+        'quick.mailNow': '바로 메일 쓰기',
+        'quick.subjectComfort': '말랑냥이점프 불편사항 건의',
+        'quick.subjectSuggestion': '말랑냥이점프 개선 건의',
+        'quick.subjectBug': '말랑냥이점프 버그 제보',
+        'quick.bodyComfort': '게임 중 불편했던 내용을 편하게 적어주세요.\n\n기기:\n앱 버전:\n불편했던 상황:',
+        'quick.bodySuggestion': '개선되면 좋겠는 내용을 편하게 적어주세요.\n\n건의 내용:\n이유:',
+        'quick.bodyBug': '발견한 오류를 알려주세요.\n\n기기:\n앱 버전:\n오류가 발생한 상황:',
+        'feedback.typeLabel': '분류',
+        'feedback.typeInquiry': '문의',
+        'feedback.typeSuggestion': '건의사항',
+        'feedback.typeBug': '버그 제보',
+        'feedback.typeComfort': '게임 이용 불편사항',
+        'feedback.replyLabel': '답변 받을 이메일 (선택)',
+        'feedback.messageLabel': '내용',
+        'feedback.submit': '이메일 앱 열기',
+        'feedback.direct': '직접 이메일 보내기',
+        'feedback.mailSubject': '팡츄 스튜디오 문의/건의',
+        'feedback.mailType': '분류',
+        'feedback.mailReply': '답변 받을 이메일',
+        'feedback.mailMessage': '내용',
         'links.label': '공식 링크', 'links.title': '스토어 및 공식 링크',
         'links.sub': '게임 스토어, 정책 페이지, 공식 지원 자료를 한곳에서 확인하세요.',
         'link1.title': '개인정보처리방침', 'link1.desc': '팡츄 스튜디오 서비스 및 말랑냥이점프의 개인정보처리방침입니다.', 'link1.arrow': '확인하기',
@@ -881,6 +1134,7 @@
         'ann1.desc': 'PangChu Studioの公式ウェブサイトが公開されました。ポリシーページ、お問い合わせ先、ゲーム情報をこちらでご確認いただけます。',
         'ann2.title': 'プライバシーポリシーおよび利用規約を公開しました',
         'ann2.desc': 'プライバシーポリシーと利用規約を公開しました。リンクセクションよりご確認いただけます。',
+        'ann.feedbackBtn': 'お知らせ確認・意見を送る',
         'faq.label': 'よくある質問', 'faq.title': 'よくある質問',
         'faq.sub': 'ゲームとスタジオに関するよくある質問にお答えします。',
         'faq1.q': 'ぷにねこジャンプはどんなゲームですか？',
@@ -897,7 +1151,42 @@
         'faq6.a': 'ゲーム中に気づいた不具合、改善アイデア、フィードバックは support@pangchustudio.co.kr までお送りください。いただいた内容は、ゲームとサービス改善の参考にさせていただきます。',
         'contact.title': 'PangChu Studioへのお問い合わせ',
         'contact.body': 'PangChu Studioおよびぷにねこジャンプに関するご質問、サポート依頼、公式連絡は以下のメールアドレスまでご連絡ください。',
-        'contact.btn': 'メールを送る', 'contact.orEmail': 'または直接メール:',
+        'contact.btn': '意見を送る', 'contact.orEmail': 'または直接メール:',
+        'modal.badge': 'お知らせとご意見',
+        'modal.title': 'より快適に遊べるよう、ご意見をお聞かせください',
+        'modal.body': 'ゲームを楽しむ皆さまが不便なく遊べるよう、気になる点やご提案をお気軽にお送りください。小さな声も今後のアップデートの大切な参考になります。',
+        'modal.noticeLabel': '現在のお知らせ',
+        'modal.noticeTitle': 'ぷにねこジャンプのApp Store登録を準備中',
+        'modal.noticeBody': 'ぷにねこジャンプのAndroid版はGoogle Playで配信中です。App Store版は準備中です。',
+        'feedback.title': 'お問い合わせ・ご意見を送る',
+        'feedback.copy': 'カードからすぐにメールを開くか、下の入力欄に詳しく書いて送れます。',
+        'feedback.boardNote': '掲示板カードのように選ぶと、件名と本文テンプレート入りのメールが開きます。',
+        'quick.comfortLabel': '不便',
+        'quick.comfortTitle': 'プレイ中に不便を感じました',
+        'quick.suggestionLabel': '提案',
+        'quick.suggestionTitle': '改善アイデアがあります',
+        'quick.bugLabel': '不具合',
+        'quick.bugTitle': '問題を見つけました',
+        'quick.mailNow': 'すぐにメール',
+        'quick.subjectComfort': 'ぷにねこジャンプ プレイ中の不便',
+        'quick.subjectSuggestion': 'ぷにねこジャンプ 改善の提案',
+        'quick.subjectBug': 'ぷにねこジャンプ 不具合報告',
+        'quick.bodyComfort': 'プレイ中に不便だった点をお書きください。\n\n端末:\nアプリバージョン:\n内容:',
+        'quick.bodySuggestion': '改善してほしい内容をお書きください。\n\n提案内容:\n理由:',
+        'quick.bodyBug': '見つけた問題をお知らせください。\n\n端末:\nアプリバージョン:\n発生した状況:',
+        'feedback.typeLabel': '種類',
+        'feedback.typeInquiry': 'お問い合わせ',
+        'feedback.typeSuggestion': 'ご提案',
+        'feedback.typeBug': '不具合報告',
+        'feedback.typeComfort': 'プレイ中の不便',
+        'feedback.replyLabel': '返信先メール（任意）',
+        'feedback.messageLabel': '内容',
+        'feedback.submit': 'メールアプリを開く',
+        'feedback.direct': '直接メールする',
+        'feedback.mailSubject': 'PangChu Studio お問い合わせ・ご意見',
+        'feedback.mailType': '種類',
+        'feedback.mailReply': '返信先メール',
+        'feedback.mailMessage': '内容',
         'links.label': '公式リンク', 'links.title': 'ストア＆公式リンク',
         'links.sub': 'ゲームのストアページ、ポリシー、公式サポート情報をまとめています。',
         'link1.title': 'プライバシーポリシー', 'link1.desc': 'PangChu Studioサービスおよびぷにねこジャンプのプライバシーポリシーです。', 'link1.arrow': '確認する',
@@ -934,6 +1223,7 @@
         'ann1.desc': 'PangChu Studio 官方網站正式上線。政策頁面、聯絡資訊及遊戲詳情均可在此查閱。',
         'ann2.title': '隱私政策及服務條款已發布',
         'ann2.desc': '我們的隱私政策與服務條款文件已正式發布，可於連結區塊查閱。',
+        'ann.feedbackBtn': '查看公告並提交意見',
         'faq.label': '常見問題', 'faq.title': '常見問題',
         'faq.sub': '關於我們遊戲與工作室的常見問題解答。',
         'faq1.q': '啫喱貓跳跳是怎樣的遊戲？',
@@ -950,7 +1240,42 @@
         'faq6.a': '如有遊戲使用上的不便、錯誤回報或改善建議，請寄至 support@pangchustudio.co.kr。我們會參考收到的意見，用於改善遊戲與服務。',
         'contact.title': '聯絡 PangChu Studio',
         'contact.body': '如有關於 PangChu Studio 及啫喱貓跳跳的問題、支援需求或官方聯絡事項，請使用以下電子郵件。',
-        'contact.btn': '發送電子郵件', 'contact.orEmail': '或直接寄信至:',
+        'contact.btn': '提交意見', 'contact.orEmail': '或直接寄信至:',
+        'modal.badge': '公告與意見箱',
+        'modal.title': '讓遊戲體驗更舒適，歡迎告訴我們你的想法',
+        'modal.body': '為了讓玩家可以更安心順暢地遊玩，如有不便之處、建議、錯誤回報或改善想法，歡迎隨時寄給我們。每一則小意見都能幫助我們改進後續更新。',
+        'modal.noticeLabel': '目前公告',
+        'modal.noticeTitle': '啫喱貓跳跳 App Store 登錄準備中',
+        'modal.noticeBody': '啫喱貓跳跳 Android 版已於 Google Play 上架，App Store 版本正在準備中。',
+        'feedback.title': '提交查詢或建議',
+        'feedback.copy': '可直接選擇卡片快速開啟電郵，或在下方填寫更詳細內容。',
+        'feedback.boardNote': '像公告板卡片一樣選擇後，會立即開啟已填好主旨與範本的電郵。',
+        'quick.comfortLabel': '不便',
+        'quick.comfortTitle': '遊玩時感到不便',
+        'quick.suggestionLabel': '建議',
+        'quick.suggestionTitle': '我有改善建議',
+        'quick.bugLabel': '錯誤',
+        'quick.bugTitle': '發現問題',
+        'quick.mailNow': '快速寄信',
+        'quick.subjectComfort': '啫喱貓跳跳 遊玩不便回報',
+        'quick.subjectSuggestion': '啫喱貓跳跳 改善建議',
+        'quick.subjectBug': '啫喱貓跳跳 錯誤回報',
+        'quick.bodyComfort': '請描述遊玩時感到不便的地方。\n\n裝置:\nApp 版本:\n詳情:',
+        'quick.bodySuggestion': '請告訴我們你的改善建議。\n\n建議內容:\n原因:',
+        'quick.bodyBug': '請告訴我們你發現的問題。\n\n裝置:\nApp 版本:\n發生情況:',
+        'feedback.typeLabel': '類別',
+        'feedback.typeInquiry': '查詢',
+        'feedback.typeSuggestion': '建議',
+        'feedback.typeBug': '錯誤回報',
+        'feedback.typeComfort': '遊玩時的不便',
+        'feedback.replyLabel': '回覆電郵（選填）',
+        'feedback.messageLabel': '內容',
+        'feedback.submit': '開啟電子郵件 App',
+        'feedback.direct': '直接寄信',
+        'feedback.mailSubject': 'PangChu Studio 查詢／建議',
+        'feedback.mailType': '類別',
+        'feedback.mailReply': '回覆電郵',
+        'feedback.mailMessage': '內容',
         'links.label': '官方連結', 'links.title': '商店與官方連結',
         'links.sub': '在這裡查看遊戲商店頁面、政策文件及官方支援資訊。',
         'link1.title': '隱私政策', 'link1.desc': 'PangChu Studio 服務及啫喱貓跳跳的隱私政策。', 'link1.arrow': '查閱政策',
@@ -987,6 +1312,7 @@
         'ann1.desc': 'O site oficial da PangChu Studio está no ar. Páginas de política, informações de contato e detalhes do jogo estão disponíveis aqui.',
         'ann2.title': 'Política de Privacidade e Termos de Serviço publicados',
         'ann2.desc': 'Nossa Política de Privacidade e Termos de Serviço foram publicados e estão acessíveis na seção de Links.',
+        'ann.feedbackBtn': 'Ver avisos e enviar feedback',
         'faq.label': 'Perguntas Frequentes', 'faq.title': 'Perguntas Frequentes',
         'faq.sub': 'Respostas rápidas sobre nosso jogo e estúdio.',
         'faq1.q': 'Que tipo de jogo é Gatinho Pula-Pula?',
@@ -1003,7 +1329,42 @@
         'faq6.a': 'Você pode enviar feedback, relatos de bugs ou ideias de melhoria para support@pangchustudio.co.kr. Seus comentários podem ser usados como referência para melhorar nossos jogos e serviços.',
         'contact.title': 'Contatar a PangChu Studio',
         'contact.body': 'Para dúvidas, suporte ou contato oficial relacionado à PangChu Studio e ao Gatinho Pula-Pula, use o e-mail abaixo.',
-        'contact.btn': 'Enviar E-mail', 'contact.orEmail': 'ou envie diretamente:',
+        'contact.btn': 'Enviar feedback', 'contact.orEmail': 'ou envie diretamente:',
+        'modal.badge': 'Avisos e Feedback',
+        'modal.title': 'Ajude-nos a manter o jogo mais confortável',
+        'modal.body': 'Para que todos possam jogar sem incômodos, envie qualquer dificuldade, sugestão, relato de bug ou ideia de melhoria. Mesmo pequenos comentários ajudam nas próximas atualizações.',
+        'modal.noticeLabel': 'Aviso atual',
+        'modal.noticeTitle': 'Cadastro do Gatinho Pula-Pula na App Store em preparação',
+        'modal.noticeBody': 'Gatinho Pula-Pula está disponível no Google Play, e a versão da App Store está em preparação.',
+        'feedback.title': 'Enviar dúvida ou sugestão',
+        'feedback.copy': 'Escolha um cartão para abrir um e-mail rápido ou escreva uma mensagem detalhada abaixo.',
+        'feedback.boardNote': 'Os cartões funcionam como um mural simples e abrem um e-mail com assunto e modelo prontos.',
+        'quick.comfortLabel': 'Conforto',
+        'quick.comfortTitle': 'Senti incômodo ao jogar',
+        'quick.suggestionLabel': 'Sugestão',
+        'quick.suggestionTitle': 'Tenho uma ideia de melhoria',
+        'quick.bugLabel': 'Bug',
+        'quick.bugTitle': 'Encontrei um problema',
+        'quick.mailNow': 'Enviar e-mail rápido',
+        'quick.subjectComfort': 'Gatinho Pula-Pula incômodo ao jogar',
+        'quick.subjectSuggestion': 'Gatinho Pula-Pula sugestão de melhoria',
+        'quick.subjectBug': 'Gatinho Pula-Pula relato de bug',
+        'quick.bodyComfort': 'Descreva o que causou incômodo ao jogar.\n\nDispositivo:\nVersão do app:\nDetalhes:',
+        'quick.bodySuggestion': 'Conte sua ideia de melhoria.\n\nO que você gostaria de melhorar?\nDetalhes:',
+        'quick.bodyBug': 'Conte qual problema você encontrou.\n\nDispositivo:\nVersão do app:\nO que aconteceu:',
+        'feedback.typeLabel': 'Tipo',
+        'feedback.typeInquiry': 'Dúvida',
+        'feedback.typeSuggestion': 'Sugestão',
+        'feedback.typeBug': 'Relato de bug',
+        'feedback.typeComfort': 'Incômodo ao jogar',
+        'feedback.replyLabel': 'E-mail para resposta (opcional)',
+        'feedback.messageLabel': 'Mensagem',
+        'feedback.submit': 'Abrir app de e-mail',
+        'feedback.direct': 'Enviar e-mail direto',
+        'feedback.mailSubject': 'Feedback para PangChu Studio',
+        'feedback.mailType': 'Tipo',
+        'feedback.mailReply': 'E-mail para resposta',
+        'feedback.mailMessage': 'Mensagem',
         'links.label': 'Links Oficiais', 'links.title': 'Loja e Links Oficiais',
         'links.sub': 'Acesse a loja do jogo, páginas de política e recursos oficiais de suporte.',
         'link1.title': 'Política de Privacidade', 'link1.desc': 'Nossa política de privacidade para os serviços da PangChu Studio e Gatinho Pula-Pula.', 'link1.arrow': 'Ler política',
@@ -1039,8 +1400,77 @@
       if (!isOpen) item.classList.add('open');
     }
 
+    let lastFeedbackTrigger = null;
+
+    function openFeedbackModal(trigger) {
+      const modal = document.getElementById('feedbackModal');
+      const dialog = modal?.querySelector('.feedback-dialog');
+      if (!modal || !dialog) return;
+      lastFeedbackTrigger = trigger || document.activeElement;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      dialog.focus();
+    }
+
+    function closeFeedbackModal() {
+      const modal = document.getElementById('feedbackModal');
+      if (!modal) return;
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastFeedbackTrigger && typeof lastFeedbackTrigger.focus === 'function') {
+        lastFeedbackTrigger.focus();
+      }
+    }
+
+    function sendFeedback(event) {
+      event.preventDefault();
+      const typeEl = document.getElementById('feedbackType');
+      const replyEl = document.getElementById('feedbackReply');
+      const messageEl = document.getElementById('feedbackMessage');
+      const selectedType = typeEl?.selectedOptions?.[0]?.textContent.trim() || '';
+      const replyEmail = replyEl?.value.trim();
+      const message = messageEl?.value.trim();
+      const text = T[currentLang] || T.en;
+      const subject = `${text['feedback.mailSubject']} - ${selectedType}`;
+      const bodyLines = [
+        `${text['feedback.mailType']}: ${selectedType}`,
+        replyEmail ? `${text['feedback.mailReply']}: ${replyEmail}` : '',
+        '',
+        `${text['feedback.mailMessage']}:`,
+        message
+      ].filter((line, index) => line || index === 2);
+      const mailto = `mailto:support@pangchustudio.co.kr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+      window.location.href = mailto;
+    }
+
+    function openQuickMail(kind) {
+      const text = T[currentLang] || T.en;
+      const quickMailMap = {
+        comfort: ['quick.subjectComfort', 'quick.bodyComfort'],
+        suggestion: ['quick.subjectSuggestion', 'quick.bodySuggestion'],
+        bug: ['quick.subjectBug', 'quick.bodyBug']
+      };
+      const [subjectKey, bodyKey] = quickMailMap[kind] || quickMailMap.suggestion;
+      const mailto = `mailto:support@pangchustudio.co.kr?subject=${encodeURIComponent(text[subjectKey])}&body=${encodeURIComponent(text[bodyKey])}`;
+      window.location.href = mailto;
+    }
+
     // Init
     setLang(currentLang);
+    document.querySelectorAll('.js-open-feedback').forEach(btn => {
+      btn.addEventListener('click', () => openFeedbackModal(btn));
+    });
+    document.querySelectorAll('[data-quick-mail]').forEach(btn => {
+      btn.addEventListener('click', () => openQuickMail(btn.getAttribute('data-quick-mail')));
+    });
+    document.querySelectorAll('[data-feedback-close]').forEach(btn => {
+      btn.addEventListener('click', closeFeedbackModal);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeFeedbackModal();
+    });
   </script>
 </body>
 </html>
