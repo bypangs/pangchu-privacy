@@ -85,7 +85,7 @@
     "alternateName": ["Jelly Cat Jump", "말랑냥이점프", "ぷにねこジャンプ", "啫喱貓跳跳", "Gatinho Pula-Pula"],
     "applicationCategory": "GameApplication",
     "applicationSubCategory": "ArcadeGame",
-    "operatingSystem": ["ANDROID", "WINDOWS"],
+    "operatingSystem": ["ANDROID", "WINDOWS", "iOS", "macOS"],
     "description": "啫喱貓跳跳 是一款可愛的休閒雲朵跳躍遊戲，玩家可以操作柔軟的小貓跳上雲端、收集金幣、解鎖造型並挑戰高分。",
     "inLanguage": "zh-HK",
     "genre": ["Casual", "Arcade", "Jumping"],
@@ -389,10 +389,9 @@
     .announce-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .announce-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
     .announce-date { flex-shrink: 0; font-size: 12px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
-    .announce-actions { margin-top: 16px; display: flex; justify-content: flex-end; }
     .notice-open-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      min-height: 44px; padding: 0 18px; border-radius: 999px;
+      min-height: 46px; padding: 0 18px; border-radius: 999px;
       border: 1px solid rgba(77,184,255,0.22); background: rgba(255,255,255,0.88);
       color: var(--primary-deep); font-family: var(--font); font-size: 13px; font-weight: 800;
       box-shadow: 0 8px 24px rgba(67,133,193,0.10); cursor: pointer;
@@ -547,7 +546,6 @@
       .features-row { grid-template-columns: 1fr; }
       .links-grid { grid-template-columns: 1fr; }
       .contact-card { flex-direction: column; align-items: flex-start; }
-      .announce-actions { justify-content: flex-start; }
       .feedback-inner { grid-template-columns: 1fr; }
       .feedback-info { border-right: none; border-bottom: 1px solid rgba(92,151,201,0.13); }
       .feedback-info, .feedback-form { padding: 26px 22px; }
@@ -601,6 +599,10 @@
           <div class="hero-cta">
             <a class="btn btn-primary" href="#game" data-i18n="hero.cta1">查看遊戲</a>
             <a class="btn btn-ghost" href="#links" data-i18n="hero.cta2">官方連結</a>
+            <button class="notice-open-btn js-open-feedback" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
+              <span data-i18n="ann.feedbackBtn">查看公告並提交意見</span>
+            </button>
           </div>
         </article>
 
@@ -608,12 +610,12 @@
           <div class="status-card" id="about">
             <div class="live-badge"><span class="live-dot"></span><span data-i18n="status.badge">網站運作中</span></div>
             <div class="status-title" data-i18n="status.title">官方連結已上線</div>
-            <p class="status-body" data-i18n="status.body">Google Play 與 Microsoft Store 已上架，App Store 登錄準備中，亦可查看客戶支援與政策文件。</p>
+            <p class="status-body" data-i18n="status.body">Google Play 與 Microsoft Store 已上架，iOS 與 Mac 版 App Store 登錄準備中，亦可查看客戶支援與政策文件。</p>
             <div class="mini-grid">
               <div class="mini-tile"><strong data-i18n="mini.game">遊戲</strong><span data-i18n="mini.gameVal">啫喱貓跳跳</span></div>
               <div class="mini-tile"><strong data-i18n="mini.genre">類型</strong><span data-i18n="mini.genreVal">超休閒</span></div>
               <div class="mini-tile"><strong data-i18n="mini.studio">工作室</strong><span>PangChu Studio</span></div>
-              <div class="mini-tile"><strong data-i18n="mini.platform">平台</strong><span data-i18n="mini.platformVal">Android / Windows</span></div>
+              <div class="mini-tile"><strong data-i18n="mini.platform">平台</strong><span data-i18n="mini.platformVal">Android / Windows / iOS / Mac</span></div>
             </div>
           </div>
           <div class="about-card">
@@ -624,12 +626,6 @@
               <span>PangChu Studio is the official game brand operated by Byeol Noraebang.</span>
             </p>
           </div>
-        </div>
-        <div class="announce-actions">
-          <button class="notice-open-btn js-open-feedback" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
-            <span data-i18n="ann.feedbackBtn">查看公告並提交意見</span>
-          </button>
         </div>
       </div>
     </section>
@@ -661,7 +657,7 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.4 10.8 4.3v7.2H3V5.4Zm8.8-1.3L21 2.8v8.7h-9.2V4.1ZM3 12.5h7.8v7.2L3 18.6v-6.1Zm8.8 0H21v8.7l-9.2-1.3v-7.4Z"/></svg>
                 <span data-i18n="store.microsoftCta">在 Microsoft Store 取得</span>
               </a>
-              <span class="store-note" data-i18n="store.note">Android 與 Windows 已推出 / App Store 準備中</span>
+              <span class="store-note" data-i18n="store.note">Android 與 Windows 已推出 / iOS 與 Mac 準備中</span>
             </div>
             <div class="features-row">
               <div class="feature-tile"><strong data-i18n="feat1.title">簡單操作</strong><span data-i18n="feat1.desc">輕鬆上手的左右觸控操作。</span></div>
@@ -710,10 +706,18 @@
           <div class="announce-item">
             <span class="announce-badge badge-new" data-i18n="ann.badge.new">新</span>
             <div class="announce-content">
-              <div class="announce-title" data-i18n="ann3.title">啫喱貓跳跳 App Store 登錄準備中</div>
-              <div class="announce-desc" data-i18n="ann3.desc">Android 版已於 Google Play 上架，App Store 登錄準備中。</div>
+              <div class="announce-title" data-i18n="ann3.title">啫喱貓跳跳 iOS 與 Mac 版 App Store 登錄準備中</div>
+              <div class="announce-desc" data-i18n="ann3.desc">Android 版已於 Google Play 上架，iOS 與 Mac 版 App Store 登錄準備中。</div>
             </div>
             <div class="announce-date">2026.05.13</div>
+          </div>
+          <div class="announce-item">
+            <span class="announce-badge badge-new" data-i18n="ann.badge.new">新</span>
+            <div class="announce-content">
+              <div class="announce-title" data-i18n="ann5.title">啫喱貓跳跳 Android 版已於 Google Play 正式推出</div>
+              <div class="announce-desc" data-i18n="ann5.desc">啫喱貓跳跳 Android 版已於 Google Play 正式推出。</div>
+            </div>
+            <div class="announce-date">2026.05.07</div>
           </div>
           <div class="announce-item">
             <span class="announce-badge badge-new" data-i18n="ann.badge.new">新</span>
@@ -770,7 +774,7 @@
               <span data-i18n="faq4.q">現在可以玩啫喱貓跳跳嗎？</span>
               <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
             </button>
-            <div class="faq-a" data-i18n="faq4.a">可以。啫喱貓跳跳 Android 版已於 Google Play 上架，Windows 版已於 Microsoft Store 上架，App Store 版本正在準備中。</div>
+            <div class="faq-a" data-i18n="faq4.a">可以。啫喱貓跳跳 Android 版已於 Google Play 上架，Windows 版已於 Microsoft Store 上架，iOS 與 Mac 版正在準備 App Store 登錄。</div>
           </div>
           <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">
@@ -885,7 +889,7 @@
           <article class="feedback-notice">
             <div class="feedback-notice-label" data-i18n="modal.noticeLabel">目前公告</div>
             <h3 data-i18n="modal.noticeTitle">啫喱貓跳跳商店連結已上線</h3>
-            <p data-i18n="modal.noticeBody">啫喱貓跳跳已於 Google Play 及 Microsoft Store 上架，App Store 版本正在準備中。</p>
+            <p data-i18n="modal.noticeBody">啫喱貓跳跳已於 Google Play 及 Microsoft Store 上架，iOS 與 Mac 版正在準備 App Store 登錄。</p>
           </article>
         </div>
         <form class="feedback-form" onsubmit="sendFeedback(event)">
@@ -969,15 +973,15 @@
         'hero.sub': 'A small indie studio crafting cute, cozy mobile game experiences. Official home for studio information, game details, and policy pages.',
         'hero.cta1': 'View Featured Game', 'hero.cta2': 'Official Links',
         'status.badge': 'Website Active', 'status.title': 'Official links are live',
-        'status.body': 'Google Play and Microsoft Store are live, App Store registration is in progress, and support contacts and policy pages are available.',
+        'status.body': 'Google Play and Microsoft Store are live, and App Store registration for iOS and Mac is in progress. Support contacts and policy pages are available.',
         'mini.game': 'Game', 'mini.gameVal': 'Jelly Cat Jump', 'mini.genre': 'Genre', 'mini.genreVal': 'Cute hyper-casual',
-        'mini.studio': 'Studio', 'mini.platform': 'Platform', 'mini.platformVal': 'Android / Windows',
+        'mini.studio': 'Studio', 'mini.platform': 'Platform', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': 'About the studio',
         'about.body': 'PangChu Studio builds clean, friendly game experiences with soft visuals, approachable controls, and a charming, welcoming feel.',
         'game.title': 'Jelly Cat Jump', 'game.label': 'Featured Game', 'game.sub': 'Our current title — soft, cheerful, and made for quick cozy play.',
         'game.tag': 'Cute Casual Jumping Game',
         'game.desc': 'A cheerful cat jumping game set in soft cloud-filled skies, with simple left and right touch controls, coins to collect, skins to unlock, and quick runs that feel light and cozy.',
-        'store.cta': 'Get it on Google Play', 'store.microsoftCta': 'Get it from Microsoft Store', 'store.note': 'Android and Windows available / App Store coming soon',
+        'store.cta': 'Get it on Google Play', 'store.microsoftCta': 'Get it from Microsoft Store', 'store.note': 'Android and Windows available / iOS and Mac coming soon',
         'feat1.title': 'Simple controls', 'feat1.desc': 'Pick-up-and-play controls with a soft rhythm.',
         'feat2.title': 'Soft visuals', 'feat2.desc': 'Clouds, pastels, and cute cat characters.',
         'feat3.title': 'Arcade rhythm', 'feat3.desc': 'Quick runs and score-focused challenge.',
@@ -986,8 +990,10 @@
         'ann.badge.new': 'New', 'ann.badge.notice': 'Notice',
         'ann4.title': 'Jelly Cat Jump Windows version is available on Microsoft Store',
         'ann4.desc': 'The Windows version of Jelly Cat Jump is now available through the Microsoft Store.',
-        'ann3.title': 'Jelly Cat Jump App Store registration is in progress',
-        'ann3.desc': 'The Android version is available on Google Play, and App Store registration is in progress.',
+        'ann3.title': 'App Store registration for Jelly Cat Jump on iOS and Mac is in progress',
+        'ann3.desc': 'The Android version is available on Google Play, and App Store registration for iOS and Mac is in progress.',
+        'ann5.title': 'Jelly Cat Jump Android version officially released on Google Play',
+        'ann5.desc': 'The Android version of Jelly Cat Jump has officially launched on Google Play.',
         'ann1.title': 'Official website is now live',
         'ann1.desc': 'The PangChu Studio official website is now live. Policy pages, contact information, and game details are all available here.',
         'ann2.title': 'Privacy Policy and Terms of Service published',
@@ -1002,7 +1008,7 @@
         'faq3.q': 'Where can I find the Terms of Service?',
         'faq3.a': 'You can find the Terms of Service through the official links section on this website.',
         'faq4.q': 'Can I play Jelly Cat Jump now?',
-        'faq4.a': 'Yes. Jelly Cat Jump is available on Google Play for Android and Microsoft Store for Windows. The App Store version is in preparation.',
+        'faq4.a': 'Yes. Jelly Cat Jump is available on Google Play for Android and Microsoft Store for Windows. The iOS and Mac versions are in preparation for the App Store.',
         'faq5.q': 'How can I contact PangChu Studio?',
         'faq5.a': 'You can contact PangChu Studio by email at support@pangchustudio.co.kr.',
         'faq6.q': 'Where can I send feedback or suggestions about the game?',
@@ -1015,7 +1021,7 @@
         'modal.body': 'To keep play comfortable for everyone, please send any inconvenience, suggestion, bug report, or improvement idea. Even small notes help us improve future updates.',
         'modal.noticeLabel': 'Current notice',
         'modal.noticeTitle': 'Jelly Cat Jump store links are live',
-        'modal.noticeBody': 'Jelly Cat Jump is available on Google Play and Microsoft Store, and the App Store version is being prepared.',
+        'modal.noticeBody': 'Jelly Cat Jump is available on Google Play and Microsoft Store, and the iOS and Mac versions are being prepared for the App Store.',
         'feedback.title': 'Send an inquiry or suggestion',
         'feedback.copy': 'Choose a quick board card for one-tap email, or write a detailed message below.',
         'feedback.boardNote': 'Quick board cards open a prefilled email right away.',
@@ -1061,15 +1067,15 @@
         'hero.sub': '귀엽고 아늑한 모바일 게임을 만드는 소규모 인디 스튜디오입니다. 스튜디오 소개, 게임 정보, 정책 페이지를 확인하세요.',
         'hero.cta1': '게임 보기', 'hero.cta2': '공식 링크',
         'status.badge': '웹사이트 운영 중', 'status.title': '공식 링크가 준비되었습니다',
-        'status.body': 'Google Play와 Microsoft Store에서 이용 가능하며, App Store 등록은 준비 중입니다. 고객 지원과 정책 페이지도 확인할 수 있습니다.',
+        'status.body': 'Google Play와 Microsoft Store에서 이용 가능하며, iOS와 Mac 버전의 App Store 등록은 준비 중입니다. 고객 지원과 정책 페이지도 확인할 수 있습니다.',
         'mini.game': '게임', 'mini.gameVal': '말랑냥이점프', 'mini.genre': '장르', 'mini.genreVal': '하이퍼캐주얼',
-        'mini.studio': '스튜디오', 'mini.platform': '플랫폼', 'mini.platformVal': 'Android / Windows',
+        'mini.studio': '스튜디오', 'mini.platform': '플랫폼', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': '스튜디오 소개',
         'about.body': '팡츄 스튜디오는 부드러운 비주얼, 직관적인 조작, 따뜻하고 친근한 느낌의 게임 경험을 만들어갑니다.',
         'game.title': '말랑냥이점프', 'game.label': '대표 게임', 'game.sub': '현재 서비스 중인 게임 — 부드럽고 귀엽게, 짧고 산뜻한 플레이로.',
         'game.tag': '귀여운 캐주얼 점프 게임',
         'game.desc': '구름 가득한 하늘을 귀여운 고양이와 함께 뛰어오르는 하이퍼캐주얼 점프 게임입니다. 간단한 좌우 터치 조작, 코인 수집, 스킨 해제, 짧고 산뜻한 기록 도전의 재미를 담았습니다.',
-        'store.cta': 'Google Play에서 보기', 'store.microsoftCta': 'Microsoft Store에서 받기', 'store.note': 'Android·Windows 이용 가능 / App Store 준비 중',
+        'store.cta': 'Google Play에서 보기', 'store.microsoftCta': 'Microsoft Store에서 받기', 'store.note': 'Android·Windows 이용 가능 / iOS·Mac 준비 중',
         'feat1.title': '간단한 조작', 'feat1.desc': '가볍게 익히는 좌우 터치 조작.',
         'feat2.title': '부드러운 비주얼', 'feat2.desc': '구름, 파스텔, 귀여운 고양이 캐릭터.',
         'feat3.title': '아케이드 리듬', 'feat3.desc': '짧은 런과 점수 도전의 재미.',
@@ -1078,8 +1084,10 @@
         'ann.badge.new': '신규', 'ann.badge.notice': '공지',
         'ann4.title': '말랑냥이점프 Windows 버전 Microsoft Store 출시',
         'ann4.desc': '말랑냥이점프 Windows 버전을 Microsoft Store에서 이용할 수 있습니다.',
-        'ann3.title': '말랑냥이점프 App Store 등록 준비 중',
-        'ann3.desc': 'Android 버전은 Google Play에서 이용 가능하며, App Store 등록은 준비 중입니다.',
+        'ann3.title': '말랑냥이점프 iOS·Mac 버전 App Store 등록 준비 중',
+        'ann3.desc': 'Android 버전은 Google Play에서 이용 가능하며, iOS와 Mac 버전은 App Store 등록 준비 중입니다.',
+        'ann5.title': '말랑냥이점프 Android 버전 Google Play 정식 출시',
+        'ann5.desc': '말랑냥이점프 Android 버전이 Google Play에 정식 출시되었습니다.',
         'ann1.title': '공식 웹사이트 오픈',
         'ann1.desc': '팡츄 스튜디오 공식 웹사이트가 오픈되었습니다. 정책 페이지, 연락처, 게임 정보를 이곳에서 확인하실 수 있습니다.',
         'ann2.title': '개인정보처리방침 및 이용약관 게재',
@@ -1094,7 +1102,7 @@
         'faq3.q': '이용약관은 어디서 확인하나요?',
         'faq3.a': '이 웹사이트 하단의 공식 링크 섹션에서 확인하실 수 있습니다.',
         'faq4.q': '말랑냥이점프를 지금 플레이할 수 있나요?',
-        'faq4.a': '네. 말랑냥이점프는 Android에서는 Google Play, Windows에서는 Microsoft Store에서 플레이할 수 있으며, App Store 버전은 등록 준비 중입니다.',
+        'faq4.a': '네. 말랑냥이점프는 Android에서는 Google Play, Windows에서는 Microsoft Store에서 플레이할 수 있으며, iOS와 Mac 버전은 App Store 등록 준비 중입니다.',
         'faq5.q': '팡츄 스튜디오에 연락하려면 어떻게 하나요?',
         'faq5.a': 'support@pangchustudio.co.kr 으로 이메일을 보내주시면 됩니다.',
         'faq6.q': '게임 관련 건의나 피드백은 어디로 보내면 되나요?',
@@ -1107,7 +1115,7 @@
         'modal.body': '게임을 즐기시는 고객님들이 불편하지 않도록, 불편한 점이나 건의사항을 편하게 보내주세요. 작은 의견도 다음 업데이트를 준비하는 데 큰 도움이 됩니다.',
         'modal.noticeLabel': '현재 공지',
         'modal.noticeTitle': '말랑냥이점프 스토어 링크 안내',
-        'modal.noticeBody': '말랑냥이점프는 Google Play와 Microsoft Store에서 이용 가능하며, App Store 버전은 준비 중입니다.',
+        'modal.noticeBody': '말랑냥이점프는 Google Play와 Microsoft Store에서 이용 가능하며, iOS와 Mac 버전은 App Store 등록 준비 중입니다.',
         'feedback.title': '문의나 건의사항 보내기',
         'feedback.copy': '아래 카드에서 바로 메일을 열거나, 자세한 내용은 아래 입력칸에 적어 보내주세요.',
         'feedback.boardNote': '게시판 카드처럼 고르면 제목과 양식이 채워진 메일이 바로 열립니다.',
@@ -1153,15 +1161,15 @@
         'hero.sub': 'かわいくて居心地のいいモバイルゲームを制作する小さなインディースタジオです。スタジオ情報、ゲームの詳細、ポリシーページをご確認ください。',
         'hero.cta1': 'ゲームを見る', 'hero.cta2': '公式リンク',
         'status.badge': 'ウェブサイト運営中', 'status.title': '公式リンク公開中',
-        'status.body': 'Google PlayとMicrosoft Storeで配信中で、App Store登録は準備中です。サポート連絡先とポリシーページも確認できます。',
+        'status.body': 'Google PlayとMicrosoft Storeで配信中で、iOS・Mac版のApp Store登録は準備中です。サポート連絡先とポリシーページも確認できます。',
         'mini.game': 'ゲーム', 'mini.gameVal': 'ぷにねこジャンプ', 'mini.genre': 'ジャンル', 'mini.genreVal': 'ハイパーカジュアル',
-        'mini.studio': 'スタジオ', 'mini.platform': 'プラットフォーム', 'mini.platformVal': 'Android / Windows',
+        'mini.studio': 'スタジオ', 'mini.platform': 'プラットフォーム', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': 'スタジオについて',
         'about.body': 'PangChu Studioは、柔らかなビジュアル、直感的な操作、温かみのあるゲーム体験を大切にしています。',
         'game.title': 'ぷにねこジャンプ', 'game.label': '注目のゲーム', 'game.sub': '現在のタイトル — やさしく、かわいく、気軽に遊べる。',
         'game.tag': 'かわいいカジュアルジャンプゲーム',
         'game.desc': '雲いっぱいの空をかわいい猫と跳び上がるハイパーカジュアルジャンプゲームです。シンプルな左右タッチ操作、コイン集め、スキン解放、テンポのよいスコア挑戦を楽しめます。',
-        'store.cta': 'Google Playで見る', 'store.microsoftCta': 'Microsoft Storeで入手', 'store.note': 'Android・Windows配信中 / App Store準備中',
+        'store.cta': 'Google Playで見る', 'store.microsoftCta': 'Microsoft Storeで入手', 'store.note': 'Android・Windows配信中 / iOS・Mac準備中',
         'feat1.title': '簡単な操作', 'feat1.desc': 'すぐになじむ左右タッチ操作。',
         'feat2.title': '柔らかなビジュアル', 'feat2.desc': '雲、パステル、かわいい猫キャラクター。',
         'feat3.title': 'アーケードリズム', 'feat3.desc': 'テンポよくスコアを狙う楽しさ。',
@@ -1170,8 +1178,10 @@
         'ann.badge.new': '新着', 'ann.badge.notice': 'お知らせ',
         'ann4.title': 'ぷにねこジャンプ Windows版をMicrosoft Storeで配信中',
         'ann4.desc': 'ぷにねこジャンプのWindows版をMicrosoft Storeでご利用いただけます。',
-        'ann3.title': 'ぷにねこジャンプのApp Store登録を準備中',
-        'ann3.desc': 'Android版はGoogle Playで配信中です。App Store登録は準備中です。',
+        'ann3.title': 'ぷにねこジャンプ iOS・Mac版のApp Store登録を準備中',
+        'ann3.desc': 'Android版はGoogle Playで配信中です。iOS・Mac版はApp Store登録準備中です。',
+        'ann5.title': 'ぷにねこジャンプ Android版をGoogle Playで正式リリース',
+        'ann5.desc': 'ぷにねこジャンプのAndroid版をGoogle Playで正式リリースしました。',
         'ann1.title': '公式ウェブサイトがオープンしました',
         'ann1.desc': 'PangChu Studioの公式ウェブサイトが公開されました。ポリシーページ、お問い合わせ先、ゲーム情報をこちらでご確認いただけます。',
         'ann2.title': 'プライバシーポリシーおよび利用規約を公開しました',
@@ -1186,7 +1196,7 @@
         'faq3.q': '利用規約はどこで確認できますか？',
         'faq3.a': 'このウェブサイトの公式リンクセクションよりご確認いただけます。',
         'faq4.q': 'ぷにねこジャンプは今プレイできますか？',
-        'faq4.a': 'はい。ぷにねこジャンプはAndroid版をGoogle Playで、Windows版をMicrosoft Storeで配信中です。App Store版は登録準備中です。',
+        'faq4.a': 'はい。ぷにねこジャンプはAndroid版をGoogle Playで、Windows版をMicrosoft Storeで配信中です。iOS・Mac版はApp Store登録準備中です。',
         'faq5.q': 'PangChu Studioへの連絡方法は？',
         'faq5.a': 'support@pangchustudio.co.kr までメールにてお問い合わせください。',
         'faq6.q': 'ゲームに関するフィードバックや提案はどこへ送ればよいですか？',
@@ -1199,7 +1209,7 @@
         'modal.body': 'ゲームを楽しむ皆さまが不便なく遊べるよう、気になる点やご提案をお気軽にお送りください。小さな声も今後のアップデートの大切な参考になります。',
         'modal.noticeLabel': '現在のお知らせ',
         'modal.noticeTitle': 'ぷにねこジャンプのストアリンク公開中',
-        'modal.noticeBody': 'ぷにねこジャンプはGoogle PlayとMicrosoft Storeで配信中です。App Store版は準備中です。',
+        'modal.noticeBody': 'ぷにねこジャンプはGoogle PlayとMicrosoft Storeで配信中です。iOS・Mac版はApp Store登録準備中です。',
         'feedback.title': 'お問い合わせ・ご意見を送る',
         'feedback.copy': 'カードからすぐにメールを開くか、下の入力欄に詳しく書いて送れます。',
         'feedback.boardNote': '掲示板カードのように選ぶと、件名と本文テンプレート入りのメールが開きます。',
@@ -1245,15 +1255,15 @@
         'hero.sub': '一個專注於製作可愛、溫馨手機遊戲的小型獨立工作室。歡迎瀏覽工作室介紹、遊戲資訊與政策頁面。',
         'hero.cta1': '查看遊戲', 'hero.cta2': '官方連結',
         'status.badge': '網站運作中', 'status.title': '官方連結已上線',
-        'status.body': 'Google Play 與 Microsoft Store 已上架，App Store 登錄準備中，亦可查看客戶支援與政策文件。',
+        'status.body': 'Google Play 與 Microsoft Store 已上架，iOS 與 Mac 版 App Store 登錄準備中，亦可查看客戶支援與政策文件。',
         'mini.game': '遊戲', 'mini.gameVal': '啫喱貓跳跳', 'mini.genre': '類型', 'mini.genreVal': '超休閒',
-        'mini.studio': '工作室', 'mini.platform': '平台', 'mini.platformVal': 'Android / Windows',
+        'mini.studio': '工作室', 'mini.platform': '平台', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': '關於工作室',
         'about.body': 'PangChu Studio 致力於打造畫面柔和、操作直覺、充滿溫暖魅力的遊戲體驗。',
         'game.title': '啫喱貓跳跳', 'game.label': '主打遊戲', 'game.sub': '目前上線作品 — 柔和、可愛，輕鬆上手。',
         'game.tag': '可愛休閒跳躍遊戲',
         'game.desc': '一款可愛超休閒貓咪跳躍遊戲，在雲朵天空中輕快向上跳躍。簡單左右觸控、金幣收集、造型解鎖和短局高分挑戰，玩起來輕鬆又療癒。',
-        'store.cta': '在 Google Play 查看', 'store.microsoftCta': '在 Microsoft Store 取得', 'store.note': 'Android 與 Windows 已推出 / App Store 準備中',
+        'store.cta': '在 Google Play 查看', 'store.microsoftCta': '在 Microsoft Store 取得', 'store.note': 'Android 與 Windows 已推出 / iOS 與 Mac 準備中',
         'feat1.title': '簡單操作', 'feat1.desc': '輕鬆上手的左右觸控操作。',
         'feat2.title': '柔和視覺', 'feat2.desc': '雲朵、粉彩色調與可愛貓咪角色。',
         'feat3.title': '街機節奏', 'feat3.desc': '快節奏闖關，追求高分挑戰。',
@@ -1262,8 +1272,10 @@
         'ann.badge.new': '新', 'ann.badge.notice': '公告',
         'ann4.title': '啫喱貓跳跳 Windows 版已於 Microsoft Store 上架',
         'ann4.desc': '啫喱貓跳跳 Windows 版已可於 Microsoft Store 下載。',
-        'ann3.title': '啫喱貓跳跳 App Store 登錄準備中',
-        'ann3.desc': 'Android 版已於 Google Play 上架，App Store 登錄準備中。',
+        'ann3.title': '啫喱貓跳跳 iOS 與 Mac 版 App Store 登錄準備中',
+        'ann3.desc': 'Android 版已於 Google Play 上架，iOS 與 Mac 版 App Store 登錄準備中。',
+        'ann5.title': '啫喱貓跳跳 Android 版已於 Google Play 正式推出',
+        'ann5.desc': '啫喱貓跳跳 Android 版已於 Google Play 正式推出。',
         'ann1.title': '官方網站正式上線',
         'ann1.desc': 'PangChu Studio 官方網站正式上線。政策頁面、聯絡資訊及遊戲詳情均可在此查閱。',
         'ann2.title': '隱私政策及服務條款已發布',
@@ -1278,7 +1290,7 @@
         'faq3.q': '服務條款在哪裡查看？',
         'faq3.a': '可透過本網站下方的官方連結區塊查閱。',
         'faq4.q': '現在可以玩啫喱貓跳跳嗎？',
-        'faq4.a': '可以。啫喱貓跳跳 Android 版已於 Google Play 上架，Windows 版已於 Microsoft Store 上架，App Store 版本正在準備中。',
+        'faq4.a': '可以。啫喱貓跳跳 Android 版已於 Google Play 上架，Windows 版已於 Microsoft Store 上架，iOS 與 Mac 版正在準備 App Store 登錄。',
         'faq5.q': '如何聯絡 PangChu Studio？',
         'faq5.a': '請發送電子郵件至 support@pangchustudio.co.kr 與我們聯絡。',
         'faq6.q': '遊戲相關建議或意見可以寄到哪裡？',
@@ -1291,7 +1303,7 @@
         'modal.body': '為了讓玩家可以更安心順暢地遊玩，如有不便之處、建議、錯誤回報或改善想法，歡迎隨時寄給我們。每一則小意見都能幫助我們改進後續更新。',
         'modal.noticeLabel': '目前公告',
         'modal.noticeTitle': '啫喱貓跳跳商店連結已上線',
-        'modal.noticeBody': '啫喱貓跳跳已於 Google Play 及 Microsoft Store 上架，App Store 版本正在準備中。',
+        'modal.noticeBody': '啫喱貓跳跳已於 Google Play 及 Microsoft Store 上架，iOS 與 Mac 版正在準備 App Store 登錄。',
         'feedback.title': '提交查詢或建議',
         'feedback.copy': '可直接選擇卡片快速開啟電郵，或在下方填寫更詳細內容。',
         'feedback.boardNote': '像公告板卡片一樣選擇後，會立即開啟已填好主旨與範本的電郵。',
@@ -1337,15 +1349,15 @@
         'hero.sub': 'Um pequeno estúdio indie criando jogos mobile fofos e aconchegantes. Informações do estúdio, detalhes do jogo e páginas de políticas.',
         'hero.cta1': 'Ver o Jogo', 'hero.cta2': 'Links Oficiais',
         'status.badge': 'Site Ativo', 'status.title': 'Links oficiais no ar',
-        'status.body': 'Google Play e Microsoft Store já estão disponíveis, o cadastro na App Store está em preparação, e contatos de suporte e políticas estão disponíveis.',
+        'status.body': 'Google Play e Microsoft Store já estão disponíveis, o cadastro das versões iOS e Mac na App Store está em preparação, e contatos de suporte e políticas estão disponíveis.',
         'mini.game': 'Jogo', 'mini.gameVal': 'Gatinho Pula-Pula', 'mini.genre': 'Gênero', 'mini.genreVal': 'Hipercasual fofo',
-        'mini.studio': 'Estúdio', 'mini.platform': 'Plataforma', 'mini.platformVal': 'Android / Windows',
+        'mini.studio': 'Estúdio', 'mini.platform': 'Plataforma', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': 'Sobre o estúdio',
         'about.body': 'A PangChu Studio cria experiências de jogo limpas e amigáveis com visuais suaves, controles acessíveis e um charme acolhedor.',
         'game.title': 'Gatinho Pula-Pula', 'game.label': 'Jogo em Destaque', 'game.sub': 'Nosso título atual — suave, alegre e feito para partidas rápidas.',
         'game.tag': 'Jogo Casual de Pulo Fofo',
         'game.desc': 'Um jogo hipercasual fofo em que um gatinho salta pelas nuvens. Com controles simples para a esquerda e para a direita, moedas para coletar, skins para desbloquear e partidas rápidas para buscar sua melhor pontuação.',
-        'store.cta': 'Ver no Google Play', 'store.microsoftCta': 'Obter na Microsoft Store', 'store.note': 'Android e Windows disponíveis / App Store em breve',
+        'store.cta': 'Ver no Google Play', 'store.microsoftCta': 'Obter na Microsoft Store', 'store.note': 'Android e Windows disponíveis / iOS e Mac em breve',
         'feat1.title': 'Controles simples', 'feat1.desc': 'Controles simples com ritmo leve e direto.',
         'feat2.title': 'Visuais suaves', 'feat2.desc': 'Nuvens, pastéis e personagens de gatos fofos.',
         'feat3.title': 'Ritmo arcade', 'feat3.desc': 'Corridas rápidas e desafio focado em pontuação.',
@@ -1354,8 +1366,10 @@
         'ann.badge.new': 'Novo', 'ann.badge.notice': 'Aviso',
         'ann4.title': 'Versão Windows de Gatinho Pula-Pula na Microsoft Store',
         'ann4.desc': 'A versão Windows de Gatinho Pula-Pula já está disponível na Microsoft Store.',
-        'ann3.title': 'Cadastro do Gatinho Pula-Pula na App Store em preparação',
-        'ann3.desc': 'A versão Android está disponível no Google Play, e o cadastro na App Store está em preparação.',
+        'ann3.title': 'Cadastro das versões iOS e Mac de Gatinho Pula-Pula na App Store em preparação',
+        'ann3.desc': 'A versão Android está disponível no Google Play, e o cadastro das versões iOS e Mac na App Store está em preparação.',
+        'ann5.title': 'Versão Android de Gatinho Pula-Pula lançada no Google Play',
+        'ann5.desc': 'A versão Android de Gatinho Pula-Pula foi lançada oficialmente no Google Play.',
         'ann1.title': 'Site oficial no ar',
         'ann1.desc': 'O site oficial da PangChu Studio está no ar. Páginas de política, informações de contato e detalhes do jogo estão disponíveis aqui.',
         'ann2.title': 'Política de Privacidade e Termos de Serviço publicados',
@@ -1370,7 +1384,7 @@
         'faq3.q': 'Onde encontro os Termos de Serviço?',
         'faq3.a': 'Você pode encontrá-los na seção de links oficiais neste site.',
         'faq4.q': 'Já posso jogar Gatinho Pula-Pula?',
-        'faq4.a': 'Sim. Gatinho Pula-Pula está disponível no Google Play para Android e na Microsoft Store para Windows. A versão da App Store está em preparação.',
+        'faq4.a': 'Sim. Gatinho Pula-Pula está disponível no Google Play para Android e na Microsoft Store para Windows. As versões para iOS e Mac estão em preparação para a App Store.',
         'faq5.q': 'Como contatar a PangChu Studio?',
         'faq5.a': 'Você pode entrar em contato pelo e-mail support@pangchustudio.co.kr.',
         'faq6.q': 'Para onde posso enviar feedback ou sugestões sobre o jogo?',
@@ -1383,7 +1397,7 @@
         'modal.body': 'Para que todos possam jogar sem incômodos, envie qualquer dificuldade, sugestão, relato de bug ou ideia de melhoria. Mesmo pequenos comentários ajudam nas próximas atualizações.',
         'modal.noticeLabel': 'Aviso atual',
         'modal.noticeTitle': 'Links de loja do Gatinho Pula-Pula no ar',
-        'modal.noticeBody': 'Gatinho Pula-Pula está disponível no Google Play e na Microsoft Store, e a versão da App Store está em preparação.',
+        'modal.noticeBody': 'Gatinho Pula-Pula está disponível no Google Play e na Microsoft Store, e as versões para iOS e Mac estão em preparação para a App Store.',
         'feedback.title': 'Enviar dúvida ou sugestão',
         'feedback.copy': 'Escolha um cartão para abrir um e-mail rápido ou escreva uma mensagem detalhada abaixo.',
         'feedback.boardNote': 'Os cartões funcionam como um mural simples e abrem um e-mail com assunto e modelo prontos.',
