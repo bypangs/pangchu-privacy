@@ -11,9 +11,17 @@
 
   <!-- ═══ PRIMARY SEO ═══ -->
   <title>PangChu Studio Official Website | Jelly Cat Jump</title>
+<<<<<<< Updated upstream
   <meta name="description" content="PangChu Studio official site for Jelly Cat Jump, Google Play and Microsoft Store links, support, privacy, and terms." />
   <meta name="keywords" content="PangChu Studio official website, PangChu Studio, Jelly Cat Jump, cat jump game, cute cat game, mobile game studio" />
+=======
+  <meta name="description" content="PangChu Studio official website for Jelly Cat Jump, a cute cat jumping game. Find game news, Google Play and Windows updates, support, privacy policy, and terms." />
+  <meta name="keywords" content="PangChu Studio official website, PangChu Studio, Jelly Cat Jump official website, Jelly Cat Jump, cat jumping game, cute cat game, Android game, Windows game" />
+>>>>>>> Stashed changes
   <meta name="robots" content="index, follow" />
+  <meta name="language" content="en-US" />
+  <meta name="geo.region" content="US" />
+  <meta name="geo.placename" content="United States" />
   <meta name="naver-site-verification" content="01a4801cc7e5c38e085b666c3904743892d576bc" />
   <meta name="msvalidate.01" content="0E4F5C20F4544A29E87928B4A2A0686A" />
   <link rel="canonical" href="https://pangchustudio.co.kr/" />
@@ -21,16 +29,65 @@
   <!-- ═══ HREFLANG ═══ -->
     <link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
   <link rel="alternate" hreflang="en"    href="https://pangchustudio.co.kr/" />
+  <link rel="alternate" hreflang="en-US" href="https://pangchustudio.co.kr/" />
   <link rel="alternate" hreflang="ko"    href="https://pangchustudio.co.kr/ko/" />
+  <link rel="alternate" hreflang="ko-KR" href="https://pangchustudio.co.kr/ko/" />
   <link rel="alternate" hreflang="ja"    href="https://pangchustudio.co.kr/ja/" />
+  <link rel="alternate" hreflang="ja-JP" href="https://pangchustudio.co.kr/ja/" />
   <link rel="alternate" hreflang="pt-BR" href="https://pangchustudio.co.kr/pt-br/" />
   <link rel="alternate" hreflang="zh-HK" href="https://pangchustudio.co.kr/zh-hk/" />
+
+  <script>
+    (function () {
+      const routes = { ko: '/ko/', ja: '/ja/', zh: '/zh-hk/', pt: '/pt-br/' };
+      const normalizeLang = (value) => {
+        const lang = (value || '').toLowerCase();
+        if (lang.startsWith('ko')) return 'ko';
+        if (lang.startsWith('ja')) return 'ja';
+        if (lang === 'zh-hk' || lang === 'zh-tw' || lang.startsWith('zh-hant')) return 'zh';
+        if (lang.startsWith('pt')) return 'pt';
+        return 'en';
+      };
+
+      try {
+        const isRootPath = location.pathname === '/' || location.pathname === '/index.html';
+        if (!isRootPath) return;
+
+        const params = new URLSearchParams(location.search);
+        if (params.has('lang')) {
+          const requestedLang = normalizeLang(params.get('lang'));
+          localStorage.setItem('pangchu_lang', requestedLang);
+          localStorage.setItem('pangchu_lang_explicit', '1');
+          if (requestedLang !== 'en' && routes[requestedLang]) {
+            location.replace(routes[requestedLang] + location.hash);
+          }
+          return;
+        }
+
+        const storedLang = normalizeLang(localStorage.getItem('pangchu_lang'));
+        const explicitLang = localStorage.getItem('pangchu_lang_explicit') === '1';
+        const browserLang = normalizeLang((navigator.languages && navigator.languages[0]) || navigator.language);
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const inferredLang = browserLang !== 'en' ? browserLang : (timeZone === 'Asia/Seoul' ? 'ko' : 'en');
+        const targetLang = explicitLang ? storedLang : inferredLang;
+
+        if (targetLang !== 'en' && routes[targetLang]) {
+          localStorage.setItem('pangchu_lang', targetLang);
+          location.replace(routes[targetLang] + location.search + location.hash);
+        }
+      } catch (err) {}
+    })();
+  </script>
 
   <!-- ═══ OPEN GRAPH ═══ -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://pangchustudio.co.kr/" />
   <meta property="og:title"       content="PangChu Studio Official Website | Jelly Cat Jump" />
+<<<<<<< Updated upstream
   <meta property="og:description" content="PangChu Studio official site for Jelly Cat Jump, Google Play and Microsoft Store links, support, privacy, and terms." />
+=======
+  <meta property="og:description" content="PangChu Studio official website for Jelly Cat Jump, a cute cat jumping game. Find game news, Google Play and Windows updates, support, privacy policy, and terms." />
+>>>>>>> Stashed changes
   <meta property="og:image"       content="https://pangchustudio.co.kr/images/jelly-cat-jump-banner.png" />
   <meta property="og:image:alt"   content="Jelly Cat Jump game banner" />
   <meta property="og:locale"      content="en_US" />
@@ -43,7 +100,11 @@
   <!-- ═══ TWITTER CARD ═══ -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="PangChu Studio Official Website | Jelly Cat Jump" />
+<<<<<<< Updated upstream
   <meta name="twitter:description" content="PangChu Studio official site for Jelly Cat Jump, Google Play and Microsoft Store links, support, privacy, and terms." />
+=======
+  <meta name="twitter:description" content="PangChu Studio official website for Jelly Cat Jump, a cute cat jumping game. Find game news, Google Play and Windows updates, support, privacy policy, and terms." />
+>>>>>>> Stashed changes
   <meta name="twitter:image"       content="https://pangchustudio.co.kr/images/jelly-cat-jump-banner.png" />
   <meta name="twitter:image:alt"   content="Jelly Cat Jump game banner" />
 
@@ -61,7 +122,8 @@
     "@type": "WebSite",
     "name": "PangChu Studio",
     "alternateName": ["PangChuStudio", "PangChu", "팡츄 스튜디오"],
-    "description": "PangChu Studio official site for Jelly Cat Jump and cute mobile games.",
+    "description": "PangChu Studio official website for Jelly Cat Jump, a cute cat jumping game, plus support, privacy policy, terms, and platform updates.",
+    "keywords": ["PangChu Studio official website", "Jelly Cat Jump official website", "cute cat jumping game", "Android game", "Windows game"],
     "inLanguage": ["en", "ko", "ja", "pt-BR", "zh-HK"],
     "url": "https://pangchustudio.co.kr/",
     "publisher": {
@@ -69,7 +131,14 @@
       "name": "PangChu Studio",
       "legalName": "Byeol Noraebang",
       "url": "https://pangchustudio.co.kr/",
-      "email": "support@pangchustudio.co.kr"
+      "email": "support@pangchustudio.co.kr",
+      "areaServed": [
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Country", "name": "South Korea" },
+        { "@type": "Country", "name": "Japan" },
+        { "@type": "Country", "name": "Hong Kong" },
+        { "@type": "Country", "name": "Brazil" }
+      ]
     }
   }
   </script>
@@ -83,10 +152,16 @@
     "alternateName": ["말랑냥이점프", "ぷにねこジャンプ", "Gatinho Pula-Pula", "啫喱貓跳跳"],
     "applicationCategory": "GameApplication",
     "applicationSubCategory": "ArcadeGame",
+<<<<<<< Updated upstream
     "operatingSystem": ["ANDROID", "WINDOWS", "iOS", "macOS"],
     "description": "Jelly Cat Jump is a cheerful casual arcade jumping game. Hop through soft clouds, collect coins, unlock skins, and challenge your best score.",
+=======
+    "operatingSystem": "Android, Windows",
+    "description": "Jelly Cat Jump is a cheerful casual arcade jumping game by PangChu Studio. Hop through soft clouds, collect coins, unlock skins, and challenge your best score on Android and Windows.",
+>>>>>>> Stashed changes
     "inLanguage": ["en", "ko", "ja", "pt-BR", "zh-HK"],
     "genre": ["Casual", "Arcade", "Jumping"],
+    "keywords": "Jelly Cat Jump, PangChu Studio, cute cat game, cat jumping game, casual arcade game, Android game, Windows game",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -608,12 +683,20 @@
           <div class="status-card" id="about">
             <div class="live-badge"><span class="live-dot"></span><span data-i18n="status.badge">Website Active</span></div>
             <div class="status-title" data-i18n="status.title">Official links are live</div>
+<<<<<<< Updated upstream
             <p class="status-body" data-i18n="status.body">Google Play and Microsoft Store are live, and App Store registration for iOS and Mac is in progress. Support contacts and policy pages are available.</p>
+=======
+            <p class="status-body" data-i18n="status.body">Google Play is live, the Windows version has been uploaded, and iOS/macOS App Store registration is in progress.</p>
+>>>>>>> Stashed changes
             <div class="mini-grid">
               <div class="mini-tile"><strong data-i18n="mini.game">Game</strong><span data-i18n="mini.gameVal">Jelly Cat Jump</span></div>
               <div class="mini-tile"><strong data-i18n="mini.genre">Genre</strong><span data-i18n="mini.genreVal">Cute hyper-casual</span></div>
               <div class="mini-tile"><strong data-i18n="mini.studio">Studio</strong><span>PangChu Studio</span></div>
+<<<<<<< Updated upstream
               <div class="mini-tile"><strong data-i18n="mini.platform">Platform</strong><span data-i18n="mini.platformVal">Android / Windows / iOS / Mac</span></div>
+=======
+              <div class="mini-tile"><strong data-i18n="mini.platform">Platform</strong><span data-i18n="mini.platformVal">Android / Windows</span></div>
+>>>>>>> Stashed changes
             </div>
           </div>
           <div class="about-card">
@@ -651,11 +734,15 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.4 3.1c-.5.3-.8.8-.8 1.5v14.8c0 .7.3 1.2.8 1.5l8.9-8.9L5.4 3.1Zm10 7.8 2.4-2.4L7.8 3c-.2-.1-.4-.2-.6-.2l8.2 8.1Zm0 2.2-8.2 8.1c.2 0 .4-.1.6-.2l10-5.5-2.4-2.4Zm3.8-3.8-2.7 2.7 2.7 2.7 1.9-1c1.2-.7 1.2-2 0-2.7l-1.9-1.7Z"/></svg>
                 <span data-i18n="store.cta">Get it on Google Play</span>
               </a>
+<<<<<<< Updated upstream
               <a class="store-btn microsoft-store-btn" href="https://apps.microsoft.com/detail/9p2cw64kjm68?ocid=webpdpshare" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.4 10.8 4.3v7.2H3V5.4Zm8.8-1.3L21 2.8v8.7h-9.2V4.1ZM3 12.5h7.8v7.2L3 18.6v-6.1Zm8.8 0H21v8.7l-9.2-1.3v-7.4Z"/></svg>
                 <span data-i18n="store.microsoftCta">Get it from Microsoft Store</span>
               </a>
               <span class="store-note" data-i18n="store.note">Android and Windows available / iOS and Mac coming soon</span>
+=======
+              <span class="store-note" data-i18n="store.note">Android available / Windows uploaded / iOS and macOS in progress</span>
+>>>>>>> Stashed changes
             </div>
             <div class="features-row">
               <div class="feature-tile"><strong data-i18n="feat1.title">Simple controls</strong><span data-i18n="feat1.desc">Pick-up-and-play controls with a soft rhythm.</span></div>
@@ -696,6 +783,7 @@
           <div class="announce-item">
             <span class="announce-badge badge-new" data-i18n="ann.badge.new">New</span>
             <div class="announce-content">
+<<<<<<< Updated upstream
               <div class="announce-title" data-i18n="ann4.title">Jelly Cat Jump Windows version is available on Microsoft Store</div>
               <div class="announce-desc" data-i18n="ann4.desc">The Windows version of Jelly Cat Jump is now available through the Microsoft Store.</div>
             </div>
@@ -706,6 +794,10 @@
             <div class="announce-content">
               <div class="announce-title" data-i18n="ann3.title">App Store registration for Jelly Cat Jump on iOS and Mac is in progress</div>
               <div class="announce-desc" data-i18n="ann3.desc">The Android version is available on Google Play, and App Store registration for iOS and Mac is in progress.</div>
+=======
+              <div class="announce-title" data-i18n="ann3.title">Jelly Cat Jump iOS and macOS registration is in progress</div>
+              <div class="announce-desc" data-i18n="ann3.desc">The Android version is available on Google Play, the Windows version has been uploaded, and iOS/macOS App Store registration is in progress.</div>
+>>>>>>> Stashed changes
             </div>
             <div class="announce-date">2026.05.13</div>
           </div>
@@ -772,7 +864,11 @@
               <span data-i18n="faq4.q">Can I play Jelly Cat Jump now?</span>
               <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
             </button>
+<<<<<<< Updated upstream
             <div class="faq-a" data-i18n="faq4.a">Yes. Jelly Cat Jump is available on Google Play for Android and Microsoft Store for Windows. The iOS and Mac versions are in preparation for the App Store.</div>
+=======
+            <div class="faq-a" data-i18n="faq4.a">Yes. Jelly Cat Jump is available on Google Play for Android, and the Windows version has been uploaded. iOS and macOS App Store versions are in progress.</div>
+>>>>>>> Stashed changes
           </div>
           <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">
@@ -971,27 +1067,42 @@
         'hero.sub': 'A small indie studio crafting cute, cozy mobile game experiences. Official home for studio information, game details, and policy pages.',
         'hero.cta1': 'View Featured Game', 'hero.cta2': 'Official Links',
         'status.badge': 'Website Active', 'status.title': 'Official links are live',
+<<<<<<< Updated upstream
         'status.body': 'Google Play and Microsoft Store are live, and App Store registration for iOS and Mac is in progress. Support contacts and policy pages are available.',
         'mini.game': 'Game', 'mini.gameVal': 'Jelly Cat Jump', 'mini.genre': 'Genre', 'mini.genreVal': 'Cute hyper-casual',
         'mini.studio': 'Studio', 'mini.platform': 'Platform', 'mini.platformVal': 'Android / Windows / iOS / Mac',
+=======
+        'status.body': 'Google Play is live, the Windows version has been uploaded, and iOS/macOS App Store registration is in progress.',
+        'mini.game': 'Game', 'mini.gameVal': 'Jelly Cat Jump', 'mini.genre': 'Genre', 'mini.genreVal': 'Cute hyper-casual',
+        'mini.studio': 'Studio', 'mini.platform': 'Platform', 'mini.platformVal': 'Android / Windows',
+>>>>>>> Stashed changes
         'about.title': 'About the studio',
         'about.body': 'PangChu Studio builds clean, friendly game experiences with soft visuals, approachable controls, and a charming, welcoming feel.',
         'game.title': 'Jelly Cat Jump', 'game.label': 'Featured Game', 'game.sub': 'Our current title — soft, cheerful, and made for quick cozy play.',
         'game.tag': 'Cute Casual Jumping Game',
         'game.desc': 'A cheerful cat jumping game set in soft cloud-filled skies, with simple left and right touch controls, coins to collect, skins to unlock, and quick runs that feel light and cozy.',
+<<<<<<< Updated upstream
         'store.cta': 'Get it on Google Play', 'store.microsoftCta': 'Get it from Microsoft Store', 'store.note': 'Android and Windows available / iOS and Mac coming soon',
+=======
+        'store.cta': 'Get it on Google Play', 'store.note': 'Android available / Windows uploaded / iOS and macOS in progress',
+>>>>>>> Stashed changes
         'feat1.title': 'Simple controls', 'feat1.desc': 'Pick-up-and-play controls with a soft rhythm.',
         'feat2.title': 'Soft visuals', 'feat2.desc': 'Clouds, pastels, and cute cat characters.',
         'feat3.title': 'Arcade rhythm', 'feat3.desc': 'Quick runs and score-focused challenge.',
         'ann.label': 'Announcements', 'ann.title': 'Updates & Notices',
         'ann.sub': 'Latest news and updates from PangChu Studio.',
         'ann.badge.new': 'New', 'ann.badge.notice': 'Notice',
+<<<<<<< Updated upstream
         'ann4.title': 'Jelly Cat Jump Windows version is available on Microsoft Store',
         'ann4.desc': 'The Windows version of Jelly Cat Jump is now available through the Microsoft Store.',
         'ann3.title': 'App Store registration for Jelly Cat Jump on iOS and Mac is in progress',
         'ann3.desc': 'The Android version is available on Google Play, and App Store registration for iOS and Mac is in progress.',
         'ann5.title': 'Jelly Cat Jump Android version officially released on Google Play',
         'ann5.desc': 'The Android version of Jelly Cat Jump has officially launched on Google Play.',
+=======
+        'ann3.title': 'Jelly Cat Jump iOS and macOS registration is in progress',
+        'ann3.desc': 'The Android version is available on Google Play, the Windows version has been uploaded, and iOS/macOS App Store registration is in progress.',
+>>>>>>> Stashed changes
         'ann1.title': 'Official website is now live',
         'ann1.desc': 'The PangChu Studio official website is now live. Policy pages, contact information, and game details are all available here.',
         'ann2.title': 'Privacy Policy and Terms of Service published',
@@ -1006,7 +1117,11 @@
         'faq3.q': 'Where can I find the Terms of Service?',
         'faq3.a': 'You can find the Terms of Service through the official links section on this website.',
         'faq4.q': 'Can I play Jelly Cat Jump now?',
+<<<<<<< Updated upstream
         'faq4.a': 'Yes. Jelly Cat Jump is available on Google Play for Android and Microsoft Store for Windows. The iOS and Mac versions are in preparation for the App Store.',
+=======
+        'faq4.a': 'Yes. Jelly Cat Jump is available on Google Play for Android, and the Windows version has been uploaded. iOS and macOS App Store versions are in progress.',
+>>>>>>> Stashed changes
         'faq5.q': 'How can I contact PangChu Studio?',
         'faq5.a': 'You can contact PangChu Studio by email at support@pangchustudio.co.kr.',
         'faq6.q': 'Where can I send feedback or suggestions about the game?',
@@ -1436,12 +1551,28 @@
       },
     };
 
-    // 루트 접속 시 브라우저 언어와 한국 시간대를 기준으로 언어별 페이지로 안내한다.
+    // 현재 언어와 사용자가 직접 고른 언어를 기억해 루트 접속 안내가 흔들리지 않게 한다.
     let currentLang = 'en';
+
+    function rememberLanguage(lang, explicit) {
+      try {
+        localStorage.setItem('pangchu_lang', lang);
+        if (explicit) localStorage.setItem('pangchu_lang_explicit', '1');
+      } catch (err) {}
+    }
+
+    function bindLanguagePreference() {
+      const routeLangMap = { '/': 'en', '/ko/': 'ko', '/ja/': 'ja', '/zh-hk/': 'zh', '/pt-br/': 'pt' };
+      document.querySelectorAll('.lang-btn[href]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          rememberLanguage(routeLangMap[btn.getAttribute('href')] || 'en', true);
+        });
+      });
+    }
 
     function setLang(lang) {
       currentLang = lang;
-      localStorage.setItem('pangchu_lang', currentLang);
+      rememberLanguage(currentLang, false);
       const labelMap = { en: 'EN', ko: '한국어', ja: '日本語', zh: '繁體', pt: 'PT' };
       document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.textContent.trim() === labelMap[lang]);
@@ -1519,6 +1650,7 @@
     }
 
     // Init
+    bindLanguagePreference();
     setLang(currentLang);
     document.querySelectorAll('.js-open-feedback').forEach(btn => {
       btn.addEventListener('click', () => openFeedbackModal(btn));
