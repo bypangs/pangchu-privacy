@@ -39,7 +39,7 @@ const Hero = ({ onNav }) => {
             <span style={{ display:'inline-flex', padding:'8px 14px', borderRadius:999, background:'rgba(89,184,255,0.12)', color:'#3399ee', fontSize:13, fontWeight:800, letterSpacing:'0.02em', marginBottom:16 }}>Official Website</span>
             <h1 style={{ margin:0, fontSize:'clamp(38px,5vw,64px)', lineHeight:0.95, letterSpacing:'-0.05em', fontWeight:800, color:'#17324d' }}>PangChu Studio</h1>
             <p style={{ margin:'18px 0 0', maxWidth:580, color:'#587089', fontSize:18, lineHeight:1.7 }}>
-              A small studio building cute and approachable mobile game experiences. Official home for studio information, policy pages, and <strong style={{color:'#17324d'}}>MalrangNyang (Jelly Cat Jump)</strong>.
+              A small studio building cute and approachable mobile game experiences. Official home for studio information, policy pages, and <strong style={{color:'#17324d'}}>MalrangNyang (MalangNyang Jump)</strong>.
             </p>
             <div style={{ display:'flex', flexWrap:'wrap', gap:12, marginTop:28 }}>
               <Btn primary onClick={() => onNav('game')}>View Game</Btn>

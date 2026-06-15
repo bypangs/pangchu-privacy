@@ -1,6 +1,6 @@
 ---
 name: pangchu-design
-description: Use this skill to generate well-branded interfaces and assets for PangChu Studio, either for production or throwaway prototypes/mocks/etc. Contains essential design guidelines, colors, type, fonts, assets, and UI kit components for prototyping the PangChu Studio website and MalrangNyang (Jelly Cat Jump) game brand.
+description: Use this skill to generate well-branded interfaces and assets for PangChu Studio, either for production or throwaway prototypes/mocks/etc. Contains essential design guidelines, colors, type, fonts, assets, and UI kit components for prototyping the PangChu Studio website and MalrangNyang (MalangNyang Jump) game brand.
 user-invocable: true
 ---
 

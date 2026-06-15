@@ -2,7 +2,7 @@
 
 ## Overview
 
-**PangChu Studio** is a small indie game studio creating cute, cozy, and casual mobile games. Their current featured title is **MalrangNyang (Jelly Cat Jump / 말랑냥)** — a soft, cheerful jumping game featuring cloud-like visuals, playful cat characters, and a clean, friendly user experience.
+**PangChu Studio** is a small indie game studio creating cute, cozy, and casual mobile games. Their current featured title is **MalrangNyang (MalangNyang Jump / 말랑냥)** — a soft, cheerful jumping game featuring cloud-like visuals, playful cat characters, and a clean, friendly user experience.
 
 ### Sources
 
@@ -32,7 +32,7 @@
 
 ### Casing
 - **Sentence case** for body copy and labels.
-- **Title Case** for proper nouns (PangChu Studio, MalrangNyang, Jelly Cat Jump).
+- **Title Case** for proper nouns (PangChu Studio, MalrangNyang, MalangNyang Jump).
 - Navigation items: sentence case (Game, Links, About).
 
 ### Person / Voice

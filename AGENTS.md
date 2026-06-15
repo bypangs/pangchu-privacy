@@ -26,7 +26,7 @@
 
 ### 앱 이름/브랜드 표기
 - 한국어 앱 이름은 `말랑냥이점프`로 통일한다.
-- 영어/글로벌 앱 이름은 `Jelly Cat Jump`로 통일한다.
+- 영어/글로벌 앱 이름은 `MalangNyang Jump`로 통일한다.
 - 번체/홍콩 앱 표시명은 `啫喱貓跳跳`로 통일한다.
 - 브라질 포르투갈어 앱 표시명은 `Gatinho Pula-Pula`로 통일한다.
 - 일본어 앱 이름은 `ぷにねこジャンプ`로 통일한다.
@@ -39,22 +39,22 @@
 - 단, 일반 설명 문장 안의 형용 표현까지 무조건 교체하지 말고, 앱 이름/타이틀/메타/JSON-LD/alt/OG/Twitter 문구일 때만 교체한다.
 
 ### 국가/언어별 앱명 고정 규칙
-- 현재 앱은 `말랑냥이점프` / `Jelly Cat Jump` 계열의 점프 게임이다.
+- 현재 앱은 `말랑냥이점프` / `MalangNyang Jump` 계열의 점프 게임이다.
 - 한국어/한국 스토어 앱명은 `말랑냥이점프`로 고정한다.
-- 영어/글로벌 기본 앱명은 `Jelly Cat Jump`로 고정한다.
+- 영어/글로벌 기본 앱명은 `MalangNyang Jump`로 고정한다.
 - 일본어/일본 스토어 앱명은 `ぷにねこジャンプ`로 고정한다.
 - 홍콩/번체 앱명은 `啫喱貓跳跳`로 고정한다.
 - 브라질 포르투갈어 앱명은 `Gatinho Pula-Pula`로 고정한다.
 - 국가별 앱명은 사용자의 명시 요청 없이 임의 변경하지 않는다.
-- `/` 영어 기본 페이지에서는 대표 앱명 `Jelly Cat Jump`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
+- `/` 영어 기본 페이지에서는 대표 앱명 `MalangNyang Jump`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
 - `/ko/` 한국어 페이지에서는 대표 앱명 `말랑냥이점프`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
 - `/ja/` 일본어 페이지에서는 대표 앱명 `ぷにねこジャンプ`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
 - `/zh-hk/` 홍콩/번체 페이지에서는 대표 앱명 `啫喱貓跳跳`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
 - `/pt-br/` 브라질 포르투갈어 페이지에서는 대표 앱명 `Gatinho Pula-Pula`를 title, Featured Game, meta description, JSON-LD, Open Graph, Twitter, alt, FAQ에서 사용한다.
 - JSON-LD의 `name`은 해당 언어/지역 대표 앱명을 사용하고, `alternateName`에는 확정된 다른 언어/지역 앱명을 함께 포함할 수 있다.
-- 홍콩/번체 앱명을 임의로 `Jelly Cat Jump`, `貓咪跳跳`, `果凍貓跳躍`, `軟萌喵跳跳` 등으로 변경하지 않는다.
-- 브라질 앱명을 임의로 `Jelly Cat Jump`, `Pulo do Gato`, `Gato Gelatinoso`, `Gatinho Saltitante` 등으로 변경하지 않는다.
-- `Jelly Cat Jump`를 모든 나라에 일괄 적용하지 않는다.
+- 홍콩/번체 앱명을 임의로 `MalangNyang Jump`, `貓咪跳跳`, `果凍貓跳躍`, `軟萌喵跳跳` 등으로 변경하지 않는다.
+- 브라질 앱명을 임의로 `MalangNyang Jump`, `Pulo do Gato`, `Gato Gelatinoso`, `Gatinho Saltitante` 등으로 변경하지 않는다.
+- `MalangNyang Jump`를 모든 나라에 일괄 적용하지 않는다.
 - 기존 Play Console 맞춤 등록정보 이름과 홈페이지 표기가 충돌하면, 사용자가 확정한 국가별 표기명을 우선한다.
 - 향후 시리즈명은 참고용으로만 취급하고, 현재 홈페이지 작업에서는 점프 게임명만 수정 대상으로 삼는다.
 - 대쉬 게임은 현재 개발 중인 별도 프로젝트이며, 국가별 앱명은 한국어 `말랑냥이대쉬`, 영어/미국 `Jelly Cat Dash`, 일본어 `ぷにねこダッシュ`, 홍콩/번체 `啫喱貓衝刺`, 브라질 포르투갈어 `Gatinho Corre-Corre`로 고정한다.
@@ -128,14 +128,14 @@
 ## 홈페이지 UI/브랜딩 고정 규칙
 
 ### 사이트 정체성
-- 이 사이트의 1차 정체성은 `Jelly Cat Jump` 단독 게임 랜딩페이지가 아니라 `PangChu Studio` 공식 홈페이지다.
+- 이 사이트의 1차 정체성은 `MalangNyang Jump` 단독 게임 랜딩페이지가 아니라 `PangChu Studio` 공식 홈페이지다.
 - 루트 기준 페이지는 항상 `https://pangchustudio.co.kr/`의 영어 페이지 구조를 마스터로 삼는다.
 - 다른 언어 페이지는 영어 루트 페이지의 UI/섹션 구조를 그대로 따라가고, 텍스트/메타/alt/JSON-LD만 각 언어에 맞게 현지화한다.
 - SEO 보강 작업을 하더라도 사이트의 정체성을 게임 단독 랜딩페이지로 바꾸지 않는다.
 
 ### H1 / 히어로 영역 보호
 - 메인 히어로의 대표 H1은 `PangChu Studio` 기준을 유지한다.
-- `Jelly Cat Jump`, `말랑냥이점프`, `ぷにねこジャンプ` 같은 게임명은 메인 H1로 올리지 않는다.
+- `MalangNyang Jump`, `말랑냥이점프`, `ぷにねこジャンプ` 같은 게임명은 메인 H1로 올리지 않는다.
 - 게임명은 Featured Game, Game Card, FAQ, 설명 문구, 메타 태그 안에서만 사용한다.
 - 히어로 영역의 `Official Studio Website`, 스튜디오 소개, 버튼 구성은 사용자가 명시적으로 요청하지 않으면 변경하지 않는다.
 
@@ -154,10 +154,10 @@
 - 수정 후에는 각 언어 페이지에서 새 문구가 깨지지 않는지, 버튼/FAQ/카드 안에서 줄바꿈이 자연스러운지 확인한다.
 
 ### Featured Game 영역 정책
-- 글로벌 기준 게임명은 `Jelly Cat Jump`이며, 각 언어/지역 페이지에서는 해당 지역의 확정 앱명을 PangChu Studio의 Featured Game으로 표시한다.
+- 글로벌 기준 게임명은 `MalangNyang Jump`이며, 각 언어/지역 페이지에서는 해당 지역의 확정 앱명을 PangChu Studio의 Featured Game으로 표시한다.
 - 한국어 페이지에서는 Featured Game 안의 앱명을 `말랑냥이점프`로 표시한다.
 - 일본어 페이지에서는 Featured Game 안의 앱명을 `ぷにねこジャンプ`로 표시한다.
-- 영어 페이지에서는 Featured Game 안의 앱명을 `Jelly Cat Jump`로 표시한다.
+- 영어 페이지에서는 Featured Game 안의 앱명을 `MalangNyang Jump`로 표시한다.
 - 번체/홍콩 페이지에서는 Featured Game 안의 앱명을 `啫喱貓跳跳`로 표시한다.
 - 브라질 포르투갈어 페이지에서는 Featured Game 안의 앱명을 `Gatinho Pula-Pula`로 표시한다.
 - 게임 소개를 강화하더라도 Featured Game 섹션 내부에서만 강화한다.

@@ -23,14 +23,14 @@ const GameSection = () => {
             borderRight:'1px solid rgba(92,151,201,0.14)',
           }}>
             <div style={{ background:'rgba(255,255,255,0.72)', border:'1px solid rgba(255,255,255,0.7)', borderRadius:24, padding:14, boxShadow:'0 16px 34px rgba(82,149,201,0.16)' }}>
-              <img src="../../assets/jelly-cat-jump-banner.png" alt="MalrangNyang Jelly Cat Jump" style={{ display:'block', width:'100%', borderRadius:18 }} />
+              <img src="../../assets/jelly-cat-jump-banner.png" alt="MalrangNyang MalangNyang Jump" style={{ display:'block', width:'100%', borderRadius:18 }} />
             </div>
           </div>
 
           {/* Body panel */}
           <div style={{ padding:32, display:'flex', flexDirection:'column', justifyContent:'center', gap:20 }}>
             <span style={{ display:'inline-flex', width:'fit-content', padding:'8px 14px', borderRadius:999, background:'rgba(138,228,197,0.18)', color:'#19936d', fontSize:13, fontWeight:800, letterSpacing:'0.02em' }}>Cute Casual Mobile Game</span>
-            <h3 style={{ margin:0, fontSize:'clamp(26px,3.5vw,40px)', lineHeight:1.02, letterSpacing:'-0.04em', fontWeight:800, color:'#17324d' }}>MalrangNyang<br/>(Jelly Cat Jump)</h3>
+            <h3 style={{ margin:0, fontSize:'clamp(26px,3.5vw,40px)', lineHeight:1.02, letterSpacing:'-0.04em', fontWeight:800, color:'#17324d' }}>MalrangNyang<br/>(MalangNyang Jump)</h3>
             <p style={{ margin:0, color:'#587089', lineHeight:1.7, fontSize:15 }}>A soft and cheerful jumping game built around cute cat energy, approachable controls, and a light, playful mood.</p>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>
               {features.map(f => (
