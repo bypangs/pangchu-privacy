@@ -79,7 +79,7 @@
   <meta property="og:url"         content="https://pangchustudio.co.kr/" />
   <meta property="og:title"       content="PangChu Studio Official Website | MalangNyang Jump" />
   <meta property="og:description" content="PangChu Studio official website for MalangNyang Jump, a cute cat jumping game. Find Google Play, Microsoft Store, Windows, iOS and Mac App Store updates, support, privacy policy, and terms." />
-  <meta property="og:image"       content="https://pangchustudio.co.kr/images/jelly-cat-jump-banner.png" />
+  <meta property="og:image"       content="https://pangchustudio.co.kr/images/malangnyang-jump-banner.png" />
   <meta property="og:image:alt"   content="MalangNyang Jump game banner" />
   <meta property="og:locale"      content="en_US" />
   <meta property="og:locale:alternate" content="ko_KR" />
@@ -92,7 +92,7 @@
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="PangChu Studio Official Website | MalangNyang Jump" />
   <meta name="twitter:description" content="PangChu Studio official website for MalangNyang Jump, a cute cat jumping game. Find Google Play, Microsoft Store, Windows, iOS and Mac App Store updates, support, privacy policy, and terms." />
-  <meta name="twitter:image"       content="https://pangchustudio.co.kr/images/jelly-cat-jump-banner.png" />
+  <meta name="twitter:image"       content="https://pangchustudio.co.kr/images/malangnyang-jump-banner.png" />
   <meta name="twitter:image:alt"   content="MalangNyang Jump game banner" />
 
   <!-- ═══ MISC ═══ -->
@@ -360,11 +360,7 @@
     .game-banner img {
       display: block; width: 100%; height: auto;
     }
-    .game-banner-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to right, rgba(23,50,77,0.55) 0%, transparent 55%);
-      display: flex; align-items: center; padding: 40px 48px;
-    }
+    .game-banner-overlay { display: none; }
     .game-banner-text { max-width: 420px; }
     .game-banner-tag {
       display: inline-flex; padding: 6px 13px; border-radius: 999px;
@@ -650,7 +646,7 @@
             <span data-i18n="hero.eyebrow">Official Studio Website</span>
           </div>
           <h1 class="hero-title">PangChu<br><span>Studio</span></h1>
-          <p class="hero-sub" data-i18n="hero.sub">A small indie studio crafting cute, cozy mobile game experiences. Official home for studio information, game details, and policy pages.</p>
+          <p class="hero-sub" data-i18n="hero.sub">A small indie game studio building playful, approachable game experiences. Official home for studio information, game details, and policy pages.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#game" data-i18n="hero.cta1">View Featured Game</a>
             <a class="btn btn-ghost" href="#links" data-i18n="hero.cta2">Official Links</a>
@@ -675,7 +671,7 @@
           </div>
           <div class="about-card">
             <h3 data-i18n="about.title">About the studio</h3>
-            <p data-i18n="about.body">PangChu Studio builds clean, friendly game experiences with soft visuals, approachable controls, and a charming, welcoming feel.</p>
+            <p data-i18n="about.body">PangChu Studio develops games with clear ideas, simple controls, and a small-team indie spirit across different play styles.</p>
             <p class="org-note">
               Registered organization: Byeol Noraebang
               <span>PangChu Studio is the official game brand operated by Byeol Noraebang.</span>
@@ -696,7 +692,7 @@
         <article class="game-card">
           <div class="game-visual">
             <div class="banner-frame">
-              <img src="images/jelly-cat-jump-banner.png" alt="MalangNyang Jump banner" />
+              <img src="images/malangnyang-jump-banner.png" alt="MalangNyang Jump banner" />
             </div>
           </div>
           <div class="game-body">
@@ -724,7 +720,7 @@
 
         <!-- BANNER -->
         <div class="game-banner">
-          <img src="images/jelly-cat-jump-banner.png" alt="MalangNyang Jump" />
+          <img src="images/malangnyang-jump-banner.png" alt="MalangNyang Jump" />
           <div class="game-banner-overlay">
             <div class="game-banner-text">
               <div class="game-banner-tag" data-i18n="game.tag">Cute Casual Jumping Game</div>
@@ -1015,7 +1011,7 @@
           <div class="brand-mark" style="width:34px;height:34px;border-radius:10px;font-size:14px;">P</div>
           <div>
             <div class="footer-brand-name">PangChu Studio</div>
-            <div class="footer-tagline" data-i18n="footer.tagline">Cute &amp; cozy mobile games</div>
+            <div class="footer-tagline" data-i18n="footer.tagline">Small indie game studio</div>
           </div>
         </div>
         <div>
@@ -1033,14 +1029,14 @@
         'nav.game': 'Game', 'nav.updates': 'Updates', 'nav.faq': 'FAQ',
         'nav.contact': 'Contact', 'nav.links': 'Links',
         'hero.eyebrow': 'Official Studio Website',
-        'hero.sub': 'A small indie studio crafting cute, cozy mobile game experiences. Official home for studio information, game details, and policy pages.',
+        'hero.sub': 'A small indie game studio building playful, approachable game experiences. Official home for studio information, game details, and policy pages.',
         'hero.cta1': 'View Featured Game', 'hero.cta2': 'Official Links',
         'status.badge': 'Website Active', 'status.title': 'Official links are live',
         'status.body': 'Google Play and Microsoft Store are live, and App Store registration for iOS and Mac is in progress. Support contacts and policy pages are available.',
         'mini.game': 'Game', 'mini.gameVal': 'MalangNyang Jump', 'mini.genre': 'Genre', 'mini.genreVal': 'Cute hyper-casual',
         'mini.studio': 'Studio', 'mini.platform': 'Platform', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': 'About the studio',
-        'about.body': 'PangChu Studio builds clean, friendly game experiences with soft visuals, approachable controls, and a charming, welcoming feel.',
+        'about.body': 'PangChu Studio develops games with clear ideas, simple controls, and a small-team indie spirit across different play styles.',
         'game.title': 'MalangNyang Jump', 'game.label': 'Featured Game', 'game.sub': 'Our current title — soft, cheerful, and made for quick cozy play.',
         'game.tag': 'Cute Casual Jumping Game',
         'game.desc': 'A cheerful cat jumping game set in soft cloud-filled skies, with simple left and right touch controls, coins to collect, skins to unlock, and quick runs that feel light and cozy.',
@@ -1123,20 +1119,20 @@
         'link3.title': 'Official Website', 'link3.desc': 'The official PangChu Studio homepage on pangchustudio.co.kr.', 'link3.arrow': 'Open homepage',
         'link4.title': 'Google Play', 'link4.desc': 'Official store listing for MalangNyang Jump on Google Play.', 'link4.arrow': 'Open store',
         'link5.title': 'Microsoft Store', 'link5.desc': 'Official Windows store listing for MalangNyang Jump on Microsoft Store.', 'link5.arrow': 'Open Windows store',
-        'footer.tagline': 'Cute & cozy mobile games', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+        'footer.tagline': 'Small indie game studio', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
       },
       ko: {
         'nav.game': '게임', 'nav.updates': '공지', 'nav.faq': '자주 묻는 질문',
         'nav.contact': '문의', 'nav.links': '링크',
         'hero.eyebrow': '공식 스튜디오 웹사이트',
-        'hero.sub': '귀엽고 아늑한 모바일 게임을 만드는 소규모 인디 스튜디오입니다. 스튜디오 소개, 게임 정보, 정책 페이지를 확인하세요.',
+        'hero.sub': '여러 스타일의 게임 경험을 만들어가는 소규모 인디게임 스튜디오입니다. 스튜디오 소개, 게임 정보, 정책 페이지를 확인하세요.',
         'hero.cta1': '게임 보기', 'hero.cta2': '공식 링크',
         'status.badge': '웹사이트 운영 중', 'status.title': '공식 링크가 준비되었습니다',
         'status.body': 'Google Play와 Microsoft Store에서 이용 가능하며, iOS와 Mac 버전의 App Store 등록은 준비 중입니다. 고객 지원과 정책 페이지도 확인할 수 있습니다.',
         'mini.game': '게임', 'mini.gameVal': '말랑냥이점프', 'mini.genre': '장르', 'mini.genreVal': '하이퍼캐주얼',
         'mini.studio': '스튜디오', 'mini.platform': '플랫폼', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': '스튜디오 소개',
-        'about.body': '팡츄 스튜디오는 부드러운 비주얼, 직관적인 조작, 따뜻하고 친근한 느낌의 게임 경험을 만들어갑니다.',
+        'about.body': '팡츄 스튜디오는 명확한 아이디어와 직관적인 조작, 작은 팀의 인디 감성으로 여러 스타일의 게임을 만들어갑니다.',
         'game.title': '말랑냥이점프', 'game.label': '대표 게임', 'game.sub': '현재 서비스 중인 게임 — 부드럽고 귀엽게, 짧고 산뜻한 플레이로.',
         'game.tag': '귀여운 캐주얼 점프 게임',
         'game.desc': '구름 가득한 하늘을 귀여운 고양이와 함께 뛰어오르는 하이퍼캐주얼 점프 게임입니다. 간단한 좌우 터치 조작, 코인 수집, 스킨 해제, 짧고 산뜻한 기록 도전의 재미를 담았습니다.',
@@ -1219,20 +1215,20 @@
         'link3.title': '공식 홈페이지', 'link3.desc': 'pangchustudio.co.kr에서 운영되는 PangChu Studio 공식 홈페이지입니다.', 'link3.arrow': '홈페이지 열기',
         'link4.title': 'Google Play', 'link4.desc': '말랑냥이점프의 공식 Google Play 스토어 페이지입니다.', 'link4.arrow': '스토어 열기',
         'link5.title': 'Microsoft Store', 'link5.desc': '말랑냥이점프 Windows 버전의 공식 Microsoft Store 페이지입니다.', 'link5.arrow': 'Windows 스토어 열기',
-        'footer.tagline': '귀엽고 아늑한 모바일 게임', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+        'footer.tagline': '소규모 인디게임 스튜디오', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
       },
       ja: {
         'nav.game': 'ゲーム', 'nav.updates': 'お知らせ', 'nav.faq': 'よくある質問',
         'nav.contact': 'お問い合わせ', 'nav.links': 'リンク',
         'hero.eyebrow': '公式スタジオウェブサイト',
-        'hero.sub': 'かわいくて居心地のいいモバイルゲームを制作する小さなインディースタジオです。スタジオ情報、ゲームの詳細、ポリシーページをご確認ください。',
+        'hero.sub': 'さまざまな遊びの体験を少しずつ形にしていく、小さなインディーゲームスタジオです。スタジオ情報、ゲームの詳細、ポリシーページをご確認ください。',
         'hero.cta1': 'ゲームを見る', 'hero.cta2': '公式リンク',
         'status.badge': 'ウェブサイト運営中', 'status.title': '公式リンク公開中',
         'status.body': 'Google PlayとMicrosoft Storeで配信中で、iOS・Mac版のApp Store登録は準備中です。サポート連絡先とポリシーページも確認できます。',
         'mini.game': 'ゲーム', 'mini.gameVal': 'ぷにねこジャンプ', 'mini.genre': 'ジャンル', 'mini.genreVal': 'ハイパーカジュアル',
         'mini.studio': 'スタジオ', 'mini.platform': 'プラットフォーム', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': 'スタジオについて',
-        'about.body': 'PangChu Studioは、柔らかなビジュアル、直感的な操作、温かみのあるゲーム体験を大切にしています。',
+        'about.body': 'PangChu Studioは、明快なアイデア、直感的な操作、小さなチームならではのインディースピリットを大切にしながら、さまざまなスタイルのゲーム体験を作っています。',
         'game.title': 'ぷにねこジャンプ', 'game.label': '注目のゲーム', 'game.sub': '現在のタイトル — やさしく、かわいく、気軽に遊べる。',
         'game.tag': 'かわいいカジュアルジャンプゲーム',
         'game.desc': '雲いっぱいの空をかわいい猫と跳び上がるハイパーカジュアルジャンプゲームです。シンプルな左右タッチ操作、コイン集め、スキン解放、テンポのよいスコア挑戦を楽しめます。',
@@ -1315,20 +1311,20 @@
         'link3.title': '公式サイト', 'link3.desc': 'pangchustudio.co.krで運営しているPangChu Studio公式サイトです。', 'link3.arrow': 'サイトを開く',
         'link4.title': 'Google Play', 'link4.desc': 'ぷにねこジャンプの公式Google Playストア掲載ページです。', 'link4.arrow': 'ストアを開く',
         'link5.title': 'Microsoft Store', 'link5.desc': 'ぷにねこジャンプ Windows版の公式Microsoft Store掲載ページです。', 'link5.arrow': 'Windowsストアを開く',
-        'footer.tagline': 'かわいくて居心地のいいモバイルゲーム', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+        'footer.tagline': '小さなインディーゲームスタジオ', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
       },
       zh: {
         'nav.game': '遊戲', 'nav.updates': '公告', 'nav.faq': '常見問題',
         'nav.contact': '聯絡', 'nav.links': '連結',
         'hero.eyebrow': '官方工作室網站',
-        'hero.sub': '一個專注於製作可愛、溫馨手機遊戲的小型獨立工作室。歡迎瀏覽工作室介紹、遊戲資訊與政策頁面。',
+        'hero.sub': '一個逐步打造不同遊戲體驗的小型獨立遊戲工作室。歡迎瀏覽工作室介紹、遊戲資訊與政策頁面。',
         'hero.cta1': '查看遊戲', 'hero.cta2': '官方連結',
         'status.badge': '網站運作中', 'status.title': '官方連結已上線',
         'status.body': 'Google Play 與 Microsoft Store 已上架，iOS 與 Mac 版 App Store 登錄準備中，亦可查看客戶支援與政策文件。',
         'mini.game': '遊戲', 'mini.gameVal': '啫喱貓跳跳', 'mini.genre': '類型', 'mini.genreVal': '超休閒',
         'mini.studio': '工作室', 'mini.platform': '平台', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': '關於工作室',
-        'about.body': 'PangChu Studio 致力於打造畫面柔和、操作直覺、充滿溫暖魅力的遊戲體驗。',
+        'about.body': 'PangChu Studio 以清晰的創意、直覺操作和小團隊的獨立精神，製作不同風格的遊戲體驗。',
         'game.title': '啫喱貓跳跳', 'game.label': '主打遊戲', 'game.sub': '目前上線作品 — 柔和、可愛，輕鬆上手。',
         'game.tag': '可愛休閒跳躍遊戲',
         'game.desc': '一款可愛超休閒貓咪跳躍遊戲，在雲朵天空中輕快向上跳躍。簡單左右觸控、金幣收集、造型解鎖和短局高分挑戰，玩起來輕鬆又療癒。',
@@ -1411,20 +1407,20 @@
         'link3.title': '官方網站', 'link3.desc': '在 pangchustudio.co.kr 營運的 PangChu Studio 官方網站。', 'link3.arrow': '開啟網站',
         'link4.title': 'Google Play', 'link4.desc': '啫喱貓跳跳的官方 Google Play 商店頁面。', 'link4.arrow': '開啟商店',
         'link5.title': 'Microsoft Store', 'link5.desc': '啫喱貓跳跳 Windows 版的官方 Microsoft Store 頁面。', 'link5.arrow': '開啟 Windows 商店',
-        'footer.tagline': '可愛溫馨的手機遊戲', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+        'footer.tagline': '小型獨立遊戲工作室', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
       },
       pt: {
         'nav.game': 'Jogo', 'nav.updates': 'Novidades', 'nav.faq': 'Perguntas',
         'nav.contact': 'Contato', 'nav.links': 'Links',
         'hero.eyebrow': 'Site Oficial do Estúdio',
-        'hero.sub': 'Um pequeno estúdio indie criando jogos mobile fofos e aconchegantes. Informações do estúdio, detalhes do jogo e páginas de políticas.',
+        'hero.sub': 'Um pequeno estúdio indie criando experiências de jogo acessíveis e variadas. Informações do estúdio, detalhes do jogo e páginas de políticas.',
         'hero.cta1': 'Ver o Jogo', 'hero.cta2': 'Links Oficiais',
         'status.badge': 'Site Ativo', 'status.title': 'Links oficiais no ar',
         'status.body': 'Google Play e Microsoft Store já estão disponíveis, o cadastro das versões iOS e Mac na App Store está em preparação, e contatos de suporte e políticas estão disponíveis.',
         'mini.game': 'Jogo', 'mini.gameVal': 'Gatinho Pula-Pula', 'mini.genre': 'Gênero', 'mini.genreVal': 'Hipercasual fofo',
         'mini.studio': 'Estúdio', 'mini.platform': 'Plataforma', 'mini.platformVal': 'Android / Windows / iOS / Mac',
         'about.title': 'Sobre o estúdio',
-        'about.body': 'A PangChu Studio cria experiências de jogo limpas e amigáveis com visuais suaves, controles acessíveis e um charme acolhedor.',
+        'about.body': 'A PangChu Studio desenvolve jogos com ideias claras, controles simples e o espírito indie de uma equipe pequena em diferentes estilos de jogo.',
         'game.title': 'Gatinho Pula-Pula', 'game.label': 'Jogo em Destaque', 'game.sub': 'Nosso título atual — suave, alegre e feito para partidas rápidas.',
         'game.tag': 'Jogo Casual de Pulo Fofo',
         'game.desc': 'Um jogo hipercasual fofo em que um gatinho salta pelas nuvens. Com controles simples para a esquerda e para a direita, moedas para coletar, skins para desbloquear e partidas rápidas para buscar sua melhor pontuação.',
@@ -1507,7 +1503,7 @@
         'link3.title': 'Site oficial', 'link3.desc': 'A página oficial da PangChu Studio em pangchustudio.co.kr.', 'link3.arrow': 'Abrir site',
         'link4.title': 'Google Play', 'link4.desc': 'Página oficial do Gatinho Pula-Pula na Google Play Store.', 'link4.arrow': 'Abrir loja',
         'link5.title': 'Microsoft Store', 'link5.desc': 'Página oficial da versão Windows de Gatinho Pula-Pula na Microsoft Store.', 'link5.arrow': 'Abrir loja Windows',
-        'footer.tagline': 'Jogos mobile fofos e aconchegantes', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
+        'footer.tagline': 'Pequeno estúdio indie de jogos', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
       },
     };
 

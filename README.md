@@ -8,7 +8,7 @@
 
 - **Live website:** https://pangchustudio.co.kr/
 - **Canonical website:** https://pangchustudio.co.kr/
-- **Key visual:** `assets/jelly-cat-jump-banner.png` — the official game banner (white fluffy cats, cloudy sky, green meadow, jelly-style bubbly logo in green/yellow/pink)
+- **Key visual:** `assets/malangnyang-jump-banner.png` — the official game banner (white fluffy cats, cloudy sky, green meadow, jelly-style bubbly logo in green/yellow/pink)
 
 ---
 
@@ -158,7 +158,7 @@ Use → (right arrow) for navigation links. E.g. "Open page →"
 ### Assets
 | File | Description |
 |---|---|
-| `assets/jelly-cat-jump-banner.png` | Official game banner — key visual |
+| `assets/malangnyang-jump-banner.png` | Official game banner — key visual |
 
 ---
 
@@ -169,7 +169,7 @@ README.md                         — This file
 SKILL.md                          — Agent skill definition
 colors_and_type.css               — All CSS design tokens
 assets/
-  jelly-cat-jump-banner.png       — Game banner (key visual)
+  malangnyang-jump-banner.png       — Game banner (key visual)
 preview/
   colors-primary.html             — Primary color swatches
   colors-neutrals.html            — Neutral / text colors

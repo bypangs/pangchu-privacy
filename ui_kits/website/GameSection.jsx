@@ -23,7 +23,7 @@ const GameSection = () => {
             borderRight:'1px solid rgba(92,151,201,0.14)',
           }}>
             <div style={{ background:'rgba(255,255,255,0.72)', border:'1px solid rgba(255,255,255,0.7)', borderRadius:24, padding:14, boxShadow:'0 16px 34px rgba(82,149,201,0.16)' }}>
-              <img src="../../assets/jelly-cat-jump-banner.png" alt="MalrangNyang MalangNyang Jump" style={{ display:'block', width:'100%', borderRadius:18 }} />
+              <img src="../../assets/malangnyang-jump-banner.png" alt="MalrangNyang MalangNyang Jump" style={{ display:'block', width:'100%', borderRadius:18 }} />
             </div>
           </div>
 
