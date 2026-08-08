@@ -411,6 +411,13 @@
     .announce-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .announce-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
     .announce-date { flex-shrink: 0; font-size: 12px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .preview-banner {
+      display: inline-flex; width: fit-content; margin-top: -4px; padding: 7px 12px;
+      border-radius: 999px; border: 1px solid rgba(255,255,255,0.34);
+      background: rgba(17,35,52,0.58); color: #fff; font-size: 11px; font-weight: 900;
+      letter-spacing: 0.03em; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+
     .notice-open-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       min-height: 46px; padding: 0 18px; border-radius: 999px;
@@ -635,7 +642,7 @@
           <div class="status-card" id="about">
             <div class="live-badge"><span class="live-dot"></span><span data-i18n="status.badge">Site Ativo</span></div>
             <div class="status-title" data-i18n="status.title">Links oficiais no ar</div>
-            <p class="status-body" data-i18n="status.body">Gatinho Pula-Pula está disponível na Google Play, Microsoft Store e App Store para Android, Windows, iPhone e Mac. Contatos de suporte e políticas também estão disponíveis.</p>
+            <p class="status-body" data-i18n="status.body">Android e iPhone são as versões principais de Gatinho Pula-Pula. Windows e Mac são edições de prévia com algumas diferenças específicas de plataforma.</p>
             <div class="mini-grid">
               <div class="mini-tile"><strong data-i18n="mini.game">Jogo</strong><span data-i18n="mini.gameVal">Gatinho Pula-Pula</span></div>
               <div class="mini-tile"><strong data-i18n="mini.genre">Gênero</strong><span data-i18n="mini.genreVal">Hipercasual fofo</span></div>
@@ -680,17 +687,17 @@
               </a>
               <a class="store-btn microsoft-store-btn" href="https://apps.microsoft.com/detail/9p2cw64kjm68?ocid=webpdpshare" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.4 10.8 4.3v7.2H3V5.4Zm8.8-1.3L21 2.8v8.7h-9.2V4.1ZM3 12.5h7.8v7.2L3 18.6v-6.1Zm8.8 0H21v8.7l-9.2-1.3v-7.4Z"/></svg>
-                <span class="store-text"><span data-i18n="store.microsoftTitle">Microsoft Store</span><small data-i18n="store.microsoftMeta">Windows disponível</small></span>
+                <span class="store-text"><span data-i18n="store.microsoftTitle">Microsoft Store</span><small data-i18n="store.microsoftMeta">Prévia do Windows</small></span>
               </a>
               <a class="store-btn app-store-btn" href="https://apps.apple.com/br/app/gatinho-pula-pula/id6768498966" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.6 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.2-2.8.8-3.6.8-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8 2.1-1.1 2.8-2.3c.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.4-.9-2.4-3.6ZM15.4 5.5c.6-.8 1.1-1.9 1-3-.9 0-2 .6-2.6 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2-.5 2.6-1.3Z"/></svg>
-                <span class="store-text"><span data-i18n="store.macTitle">Mac App Store</span><small data-i18n="store.macMeta">Mac disponível</small></span>
+                <span class="store-text"><span data-i18n="store.macTitle">Mac App Store</span><small data-i18n="store.macMeta">Prévia do Mac</small></span>
               </a>
               <a class="store-btn iphone-store-btn" href="https://apps.apple.com/br/app/gatinho-pula-pula/id6768498966" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 2h8a2.5 2.5 0 0 1 2.5 2.5v15A2.5 2.5 0 0 1 16 22H8a2.5 2.5 0 0 1-2.5-2.5v-15A2.5 2.5 0 0 1 8 2Zm0 2a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-15A.5.5 0 0 0 16 4h-1.2a1 1 0 0 1-.9.6h-3.8a1 1 0 0 1-.9-.6H8Zm3 14.4h2a.8.8 0 0 1 0 1.6h-2a.8.8 0 0 1 0-1.6Z"/></svg>
                 <span class="store-text"><span data-i18n="store.iphoneTitle">App Store para iPhone</span><small data-i18n="store.iphoneMeta">iPhone disponível</small></span>
               </a>
-              <span class="store-note" data-i18n="store.note">Disponível para Android, Windows, iPhone e Mac</span>
+              <span class="store-note" data-i18n="store.note">Android e iPhone principais · Windows e Mac em prévia</span>
             </div>
             <div class="features-row">
               <div class="feature-tile"><strong data-i18n="feat1.title">Controles simples</strong><span data-i18n="feat1.desc">Controles simples com ritmo leve e direto.</span></div>
@@ -706,6 +713,7 @@
           <div class="game-banner-overlay">
             <div class="game-banner-text">
               <div class="game-banner-tag" data-i18n="game.tag">Jogo Casual de Pulo Fofo</div>
+              <div class="preview-banner" data-i18n="platform.previewBanner">Windows e Mac — edições de prévia</div>
               <div class="game-banner-title" data-i18n="game.title">Gatinho Pula-Pula</div>
               <p class="game-banner-desc" data-i18n="game.desc">Um jogo hipercasual fofo em que um gatinho salta pelas nuvens. Com controles simples para a esquerda e para a direita, moedas para coletar, skins para desbloquear e partidas rápidas para buscar sua melhor pontuação.</p>
               <div class="game-banner-actions">
@@ -730,6 +738,16 @@
         <div class="section-title" data-i18n="ann.title">Novidades e Avisos</div>
         <div class="section-sub" data-i18n="ann.sub">Últimas notícias e atualizações da PangChu Studio.</div>
         <div class="announce-list">
+          <div class="announce-item">
+            <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">Aviso</span>
+            <div class="announce-content"><div class="announce-title" data-i18n="ann8.title">Aviso sobre o calendário de atualizações do iOS</div><div class="announce-desc" data-i18n="ann8.desc">O cronograma de análise da App Store pode fazer a atualização do iOS chegar depois da versão do Google Play. Estamos trabalhando para reduzir essa diferença o mais rápido possível.</div></div>
+            <div class="announce-date">2026.08.09</div>
+          </div>
+          <div class="announce-item">
+            <span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span>
+            <div class="announce-content"><div class="announce-title" data-i18n="ann9.title">Station Masters — preparando o lançamento</div><div class="announce-desc" data-i18n="ann9.desc">A preparação para o lançamento começa em agosto de 2026. Mais detalhes serão divulgados quando o cronograma for confirmado.</div></div>
+            <div class="announce-date">2026.08~</div>
+          </div>
                     <div class="announce-item">
             <span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span>
             <div class="announce-content">
@@ -783,6 +801,7 @@
     </section>
 
     <div class="section-divider"></div>
+
 
     <!-- FAQ -->
     <section class="faq-section" id="faq">
@@ -1410,7 +1429,7 @@
         'hero.sub': 'Um pequeno estúdio indie criando experiências de jogo acessíveis e variadas. Informações do estúdio, detalhes do jogo e páginas de políticas.',
         'hero.cta1': 'Ver o Jogo', 'hero.cta2': 'Links Oficiais',
         'status.badge': 'Site Ativo', 'status.title': 'Links oficiais no ar',
-        'status.body': 'Gatinho Pula-Pula está disponível na Google Play, Microsoft Store e App Store para Android, Windows, iPhone e Mac. Contatos de suporte e políticas também estão disponíveis.',
+        'status.body': 'Android e iPhone são as versões principais de Gatinho Pula-Pula. Windows e Mac são edições de prévia com algumas diferenças específicas de plataforma.',
         'mini.game': 'Jogo', 'mini.gameVal': 'Gatinho Pula-Pula', 'mini.genre': 'Gênero', 'mini.genreVal': 'Hipercasual fofo',
         'mini.studio': 'Estúdio', 'mini.platform': 'Plataforma', 'mini.platformVal': 'Android / Windows / iPhone / Mac',
         'about.title': 'Sobre o estúdio',
@@ -1418,7 +1437,8 @@
         'game.title': 'Gatinho Pula-Pula', 'game.label': 'Jogo em Destaque', 'game.sub': 'Nosso título atual — suave, alegre e feito para partidas rápidas.',
         'game.tag': 'Jogo Casual de Pulo Fofo',
         'game.desc': 'Um jogo hipercasual fofo em que um gatinho salta pelas nuvens. Com controles simples para a esquerda e para a direita, moedas para coletar, skins para desbloquear e partidas rápidas para buscar sua melhor pontuação.',
-        'store.cta': 'Ver no Google Play', 'store.microsoftCta': 'Obter na Microsoft Store', 'store.note': 'Disponível para Android, Windows, iPhone e Mac', 'store.googleTitle': 'Google Play', 'store.googleMeta': 'Android disponível', 'store.microsoftTitle': 'Microsoft Store', 'store.microsoftMeta': 'Windows disponível', 'store.macTitle': 'Mac App Store', 'store.macMeta': 'Mac disponível', 'store.appStoreCta': 'Baixar na Mac App Store', 'store.iphoneTitle': 'App Store para iPhone', 'store.iphoneMeta': 'iPhone disponível', 'store.iphoneCta': 'Baixar na App Store para iPhone',
+        'store.cta': 'Ver no Google Play', 'store.microsoftCta': 'Obter prévia do Windows', 'store.note': 'Android e iPhone principais · Windows e Mac em prévia', 'store.googleTitle': 'Google Play', 'store.googleMeta': 'Versão principal Android', 'store.microsoftTitle': 'Microsoft Store', 'store.microsoftMeta': 'Prévia do Windows', 'store.macTitle': 'Mac App Store', 'store.macMeta': 'Prévia do Mac', 'store.appStoreCta': 'Baixar prévia do Mac', 'store.iphoneTitle': 'App Store para iPhone', 'store.iphoneMeta': 'Versão principal iPhone', 'store.iphoneCta': 'Baixar na App Store para iPhone',
+        'platform.previewBanner': 'Windows e Mac — edições de prévia',
         'feat1.title': 'Controles simples', 'feat1.desc': 'Controles simples com ritmo leve e direto.',
         'feat2.title': 'Visuais suaves', 'feat2.desc': 'Nuvens, pastéis e personagens de gatos fofos.',
         'feat3.title': 'Ritmo arcade', 'feat3.desc': 'Corridas rápidas e desafio focado em pontuação.',
@@ -1429,6 +1449,10 @@
         'ann6.desc': 'Gatinho Corre-Corre foi registrado pela primeira vez no GitHub em 2026.05.05 e está em desenvolvimento como um novo projeto da PangChu Studio.',
         'ann7.title': 'Gatinho Pula-Pula disponível na App Store para iPhone e Mac',
         'ann7.desc': 'Baixe Gatinho Pula-Pula na App Store e jogue no iPhone ou Mac.',
+        'ann8.title': 'Aviso sobre o calendário de atualizações do iOS',
+        'ann8.desc': 'O cronograma de análise da App Store pode fazer a atualização do iOS chegar depois da versão do Google Play. Estamos trabalhando para reduzir essa diferença o mais rápido possível.',
+        'ann9.title': 'Station Masters — preparando o lançamento',
+        'ann9.desc': 'A preparação para o lançamento começa em agosto de 2026. Mais detalhes serão divulgados quando o cronograma for confirmado.',
         'ann4.title': 'Versão Windows de Gatinho Pula-Pula na Microsoft Store',
         'ann4.desc': 'A versão Windows de Gatinho Pula-Pula já está disponível na Microsoft Store.',
         'ann5.title': 'Versão Android de Gatinho Pula-Pula lançada no Google Play',
@@ -1447,7 +1471,7 @@
         'faq3.q': 'Onde encontro os Termos de Serviço?',
         'faq3.a': 'Você pode encontrá-los na seção de links oficiais neste site.',
         'faq4.q': 'Já posso jogar Gatinho Pula-Pula?',
-        'faq4.a': 'Sim. Gatinho Pula-Pula está disponível na Google Play para Android, na Microsoft Store para Windows e na App Store para iPhone e Mac.',
+        'faq4.a': 'Sim. As versões principais estão na Google Play para Android e na App Store para iPhone. Windows e Mac estão disponíveis como edições de prévia.',
         'faq5.q': 'Como contatar a PangChu Studio?',
         'faq5.a': 'Você pode entrar em contato pelo e-mail support@pangchustudio.co.kr.',
         'faq6.q': 'Para onde posso enviar feedback ou sugestões sobre o jogo?',

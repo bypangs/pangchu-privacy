@@ -411,6 +411,13 @@
     .announce-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .announce-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
     .announce-date { flex-shrink: 0; font-size: 12px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .preview-banner {
+      display: inline-flex; width: fit-content; margin-top: -4px; padding: 7px 12px;
+      border-radius: 999px; border: 1px solid rgba(255,255,255,0.34);
+      background: rgba(17,35,52,0.58); color: #fff; font-size: 11px; font-weight: 900;
+      letter-spacing: 0.03em; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+
     .notice-open-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       min-height: 46px; padding: 0 18px; border-radius: 999px;
@@ -635,7 +642,7 @@
           <div class="status-card" id="about">
             <div class="live-badge"><span class="live-dot"></span><span data-i18n="status.badge">웹사이트 운영 중</span></div>
             <div class="status-title" data-i18n="status.title">공식 링크가 준비되었습니다</div>
-            <p class="status-body" data-i18n="status.body">말랑냥이점프는 Android, Windows, iPhone, Mac에서 이용할 수 있으며 Google Play, Microsoft Store, App Store 링크와 고객 지원·정책 페이지를 확인할 수 있습니다.</p>
+            <p class="status-body" data-i18n="status.body">말랑냥이점프의 Android와 iPhone은 메인 서비스 버전입니다. Windows와 Mac은 플랫폼별 차이가 있는 프리뷰 버전으로 운영합니다.</p>
             <div class="mini-grid">
               <div class="mini-tile"><strong data-i18n="mini.game">게임</strong><span data-i18n="mini.gameVal">말랑냥이점프</span></div>
               <div class="mini-tile"><strong data-i18n="mini.genre">장르</strong><span data-i18n="mini.genreVal">하이퍼캐주얼</span></div>
@@ -680,17 +687,17 @@
               </a>
               <a class="store-btn microsoft-store-btn" href="https://apps.microsoft.com/detail/9p2cw64kjm68?ocid=webpdpshare" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.4 10.8 4.3v7.2H3V5.4Zm8.8-1.3L21 2.8v8.7h-9.2V4.1ZM3 12.5h7.8v7.2L3 18.6v-6.1Zm8.8 0H21v8.7l-9.2-1.3v-7.4Z"/></svg>
-                <span class="store-text"><span data-i18n="store.microsoftTitle">Microsoft Store</span><small data-i18n="store.microsoftMeta">Windows 이용 가능</small></span>
+                <span class="store-text"><span data-i18n="store.microsoftTitle">Microsoft Store</span><small data-i18n="store.microsoftMeta">Windows 프리뷰</small></span>
               </a>
               <a class="store-btn app-store-btn" href="https://apps.apple.com/kr/app/%EB%A7%90%EB%9E%91%EB%83%A5%EC%9D%B4%EC%A0%90%ED%94%84/id6768498966" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.6 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.2-2.8.8-3.6.8-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8 2.1-1.1 2.8-2.3c.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.4-.9-2.4-3.6ZM15.4 5.5c.6-.8 1.1-1.9 1-3-.9 0-2 .6-2.6 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2-.5 2.6-1.3Z"/></svg>
-                <span class="store-text"><span data-i18n="store.macTitle">Mac App Store</span><small data-i18n="store.macMeta">Mac 이용 가능</small></span>
+                <span class="store-text"><span data-i18n="store.macTitle">Mac App Store</span><small data-i18n="store.macMeta">Mac 프리뷰</small></span>
               </a>
               <a class="store-btn iphone-store-btn" href="https://apps.apple.com/kr/app/%EB%A7%90%EB%9E%91%EB%83%A5%EC%9D%B4%EC%A0%90%ED%94%84/id6768498966" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 2h8a2.5 2.5 0 0 1 2.5 2.5v15A2.5 2.5 0 0 1 16 22H8a2.5 2.5 0 0 1-2.5-2.5v-15A2.5 2.5 0 0 1 8 2Zm0 2a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-15A.5.5 0 0 0 16 4h-1.2a1 1 0 0 1-.9.6h-3.8a1 1 0 0 1-.9-.6H8Zm3 14.4h2a.8.8 0 0 1 0 1.6h-2a.8.8 0 0 1 0-1.6Z"/></svg>
                 <span class="store-text"><span data-i18n="store.iphoneTitle">iPhone App Store</span><small data-i18n="store.iphoneMeta">iPhone 이용 가능</small></span>
               </a>
-              <span class="store-note" data-i18n="store.note">Android·Windows·iPhone·Mac 이용 가능</span>
+              <span class="store-note" data-i18n="store.note">Android·iPhone 메인 버전 · Windows·Mac 프리뷰 버전</span>
             </div>
             <div class="features-row">
               <div class="feature-tile"><strong data-i18n="feat1.title">간단한 조작</strong><span data-i18n="feat1.desc">가볍게 익히는 좌우 터치 조작.</span></div>
@@ -706,6 +713,7 @@
           <div class="game-banner-overlay">
             <div class="game-banner-text">
               <div class="game-banner-tag" data-i18n="game.tag">귀여운 캐주얼 점프 게임</div>
+              <div class="preview-banner" data-i18n="platform.previewBanner">Windows &amp; Mac — 프리뷰 버전</div>
               <div class="game-banner-title" data-i18n="game.title">말랑냥이점프</div>
               <p class="game-banner-desc" data-i18n="game.desc">구름 가득한 하늘을 귀여운 고양이와 함께 뛰어오르는 하이퍼캐주얼 점프 게임입니다. 간단한 좌우 터치 조작, 코인 수집, 스킨 해제, 짧고 산뜻한 기록 도전의 재미를 담았습니다.</p>
               <div class="game-banner-actions">
@@ -730,6 +738,22 @@
         <div class="section-title" data-i18n="ann.title">업데이트 및 공지</div>
         <div class="section-sub" data-i18n="ann.sub">팡츄 스튜디오의 최신 소식을 확인하세요.</div>
         <div class="announce-list">
+          <div class="announce-item">
+            <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">공지</span>
+            <div class="announce-content">
+              <div class="announce-title" data-i18n="ann8.title">iOS 업데이트 일정 안내</div>
+              <div class="announce-desc" data-i18n="ann8.desc">App Store 검토 일정으로 iOS 업데이트가 Google Play보다 늦어질 수 있습니다. 버전 차이를 줄이고 최신 업데이트를 최대한 빠르게 제공하겠습니다.</div>
+            </div>
+            <div class="announce-date">2026.08.09</div>
+          </div>
+          <div class="announce-item">
+            <span class="announce-badge badge-new" data-i18n="ann.badge.new">신규</span>
+            <div class="announce-content">
+              <div class="announce-title" data-i18n="ann9.title">Station Masters — 출시 준비 중</div>
+              <div class="announce-desc" data-i18n="ann9.desc">Station Masters는 2026년 8월부터 출시 준비를 진행합니다. 일정이 확정되는 대로 자세한 소식을 안내하겠습니다.</div>
+            </div>
+            <div class="announce-date">2026.08~</div>
+          </div>
                     <div class="announce-item">
             <span class="announce-badge badge-new" data-i18n="ann.badge.new">신규</span>
             <div class="announce-content">
@@ -783,6 +807,7 @@
     </section>
 
     <div class="section-divider"></div>
+
 
     <!-- FAQ -->
     <section class="faq-section" id="faq">
@@ -1119,7 +1144,7 @@
         'hero.sub': '여러 스타일의 게임 경험을 만들어가는 소규모 인디게임 스튜디오입니다. 스튜디오 소개, 게임 정보, 정책 페이지를 확인하세요.',
         'hero.cta1': '게임 보기', 'hero.cta2': '공식 링크',
         'status.badge': '웹사이트 운영 중', 'status.title': '공식 링크가 준비되었습니다',
-        'status.body': '말랑냥이점프는 Android, Windows, iPhone, Mac에서 이용할 수 있으며 Google Play, Microsoft Store, App Store 링크와 고객 지원·정책 페이지를 확인할 수 있습니다.',
+        'status.body': '말랑냥이점프의 Android와 iPhone은 메인 서비스 버전입니다. Windows와 Mac은 플랫폼별 차이가 있는 프리뷰 버전으로 운영합니다.',
         'mini.game': '게임', 'mini.gameVal': '말랑냥이점프', 'mini.genre': '장르', 'mini.genreVal': '하이퍼캐주얼',
         'mini.studio': '스튜디오', 'mini.platform': '플랫폼', 'mini.platformVal': 'Android / Windows / iPhone / Mac',
         'about.title': '스튜디오 소개',
@@ -1127,7 +1152,8 @@
         'game.title': '말랑냥이점프', 'game.label': '대표 게임', 'game.sub': '현재 서비스 중인 게임 — 부드럽고 귀엽게, 짧고 산뜻한 플레이로.',
         'game.tag': '귀여운 캐주얼 점프 게임',
         'game.desc': '구름 가득한 하늘을 귀여운 고양이와 함께 뛰어오르는 하이퍼캐주얼 점프 게임입니다. 간단한 좌우 터치 조작, 코인 수집, 스킨 해제, 짧고 산뜻한 기록 도전의 재미를 담았습니다.',
-        'store.cta': 'Google Play에서 보기', 'store.microsoftCta': 'Microsoft Store에서 받기', 'store.note': 'Android·Windows·iPhone·Mac 이용 가능', 'store.googleTitle': 'Google Play', 'store.googleMeta': 'Android 이용 가능', 'store.microsoftTitle': 'Microsoft Store', 'store.microsoftMeta': 'Windows 이용 가능', 'store.macTitle': 'Mac App Store', 'store.macMeta': 'Mac 이용 가능', 'store.appStoreCta': 'Mac App Store에서 받기', 'store.iphoneTitle': 'iPhone App Store', 'store.iphoneMeta': 'iPhone 이용 가능', 'store.iphoneCta': 'iPhone App Store에서 받기',
+        'store.cta': 'Google Play에서 보기', 'store.microsoftCta': 'Windows 프리뷰 받기', 'store.note': 'Android·iPhone 메인 버전 · Windows·Mac 프리뷰 버전', 'store.googleTitle': 'Google Play', 'store.googleMeta': 'Android 메인 버전', 'store.microsoftTitle': 'Microsoft Store', 'store.microsoftMeta': 'Windows 프리뷰', 'store.macTitle': 'Mac App Store', 'store.macMeta': 'Mac 프리뷰', 'store.appStoreCta': 'Mac 프리뷰 받기', 'store.iphoneTitle': 'iPhone App Store', 'store.iphoneMeta': 'iPhone 메인 버전', 'store.iphoneCta': 'iPhone App Store에서 받기',
+        'platform.previewBanner': 'Windows & Mac — 프리뷰 버전',
         'feat1.title': '간단한 조작', 'feat1.desc': '가볍게 익히는 좌우 터치 조작.',
         'feat2.title': '부드러운 비주얼', 'feat2.desc': '구름, 파스텔, 귀여운 고양이 캐릭터.',
         'feat3.title': '아케이드 리듬', 'feat3.desc': '짧은 런과 점수 도전의 재미.',
@@ -1138,6 +1164,10 @@
         'ann6.desc': '말랑냥이대쉬는 2026.05.05 GitHub에 첫 등록되었으며, 현재 PangChu Studio의 새 프로젝트로 개발 중입니다.',
         'ann7.title': '말랑냥이점프 iPhone·Mac 버전 App Store 출시',
         'ann7.desc': '말랑냥이점프를 App Store에서 내려받아 iPhone과 Mac에서 플레이할 수 있습니다.',
+        'ann8.title': 'iOS 업데이트 일정 안내',
+        'ann8.desc': 'App Store 검토 일정으로 iOS 업데이트가 Google Play보다 늦어질 수 있습니다. 버전 차이를 줄이고 최신 업데이트를 최대한 빠르게 제공하겠습니다.',
+        'ann9.title': 'Station Masters — 출시 준비 중',
+        'ann9.desc': 'Station Masters는 2026년 8월부터 출시 준비를 진행합니다. 일정이 확정되는 대로 자세한 소식을 안내하겠습니다.',
         'ann4.title': '말랑냥이점프 Windows 버전 Microsoft Store 출시',
         'ann4.desc': '말랑냥이점프 Windows 버전을 Microsoft Store에서 이용할 수 있습니다.',
         'ann5.title': '말랑냥이점프 Android 버전 Google Play 정식 출시',
@@ -1156,7 +1186,7 @@
         'faq3.q': '이용약관은 어디서 확인하나요?',
         'faq3.a': '이 웹사이트 하단의 공식 링크 섹션에서 확인하실 수 있습니다.',
         'faq4.q': '말랑냥이점프를 지금 플레이할 수 있나요?',
-        'faq4.a': '네. 말랑냥이점프는 Android는 Google Play, Windows는 Microsoft Store, iPhone과 Mac은 App Store에서 플레이할 수 있습니다.',
+        'faq4.a': '네. 메인 버전은 Android의 Google Play와 iPhone의 App Store에서 이용할 수 있습니다. Windows와 Mac은 프리뷰 버전으로 제공됩니다.',
         'faq5.q': '팡츄 스튜디오에 연락하려면 어떻게 하나요?',
         'faq5.a': 'support@pangchustudio.co.kr 으로 이메일을 보내주시면 됩니다.',
         'faq6.q': '게임 관련 건의나 피드백은 어디로 보내면 되나요?',

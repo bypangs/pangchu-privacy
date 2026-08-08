@@ -411,6 +411,13 @@
     .announce-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .announce-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
     .announce-date { flex-shrink: 0; font-size: 12px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .preview-banner {
+      display: inline-flex; width: fit-content; margin-top: -4px; padding: 7px 12px;
+      border-radius: 999px; border: 1px solid rgba(255,255,255,0.34);
+      background: rgba(17,35,52,0.58); color: #fff; font-size: 11px; font-weight: 900;
+      letter-spacing: 0.03em; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+
     .notice-open-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       min-height: 46px; padding: 0 18px; border-radius: 999px;
@@ -635,7 +642,7 @@
           <div class="status-card" id="about">
             <div class="live-badge"><span class="live-dot"></span><span data-i18n="status.badge">網站運作中</span></div>
             <div class="status-title" data-i18n="status.title">官方連結已上線</div>
-            <p class="status-body" data-i18n="status.body">啫喱貓跳跳現已可於 Google Play、Microsoft Store 與 App Store 下載，支援 Android、Windows、iPhone 及 Mac，亦可查看客戶支援與政策文件。</p>
+            <p class="status-body" data-i18n="status.body">Android 與 iPhone 為主要營運版本。Windows 與 Mac 則以預覽版形式提供，部分功能會因平台而有所不同。</p>
             <div class="mini-grid">
               <div class="mini-tile"><strong data-i18n="mini.game">遊戲</strong><span data-i18n="mini.gameVal">啫喱貓跳跳</span></div>
               <div class="mini-tile"><strong data-i18n="mini.genre">類型</strong><span data-i18n="mini.genreVal">超休閒</span></div>
@@ -680,17 +687,17 @@
               </a>
               <a class="store-btn microsoft-store-btn" href="https://apps.microsoft.com/detail/9p2cw64kjm68?ocid=webpdpshare" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.4 10.8 4.3v7.2H3V5.4Zm8.8-1.3L21 2.8v8.7h-9.2V4.1ZM3 12.5h7.8v7.2L3 18.6v-6.1Zm8.8 0H21v8.7l-9.2-1.3v-7.4Z"/></svg>
-                <span class="store-text"><span data-i18n="store.microsoftTitle">Microsoft Store</span><small data-i18n="store.microsoftMeta">Windows 已推出</small></span>
+                <span class="store-text"><span data-i18n="store.microsoftTitle">Microsoft Store</span><small data-i18n="store.microsoftMeta">Windows 預覽版</small></span>
               </a>
               <a class="store-btn app-store-btn" href="https://apps.apple.com/hk/app/%E5%95%AB%E5%96%B1%E8%B2%93%E8%B7%B3%E8%B7%B3/id6768498966" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.6 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.6-2.8-1.8-3.4-1.9-1.5-.2-2.8.8-3.6.8-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.5.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.8 3-.8s1.8.8 3.1.8 2.1-1.1 2.8-2.3c.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.4-.9-2.4-3.6ZM15.4 5.5c.6-.8 1.1-1.9 1-3-.9 0-2 .6-2.6 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2-.5 2.6-1.3Z"/></svg>
-                <span class="store-text"><span data-i18n="store.macTitle">Mac App Store</span><small data-i18n="store.macMeta">Mac 已推出</small></span>
+                <span class="store-text"><span data-i18n="store.macTitle">Mac App Store</span><small data-i18n="store.macMeta">Mac 預覽版</small></span>
               </a>
               <a class="store-btn iphone-store-btn" href="https://apps.apple.com/hk/app/%E5%95%AB%E5%96%B1%E8%B2%93%E8%B7%B3%E8%B7%B3/id6768498966" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 2h8a2.5 2.5 0 0 1 2.5 2.5v15A2.5 2.5 0 0 1 16 22H8a2.5 2.5 0 0 1-2.5-2.5v-15A2.5 2.5 0 0 1 8 2Zm0 2a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-15A.5.5 0 0 0 16 4h-1.2a1 1 0 0 1-.9.6h-3.8a1 1 0 0 1-.9-.6H8Zm3 14.4h2a.8.8 0 0 1 0 1.6h-2a.8.8 0 0 1 0-1.6Z"/></svg>
                 <span class="store-text"><span data-i18n="store.iphoneTitle">iPhone App Store</span><small data-i18n="store.iphoneMeta">iPhone 已推出</small></span>
               </a>
-              <span class="store-note" data-i18n="store.note">Android、Windows、iPhone 與 Mac 已推出</span>
+              <span class="store-note" data-i18n="store.note">Android、iPhone 主版本 · Windows、Mac 預覽版</span>
             </div>
             <div class="features-row">
               <div class="feature-tile"><strong data-i18n="feat1.title">簡單操作</strong><span data-i18n="feat1.desc">輕鬆上手的左右觸控操作。</span></div>
@@ -706,6 +713,7 @@
           <div class="game-banner-overlay">
             <div class="game-banner-text">
               <div class="game-banner-tag" data-i18n="game.tag">可愛休閒跳躍遊戲</div>
+              <div class="preview-banner" data-i18n="platform.previewBanner">Windows、Mac — 預覽版</div>
               <div class="game-banner-title" data-i18n="game.title">啫喱貓跳跳</div>
               <p class="game-banner-desc" data-i18n="game.desc">一款可愛超休閒貓咪跳躍遊戲，在雲朵天空中輕快向上跳躍。簡單左右觸控、金幣收集、造型解鎖和短局高分挑戰，玩起來輕鬆又療癒。</p>
               <div class="game-banner-actions">
@@ -730,6 +738,16 @@
         <div class="section-title" data-i18n="ann.title">更新與公告</div>
         <div class="section-sub" data-i18n="ann.sub">來自 PangChu Studio 的最新消息。</div>
         <div class="announce-list">
+          <div class="announce-item">
+            <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">公告</span>
+            <div class="announce-content"><div class="announce-title" data-i18n="ann8.title">iOS 更新時程公告</div><div class="announce-desc" data-i18n="ann8.desc">受 App Store 審核時程影響，iOS 更新可能較 Google Play 稍晚。我們正努力縮短版本差距，盡快提供最新版本。</div></div>
+            <div class="announce-date">2026.08.09</div>
+          </div>
+          <div class="announce-item">
+            <span class="announce-badge badge-new" data-i18n="ann.badge.new">新</span>
+            <div class="announce-content"><div class="announce-title" data-i18n="ann9.title">Station Masters — 正在準備推出</div><div class="announce-desc" data-i18n="ann9.desc">Station Masters 將於 2026 年 8 月起進行推出準備。時程確認後會再公布詳細資訊。</div></div>
+            <div class="announce-date">2026.08~</div>
+          </div>
                     <div class="announce-item">
             <span class="announce-badge badge-new" data-i18n="ann.badge.new">新</span>
             <div class="announce-content">
@@ -783,6 +801,7 @@
     </section>
 
     <div class="section-divider"></div>
+
 
     <!-- FAQ -->
     <section class="faq-section" id="faq">
@@ -1313,7 +1332,7 @@
         'hero.sub': '一個逐步打造不同遊戲體驗的小型獨立遊戲工作室。歡迎瀏覽工作室介紹、遊戲資訊與政策頁面。',
         'hero.cta1': '查看遊戲', 'hero.cta2': '官方連結',
         'status.badge': '網站運作中', 'status.title': '官方連結已上線',
-        'status.body': '啫喱貓跳跳現已可於 Google Play、Microsoft Store 與 App Store 下載，支援 Android、Windows、iPhone 及 Mac，亦可查看客戶支援與政策文件。',
+        'status.body': 'Android 與 iPhone 為主要營運版本。Windows 與 Mac 則以預覽版形式提供，部分功能會因平台而有所不同。',
         'mini.game': '遊戲', 'mini.gameVal': '啫喱貓跳跳', 'mini.genre': '類型', 'mini.genreVal': '超休閒',
         'mini.studio': '工作室', 'mini.platform': '平台', 'mini.platformVal': 'Android / Windows / iPhone / Mac',
         'about.title': '關於工作室',
@@ -1321,7 +1340,8 @@
         'game.title': '啫喱貓跳跳', 'game.label': '主打遊戲', 'game.sub': '目前上線作品 — 柔和、可愛，輕鬆上手。',
         'game.tag': '可愛休閒跳躍遊戲',
         'game.desc': '一款可愛超休閒貓咪跳躍遊戲，在雲朵天空中輕快向上跳躍。簡單左右觸控、金幣收集、造型解鎖和短局高分挑戰，玩起來輕鬆又療癒。',
-        'store.cta': '在 Google Play 查看', 'store.microsoftCta': '在 Microsoft Store 取得', 'store.note': 'Android、Windows、iPhone 與 Mac 已推出', 'store.googleTitle': 'Google Play', 'store.googleMeta': 'Android 已推出', 'store.microsoftTitle': 'Microsoft Store', 'store.microsoftMeta': 'Windows 已推出', 'store.macTitle': 'Mac App Store', 'store.macMeta': 'Mac 已推出', 'store.appStoreCta': '在 Mac App Store 下載', 'store.iphoneTitle': 'iPhone App Store', 'store.iphoneMeta': 'iPhone 已推出', 'store.iphoneCta': '在 iPhone App Store 下載',
+        'store.cta': '在 Google Play 查看', 'store.microsoftCta': '取得 Windows 預覽版', 'store.note': 'Android、iPhone 主版本 · Windows、Mac 預覽版', 'store.googleTitle': 'Google Play', 'store.googleMeta': 'Android 主版本', 'store.microsoftTitle': 'Microsoft Store', 'store.microsoftMeta': 'Windows 預覽版', 'store.macTitle': 'Mac App Store', 'store.macMeta': 'Mac 預覽版', 'store.appStoreCta': '下載 Mac 預覽版', 'store.iphoneTitle': 'iPhone App Store', 'store.iphoneMeta': 'iPhone 主版本', 'store.iphoneCta': '在 iPhone App Store 下載',
+        'platform.previewBanner': 'Windows、Mac — 預覽版',
         'feat1.title': '簡單操作', 'feat1.desc': '輕鬆上手的左右觸控操作。',
         'feat2.title': '柔和視覺', 'feat2.desc': '雲朵、粉彩色調與可愛貓咪角色。',
         'feat3.title': '街機節奏', 'feat3.desc': '快節奏闖關，追求高分挑戰。',
@@ -1332,6 +1352,10 @@
         'ann6.desc': '啫喱貓衝刺已於 2026.05.05 首次登錄 GitHub，目前正作為 PangChu Studio 的新項目開發中。',
         'ann7.title': '啫喱貓跳跳 iPhone 與 Mac 版已於 App Store 上架',
         'ann7.desc': '啫喱貓跳跳現已可於 App Store 下載，支援 iPhone 與 Mac。',
+        'ann8.title': 'iOS 更新時程公告',
+        'ann8.desc': '受 App Store 審核時程影響，iOS 更新可能較 Google Play 稍晚。我們正努力縮短版本差距，盡快提供最新版本。',
+        'ann9.title': 'Station Masters — 正在準備推出',
+        'ann9.desc': 'Station Masters 將於 2026 年 8 月起進行推出準備。時程確認後會再公布詳細資訊。',
         'ann4.title': '啫喱貓跳跳 Windows 版已於 Microsoft Store 上架',
         'ann4.desc': '啫喱貓跳跳 Windows 版已可於 Microsoft Store 下載。',
         'ann5.title': '啫喱貓跳跳 Android 版已於 Google Play 正式推出',
@@ -1350,7 +1374,7 @@
         'faq3.q': '服務條款在哪裡查看？',
         'faq3.a': '可透過本網站下方的官方連結區塊查閱。',
         'faq4.q': '現在可以玩啫喱貓跳跳嗎？',
-        'faq4.a': '可以。啫喱貓跳跳 Android 版已於 Google Play 上架，Windows 版已於 Microsoft Store 上架，iPhone 與 Mac 版已於 App Store 上架。',
+        'faq4.a': '可以。Android 的 Google Play 與 iPhone 的 App Store 提供主要版本；Windows 與 Mac 則提供預覽版。',
         'faq5.q': '如何聯絡 PangChu Studio？',
         'faq5.a': '請發送電子郵件至 support@pangchustudio.co.kr 與我們聯絡。',
         'faq6.q': '遊戲相關建議或意見可以寄到哪裡？',
