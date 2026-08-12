@@ -737,6 +737,15 @@
               <p class="guide-intro" data-i18n="guide.intro">雲のコンボをつないでスコアを伸ばし、成長ステータスとスキン・エフェクトを組み合わせて自分だけのプレイスタイルを作りましょう。</p>
             </div>
 
+            <details class="guide-accordion">
+              <summary class="guide-toggle">
+                <span class="guide-toggle-copy">
+                  <strong><span class="guide-toggle-open" data-i18n="guide.toggle.open">ゲームガイドを開く</span><span class="guide-toggle-close" data-i18n="guide.toggle.close">ゲームガイドを閉じる</span></strong>
+                  <small data-i18n="guide.toggle.hint">成長ステータス、ラック、コンボ、チャージ、コイン報酬、クイックヒント</small>
+                </span>
+                <span class="guide-toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="guide-body">
             <div class="guide-metrics" aria-label="成長ステータス">
               <div class="guide-metric"><strong data-i18n="guide.metric.points">+1</strong><span data-i18n="guide.metric.pointsLabel">プロフィールレベル2ごとに成長ポイント</span></div>
               <div class="guide-metric"><strong data-i18n="guide.metric.cap">10</strong><span data-i18n="guide.metric.capLabel">各ステータスの最大ポイント</span></div>
@@ -867,7 +876,9 @@
               </div>
             </section>
 
-            <p class="guide-disclaimer" data-i18n="guide.disclaimer">ゲーム内の数値と報酬はバランス調整により変更される場合があります。最新情報はゲーム内表示を優先します。</p>
+                <p class="guide-disclaimer" data-i18n="guide.disclaimer">ゲーム内の数値と報酬はバランス調整により変更される場合があります。最新情報はゲーム内表示を優先します。</p>
+              </div>
+            </details>
           </div>
         </section>
 
@@ -884,42 +895,26 @@
         <div class="section-title" data-i18n="ann.title">アップデート＆お知らせ</div>
         <div class="section-sub" data-i18n="ann.sub">PangChu Studioの最新情報をお届けします。</div>
         <div class="announce-list">
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">新着</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann10.title">ぷにねこジャンプ ゲームガイドを公開</div>
-              <div class="announce-desc" data-i18n="ann10.desc">成長ステータス、ラック・コンボ・チャージ、コイン報酬、よくある質問を見やすくまとめたゲームガイドを公式サイトに追加しました。</div>
-            </div>
-            <div class="announce-date">2026.08.13</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">お知らせ</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann8.title">iOSアップデート日程のお知らせ</div>
-              <div class="announce-desc" data-i18n="ann8.desc">App Storeの審査日程により、iOS版の更新がGoogle Play版より遅れる場合があります。差を縮め、最新バージョンをできるだけ早くお届けします。</div>
-            </div>
-            <div class="announce-date">2026.08.09</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">新着</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann9.title">Station Masters — リリース準備中</div>
-              <div class="announce-desc" data-i18n="ann9.desc">Station Mastersは2026年8月からリリース準備を進めています。日程が確定次第、詳しい情報をお知らせします。</div>
-            </div>
-            <div class="announce-date">2026.08~</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">新着</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann7.title">ぷにねこジャンプ iPhone・Mac版をApp Storeで配信開始</div>
-              <div class="announce-desc" data-i18n="ann7.desc">ぷにねこジャンプをApp Storeからダウンロードして、iPhoneとMacでプレイできます。</div>
-            </div>
-            <div class="announce-date">2026.08.08</div>
-          </div>
+          <details class="announce-item announce-accordion">
+            <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">新着</span><span class="announce-title" data-i18n="ann11.title">ぷにねこジャンプ パッチノート</span><time class="announce-date">2026.08.13</time><span class="announce-chevron" aria-hidden="true"></span></summary>
+            <div class="announce-desc"><span data-i18n="ann11.desc">バージョンごとの変更内容を1つの記事に新しい順でまとめています。</span> <a class="announce-detail-link" href="updates/#patch-notes" data-i18n="ann11.link">すべてのパッチノートを見る</a></div>
+          </details>
+          <details class="announce-item announce-accordion">
+            <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">新着</span><span class="announce-title" data-i18n="ann10.title">ぷにねこジャンプ ゲームガイドを公開</span><time class="announce-date">2026.08.13</time><span class="announce-chevron" aria-hidden="true"></span></summary>
+            <div class="announce-desc" data-i18n="ann10.desc">成長ステータス、ラック・コンボ・チャージ、コイン報酬、よくある質問を見やすくまとめたゲームガイドを公式サイトに追加しました。</div>
+          </details>
+          <details class="announce-item announce-accordion">
+            <summary class="announce-summary"><span class="announce-badge badge-notice" data-i18n="ann.badge.notice">お知らせ</span><span class="announce-title" data-i18n="ann8.title">Appleプラットフォームに最新アップデートを適用</span><time class="announce-date">2026.08.11</time><span class="announce-chevron" aria-hidden="true"></span></summary>
+            <div class="announce-desc" data-i18n="ann8.desc">App Storeの審査が完了し、ぷにねこジャンプ バージョン1.4をiPhone・iPad・Macで利用できます。</div>
+          </details>
+          <details class="announce-item announce-accordion">
+            <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">新着</span><span class="announce-title" data-i18n="ann9.title">Station Masters — リリース準備中</span><time class="announce-date">2026.08~</time><span class="announce-chevron" aria-hidden="true"></span></summary>
+            <div class="announce-desc" data-i18n="ann9.desc">Station Mastersは2026年8月からリリース準備を進めています。日程が確定次第、詳しい情報をお知らせします。</div>
+          </details>
         </div>
         <div class="announce-footer">
           <p class="announce-home-note" data-i18n="ann.homeNote">ホームページには最新4件を表示し、過去のお知らせは掲示板に保管します。</p>
-          <a class="announce-all-link" href="updates/"><span data-i18n="ann.all">すべてのお知らせを見る</span><span class="announce-count">9</span><span aria-hidden="true">→</span></a>
+          <a class="announce-all-link" href="updates/"><span data-i18n="ann.all">すべてのお知らせを見る</span><span class="announce-count">10</span><span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -1450,8 +1445,8 @@
         'ann6.desc': 'ぷにねこダッシュは2026.05.05にGitHubへ初回登録され、PangChu Studioの新しいプロジェクトとして現在開発中です。',
         'ann7.title': 'ぷにねこジャンプ iPhone・Mac版をApp Storeで配信開始',
         'ann7.desc': 'ぷにねこジャンプをApp Storeからダウンロードして、iPhoneとMacでプレイできます。',
-        'ann8.title': 'iOSアップデート日程のお知らせ',
-        'ann8.desc': 'App Storeの審査日程により、iOS版の更新がGoogle Play版より遅れる場合があります。差を縮め、最新バージョンをできるだけ早くお届けします。',
+        'ann8.title': 'Appleプラットフォームに最新アップデートを適用',
+        'ann8.desc': 'App Storeの審査が完了し、ぷにねこジャンプ バージョン1.4をiPhone・iPad・Macで利用できます。',
         'ann9.title': 'Station Masters — リリース準備中',
         'ann9.desc': 'Station Mastersは2026年8月からリリース準備を進めています。日程が確定次第、詳しい情報をお知らせします。',
         'ann4.title': 'ぷにねこジャンプ Windows版をMicrosoft Storeで配信中',

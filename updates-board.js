@@ -26,4 +26,10 @@
       });
     });
   });
+
+  const hashTarget = window.location.hash ? document.getElementById(decodeURIComponent(window.location.hash.slice(1))) : null;
+  if (hashTarget instanceof HTMLDetailsElement) {
+    hashTarget.open = true;
+    requestAnimationFrame(() => hashTarget.scrollIntoView({ block: "start" }));
+  }
 })();

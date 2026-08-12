@@ -37,6 +37,118 @@
   line-height: 1.78;
 }
 
+.guide-accordion {
+  margin-top: 22px;
+}
+
+.guide-toggle {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(77, 184, 255, 0.20);
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 9px 25px rgba(67, 133, 193, 0.09);
+  cursor: pointer;
+  list-style: none;
+  transition: border-color 0.16s, box-shadow 0.16s, transform 0.16s;
+}
+
+.guide-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.guide-toggle:hover {
+  border-color: rgba(77, 184, 255, 0.38);
+  box-shadow: 0 12px 30px rgba(67, 133, 193, 0.13);
+  transform: translateY(-1px);
+}
+
+.guide-toggle-copy {
+  min-width: 0;
+}
+
+.guide-toggle-copy strong,
+.guide-toggle-copy small {
+  display: block;
+}
+
+.guide-toggle-copy strong {
+  color: var(--primary-deep);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.guide-toggle-copy small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.guide-toggle-close {
+  display: none;
+}
+
+.guide-toggle-icon {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4db8ff, #2299ee);
+  box-shadow: 0 6px 16px rgba(51, 153, 238, 0.22);
+}
+
+.guide-toggle-icon::before,
+.guide-toggle-icon::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  border-radius: 999px;
+  background: #fff;
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.guide-toggle-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.guide-accordion[open] .guide-toggle-open {
+  display: none;
+}
+
+.guide-accordion[open] .guide-toggle-close {
+  display: inline;
+}
+
+.guide-accordion[open] .guide-toggle-icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.guide-body {
+  animation: guide-reveal 0.22s ease-out;
+}
+
+@keyframes guide-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .guide-metrics {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -341,6 +453,11 @@
     padding: 18px 16px;
   }
 
+  .guide-toggle {
+    min-height: 68px;
+    padding: 14px;
+  }
+
   .stat-grid,
   .equipment-grid,
   .guide-topic-grid,
@@ -361,6 +478,12 @@
 
   .guide-disclaimer {
     text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guide-body {
+    animation: none;
   }
 }
 

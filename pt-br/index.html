@@ -737,6 +737,15 @@
               <p class="guide-intro" data-i18n="guide.intro">Mantenha o combo entre as nuvens, aumente a pontuação e combine atributos de evolução com skins e efeitos para criar seu estilo.</p>
             </div>
 
+            <details class="guide-accordion">
+              <summary class="guide-toggle">
+                <span class="guide-toggle-copy">
+                  <strong><span class="guide-toggle-open" data-i18n="guide.toggle.open">Abrir o guia completo</span><span class="guide-toggle-close" data-i18n="guide.toggle.close">Fechar o guia</span></strong>
+                  <small data-i18n="guide.toggle.hint">Atributos, Sorte, combos, Carga, moedas e dicas rápidas</small>
+                </span>
+                <span class="guide-toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="guide-body">
             <div class="guide-metrics" aria-label="Atributos de Evolução">
               <div class="guide-metric"><strong data-i18n="guide.metric.points">+1</strong><span data-i18n="guide.metric.pointsLabel">Ponto de evolução a cada 2 níveis de perfil</span></div>
               <div class="guide-metric"><strong data-i18n="guide.metric.cap">10</strong><span data-i18n="guide.metric.capLabel">Máximo de pontos por atributo</span></div>
@@ -867,7 +876,9 @@
               </div>
             </section>
 
-            <p class="guide-disclaimer" data-i18n="guide.disclaimer">Valores e recompensas podem mudar em atualizações de balanceamento. As informações mais recentes exibidas no jogo têm prioridade.</p>
+                <p class="guide-disclaimer" data-i18n="guide.disclaimer">Valores e recompensas podem mudar em atualizações de balanceamento. As informações mais recentes exibidas no jogo têm prioridade.</p>
+              </div>
+            </details>
           </div>
         </section>
 
@@ -884,42 +895,26 @@
         <div class="section-title" data-i18n="ann.title">Novidades e Avisos</div>
         <div class="section-sub" data-i18n="ann.sub">Últimas notícias e atualizações da PangChu Studio.</div>
         <div class="announce-list">
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann10.title">Guia de Gatinho Pula-Pula publicado</div>
-              <div class="announce-desc" data-i18n="ann10.desc">Adicionamos ao site um guia visual com atributos de evolução, Sorte, combos, Carga, moedas e perguntas frequentes.</div>
-            </div>
-            <div class="announce-date">2026.08.13</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">Aviso</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann8.title">Aviso sobre o calendário de atualizações do iOS</div>
-              <div class="announce-desc" data-i18n="ann8.desc">O cronograma de análise da App Store pode fazer a atualização do iOS chegar depois da versão do Google Play. Estamos trabalhando para reduzir essa diferença o mais rápido possível.</div>
-            </div>
-            <div class="announce-date">2026.08.09</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann9.title">Station Masters — preparando o lançamento</div>
-              <div class="announce-desc" data-i18n="ann9.desc">A preparação para o lançamento começa em agosto de 2026. Mais detalhes serão divulgados quando o cronograma for confirmado.</div>
-            </div>
-            <div class="announce-date">2026.08~</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann7.title">Gatinho Pula-Pula disponível na App Store para iPhone e Mac</div>
-              <div class="announce-desc" data-i18n="ann7.desc">Baixe Gatinho Pula-Pula na App Store e jogue no iPhone ou Mac.</div>
-            </div>
-            <div class="announce-date">2026.08.08</div>
-          </div>
+          <details class="announce-item announce-accordion">
+            <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span><span class="announce-title" data-i18n="ann11.title">Notas de atualização de Gatinho Pula-Pula</span><time class="announce-date">2026.08.13</time><span class="announce-chevron" aria-hidden="true"></span></summary>
+            <div class="announce-desc"><span data-i18n="ann11.desc">As mudanças de todas as versões ficam reunidas em uma única publicação, da mais recente para a mais antiga.</span> <a class="announce-detail-link" href="updates/#patch-notes" data-i18n="ann11.link">Ver todas as notas</a></div>
+          </details>
+          <details class="announce-item announce-accordion">
+            <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span><span class="announce-title" data-i18n="ann10.title">Guia de Gatinho Pula-Pula publicado</span><time class="announce-date">2026.08.13</time><span class="announce-chevron" aria-hidden="true"></span></summary>
+            <div class="announce-desc" data-i18n="ann10.desc">Adicionamos ao site um guia visual com atributos de evolução, Sorte, combos, Carga, moedas e perguntas frequentes.</div>
+          </details>
+          <details class="announce-item announce-accordion">
+            <summary class="announce-summary"><span class="announce-badge badge-notice" data-i18n="ann.badge.notice">Aviso</span><span class="announce-title" data-i18n="ann8.title">Atualização mais recente disponível nas plataformas Apple</span><time class="announce-date">2026.08.11</time><span class="announce-chevron" aria-hidden="true"></span></summary>
+            <div class="announce-desc" data-i18n="ann8.desc">A análise da App Store foi concluída, e a versão 1.4 de Gatinho Pula-Pula já está disponível para iPhone, iPad e Mac.</div>
+          </details>
+          <details class="announce-item announce-accordion">
+            <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span><span class="announce-title" data-i18n="ann9.title">Station Masters — preparando o lançamento</span><time class="announce-date">2026.08~</time><span class="announce-chevron" aria-hidden="true"></span></summary>
+            <div class="announce-desc" data-i18n="ann9.desc">A preparação para o lançamento começa em agosto de 2026. Mais detalhes serão divulgados quando o cronograma for confirmado.</div>
+          </details>
         </div>
         <div class="announce-footer">
           <p class="announce-home-note" data-i18n="ann.homeNote">A página inicial mostra as quatro publicações mais recentes; as anteriores ficam no mural de avisos.</p>
-          <a class="announce-all-link" href="updates/"><span data-i18n="ann.all">Ver todas as atualizações</span><span class="announce-count">9</span><span aria-hidden="true">→</span></a>
+          <a class="announce-all-link" href="updates/"><span data-i18n="ann.all">Ver todas as atualizações</span><span class="announce-count">10</span><span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -1644,8 +1639,8 @@ Um novo ciclo começa após o Dia 7. O horário é 00:00 UTC, ou 9h na Coreia.</
         'ann6.desc': 'Gatinho Corre-Corre foi registrado pela primeira vez no GitHub em 2026.05.05 e está em desenvolvimento como um novo projeto da PangChu Studio.',
         'ann7.title': 'Gatinho Pula-Pula disponível na App Store para iPhone e Mac',
         'ann7.desc': 'Baixe Gatinho Pula-Pula na App Store e jogue no iPhone ou Mac.',
-        'ann8.title': 'Aviso sobre o calendário de atualizações do iOS',
-        'ann8.desc': 'O cronograma de análise da App Store pode fazer a atualização do iOS chegar depois da versão do Google Play. Estamos trabalhando para reduzir essa diferença o mais rápido possível.',
+        'ann8.title': 'Atualização mais recente disponível nas plataformas Apple',
+        'ann8.desc': 'A análise da App Store foi concluída, e a versão 1.4 de Gatinho Pula-Pula já está disponível para iPhone, iPad e Mac.',
         'ann9.title': 'Station Masters — preparando o lançamento',
         'ann9.desc': 'A preparação para o lançamento começa em agosto de 2026. Mais detalhes serão divulgados quando o cronograma for confirmado.',
         'ann4.title': 'Versão Windows de Gatinho Pula-Pula na Microsoft Store',
