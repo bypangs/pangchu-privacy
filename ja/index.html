@@ -589,6 +589,7 @@
       .lang-btn { padding: 5px 8px; font-size: 11px; }
     }
   </style>
+  <link rel="stylesheet" href="../game-guide.css" />
 </head>
 <body>
 
@@ -726,6 +727,150 @@
           </div>
         </div>
 
+        <!-- GAME GUIDE -->
+        <section class="game-guide" aria-labelledby="game-guide-title">
+          <div class="guide-shell">
+            <div class="guide-heading">
+              <div class="section-label" data-i18n="guide.label">ゲームガイド</div>
+              <h2 class="guide-title" id="game-guide-title" data-i18n="guide.title">ぷにねこジャンプ ゲームガイド</h2>
+              <p class="guide-intro" data-i18n="guide.intro">雲のコンボをつないでスコアを伸ばし、成長ステータスとスキン・エフェクトを組み合わせて自分だけのプレイスタイルを作りましょう。</p>
+            </div>
+
+            <div class="guide-metrics" aria-label="成長ステータス">
+              <div class="guide-metric"><strong data-i18n="guide.metric.points">+1</strong><span data-i18n="guide.metric.pointsLabel">プロフィールレベル2ごとに成長ポイント</span></div>
+              <div class="guide-metric"><strong data-i18n="guide.metric.cap">10</strong><span data-i18n="guide.metric.capLabel">各ステータスの最大ポイント</span></div>
+              <div class="guide-metric"><strong data-i18n="guide.metric.total">50</strong><span data-i18n="guide.metric.totalLabel">レベル100までに獲得する合計ポイント</span></div>
+            </div>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.growth.title">成長ステータス</h3>
+                <p data-i18n="guide.growth.desc">装備中のスキンとエフェクトのステータスも成長ステータスに加算されます。</p>
+              </div>
+              <div class="stat-grid">
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.speed.name">スピード</strong>
+              <p class="stat-effect" data-i18n="guide.stat.speed.effect">左右の移動を速くします。</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">成長ポイント1あたり</span>
+              <strong class="stat-rate" data-i18n="guide.stat.speed.rate">移動速度 +0.2%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.jump.name">ジャンプ</strong>
+              <p class="stat-effect" data-i18n="guide.stat.jump.effect">通常ジャンプの高さを上げます。</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">成長ポイント1あたり</span>
+              <strong class="stat-rate" data-i18n="guide.stat.jump.rate">ジャンプ高度 +0.2%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.luck.name">ラック</strong>
+              <p class="stat-effect" data-i18n="guide.stat.luck.effect">幸運コンボと追加スコアの発生率を上げます。</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">成長ポイント1あたり</span>
+              <strong class="stat-rate" data-i18n="guide.stat.luck.rate">発動率 +2%ポイント</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.power.name">パワー</strong>
+              <p class="stat-effect" data-i18n="guide.stat.power.effect">チャージブーストでより高く上がれます。</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">成長ポイント1あたり</span>
+              <strong class="stat-rate" data-i18n="guide.stat.power.rate">ブースト高度 +0.4%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.charge.name">チャージ</strong>
+              <p class="stat-effect" data-i18n="guide.stat.charge.effect">着地時のゲージ充填を速くします。</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">成長ポイント1あたり</span>
+              <strong class="stat-rate" data-i18n="guide.stat.charge.rate">チャージ量 +1%</strong>
+            </article>
+              </div>
+            </section>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.equip.title">スキン・エフェクトのステータス</h3>
+                <p data-i18n="guide.equip.intro">装備ステータスは成長ステータスより少し強く、両方が合算されます。</p>
+              </div>
+              <div class="equipment-grid">
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.speed.name">スピード・ジャンプ</strong>
+              <span data-i18n="guide.equip.speed.rate">装備ステータス1あたり +0.5%</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.luck.name">ラック</strong>
+              <span data-i18n="guide.equip.luck.rate">発動率 +2%ポイント</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.power.name">パワー</strong>
+              <span data-i18n="guide.equip.power.rate">ブースト高度 +1.5%</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.charge.name">チャージ</strong>
+              <span data-i18n="guide.equip.charge.rate">チャージ量 +1%</span>
+            </div>
+              </div>
+            </section>
+
+            <div class="guide-topic-grid">
+              <article class="guide-topic">
+                <h3 data-i18n="guide.luck.title">ラック</h3>
+                <span class="guide-topic-metric" data-i18n="guide.luck.metric">幸運着地でコンボ +2</span>
+                <ul>
+              <li data-i18n="guide.luck.1">通常着地は+1、幸運着地は+2コンボとランダム追加スコアを獲得します。</li>
+              <li data-i18n="guide.luck.2">ゲーム終了時の別判定でコインが1枚追加される場合があります。</li>
+              <li data-i18n="guide.luck.3">基本コインを倍率で増やすのではなく、コンボとスコアを伸ばして間接的に報酬を増やします。</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.combo.title">コンボ</h3>
+                <span class="guide-topic-metric" data-i18n="guide.combo.metric">20コンボ: 経験値+5 · 40コンボ: 経験値+10</span>
+                <ul>
+              <li data-i18n="guide.combo.1">新しい雲に着地するとコンボが続きます。</li>
+              <li data-i18n="guide.combo.2">同じ雲に再び着地すると現在のコンボがリセットされます。</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.charge.title">チャージ</h3>
+                <span class="guide-topic-metric" data-i18n="guide.charge.metric">ゲージ100% → ブースト · コンボ+6〜8</span>
+                <ul>
+              <li data-i18n="guide.charge.1">100%になったらチャージエリアで強力なジャンプを使えます。</li>
+              <li data-i18n="guide.charge.2">チャージは充填周期を短くし、パワーはブースト高度を上げます。</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.coin.title">コイン報酬</h3>
+                <p data-i18n="guide.coin.body">1プレイの基本コイン計算式</p>
+                <div class="guide-formula" data-i18n="guide.coin.formula">3 +（最終スコア ÷ 120）+ 新記録ボーナス5</div>
+                <ul>
+              <li data-i18n="guide.coin.1">小数点以下は切り捨て、最大100,000点まで反映され、幸運で1コイン追加される場合があります。</li>
+              <li data-i18n="guide.coin.2">5秒未満または30点未満のプレイには通常報酬がありません。</li>
+                </ul>
+              </article>
+            </div>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.reward.title">コインを多く獲得する手順</h3>
+                <p data-i18n="guide.reward.sub">復活自体にボーナスはありません。最終スコアを伸ばしてから、そのプレイの報酬コインを2倍にしましょう。</p>
+              </div>
+              <ol class="reward-flow">
+                <li class="reward-step"><b>1</b><strong data-i18n="guide.reward.step1.title">最初の2倍を見送る</strong><span data-i18n="guide.reward.step1.desc">最初のゲームオーバーでは2倍を使いません。</span></li>
+                <li class="reward-step"><b>2</b><strong data-i18n="guide.reward.step2.title">復活する</strong><span data-i18n="guide.reward.step2.desc">同じプレイを続けます。</span></li>
+                <li class="reward-step"><b>3</b><strong data-i18n="guide.reward.step3.title">スコアを伸ばす</strong><span data-i18n="guide.reward.step3.desc">最終スコアと基本コインを増やします。</span></li>
+                <li class="reward-step"><b>4</b><strong data-i18n="guide.reward.step4.title">最後に2倍</strong><span data-i18n="guide.reward.step4.desc">そのプレイで獲得したコインだけをもう一度受け取ります。</span></li>
+              </ol>
+            </section>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading"><h3 data-i18n="guide.tips.title">クイックヒント</h3></div>
+              <div class="guide-tip-grid">
+                <div class="guide-tip" data-i18n="guide.tip1">同じ雲はコンボを切るため、新しい雲を優先しましょう。</div>
+                <div class="guide-tip" data-i18n="guide.tip2">初心者はスピードとジャンプを先に上げると操作しやすくなります。</div>
+                <div class="guide-tip" data-i18n="guide.tip3">危険な場面では満タンのチャージを温存しすぎないようにしましょう。</div>
+                <div class="guide-tip" data-i18n="guide.tip4">新記録では経験値とコインボーナスが付きます。毎日の出席報酬も忘れずに。</div>
+              </div>
+            </section>
+
+            <p class="guide-disclaimer" data-i18n="guide.disclaimer">ゲーム内の数値と報酬はバランス調整により変更される場合があります。最新情報はゲーム内表示を優先します。</p>
+          </div>
+        </section>
+
+
       </div>
     </section>
 
@@ -852,6 +997,75 @@
             </button>
             <div class="faq-a" data-i18n="faq6.a">ゲーム中に気づいた不具合、改善アイデア、フィードバックは support@pangchustudio.co.kr までお送りください。いただいた内容は、ゲームとサービス改善の参考にさせていただきます。</div>
           </div>
+          <div class="faq-group-label" data-i18n="faq.gameGroup">ゲームプレイと報酬</div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq7.q">成長ポイントはいつもらえますか？</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq7.a">プロフィールレベルが2上がるごとに成長ポイントを1獲得します。各ステータスは最大10ポイント、合計50ポイントまで獲得できます。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq8.q">間違えて上げたステータスはリセットできますか？</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq8.a">はい。初回は無料で、2回目以降は2,000コイン必要です。誤操作防止のため、リセットボタンをもう一度押すと確定します。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq9.q">ラックが発動すると何が変わりますか？</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq9.a">通常着地はコンボ+1、幸運着地は+2となりランダム追加スコアも獲得します。終了時のコイン計算でも別の幸運判定により1コイン追加される場合があります。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq10.q">復活するとコインが2倍になりますか？</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq10.a">いいえ。復活後にスコアを伸ばし、最後のゲームオーバーでコイン2倍を使うと最も多く獲得できます。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq11.q">コイン2倍は所持コイン全体に適用されますか？</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq11.a">いいえ。そのプレイで獲得したゲーム報酬コインだけが対象で、所持コインやショップ購入コインには適用されません。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq12.q">出席報酬はどうやって受け取りますか？</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq12.a">ログイン済みアカウントは1日1回受け取れます。
+1日目50 → 2日目75 → 3日目100 → 4日目125 → 5日目150 → 6日目200 → 7日目300コイン
+7日目の後は新しい周期が始まります。基準時刻はUTC 0時、韓国時間午前9時です。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq13.q">ショップの初回購入2倍はどう適用されますか？</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq13.a">各コイン商品は初回購入1回だけ2倍になります。
+500 → 1,000 · 1,200 → 2,400 · 3,000 → 6,000 · 7,000 → 14,000コイン
+ゲーム終了時のコイン2倍とは別の特典です。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq14.q">ゲームを終えたのに報酬がありません。</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq14.a">プレイ時間が5秒未満、または最終スコアが30点未満の場合は超短時間・異常プレイとして報酬が支給されません。</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq15.q">ゲストアカウントでも出席報酬を受け取れますか？</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq15.a">重複支給を防ぎ進行状況を安全に保存するため、ログイン済みのクラウドアカウントのみ受け取れます。</div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1031,6 +1245,7 @@
     </div>
   </footer>
 
+  <script src="../game-guide-i18n.js"></script>
   <script>
     /* ── TRANSLATIONS ── */
     const T = {
@@ -1525,6 +1740,10 @@
         'footer.tagline': 'Pequeno estúdio indie de jogos', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
       },
     };
+
+    Object.entries(window.GAME_GUIDE_T || {}).forEach(([lang, entries]) => {
+      if (T[lang]) Object.assign(T[lang], entries);
+    });
 
     // 현재 언어와 사용자가 직접 고른 언어를 기억해 루트 접속 안내가 흔들리지 않게 한다.
     let currentLang = 'ja';

@@ -589,6 +589,7 @@
       .lang-btn { padding: 5px 8px; font-size: 11px; }
     }
   </style>
+  <link rel="stylesheet" href="../game-guide.css" />
 </head>
 <body>
 
@@ -726,6 +727,150 @@
           </div>
         </div>
 
+        <!-- GAME GUIDE -->
+        <section class="game-guide" aria-labelledby="game-guide-title">
+          <div class="guide-shell">
+            <div class="guide-heading">
+              <div class="section-label" data-i18n="guide.label">Guia do Jogo</div>
+              <h2 class="guide-title" id="game-guide-title" data-i18n="guide.title">Guia de Gatinho Pula-Pula</h2>
+              <p class="guide-intro" data-i18n="guide.intro">Mantenha o combo entre as nuvens, aumente a pontuação e combine atributos de evolução com skins e efeitos para criar seu estilo.</p>
+            </div>
+
+            <div class="guide-metrics" aria-label="Atributos de Evolução">
+              <div class="guide-metric"><strong data-i18n="guide.metric.points">+1</strong><span data-i18n="guide.metric.pointsLabel">Ponto de evolução a cada 2 níveis de perfil</span></div>
+              <div class="guide-metric"><strong data-i18n="guide.metric.cap">10</strong><span data-i18n="guide.metric.capLabel">Máximo de pontos por atributo</span></div>
+              <div class="guide-metric"><strong data-i18n="guide.metric.total">50</strong><span data-i18n="guide.metric.totalLabel">Total de pontos obtidos até o nível 100</span></div>
+            </div>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.growth.title">Atributos de Evolução</h3>
+                <p data-i18n="guide.growth.desc">Os atributos das skins e efeitos equipados são somados aos atributos de evolução.</p>
+              </div>
+              <div class="stat-grid">
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.speed.name">Velocidade</strong>
+              <p class="stat-effect" data-i18n="guide.stat.speed.effect">Aumenta a velocidade lateral.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Por ponto de evolução</span>
+              <strong class="stat-rate" data-i18n="guide.stat.speed.rate">Velocidade +0,2%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.jump.name">Salto</strong>
+              <p class="stat-effect" data-i18n="guide.stat.jump.effect">Aumenta a altura do salto normal.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Por ponto de evolução</span>
+              <strong class="stat-rate" data-i18n="guide.stat.jump.rate">Altura do salto +0,2%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.luck.name">Sorte</strong>
+              <p class="stat-effect" data-i18n="guide.stat.luck.effect">Aumenta a chance de combo de sorte e pontos extras.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Por ponto de evolução</span>
+              <strong class="stat-rate" data-i18n="guide.stat.luck.rate">Chance +2 p.p.</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.power.name">Poder</strong>
+              <p class="stat-effect" data-i18n="guide.stat.power.effect">Sobe mais alto com o impulso carregado.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Por ponto de evolução</span>
+              <strong class="stat-rate" data-i18n="guide.stat.power.rate">Altura do impulso +0,4%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.charge.name">Carga</strong>
+              <p class="stat-effect" data-i18n="guide.stat.charge.effect">Enche a barra mais rápido ao pousar.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Por ponto de evolução</span>
+              <strong class="stat-rate" data-i18n="guide.stat.charge.rate">Recarga +1%</strong>
+            </article>
+              </div>
+            </section>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.equip.title">Atributos de Skins e Efeitos</h3>
+                <p data-i18n="guide.equip.intro">Atributos de equipamento são um pouco mais fortes e se somam aos de evolução.</p>
+              </div>
+              <div class="equipment-grid">
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.speed.name">Velocidade · Salto</strong>
+              <span data-i18n="guide.equip.speed.rate">+0,5% por atributo de equipamento</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.luck.name">Sorte</strong>
+              <span data-i18n="guide.equip.luck.rate">Chance +2 p.p.</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.power.name">Poder</strong>
+              <span data-i18n="guide.equip.power.rate">Altura do impulso +1,5%</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.charge.name">Carga</strong>
+              <span data-i18n="guide.equip.charge.rate">Recarga +1%</span>
+            </div>
+              </div>
+            </section>
+
+            <div class="guide-topic-grid">
+              <article class="guide-topic">
+                <h3 data-i18n="guide.luck.title">Sorte</h3>
+                <span class="guide-topic-metric" data-i18n="guide.luck.metric">+2 de combo em um pouso de sorte</span>
+                <ul>
+              <li data-i18n="guide.luck.1">Um pouso normal dá +1; um pouso de sorte dá +2 de combo e pontos extras aleatórios.</li>
+              <li data-i18n="guide.luck.2">Uma verificação separada no fim da partida pode adicionar 1 moeda.</li>
+              <li data-i18n="guide.luck.3">Sorte aumenta a recompensa indiretamente ao acelerar combo e pontuação; ela não multiplica as moedas-base.</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.combo.title">Combo</h3>
+                <span class="guide-topic-metric" data-i18n="guide.combo.metric">Combo 20: +5 XP · Combo 40: +10 XP</span>
+                <ul>
+              <li data-i18n="guide.combo.1">Pousar em uma nuvem nova mantém o combo.</li>
+              <li data-i18n="guide.combo.2">Pousar novamente na mesma nuvem reinicia o combo atual.</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.charge.title">Carga</h3>
+                <span class="guide-topic-metric" data-i18n="guide.charge.metric">Barra 100% → impulso · combo +6–8</span>
+                <ul>
+              <li data-i18n="guide.charge.1">Com 100%, use a área de carga para um salto poderoso.</li>
+              <li data-i18n="guide.charge.2">Carga reduz o tempo de recarga; Poder aumenta a altura do impulso.</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.coin.title">Recompensa em Moedas</h3>
+                <p data-i18n="guide.coin.body">Cálculo básico por partida</p>
+                <div class="guide-formula" data-i18n="guide.coin.formula">3 + (pontuação final ÷ 120) + 5 por novo recorde</div>
+                <ul>
+              <li data-i18n="guide.coin.1">Decimais são descartados; até 100.000 pontos contam. Sorte pode adicionar 1 moeda.</li>
+              <li data-i18n="guide.coin.2">Partidas abaixo de 5 segundos ou 30 pontos não recebem recompensa normal.</li>
+                </ul>
+              </article>
+            </div>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.reward.title">Melhor Rota para Ganhar Moedas</h3>
+                <p data-i18n="guide.reward.sub">Reviver não dá moedas por si só. Aumente a pontuação final e depois duplique as moedas daquela partida.</p>
+              </div>
+              <ol class="reward-flow">
+                <li class="reward-step"><b>1</b><strong data-i18n="guide.reward.step1.title">Ignore o 2× inicial</strong><span data-i18n="guide.reward.step1.desc">Não use 2× no primeiro fim de jogo.</span></li>
+                <li class="reward-step"><b>2</b><strong data-i18n="guide.reward.step2.title">Reviva</strong><span data-i18n="guide.reward.step2.desc">Continue a mesma partida.</span></li>
+                <li class="reward-step"><b>3</b><strong data-i18n="guide.reward.step3.title">Aumente a pontuação</strong><span data-i18n="guide.reward.step3.desc">Eleve a pontuação final e as moedas-base.</span></li>
+                <li class="reward-step"><b>4</b><strong data-i18n="guide.reward.step4.title">Use 2× no final</strong><span data-i18n="guide.reward.step4.desc">Receba outra vez apenas as moedas daquela partida.</span></li>
+              </ol>
+            </section>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading"><h3 data-i18n="guide.tips.title">Dicas Rápidas</h3></div>
+              <div class="guide-tip-grid">
+                <div class="guide-tip" data-i18n="guide.tip1">Priorize nuvens novas: repetir a mesma nuvem quebra o combo.</div>
+                <div class="guide-tip" data-i18n="guide.tip2">Para iniciantes, Velocidade e Salto facilitam o controle primeiro.</div>
+                <div class="guide-tip" data-i18n="guide.tip3">Em momentos de risco, não guarde por muito tempo a barra cheia.</div>
+                <div class="guide-tip" data-i18n="guide.tip4">Novos recordes dão XP e moedas extras; lembre-se da recompensa diária.</div>
+              </div>
+            </section>
+
+            <p class="guide-disclaimer" data-i18n="guide.disclaimer">Valores e recompensas podem mudar em atualizações de balanceamento. As informações mais recentes exibidas no jogo têm prioridade.</p>
+          </div>
+        </section>
+
+
       </div>
     </section>
 
@@ -852,6 +997,75 @@
             </button>
             <div class="faq-a" data-i18n="faq6.a">Você pode enviar feedback, relatos de bugs ou ideias de melhoria para support@pangchustudio.co.kr. Seus comentários podem ser usados como referência para melhorar nossos jogos e serviços.</div>
           </div>
+          <div class="faq-group-label" data-i18n="faq.gameGroup">Jogabilidade e Recompensas</div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq7.q">Quando recebo pontos de evolução?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq7.a">Você recebe 1 ponto de evolução a cada 2 níveis de perfil. Cada atributo aceita até 10 pontos, totalizando 50.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq8.q">Posso resetar atributos que aumentei por engano?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq8.a">Sim. O primeiro reset é grátis; os seguintes custam 2.000 moedas. Para evitar erros, pressione o botão de reset outra vez para confirmar.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq9.q">O que muda quando a Sorte é ativada?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq9.a">Um pouso normal dá +1 de combo; um pouso de sorte dá +2 e pontos extras aleatórios. Uma verificação separada no cálculo final também pode adicionar 1 moeda.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq10.q">Reviver dobra minhas moedas?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq10.a">Não. Reviva, aumente a pontuação final e use moedas 2× apenas no último fim de jogo para obter a maior recompensa.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq11.q">Moedas 2× se aplica a todas as moedas que possuo?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq11.a">Não. Aplica-se somente às moedas de recompensa daquela partida, não ao saldo atual nem às moedas compradas na loja.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq12.q">Como recebo a recompensa de presença diária?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq12.a">Contas conectadas podem receber uma recompensa por dia.
+Dia 1: 50 → Dia 2: 75 → Dia 3: 100 → Dia 4: 125 → Dia 5: 150 → Dia 6: 200 → Dia 7: 300 moedas
+Um novo ciclo começa após o Dia 7. O horário é 00:00 UTC, ou 9h na Coreia.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq13.q">Como funciona o 2× da primeira compra na loja?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq13.a">Cada pacote de moedas paga o dobro apenas na primeira compra.
+500 → 1.000 · 1.200 → 2.400 · 3.000 → 6.000 · 7.000 → 14.000 moedas
+É um benefício separado do 2× de moedas no fim da partida.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq14.q">Por que terminei uma partida sem receber recompensa?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq14.a">Partidas com menos de 5 segundos ou pontuação final abaixo de 30 são tratadas como jogo anormal ou curto demais e não recebem recompensa.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq15.q">Uma conta de convidado recebe recompensa de presença?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq15.a">Para evitar pagamentos duplicados e salvar o progresso com segurança, a recompensa está disponível apenas em contas de nuvem conectadas.</div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1031,6 +1245,7 @@
     </div>
   </footer>
 
+  <script src="../game-guide-i18n.js"></script>
   <script>
     /* ── TRANSLATIONS ── */
     const T = {
@@ -1525,6 +1740,10 @@
         'footer.tagline': 'Pequeno estúdio indie de jogos', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
       },
     };
+
+    Object.entries(window.GAME_GUIDE_T || {}).forEach(([lang, entries]) => {
+      if (T[lang]) Object.assign(T[lang], entries);
+    });
 
     // 현재 언어와 사용자가 직접 고른 언어를 기억해 루트 접속 안내가 흔들리지 않게 한다.
     let currentLang = 'pt';

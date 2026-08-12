@@ -629,6 +629,7 @@
       .lang-btn { padding: 5px 8px; font-size: 11px; }
     }
   </style>
+  <link rel="stylesheet" href="game-guide.css" />
 </head>
 <body>
 
@@ -766,6 +767,150 @@
           </div>
         </div>
 
+        <!-- GAME GUIDE -->
+        <section class="game-guide" aria-labelledby="game-guide-title">
+          <div class="guide-shell">
+            <div class="guide-heading">
+              <div class="section-label" data-i18n="guide.label">Game Guide</div>
+              <h2 class="guide-title" id="game-guide-title" data-i18n="guide.title">MalangNyang Jump Game Guide</h2>
+              <p class="guide-intro" data-i18n="guide.intro">Keep your cloud combo going, build your score, and combine growth stats with skins and effects to shape your own play style.</p>
+            </div>
+
+            <div class="guide-metrics" aria-label="Growth Stats">
+              <div class="guide-metric"><strong data-i18n="guide.metric.points">+1</strong><span data-i18n="guide.metric.pointsLabel">Growth point every 2 profile levels</span></div>
+              <div class="guide-metric"><strong data-i18n="guide.metric.cap">10</strong><span data-i18n="guide.metric.capLabel">Maximum points per stat</span></div>
+              <div class="guide-metric"><strong data-i18n="guide.metric.total">50</strong><span data-i18n="guide.metric.totalLabel">Total points earned by level 100</span></div>
+            </div>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.growth.title">Growth Stats</h3>
+                <p data-i18n="guide.growth.desc">Growth stats and the stats on equipped skins and effects are applied together.</p>
+              </div>
+              <div class="stat-grid">
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.speed.name">Speed</strong>
+              <p class="stat-effect" data-i18n="guide.stat.speed.effect">Move left and right faster.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Per growth point</span>
+              <strong class="stat-rate" data-i18n="guide.stat.speed.rate">Move speed +0.2%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.jump.name">Jump</strong>
+              <p class="stat-effect" data-i18n="guide.stat.jump.effect">Increase the height of normal cloud jumps.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Per growth point</span>
+              <strong class="stat-rate" data-i18n="guide.stat.jump.rate">Jump height +0.2%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.luck.name">Luck</strong>
+              <p class="stat-effect" data-i18n="guide.stat.luck.effect">Raise the chance of luck combos and bonus score.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Per growth point</span>
+              <strong class="stat-rate" data-i18n="guide.stat.luck.rate">Trigger chance +2%p</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.power.name">Power</strong>
+              <p class="stat-effect" data-i18n="guide.stat.power.effect">Rise higher when using a charge boost.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Per growth point</span>
+              <strong class="stat-rate" data-i18n="guide.stat.power.rate">Boost height +0.4%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.charge.name">Charge</strong>
+              <p class="stat-effect" data-i18n="guide.stat.charge.effect">Fill the charge gauge faster on landing.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">Per growth point</span>
+              <strong class="stat-rate" data-i18n="guide.stat.charge.rate">Charge gain +1%</strong>
+            </article>
+              </div>
+            </section>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.equip.title">Skin &amp; Effect Stats</h3>
+                <p data-i18n="guide.equip.intro">Equipment stats are slightly stronger than growth stats and stack with them.</p>
+              </div>
+              <div class="equipment-grid">
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.speed.name">Speed · Jump</strong>
+              <span data-i18n="guide.equip.speed.rate">+0.5% per equipment stat</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.luck.name">Luck</strong>
+              <span data-i18n="guide.equip.luck.rate">Trigger chance +2%p</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.power.name">Power</strong>
+              <span data-i18n="guide.equip.power.rate">Boost height +1.5%</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.charge.name">Charge</strong>
+              <span data-i18n="guide.equip.charge.rate">Charge gain +1%</span>
+            </div>
+              </div>
+            </section>
+
+            <div class="guide-topic-grid">
+              <article class="guide-topic">
+                <h3 data-i18n="guide.luck.title">Luck</h3>
+                <span class="guide-topic-metric" data-i18n="guide.luck.metric">+2 combo on a lucky landing</span>
+                <ul>
+              <li data-i18n="guide.luck.1">A normal landing adds 1 combo; a lucky landing adds 2 and awards random bonus score.</li>
+              <li data-i18n="guide.luck.2">A separate luck check at game end can add 1 coin.</li>
+              <li data-i18n="guide.luck.3">Luck raises coins indirectly by accelerating combo and score, not by multiplying base coins.</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.combo.title">Combo</h3>
+                <span class="guide-topic-metric" data-i18n="guide.combo.metric">20 combo: +5 XP · 40 combo: +10 XP</span>
+                <ul>
+              <li data-i18n="guide.combo.1">Landing on a new cloud keeps the combo going.</li>
+              <li data-i18n="guide.combo.2">Landing on the same cloud again resets the current combo.</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.charge.title">Charge</h3>
+                <span class="guide-topic-metric" data-i18n="guide.charge.metric">100% gauge → boost · combo +6–8</span>
+                <ul>
+              <li data-i18n="guide.charge.1">Use the charge area at 100% for a powerful jump.</li>
+              <li data-i18n="guide.charge.2">Charge shortens the refill cycle; Power increases boost height.</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.coin.title">Coin Reward</h3>
+                <p data-i18n="guide.coin.body">Base reward for one run</p>
+                <div class="guide-formula" data-i18n="guide.coin.formula">3 + (final score ÷ 120) + 5 for a new record</div>
+                <ul>
+              <li data-i18n="guide.coin.1">Decimals are dropped; up to 100,000 score is counted. Luck may add 1 coin.</li>
+              <li data-i18n="guide.coin.2">Runs under 5 seconds or below 30 points do not receive normal rewards.</li>
+                </ul>
+              </article>
+            </div>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.reward.title">Best Coin Route</h3>
+                <p data-i18n="guide.reward.sub">Revival does not add coins by itself. Use it to raise the final score, then double the final run reward.</p>
+              </div>
+              <ol class="reward-flow">
+                <li class="reward-step"><b>1</b><strong data-i18n="guide.reward.step1.title">Skip 2×</strong><span data-i18n="guide.reward.step1.desc">Do not double at the first game over.</span></li>
+                <li class="reward-step"><b>2</b><strong data-i18n="guide.reward.step2.title">Revive</strong><span data-i18n="guide.reward.step2.desc">Continue the same run.</span></li>
+                <li class="reward-step"><b>3</b><strong data-i18n="guide.reward.step3.title">Raise the score</strong><span data-i18n="guide.reward.step3.desc">Increase the final score and base reward.</span></li>
+                <li class="reward-step"><b>4</b><strong data-i18n="guide.reward.step4.title">Use final 2×</strong><span data-i18n="guide.reward.step4.desc">Double only the coins earned in that run.</span></li>
+              </ol>
+            </section>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading"><h3 data-i18n="guide.tips.title">Quick Tips</h3></div>
+              <div class="guide-tip-grid">
+                <div class="guide-tip" data-i18n="guide.tip1">Prioritize new clouds—the same cloud breaks your combo.</div>
+                <div class="guide-tip" data-i18n="guide.tip2">New players will find Speed and Jump easiest to feel first.</div>
+                <div class="guide-tip" data-i18n="guide.tip3">Do not save a full charge gauge for too long in a risky moment.</div>
+                <div class="guide-tip" data-i18n="guide.tip4">New records grant XP and coin bonuses; remember daily attendance rewards.</div>
+              </div>
+            </section>
+
+            <p class="guide-disclaimer" data-i18n="guide.disclaimer">Game values and rewards may change with balance updates. The latest information shown in the game takes priority.</p>
+          </div>
+        </section>
+
+
       </div>
     </section>
 
@@ -898,6 +1043,75 @@
             </button>
             <div class="faq-a" data-i18n="faq6.a">You can send feedback, bug reports, or improvement ideas to support@pangchustudio.co.kr. Your comments may be used to help improve our games and services.</div>
           </div>
+          <div class="faq-group-label" data-i18n="faq.gameGroup">Gameplay &amp; Rewards</div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq7.q">When do I receive growth points?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq7.a">You receive 1 growth point every 2 profile levels. Each stat can hold up to 10 points, for a total of 50 points.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq8.q">Can I reset stats I raised by mistake?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq8.a">Yes. The first reset is free; each later reset costs 2,000 coins. To prevent mistakes, press the reset button once more to confirm.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq9.q">What changes when Luck triggers?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq9.a">A normal landing adds 1 combo, while a lucky landing adds 2 and grants random bonus score. A separate luck check during end-of-game coin calculation can also add 1 coin.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq10.q">Does reviving double my coins?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq10.a">No. Revive, build a higher final score, then use coin 2× at the final game over for the largest reward.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq11.q">Does coin 2× apply to all coins I own?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq11.a">No. It applies only to gameplay reward coins earned in that run, not your existing balance or store purchases.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq12.q">How do daily attendance rewards work?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq12.a">Signed-in accounts can claim one reward per day.
+Day 1: 50 → Day 2: 75 → Day 3: 100 → Day 4: 125 → Day 5: 150 → Day 6: 200 → Day 7: 300 coins
+A new cycle begins after Day 7. The reset is at 00:00 UTC, or 9:00 AM Korea time.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq13.q">How does the shop's first-purchase 2× bonus work?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq13.a">Each coin product pays double only on its first purchase.
+500 → 1,000 · 1,200 → 2,400 · 3,000 → 6,000 · 7,000 → 14,000 coins
+This is separate from the end-of-game coin 2× reward.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq14.q">Why did I finish a game without receiving a reward?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq14.a">Runs shorter than 5 seconds or ending below 30 points are treated as abnormal or ultra-short play and do not receive rewards.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq15.q">Can a guest account receive attendance rewards?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq15.a">Attendance rewards are available only to signed-in cloud accounts so progress can be stored safely and duplicate rewards can be prevented.</div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1077,6 +1291,7 @@
     </div>
   </footer>
 
+  <script src="game-guide-i18n.js"></script>
   <script>
     /* ── TRANSLATIONS ── */
     const T = {
@@ -1591,6 +1806,10 @@
         'footer.tagline': 'Pequeno estúdio indie de jogos', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
       },
     };
+
+    Object.entries(window.GAME_GUIDE_T || {}).forEach(([lang, entries]) => {
+      if (T[lang]) Object.assign(T[lang], entries);
+    });
 
     // 현재 언어와 사용자가 직접 고른 언어를 기억해 루트 접속 안내가 흔들리지 않게 한다.
     let currentLang = 'en';

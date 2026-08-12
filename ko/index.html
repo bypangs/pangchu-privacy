@@ -589,6 +589,7 @@
       .lang-btn { padding: 5px 8px; font-size: 11px; }
     }
   </style>
+  <link rel="stylesheet" href="../game-guide.css" />
 </head>
 <body>
 
@@ -726,6 +727,150 @@
           </div>
         </div>
 
+        <!-- GAME GUIDE -->
+        <section class="game-guide" aria-labelledby="game-guide-title">
+          <div class="guide-shell">
+            <div class="guide-heading">
+              <div class="section-label" data-i18n="guide.label">게임 가이드</div>
+              <h2 class="guide-title" id="game-guide-title" data-i18n="guide.title">말랑냥이점프 게임 가이드</h2>
+              <p class="guide-intro" data-i18n="guide.intro">구름 콤보를 이어 점수를 올리고, 성장 스탯과 스킨·효과를 조합해 나만의 플레이 스타일을 완성하세요.</p>
+            </div>
+
+            <div class="guide-metrics" aria-label="성장 스탯">
+              <div class="guide-metric"><strong data-i18n="guide.metric.points">+1</strong><span data-i18n="guide.metric.pointsLabel">프로필 레벨 2마다 성장 포인트</span></div>
+              <div class="guide-metric"><strong data-i18n="guide.metric.cap">10</strong><span data-i18n="guide.metric.capLabel">스탯별 최대 투자 포인트</span></div>
+              <div class="guide-metric"><strong data-i18n="guide.metric.total">50</strong><span data-i18n="guide.metric.totalLabel">레벨 100까지 획득하는 총 포인트</span></div>
+            </div>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.growth.title">성장 스탯</h3>
+                <p data-i18n="guide.growth.desc">장착한 스킨과 효과의 스탯도 성장 스탯과 함께 적용됩니다.</p>
+              </div>
+              <div class="stat-grid">
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.speed.name">속도</strong>
+              <p class="stat-effect" data-i18n="guide.stat.speed.effect">좌우 이동을 더 빠르게 합니다.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">성장 포인트 1당</span>
+              <strong class="stat-rate" data-i18n="guide.stat.speed.rate">이동 속도 +0.2%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.jump.name">점프</strong>
+              <p class="stat-effect" data-i18n="guide.stat.jump.effect">기본 점프 높이를 높입니다.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">성장 포인트 1당</span>
+              <strong class="stat-rate" data-i18n="guide.stat.jump.rate">점프 높이 +0.2%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.luck.name">행운</strong>
+              <p class="stat-effect" data-i18n="guide.stat.luck.effect">행운 콤보와 추가 점수 확률을 높입니다.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">성장 포인트 1당</span>
+              <strong class="stat-rate" data-i18n="guide.stat.luck.rate">발동 확률 +2%p</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.power.name">파워</strong>
+              <p class="stat-effect" data-i18n="guide.stat.power.effect">차지 부스트로 더 높이 올라갑니다.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">성장 포인트 1당</span>
+              <strong class="stat-rate" data-i18n="guide.stat.power.rate">부스트 높이 +0.4%</strong>
+            </article>
+            <article class="stat-card">
+              <strong class="stat-name" data-i18n="guide.stat.charge.name">차지</strong>
+              <p class="stat-effect" data-i18n="guide.stat.charge.effect">착지할 때 게이지를 더 빠르게 채웁니다.</p>
+              <span class="stat-rate-label" data-i18n="guide.stat.rateLabel">성장 포인트 1당</span>
+              <strong class="stat-rate" data-i18n="guide.stat.charge.rate">충전량 +1%</strong>
+            </article>
+              </div>
+            </section>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.equip.title">스킨·효과 스탯</h3>
+                <p data-i18n="guide.equip.intro">장비 스탯은 성장 스탯보다 조금 강하며 서로 합산됩니다.</p>
+              </div>
+              <div class="equipment-grid">
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.speed.name">속도·점프</strong>
+              <span data-i18n="guide.equip.speed.rate">장비 스탯 1당 +0.5%</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.luck.name">행운</strong>
+              <span data-i18n="guide.equip.luck.rate">발동 확률 +2%p</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.power.name">파워</strong>
+              <span data-i18n="guide.equip.power.rate">부스트 높이 +1.5%</span>
+            </div>
+            <div class="equipment-item">
+              <strong data-i18n="guide.equip.charge.name">차지</strong>
+              <span data-i18n="guide.equip.charge.rate">충전량 +1%</span>
+            </div>
+              </div>
+            </section>
+
+            <div class="guide-topic-grid">
+              <article class="guide-topic">
+                <h3 data-i18n="guide.luck.title">행운</h3>
+                <span class="guide-topic-metric" data-i18n="guide.luck.metric">행운 착지 시 콤보 +2</span>
+                <ul>
+              <li data-i18n="guide.luck.1">일반 착지는 +1, 행운 착지는 +2 콤보와 무작위 추가 점수를 줍니다.</li>
+              <li data-i18n="guide.luck.2">게임 종료 때 별도 행운 판정으로 코인 1개가 추가될 수 있습니다.</li>
+              <li data-i18n="guide.luck.3">기본 코인을 곱하는 대신 콤보와 점수를 빠르게 올려 보상을 간접적으로 높입니다.</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.combo.title">콤보</h3>
+                <span class="guide-topic-metric" data-i18n="guide.combo.metric">20콤보: 경험치 +5 · 40콤보: 경험치 +10</span>
+                <ul>
+              <li data-i18n="guide.combo.1">새 구름에 착지하면 콤보가 이어집니다.</li>
+              <li data-i18n="guide.combo.2">같은 구름을 다시 밟으면 현재 콤보가 초기화됩니다.</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.charge.title">차지</h3>
+                <span class="guide-topic-metric" data-i18n="guide.charge.metric">게이지 100% → 부스트 · 콤보 +6~8</span>
+                <ul>
+              <li data-i18n="guide.charge.1">100%가 되면 차지 영역을 사용해 강력하게 점프합니다.</li>
+              <li data-i18n="guide.charge.2">차지는 충전 주기를 줄이고, 파워는 부스트 높이를 올립니다.</li>
+                </ul>
+              </article>
+              <article class="guide-topic">
+                <h3 data-i18n="guide.coin.title">코인 보상</h3>
+                <p data-i18n="guide.coin.body">한 판의 기본 코인 계산식</p>
+                <div class="guide-formula" data-i18n="guide.coin.formula">3 + (최종 점수 ÷ 120) + 신기록 보너스 5</div>
+                <ul>
+              <li data-i18n="guide.coin.1">소수점은 버리고 최대 100,000점까지 반영하며, 행운으로 1코인이 추가될 수 있습니다.</li>
+              <li data-i18n="guide.coin.2">5초 미만 또는 30점 미만인 판은 정상 보상이 지급되지 않습니다.</li>
+                </ul>
+              </article>
+            </div>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading">
+                <h3 data-i18n="guide.reward.title">코인을 많이 받는 순서</h3>
+                <p data-i18n="guide.reward.sub">부활 자체에는 보너스가 없습니다. 최종 점수를 높인 뒤 해당 판의 보상 코인을 두 배로 받는 흐름입니다.</p>
+              </div>
+              <ol class="reward-flow">
+                <li class="reward-step"><b>1</b><strong data-i18n="guide.reward.step1.title">첫 2배 넘기기</strong><span data-i18n="guide.reward.step1.desc">첫 게임오버에서는 2배를 누르지 않습니다.</span></li>
+                <li class="reward-step"><b>2</b><strong data-i18n="guide.reward.step2.title">부활하기</strong><span data-i18n="guide.reward.step2.desc">같은 판을 계속 이어갑니다.</span></li>
+                <li class="reward-step"><b>3</b><strong data-i18n="guide.reward.step3.title">점수 높이기</strong><span data-i18n="guide.reward.step3.desc">최종 점수와 기본 코인을 올립니다.</span></li>
+                <li class="reward-step"><b>4</b><strong data-i18n="guide.reward.step4.title">마지막에 2배</strong><span data-i18n="guide.reward.step4.desc">해당 판에서 번 코인만 한 번 더 받습니다.</span></li>
+              </ol>
+            </section>
+
+            <section class="guide-panel">
+              <div class="guide-panel-heading"><h3 data-i18n="guide.tips.title">빠른 플레이 팁</h3></div>
+              <div class="guide-tip-grid">
+                <div class="guide-tip" data-i18n="guide.tip1">같은 구름은 콤보를 끊으므로 새 구름을 우선하세요.</div>
+                <div class="guide-tip" data-i18n="guide.tip2">초보자는 속도와 점프를 먼저 올리면 조작이 편해집니다.</div>
+                <div class="guide-tip" data-i18n="guide.tip3">위험한 순간에는 가득 찬 차지를 너무 오래 아끼지 마세요.</div>
+                <div class="guide-tip" data-i18n="guide.tip4">신기록은 경험치·코인 보너스를 주며, 매일 출석 보상도 챙기세요.</div>
+              </div>
+            </section>
+
+            <p class="guide-disclaimer" data-i18n="guide.disclaimer">게임 수치와 보상은 밸런스 업데이트에 따라 변경될 수 있습니다. 최신 정보는 게임 내 표시를 우선합니다.</p>
+          </div>
+        </section>
+
+
       </div>
     </section>
 
@@ -858,6 +1003,75 @@
             </button>
             <div class="faq-a" data-i18n="faq6.a">게임 이용 중 불편한 점, 버그 제보, 개선 아이디어가 있다면 support@pangchustudio.co.kr 으로 보내주세요. 보내주신 의견은 더 나은 게임과 서비스 개선을 위해 참고합니다.</div>
           </div>
+          <div class="faq-group-label" data-i18n="faq.gameGroup">게임 플레이와 보상</div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq7.q">성장 포인트는 언제 받나요?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq7.a">프로필 레벨이 2 오를 때마다 성장 포인트 1개를 획득합니다. 각 스탯은 최대 10포인트이며, 총 50포인트까지 획득할 수 있습니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq8.q">스탯을 잘못 올렸는데 초기화할 수 있나요?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq8.a">네. 첫 번째 초기화는 무료이며 이후부터는 2,000코인이 필요합니다. 실수 방지를 위해 초기화 버튼을 한 번 더 눌러야 확정됩니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq9.q">행운이 발동하면 무엇이 달라지나요?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq9.a">일반 착지는 콤보가 1 증가하지만 행운 착지는 2 증가하고 무작위 추가 점수도 지급됩니다. 게임 종료 코인 계산에서도 별도 행운 판정으로 코인 1개를 추가로 받을 수 있습니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq10.q">부활하면 코인을 두 배로 받나요?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq10.a">아니요. 부활 후 점수를 더 올린 다음 최종 게임오버에서 코인 2배를 사용해야 가장 많은 보상을 받을 수 있습니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq11.q">코인 2배는 보유 코인 전체에 적용되나요?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq11.a">아니요. 해당 판에서 획득한 게임 보상 코인에만 적용되며, 현재 보유 코인이나 상점 구매 코인에는 적용되지 않습니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq12.q">출석 보상은 어떻게 받나요?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq12.a">로그인한 계정은 하루에 한 번 받을 수 있습니다.
+1일차 50 → 2일차 75 → 3일차 100 → 4일차 125 → 5일차 150 → 6일차 200 → 7일차 300코인
+7일차 다음 새 주기가 시작되며, 기준은 UTC 자정·한국 시간 오전 9시입니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq13.q">상점의 첫 구매 2배는 어떻게 적용되나요?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq13.a">각 코인 상품은 최초 구매 1회에 한해 두 배로 지급됩니다.
+500 → 1,000 · 1,200 → 2,400 · 3,000 → 6,000 · 7,000 → 14,000코인
+게임 종료 코인 2배와는 별개의 혜택입니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq14.q">게임을 끝냈는데 보상이 없어요.</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq14.a">플레이 시간이 5초 미만이거나 최종 점수가 30점 미만인 판은 비정상·초단기 플레이로 처리되어 보상이 지급되지 않습니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span data-i18n="faq15.q">게스트 계정에서도 출석 보상을 받을 수 있나요?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 8 10 13 15 8"/></svg>
+            </button>
+            <div class="faq-a" data-i18n="faq15.a">중복 지급을 막고 진행 상황을 안전하게 저장하기 위해 로그인된 클라우드 계정에서만 출석 보상을 받을 수 있습니다.</div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1037,6 +1251,7 @@
     </div>
   </footer>
 
+  <script src="../game-guide-i18n.js"></script>
   <script>
     /* ── TRANSLATIONS ── */
     const T = {
@@ -1531,6 +1746,10 @@
         'footer.tagline': 'Pequeno estúdio indie de jogos', 'footer.copy': '© 2026 PangChu Studio. All rights reserved.',
       },
     };
+
+    Object.entries(window.GAME_GUIDE_T || {}).forEach(([lang, entries]) => {
+      if (T[lang]) Object.assign(T[lang], entries);
+    });
 
     // 현재 언어와 사용자가 직접 고른 언어를 기억해 루트 접속 안내가 흔들리지 않게 한다.
     let currentLang = 'ko';
