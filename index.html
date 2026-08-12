@@ -630,6 +630,7 @@
     }
   </style>
   <link rel="stylesheet" href="game-guide.css" />
+  <link rel="stylesheet" href="updates-board.css" />
 </head>
 <body>
 
@@ -924,6 +925,14 @@
         <div class="section-sub" data-i18n="ann.sub">Latest news and updates from PangChu Studio.</div>
         <div class="announce-list">
           <div class="announce-item">
+            <span class="announce-badge badge-new" data-i18n="ann.badge.new">New</span>
+            <div class="announce-content">
+              <div class="announce-title" data-i18n="ann10.title">MalangNyang Jump game guide is now available</div>
+              <div class="announce-desc" data-i18n="ann10.desc">A visual guide to growth stats, Luck, combos, Charge, coin rewards, and frequently asked questions is now available on the website.</div>
+            </div>
+            <div class="announce-date">2026.08.13</div>
+          </div>
+          <div class="announce-item">
             <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">Notice</span>
             <div class="announce-content">
               <div class="announce-title" data-i18n="ann8.title">iOS update schedule notice</div>
@@ -947,46 +956,10 @@
             </div>
             <div class="announce-date">2026.08.08</div>
           </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">New</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann6.title">Jelly Cat Dash is in development</div>
-              <div class="announce-desc" data-i18n="ann6.desc">Jelly Cat Dash was first registered on GitHub on 2026.05.05 and is currently in development as a new PangChu Studio project.</div>
-            </div>
-            <div class="announce-date">2026.05.24</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">New</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann4.title">MalangNyang Jump Windows version is available on Microsoft Store</div>
-              <div class="announce-desc" data-i18n="ann4.desc">The Windows version of MalangNyang Jump is now available through the Microsoft Store.</div>
-            </div>
-            <div class="announce-date">2026.05.22</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">New</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann5.title">MalangNyang Jump Android version officially released on Google Play</div>
-              <div class="announce-desc" data-i18n="ann5.desc">The Android version of MalangNyang Jump has officially launched on Google Play.</div>
-            </div>
-            <div class="announce-date">2026.05.07</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">New</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann1.title">Official website is now live</div>
-              <div class="announce-desc" data-i18n="ann1.desc">The PangChu Studio official website is now live. Policy pages, contact information, and game details are all available here.</div>
-            </div>
-            <div class="announce-date">2026.04.18</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">Notice</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann2.title">Privacy Policy and Terms of Service published</div>
-              <div class="announce-desc" data-i18n="ann2.desc">Our Privacy Policy and Terms of Service documents have been published and are accessible from the Links section.</div>
-            </div>
-            <div class="announce-date">2026.04.10</div>
-          </div>
+        </div>
+        <div class="announce-footer">
+          <p class="announce-home-note" data-i18n="ann.homeNote">The homepage shows the four latest posts. Older posts are kept in the notice board.</p>
+          <a class="announce-all-link" href="updates/"><span data-i18n="ann.all">View all updates</span><span class="announce-count">9</span><span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -1292,6 +1265,7 @@ This is separate from the end-of-game coin 2× reward.</div>
   </footer>
 
   <script src="game-guide-i18n.js"></script>
+  <script src="updates-i18n.js"></script>
   <script>
     /* ── TRANSLATIONS ── */
     const T = {
@@ -1808,6 +1782,10 @@ This is separate from the end-of-game coin 2× reward.</div>
     };
 
     Object.entries(window.GAME_GUIDE_T || {}).forEach(([lang, entries]) => {
+      if (T[lang]) Object.assign(T[lang], entries);
+    });
+
+    Object.entries(window.UPDATES_T || {}).forEach(([lang, entries]) => {
       if (T[lang]) Object.assign(T[lang], entries);
     });
 

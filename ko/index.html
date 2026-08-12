@@ -590,6 +590,7 @@
     }
   </style>
   <link rel="stylesheet" href="../game-guide.css" />
+  <link rel="stylesheet" href="../updates-board.css" />
 </head>
 <body>
 
@@ -884,6 +885,14 @@
         <div class="section-sub" data-i18n="ann.sub">팡츄 스튜디오의 최신 소식을 확인하세요.</div>
         <div class="announce-list">
           <div class="announce-item">
+            <span class="announce-badge badge-new" data-i18n="ann.badge.new">신규</span>
+            <div class="announce-content">
+              <div class="announce-title" data-i18n="ann10.title">말랑냥이점프 게임 가이드 공개</div>
+              <div class="announce-desc" data-i18n="ann10.desc">성장 스탯, 행운·콤보·차지, 코인 보상과 자주 묻는 질문을 한눈에 확인할 수 있는 게임 가이드를 홈페이지에 추가했습니다.</div>
+            </div>
+            <div class="announce-date">2026.08.13</div>
+          </div>
+          <div class="announce-item">
             <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">공지</span>
             <div class="announce-content">
               <div class="announce-title" data-i18n="ann8.title">iOS 업데이트 일정 안내</div>
@@ -899,7 +908,7 @@
             </div>
             <div class="announce-date">2026.08~</div>
           </div>
-                    <div class="announce-item">
+          <div class="announce-item">
             <span class="announce-badge badge-new" data-i18n="ann.badge.new">신규</span>
             <div class="announce-content">
               <div class="announce-title" data-i18n="ann7.title">말랑냥이점프 iPhone·Mac 버전 App Store 출시</div>
@@ -907,46 +916,10 @@
             </div>
             <div class="announce-date">2026.08.08</div>
           </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">신규</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann6.title">말랑냥이대쉬 개발 중</div>
-              <div class="announce-desc" data-i18n="ann6.desc">말랑냥이대쉬는 2026.05.05 GitHub에 첫 등록되었으며, 현재 PangChu Studio의 새 프로젝트로 개발 중입니다.</div>
-            </div>
-            <div class="announce-date">2026.05.24</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">신규</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann4.title">말랑냥이점프 Windows 버전 Microsoft Store 출시</div>
-              <div class="announce-desc" data-i18n="ann4.desc">말랑냥이점프 Windows 버전을 Microsoft Store에서 이용할 수 있습니다.</div>
-            </div>
-            <div class="announce-date">2026.05.22</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">신규</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann5.title">말랑냥이점프 Android 버전 Google Play 정식 출시</div>
-              <div class="announce-desc" data-i18n="ann5.desc">말랑냥이점프 Android 버전이 Google Play에 정식 출시되었습니다.</div>
-            </div>
-            <div class="announce-date">2026.05.07</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-new" data-i18n="ann.badge.new">신규</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann1.title">공식 웹사이트 오픈</div>
-              <div class="announce-desc" data-i18n="ann1.desc">팡츄 스튜디오 공식 웹사이트가 오픈되었습니다. 정책 페이지, 연락처, 게임 정보를 이곳에서 확인하실 수 있습니다.</div>
-            </div>
-            <div class="announce-date">2026.04.18</div>
-          </div>
-          <div class="announce-item">
-            <span class="announce-badge badge-notice" data-i18n="ann.badge.notice">공지</span>
-            <div class="announce-content">
-              <div class="announce-title" data-i18n="ann2.title">개인정보처리방침 및 이용약관 게재</div>
-              <div class="announce-desc" data-i18n="ann2.desc">개인정보처리방침과 이용약관이 공개되었습니다. 하단 링크 섹션에서 확인하실 수 있습니다.</div>
-            </div>
-            <div class="announce-date">2026.04.10</div>
-          </div>
+        </div>
+        <div class="announce-footer">
+          <p class="announce-home-note" data-i18n="ann.homeNote">홈페이지에는 최신 4개만 표시하며, 이전 소식은 공지 게시판에 보관합니다.</p>
+          <a class="announce-all-link" href="updates/"><span data-i18n="ann.all">전체 공지 보기</span><span class="announce-count">9</span><span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -1252,6 +1225,7 @@
   </footer>
 
   <script src="../game-guide-i18n.js"></script>
+  <script src="../updates-i18n.js"></script>
   <script>
     /* ── TRANSLATIONS ── */
     const T = {
@@ -1748,6 +1722,10 @@
     };
 
     Object.entries(window.GAME_GUIDE_T || {}).forEach(([lang, entries]) => {
+      if (T[lang]) Object.assign(T[lang], entries);
+    });
+
+    Object.entries(window.UPDATES_T || {}).forEach(([lang, entries]) => {
       if (T[lang]) Object.assign(T[lang], entries);
     });
 
