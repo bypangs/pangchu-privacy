@@ -313,54 +313,6 @@
 
     /* ── GAME ── */
     .game-section { padding: 20px 0; }
-    .game-banner {
-      margin-top: 16px;
-      border-radius: var(--r-xl); overflow: hidden;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--line);
-      position: relative;
-    }
-    .game-banner img {
-      display: block; width: 100%; height: auto;
-    }
-    .game-banner-overlay { display: none; }
-    .game-banner-text { max-width: 420px; }
-    .game-banner-tag {
-      display: inline-flex; padding: 6px 13px; border-radius: 999px;
-      background: rgba(77,184,255,0.22); color: #fff;
-      font-size: 11px; font-weight: 800; letter-spacing: 0.05em;
-      text-transform: uppercase; margin-bottom: 14px;
-      backdrop-filter: blur(6px);
-    }
-    .game-banner-title {
-      font-size: clamp(28px, 3.5vw, 48px); font-weight: 900;
-      line-height: 1.0; letter-spacing: -0.04em;
-      color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.28);
-      margin-bottom: 10px;
-    }
-    .game-banner-desc {
-      font-size: 15px; color: rgba(255,255,255,0.82);
-      line-height: 1.7; margin-bottom: 20px;
-    }
-    .game-banner-actions { display: grid; grid-template-columns: repeat(2,minmax(0,190px)); gap: 10px; }
-    .game-banner-btn {
-      min-height: 42px; justify-content: center; text-align: center;
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 22px; border-radius: 999px;
-      background: linear-gradient(135deg, #4db8ff, #2299ee);
-      color: #fff; font-size: 13px; font-weight: 800;
-      box-shadow: 0 8px 24px rgba(51,153,238,0.32);
-      transition: transform 0.14s, box-shadow 0.14s;
-      text-decoration: none;
-    }
-    .game-banner-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(51,153,238,0.42); }
-    .game-banner-btn.is-secondary { background: rgba(255,255,255,0.94); color: #17324d; box-shadow: 0 8px 24px rgba(23,50,77,0.22); }
-    .game-banner-btn.is-app-store { background: #fff; color: #111820; border: 1px solid rgba(18,25,35,0.12); box-shadow: 0 8px 24px rgba(18,25,35,0.18); }
-    .game-banner-btn.is-disabled { pointer-events: none; background: #fff; color: #111820; border: 1px dashed rgba(18,25,35,0.24); box-shadow: 0 8px 20px rgba(18,25,35,0.08); opacity: 0.72; }
-    @media (max-width: 600px) {
-      .game-banner-overlay { padding: 24px; }
-      .game-banner-tag { display: none; }
-    }
     .game-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow-card); display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; margin-top: 18px; }
     .game-visual {
       padding: 26px;
@@ -394,6 +346,8 @@
     .store-btn small { font-size: 10px; font-weight: 800; opacity: 0.74; }
     .store-btn svg { width: 17px; height: 17px; flex-shrink: 0; }
     .store-note { grid-column: 1 / -1; font-size: 12px; font-weight: 700; color: var(--muted); }
+    .store-note.is-soon { display: inline-flex; align-items: center; gap: 7px; width: fit-content; padding: 7px 14px; border-radius: 999px; background: rgba(125,224,188,0.16); color: var(--accent-deep); font-size: 11px; font-weight: 800; letter-spacing: 0.02em; }
+    .store-note.is-soon::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.6; flex-shrink: 0; }
     .features-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 9px; }
     .feature-tile { background: var(--card-strong); border: 1px solid var(--line); border-radius: var(--r-md); padding: 14px; }
     .feature-tile strong { display: block; font-size: 12px; font-weight: 800; color: var(--text); margin-bottom: 5px; }
@@ -411,12 +365,6 @@
     .announce-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .announce-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
     .announce-date { flex-shrink: 0; font-size: 12px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
-    .preview-banner {
-      display: inline-flex; width: fit-content; margin-top: -4px; padding: 7px 12px;
-      border-radius: 999px; border: 1px solid rgba(255,255,255,0.34);
-      background: rgba(17,35,52,0.58); color: #fff; font-size: 11px; font-weight: 900;
-      letter-spacing: 0.03em; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-    }
 
     .notice-open-btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
@@ -576,7 +524,7 @@
       .game-body { padding: 22px; }
       .features-row { grid-template-columns: 1fr; }
       .links-grid { grid-template-columns: 1fr; }
-      .store-actions, .game-banner-actions { grid-template-columns: 1fr; }
+      .store-actions { grid-template-columns: 1fr; }
       .contact-card { flex-direction: column; align-items: flex-start; }
       .feedback-inner { grid-template-columns: 1fr; }
       .feedback-info { border-right: none; border-bottom: 1px solid rgba(92,151,201,0.13); }
@@ -643,13 +591,13 @@
         <div class="hero-side">
           <div class="status-card" id="about">
             <div class="live-badge"><span class="live-dot"></span><span data-i18n="status.badge">웹사이트 운영 중</span></div>
-            <div class="status-title" data-i18n="status.title">공식 링크가 준비되었습니다</div>
-            <p class="status-body" data-i18n="status.body">말랑냥이점프의 Android와 iPhone은 메인 서비스 버전입니다. Windows와 Mac은 플랫폼별 차이가 있는 프리뷰 버전으로 운영합니다.</p>
+            <div class="status-title" data-i18n="status.title">스튜디오 현황</div>
+            <p class="status-body" data-i18n="status.body">말랑냥이점프는 Android·iPhone·Windows·Mac에서 서비스 중이고, 말랑냥이 대쉬는 스토어 심사 중입니다.</p>
             <div class="mini-grid">
-              <div class="mini-tile"><strong data-i18n="mini.game">게임</strong><span data-i18n="mini.gameVal">말랑냥이점프</span></div>
-              <div class="mini-tile"><strong data-i18n="mini.genre">장르</strong><span data-i18n="mini.genreVal">하이퍼캐주얼</span></div>
+              <div class="mini-tile"><strong data-i18n="mini.game">타이틀</strong><span data-i18n="mini.gameVal">말랑냥이 점프 · 대쉬</span></div>
+              <div class="mini-tile"><strong data-i18n="mini.genre">장르</strong><span data-i18n="mini.genreVal">캐주얼 · 러닝</span></div>
               <div class="mini-tile"><strong data-i18n="mini.studio">스튜디오</strong><span>PangChu Studio</span></div>
-              <div class="mini-tile"><strong data-i18n="mini.platform">플랫폼</strong><span data-i18n="mini.platformVal">Android / Windows / iPhone / Mac</span></div>
+              <div class="mini-tile"><strong data-i18n="mini.platform">플랫폼</strong><span data-i18n="mini.platformVal">Android / iPhone / Windows / Mac</span></div>
             </div>
           </div>
           <div class="about-card">
@@ -718,36 +666,17 @@
           <div class="game-body">
             <span class="game-tag" data-i18n="dash.tag">3D 고양이 러닝 어드벤처</span>
             <h2 class="game-title" data-i18n="dash.title">말랑냥이 대쉬</h2>
-            <p class="game-desc" data-i18n="dash.desc">책 밖으로 이어진 길을 달리는 3D 러닝 어드벤처입니다. 말랑한 고양이와 라이드를 타고 세 갈래 길을 달리며, 라이벌 둘과 겨루고 흩어진 씨앗을 데려옵니다. 한 손으로 즐길 수 있어요.</p>
+            <p class="game-desc" data-i18n="dash.desc">동화책 밖으로 이어진 길을 한 손으로 달리는 3D 러닝 게임입니다. 고양이와 라이드를 타고 세 줄 레인을 오가며 코인을 모으고, 라이벌 둘과 순위를 겨룹니다.</p>
             <div class="store-actions">
-              <span class="store-note" data-i18n="dash.soon">출시 준비 중 — 스토어 심사 중</span>
+              <span class="store-note is-soon" data-i18n="dash.soon">출시 준비 중 — 스토어 심사 중</span>
             </div>
             <div class="features-row">
-              <div class="feature-tile"><strong data-i18n="dash.feat1.title">세 갈래 길</strong><span data-i18n="dash.feat1.desc">밀어서 레인을 옮기고, 톡 두드려 점프하고, 대쉬를 이어 속도를 올려요.</span></div>
-              <div class="feature-tile"><strong data-i18n="dash.feat2.title">3인 레이스</strong><span data-i18n="dash.feat2.desc">같은 길을 달리는 라이벌 둘, 상단 미니맵으로 실시간 순위.</span></div>
+              <div class="feature-tile"><strong data-i18n="dash.feat1.title">한 손 조작</strong><span data-i18n="dash.feat1.desc">밀어서 레인을 옮기고, 톡 두드려 점프하고, 대쉬로 속도를 올려요.</span></div>
+              <div class="feature-tile"><strong data-i18n="dash.feat2.title">3인 레이스</strong><span data-i18n="dash.feat2.desc">같은 길을 달리는 라이벌 둘과 실시간으로 순위를 겨뤄요.</span></div>
               <div class="feature-tile"><strong data-i18n="dash.feat3.title">내 고양이 꾸미기</strong><span data-i18n="dash.feat3.desc">고양이 20마리, 라이드 12종, 이펙트 24종.</span></div>
             </div>
           </div>
         </article>
-
-        <!-- BANNER -->
-        <div class="game-banner">
-          <img src="../images/malangnyang-jump-banner.png" alt="말랑냥이점프" />
-          <div class="game-banner-overlay">
-            <div class="game-banner-text">
-              <div class="game-banner-tag" data-i18n="game.tag">귀여운 캐주얼 점프 게임</div>
-              <div class="preview-banner" data-i18n="platform.previewBanner">Windows &amp; Mac — 프리뷰 버전</div>
-              <div class="game-banner-title" data-i18n="game.title">말랑냥이점프</div>
-              <p class="game-banner-desc" data-i18n="game.desc">구름 가득한 하늘을 귀여운 고양이와 함께 뛰어오르는 하이퍼캐주얼 점프 게임입니다. 간단한 좌우 터치 조작, 코인 수집, 스킨 해제, 짧고 산뜻한 기록 도전의 재미를 담았습니다.</p>
-              <div class="game-banner-actions">
-                <a class="game-banner-btn" href="https://play.google.com/store/apps/details?id=malrang.nayong" target="_blank" rel="noopener" data-i18n="store.cta">Google Play에서 보기</a>
-                <a class="game-banner-btn is-secondary" href="https://apps.microsoft.com/detail/9p2cw64kjm68?ocid=webpdpshare" target="_blank" rel="noopener" data-i18n="store.microsoftCta">Microsoft Store에서 받기</a>
-                <a class="game-banner-btn is-app-store" href="https://apps.apple.com/kr/app/%EB%A7%90%EB%9E%91%EB%83%A5%EC%9D%B4%EC%A0%90%ED%94%84/id6768498966" target="_blank" rel="noopener" data-i18n="store.appStoreCta">Mac App Store에서 받기</a>
-                <a class="game-banner-btn is-app-store" href="https://apps.apple.com/kr/app/%EB%A7%90%EB%9E%91%EB%83%A5%EC%9D%B4%EC%A0%90%ED%94%84/id6768498966" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 2h8a2.5 2.5 0 0 1 2.5 2.5v15A2.5 2.5 0 0 1 16 22H8a2.5 2.5 0 0 1-2.5-2.5v-15A2.5 2.5 0 0 1 8 2Zm0 2a.5.5 0 0 0-.5.5v15a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-15A.5.5 0 0 0 16 4h-1.2a1 1 0 0 1-.9.6h-3.8a1 1 0 0 1-.9-.6H8Zm3 14.4h2a.8.8 0 0 1 0 1.6h-2a.8.8 0 0 1 0-1.6Z"/></svg> <span data-i18n="store.iphoneCta">iPhone App Store에서 받기</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- GAME GUIDE -->
         <section class="game-guide" aria-labelledby="game-guide-title">
@@ -1250,16 +1179,16 @@
         'nav.contact': 'Contact', 'nav.links': 'Links',
         'hero.eyebrow': 'Official Studio Website',
         'hero.sub': 'A small indie game studio building playful, approachable game experiences. Official home for studio information, game details, and policy pages.',
-        'hero.cta1': 'View Featured Game', 'hero.cta2': 'Official Links',
-        'status.badge': 'Website Active', 'status.title': 'Official links are live',
-        'status.body': 'MalangNyang Jump is available on Google Play, Microsoft Store, and the App Store for Android, Windows, iPhone, and Mac. Support contacts and policy pages are also available.',
-        'mini.game': 'Game', 'mini.gameVal': 'MalangNyang Jump', 'mini.genre': 'Genre', 'mini.genreVal': 'Cute hyper-casual',
-        'mini.studio': 'Studio', 'mini.platform': 'Platform', 'mini.platformVal': 'Android / Windows / iPhone / Mac',
+        'hero.cta1': 'See Our Games', 'hero.cta2': 'Official Links',
+        'status.badge': 'Website Active', 'status.title': 'Studio at a glance',
+        'status.body': 'MalangNyang Jump is live on Android, iPhone, Windows, and Mac. MalangNyang Dash is in store review and launches soon.',
+        'mini.game': 'Titles', 'mini.gameVal': 'Jump · Dash', 'mini.genre': 'Genre', 'mini.genreVal': 'Casual · Runner',
+        'mini.studio': 'Studio', 'mini.platform': 'Platform', 'mini.platformVal': 'Android / iPhone / Windows / Mac',
         'about.title': 'About the studio',
         'about.body': 'PangChu Studio develops games with clear ideas, simple controls, and a small-team indie spirit across different play styles.',
         'games.label': 'Our Games', 'games.title': 'PangChu Studio Games', 'games.sub': 'Soft, cheerful titles made for quick cozy play.',
-        'dash.tag': '3D Cat Running Adventure', 'dash.title': 'MalangNyang Dash', 'dash.desc': 'A soft 3D running adventure along the road that leads out of a storybook. Ride with a cat down one of three lanes, race two rivals, and bring the scattered seeds home — all with one thumb.', 'dash.soon': 'Coming soon — in store review',
-        'dash.feat1.title': 'Three lanes', 'dash.feat1.desc': 'Slide to switch lanes, tap to hop, chain dashes for speed.', 'dash.feat2.title': 'Rival races', 'dash.feat2.desc': 'Two rivals on the same road, tracked live on the minimap.', 'dash.feat3.title': 'Dress up your cat', 'dash.feat3.desc': 'Twenty cats, twelve rides, and twenty-four trail effects.',
+        'dash.tag': '3D Cat Running Adventure', 'dash.title': 'MalangNyang Dash', 'dash.desc': 'A one-thumb 3D runner set on the road that leads out of a storybook. Ride with a cat across three lanes, gather coins, and race two rivals for the lead.', 'dash.soon': 'Coming soon — in store review',
+        'dash.feat1.title': 'One-thumb controls', 'dash.feat1.desc': 'Slide to switch lanes, tap to hop, dash to build speed.', 'dash.feat2.title': 'Rival races', 'dash.feat2.desc': 'Two rivals on the same road, with the lead changing every run.', 'dash.feat3.title': 'Dress up your cat', 'dash.feat3.desc': 'Twenty cats, twelve rides, and twenty-four trail effects.',
         'game.title': 'MalangNyang Jump', 'game.label': 'Featured Game', 'game.sub': 'Our current title — soft, cheerful, and made for quick cozy play.',
         'game.tag': 'Cute Casual Jumping Game',
         'game.desc': 'A cheerful cat jumping game set in soft cloud-filled skies, with simple left and right touch controls, coins to collect, skins to unlock, and quick runs that feel light and cozy.',
@@ -1351,15 +1280,15 @@
         'hero.eyebrow': '공식 스튜디오 웹사이트',
         'hero.sub': '여러 스타일의 게임 경험을 만들어가는 소규모 인디게임 스튜디오입니다. 스튜디오 소개, 게임 정보, 정책 페이지를 확인하세요.',
         'hero.cta1': '게임 보기', 'hero.cta2': '공식 링크',
-        'status.badge': '웹사이트 운영 중', 'status.title': '공식 링크가 준비되었습니다',
-        'status.body': '말랑냥이점프의 Android와 iPhone은 메인 서비스 버전입니다. Windows와 Mac은 플랫폼별 차이가 있는 프리뷰 버전으로 운영합니다.',
-        'mini.game': '게임', 'mini.gameVal': '말랑냥이점프', 'mini.genre': '장르', 'mini.genreVal': '하이퍼캐주얼',
-        'mini.studio': '스튜디오', 'mini.platform': '플랫폼', 'mini.platformVal': 'Android / Windows / iPhone / Mac',
+        'status.badge': '웹사이트 운영 중', 'status.title': '스튜디오 현황',
+        'status.body': '말랑냥이점프는 Android·iPhone·Windows·Mac에서 서비스 중이고, 말랑냥이 대쉬는 스토어 심사 중입니다.',
+        'mini.game': '타이틀', 'mini.gameVal': '말랑냥이 점프 · 대쉬', 'mini.genre': '장르', 'mini.genreVal': '캐주얼 · 러닝',
+        'mini.studio': '스튜디오', 'mini.platform': '플랫폼', 'mini.platformVal': 'Android / iPhone / Windows / Mac',
         'about.title': '스튜디오 소개',
         'about.body': '팡츄 스튜디오는 명확한 아이디어와 직관적인 조작, 작은 팀의 인디 감성으로 여러 스타일의 게임을 만들어갑니다.',
         'games.label': '우리 게임', 'games.title': 'PangChu Studio 게임', 'games.sub': '부드럽고 귀엽게, 짧고 산뜻하게 즐기는 게임들.',
-        'dash.tag': '3D 고양이 러닝 어드벤처', 'dash.title': '말랑냥이 대쉬', 'dash.desc': '책 밖으로 이어진 길을 달리는 3D 러닝 어드벤처입니다. 말랑한 고양이와 라이드를 타고 세 갈래 길을 달리며, 라이벌 둘과 겨루고 흩어진 씨앗을 데려옵니다. 한 손으로 즐길 수 있어요.', 'dash.soon': '출시 준비 중 — 스토어 심사 중',
-        'dash.feat1.title': '세 갈래 길', 'dash.feat1.desc': '밀어서 레인을 옮기고, 톡 두드려 점프하고, 대쉬를 이어 속도를 올려요.', 'dash.feat2.title': '3인 레이스', 'dash.feat2.desc': '같은 길을 달리는 라이벌 둘, 상단 미니맵으로 실시간 순위.', 'dash.feat3.title': '내 고양이 꾸미기', 'dash.feat3.desc': '고양이 20마리, 라이드 12종, 이펙트 24종.',
+        'dash.tag': '3D 고양이 러닝 어드벤처', 'dash.title': '말랑냥이 대쉬', 'dash.desc': '동화책 밖으로 이어진 길을 한 손으로 달리는 3D 러닝 게임입니다. 고양이와 라이드를 타고 세 줄 레인을 오가며 코인을 모으고, 라이벌 둘과 순위를 겨룹니다.', 'dash.soon': '출시 준비 중 — 스토어 심사 중',
+        'dash.feat1.title': '한 손 조작', 'dash.feat1.desc': '밀어서 레인을 옮기고, 톡 두드려 점프하고, 대쉬로 속도를 올려요.', 'dash.feat2.title': '3인 레이스', 'dash.feat2.desc': '같은 길을 달리는 라이벌 둘과 실시간으로 순위를 겨뤄요.', 'dash.feat3.title': '내 고양이 꾸미기', 'dash.feat3.desc': '고양이 20마리, 라이드 12종, 이펙트 24종.',
         'game.title': '말랑냥이점프', 'game.label': '대표 게임', 'game.sub': '현재 서비스 중인 게임 — 부드럽고 귀엽게, 짧고 산뜻한 플레이로.',
         'game.tag': '귀여운 캐주얼 점프 게임',
         'game.desc': '구름 가득한 하늘을 귀여운 고양이와 함께 뛰어오르는 하이퍼캐주얼 점프 게임입니다. 간단한 좌우 터치 조작, 코인 수집, 스킨 해제, 짧고 산뜻한 기록 도전의 재미를 담았습니다.',
@@ -1456,15 +1385,15 @@
         'hero.eyebrow': '公式スタジオウェブサイト',
         'hero.sub': 'さまざまな遊びの体験を少しずつ形にしていく、小さなインディーゲームスタジオです。スタジオ情報、ゲームの詳細、ポリシーページをご確認ください。',
         'hero.cta1': 'ゲームを見る', 'hero.cta2': '公式リンク',
-        'status.badge': 'ウェブサイト運営中', 'status.title': '公式リンク公開中',
-        'status.body': 'Google Play、Microsoft Store、App Storeで配信中です。Android、Windows、iPhone、Macでプレイでき、サポート連絡先とポリシーページも確認できます。',
-        'mini.game': 'ゲーム', 'mini.gameVal': 'ぷにねこジャンプ', 'mini.genre': 'ジャンル', 'mini.genreVal': 'ハイパーカジュアル',
-        'mini.studio': 'スタジオ', 'mini.platform': 'プラットフォーム', 'mini.platformVal': 'Android / Windows / iPhone / Mac',
+        'status.badge': 'ウェブサイト運営中', 'status.title': 'スタジオの現況',
+        'status.body': 'ぷにねこジャンプはAndroid・iPhone・Windows・Macで配信中。ぷにねこダッシュはストア審査中です。',
+        'mini.game': 'タイトル', 'mini.gameVal': 'ジャンプ・ダッシュ', 'mini.genre': 'ジャンル', 'mini.genreVal': 'カジュアル・ランニング',
+        'mini.studio': 'スタジオ', 'mini.platform': 'プラットフォーム', 'mini.platformVal': 'Android / iPhone / Windows / Mac',
         'about.title': 'スタジオについて',
         'about.body': 'PangChu Studioは、明快なアイデア、直感的な操作、小さなチームならではのインディースピリットを大切にしながら、さまざまなスタイルのゲーム体験を作っています。',
         'games.label': '私たちのゲーム', 'games.title': 'PangChu Studio のゲーム', 'games.sub': 'やさしく、かわいく、気軽に遊べるタイトル。',
-        'dash.tag': '3D ねこランニングアドベンチャー', 'dash.title': 'ぷにねこダッシュ', 'dash.desc': '絵本の外へ続く道を走る3Dランニングアドベンチャー。ねことライドで3つのレーンを駆け抜け、2人のライバルと競い、散らばった種を連れ帰ります。片手で遊べます。', 'dash.soon': 'リリース準備中 — ストア審査中',
-        'dash.feat1.title': '3つのレーン', 'dash.feat1.desc': 'スライドでレーン変更、タップでジャンプ、ダッシュを繋いで加速。', 'dash.feat2.title': '3人レース', 'dash.feat2.desc': '同じ道を走るライバル2人、ミニマップで順位をリアルタイム表示。', 'dash.feat3.title': 'ねこの着せかえ', 'dash.feat3.desc': 'ねこ20匹、ライド12種、エフェクト24種。',
+        'dash.tag': '3D ねこランニングアドベンチャー', 'dash.title': 'ぷにねこダッシュ', 'dash.desc': '絵本の外へ続く道を片手で駆け抜ける3Dランニングゲーム。ねことライドで3つのレーンを行き来してコインを集め、2人のライバルと順位を競います。', 'dash.soon': 'リリース準備中 — ストア審査中',
+        'dash.feat1.title': '片手で操作', 'dash.feat1.desc': 'スライドでレーン変更、タップでジャンプ、ダッシュで加速。', 'dash.feat2.title': '3人レース', 'dash.feat2.desc': '同じ道を走るライバル2人と、リアルタイムで順位を競います。', 'dash.feat3.title': 'ねこの着せかえ', 'dash.feat3.desc': 'ねこ20匹、ライド12種、エフェクト24種。',
         'game.title': 'ぷにねこジャンプ', 'game.label': '注目のゲーム', 'game.sub': '現在のタイトル — やさしく、かわいく、気軽に遊べる。',
         'game.tag': 'かわいいカジュアルジャンプゲーム',
         'game.desc': '雲いっぱいの空をかわいい猫と跳び上がるハイパーカジュアルジャンプゲームです。シンプルな左右タッチ操作、コイン集め、スキン解放、テンポのよいスコア挑戦を楽しめます。',
@@ -1556,15 +1485,15 @@
         'hero.eyebrow': '官方工作室網站',
         'hero.sub': '一個逐步打造不同遊戲體驗的小型獨立遊戲工作室。歡迎瀏覽工作室介紹、遊戲資訊與政策頁面。',
         'hero.cta1': '查看遊戲', 'hero.cta2': '官方連結',
-        'status.badge': '網站運作中', 'status.title': '官方連結已上線',
-        'status.body': '啫喱貓跳跳現已可於 Google Play、Microsoft Store 與 App Store 下載，支援 Android、Windows、iPhone 及 Mac，亦可查看客戶支援與政策文件。',
-        'mini.game': '遊戲', 'mini.gameVal': '啫喱貓跳跳', 'mini.genre': '類型', 'mini.genreVal': '超休閒',
-        'mini.studio': '工作室', 'mini.platform': '平台', 'mini.platformVal': 'Android / Windows / iPhone / Mac',
+        'status.badge': '網站運作中', 'status.title': '工作室現況',
+        'status.body': '《啫喱貓跳跳》已在 Android、iPhone、Windows 與 Mac 上線；《啫喱貓衝刺》正在商店審核中。',
+        'mini.game': '作品', 'mini.gameVal': '跳跳 · 衝刺', 'mini.genre': '類型', 'mini.genreVal': '休閒 · 跑酷',
+        'mini.studio': '工作室', 'mini.platform': '平台', 'mini.platformVal': 'Android / iPhone / Windows / Mac',
         'about.title': '關於工作室',
         'about.body': 'PangChu Studio 以清晰的創意、直覺操作和小團隊的獨立精神，製作不同風格的遊戲體驗。',
         'games.label': '我們的遊戲', 'games.title': 'PangChu Studio 遊戲', 'games.sub': '柔和可愛，輕鬆上手的作品。',
-        'dash.tag': '3D 貓咪跑酷冒險', 'dash.title': '啫喱貓衝刺', 'dash.desc': '沿著繪本外的道路奔跑的 3D 跑酷冒險。與貓咪一起在三條路線上奔馳，與兩位對手競速，把散落的種子帶回家。單手即可遊玩。', 'dash.soon': '即將推出 — 商店審核中',
-        'dash.feat1.title': '三條路線', 'dash.feat1.desc': '滑動換道、輕點跳躍、連續衝刺提速。', 'dash.feat2.title': '三人競速', 'dash.feat2.desc': '同路兩位對手，小地圖即時顯示名次。', 'dash.feat3.title': '打扮你的貓', 'dash.feat3.desc': '20 隻貓、12 種坐騎、24 種特效。',
+        'dash.tag': '3D 貓咪跑酷冒險', 'dash.title': '啫喱貓衝刺', 'dash.desc': '單手就能遊玩的 3D 跑酷遊戲，沿著繪本外的道路奔跑。與貓咪一起在三條路線間穿梭收集金幣，並與兩位對手爭奪名次。', 'dash.soon': '即將推出 — 商店審核中',
+        'dash.feat1.title': '單手操作', 'dash.feat1.desc': '滑動換道、輕點跳躍、衝刺提速。', 'dash.feat2.title': '三人競速', 'dash.feat2.desc': '與同路的兩位對手即時爭奪名次。', 'dash.feat3.title': '打扮你的貓', 'dash.feat3.desc': '20 隻貓、12 種坐騎、24 種特效。',
         'game.title': '啫喱貓跳跳', 'game.label': '主打遊戲', 'game.sub': '目前上線作品 — 柔和、可愛，輕鬆上手。',
         'game.tag': '可愛休閒跳躍遊戲',
         'game.desc': '一款可愛超休閒貓咪跳躍遊戲，在雲朵天空中輕快向上跳躍。簡單左右觸控、金幣收集、造型解鎖和短局高分挑戰，玩起來輕鬆又療癒。',
@@ -1655,16 +1584,16 @@
         'nav.contact': 'Contato', 'nav.links': 'Links',
         'hero.eyebrow': 'Site Oficial do Estúdio',
         'hero.sub': 'Um pequeno estúdio indie criando experiências de jogo acessíveis e variadas. Informações do estúdio, detalhes do jogo e páginas de políticas.',
-        'hero.cta1': 'Ver o Jogo', 'hero.cta2': 'Links Oficiais',
-        'status.badge': 'Site Ativo', 'status.title': 'Links oficiais no ar',
-        'status.body': 'Gatinho Pula-Pula está disponível na Google Play, Microsoft Store e App Store para Android, Windows, iPhone e Mac. Contatos de suporte e políticas também estão disponíveis.',
-        'mini.game': 'Jogo', 'mini.gameVal': 'Gatinho Pula-Pula', 'mini.genre': 'Gênero', 'mini.genreVal': 'Hipercasual fofo',
-        'mini.studio': 'Estúdio', 'mini.platform': 'Plataforma', 'mini.platformVal': 'Android / Windows / iPhone / Mac',
+        'hero.cta1': 'Ver os Jogos', 'hero.cta2': 'Links Oficiais',
+        'status.badge': 'Site Ativo', 'status.title': 'O estúdio em resumo',
+        'status.body': 'Gatinho Pula-Pula está disponível em Android, iPhone, Windows e Mac. Gatinho Dash está em análise nas lojas.',
+        'mini.game': 'Títulos', 'mini.gameVal': 'Pula-Pula · Dash', 'mini.genre': 'Gênero', 'mini.genreVal': 'Casual · Corrida',
+        'mini.studio': 'Estúdio', 'mini.platform': 'Plataforma', 'mini.platformVal': 'Android / iPhone / Windows / Mac',
         'about.title': 'Sobre o estúdio',
         'about.body': 'A PangChu Studio desenvolve jogos com ideias claras, controles simples e o espírito indie de uma equipe pequena em diferentes estilos de jogo.',
         'games.label': 'Nossos Jogos', 'games.title': 'Jogos da PangChu Studio', 'games.sub': 'Títulos suaves e alegres, feitos para partidas rápidas.',
-        'dash.tag': 'Aventura de Corrida 3D', 'dash.title': 'Gatinho Dash', 'dash.desc': 'Uma aventura de corrida 3D pela estrada que sai do livro de histórias. Corra com um gatinho por três pistas, dispute com dois rivais e traga as sementes de volta — tudo com um polegar.', 'dash.soon': 'Em breve — em análise nas lojas',
-        'dash.feat1.title': 'Três pistas', 'dash.feat1.desc': 'Deslize para trocar de pista, toque para pular e encadeie dashes.', 'dash.feat2.title': 'Corridas com rivais', 'dash.feat2.desc': 'Dois rivais na mesma pista, acompanhados no minimapa.', 'dash.feat3.title': 'Personalize seu gato', 'dash.feat3.desc': 'Vinte gatos, doze montarias e vinte e quatro efeitos.',
+        'dash.tag': 'Aventura de Corrida 3D', 'dash.title': 'Gatinho Dash', 'dash.desc': 'Um jogo de corrida 3D para jogar com um polegar, na estrada que sai do livro de histórias. Corra com um gatinho por três pistas, junte moedas e dispute a liderança com dois rivais.', 'dash.soon': 'Em breve — em análise nas lojas',
+        'dash.feat1.title': 'Só um polegar', 'dash.feat1.desc': 'Deslize para trocar de pista, toque para pular e use o dash para acelerar.', 'dash.feat2.title': 'Corridas com rivais', 'dash.feat2.desc': 'Dois rivais na mesma pista, disputando a liderança em tempo real.', 'dash.feat3.title': 'Personalize seu gato', 'dash.feat3.desc': 'Vinte gatos, doze montarias e vinte e quatro efeitos.',
         'game.title': 'Gatinho Pula-Pula', 'game.label': 'Jogo em Destaque', 'game.sub': 'Nosso título atual — suave, alegre e feito para partidas rápidas.',
         'game.tag': 'Jogo Casual de Pulo Fofo',
         'game.desc': 'Um jogo hipercasual fofo em que um gatinho salta pelas nuvens. Com controles simples para a esquerda e para a direita, moedas para coletar, skins para desbloquear e partidas rápidas para buscar sua melhor pontuação.',
