@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://pangchustudio.co.kr/</loc>
     <lastmod>2026-09-16T00:00:00+09:00</lastmod>
@@ -149,6 +149,48 @@
     <xhtml:link rel="alternate" hreflang="ja-JP" href="https://pangchustudio.co.kr/ja/updates/" />
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://pangchustudio.co.kr/pt-br/updates/" />
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://pangchustudio.co.kr/zh-hk/updates/" />
+  </url>
+  <url>
+    <loc>https://pangchustudio.co.kr/ko/videos/malangnyang-dash/</loc>
+    <lastmod>2026-09-24T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/malangnyang-dash/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/videos/malangnyang-dash/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/malangnyang-dash/" />
+    <video:video>
+      <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/malangnyang-dash-shorts.jpg</video:thumbnail_loc>
+      <video:title>귀여운 고양이 러닝 게임 | 말랑냥이 대쉬 3인 레이스 플레이 영상</video:title>
+      <video:description>귀여운 고양이 러닝 게임 '말랑냥이 대쉬'의 22초 플레이 영상. 옆으로 밀어 레인 이동, 위로 밀어 점프, 아래로 밀어 대쉬하며 3개 월드 60개 스테이지를 달리고 라이벌 고양이 둘과 3인 레이스에서 1등에 도전합니다.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/AFeRO-gEOvE</video:player_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2026-09-24T00:00:00+09:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader info="https://pangchustudio.co.kr/">PangChu Studio</video:uploader>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://pangchustudio.co.kr/videos/malangnyang-dash/</loc>
+    <lastmod>2026-09-24T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/malangnyang-dash/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/videos/malangnyang-dash/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/malangnyang-dash/" />
+    <video:video>
+      <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/malangnyang-dash-shorts.jpg</video:thumbnail_loc>
+      <video:title>Cute Cat Runner Game | MalangNyang Dash 3-Cat Race Gameplay Video</video:title>
+      <video:description>A 22-second gameplay video of MalangNyang Dash, a cute cat running game. Swipe sideways to change lanes, up to jump and down to dash across 3 worlds and 60 stages, then race two rival cats for 1st place.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/AFeRO-gEOvE</video:player_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2026-09-24T00:00:00+09:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader info="https://pangchustudio.co.kr/">PangChu Studio</video:uploader>
+      <video:live>no</video:live>
+    </video:video>
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/privacy/</loc>
