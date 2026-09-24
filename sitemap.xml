@@ -193,6 +193,48 @@
     </video:video>
   </url>
   <url>
+    <loc>https://pangchustudio.co.kr/ko/videos/malangnyang-jump/</loc>
+    <lastmod>2026-09-24T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/malangnyang-jump/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/videos/malangnyang-jump/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/malangnyang-jump/" />
+    <video:video>
+      <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/malangnyang-jump-shorts.jpg</video:thumbnail_loc>
+      <video:title>귀여운 고양이 점프 게임 | 말랑냥이점프 4개 월드 플레이 영상</video:title>
+      <video:description>귀여운 고양이 점프 게임 '말랑냥이점프'의 20초 플레이 영상. 좌우 터치만으로 구름 발판을 밟으며 하늘 높이 올라가고 어드벤처 · 젤리 · 토이 · 오로라 설원 4개 월드에서 콤보를 이어 최고 기록에 도전합니다.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/fKoPnAqLzOQ</video:player_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2026-09-24T00:00:00+09:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader info="https://pangchustudio.co.kr/">PangChu Studio</video:uploader>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://pangchustudio.co.kr/videos/malangnyang-jump/</loc>
+    <lastmod>2026-09-24T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/malangnyang-jump/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/videos/malangnyang-jump/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/malangnyang-jump/" />
+    <video:video>
+      <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/malangnyang-jump-shorts.jpg</video:thumbnail_loc>
+      <video:title>Cute Cat Jump Game | MalangNyang Jump 4 Worlds Gameplay Video</video:title>
+      <video:description>A 20-second gameplay video of MalangNyang Jump, a cute cat jumping game. Tap left and right to hop across soft clouds, keep your combo going and climb through 4 worlds: Adventure, Jelly World, Toy World and Aurora Snowfield.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/fKoPnAqLzOQ</video:player_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2026-09-24T00:00:00+09:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader info="https://pangchustudio.co.kr/">PangChu Studio</video:uploader>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
     <loc>https://pangchustudio.co.kr/privacy/</loc>
     <lastmod>2026-06-16T00:00:00+09:00</lastmod>
     <changefreq>yearly</changefreq>
