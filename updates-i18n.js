@@ -1,9 +1,9 @@
 window.UPDATES_T = {
   "en": {
-    "ann11.title": "MalangNyang Jump patch notes",
+    "ann11.title": "PongNyang Jump patch notes",
     "ann11.desc": "All version notes are collected in one post, with the newest update listed first.",
     "ann11.link": "View all patch notes",
-    "ann10.title": "MalangNyang Jump game guide is now available",
+    "ann10.title": "PongNyang Jump game guide is now available",
     "ann10.desc": "A visual guide to growth stats, Luck, combos, Charge, coin rewards, and frequently asked questions is now available on the website.",
     "ann8.title": "Apple platforms updated to the latest version",
     "ann8.desc": "App Store review is complete, and version 1.4 is now available for iPhone, iPad, and Mac.",
@@ -11,13 +11,13 @@ window.UPDATES_T = {
     "ann.homeNote": "The homepage shows the four latest posts. Older posts are kept in the notice board."
   },
   "ko": {
-    "ann11.title": "말랑냥이점프 패치노트",
+    "ann11.title": "퐁냥점프 패치노트",
     "ann11.desc": "버전별 변경 내용을 게시글 하나에 최신순으로 모아 확인할 수 있습니다.",
     "ann11.link": "전체 패치노트 보기",
-    "ann10.title": "말랑냥이점프 게임 가이드 공개",
+    "ann10.title": "퐁냥점프 게임 가이드 공개",
     "ann10.desc": "성장 스탯, 행운·콤보·차지, 코인 보상과 자주 묻는 질문을 한눈에 확인할 수 있는 게임 가이드를 홈페이지에 추가했습니다.",
     "ann8.title": "Apple 플랫폼 최신 업데이트 적용 완료",
-    "ann8.desc": "App Store 심사가 완료되어 말랑냥이점프 1.4 업데이트를 iPhone·iPad·Mac에서 이용할 수 있습니다.",
+    "ann8.desc": "App Store 심사가 완료되어 퐁냥점프 1.4 업데이트를 iPhone·iPad·Mac에서 이용할 수 있습니다.",
     "ann.all": "전체 공지 보기",
     "ann.homeNote": "홈페이지에는 최신 4개만 표시하며, 이전 소식은 공지 게시판에 보관합니다."
   },

@@ -1,0 +1,11 @@
+# GitHub Pages(Jekyll) 빌드 설정
+# 내부 작업 문서·임시 파일이 공개 페이지(/AGENTS.html 등)로 배포되지 않게 제외한다.
+exclude:
+  - AGENTS.md
+  - CLAUDE.md
+  - README.md
+  - SKILL.md
+  - start-preview.bat
+  - tmp-preview-server.js
+  - tmp-out.log
+  - tmp-err.log

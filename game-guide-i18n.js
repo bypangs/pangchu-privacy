@@ -1,7 +1,7 @@
 window.GAME_GUIDE_T = {
   "en": {
     "guide.label": "Game Guide",
-    "guide.title": "MalangNyang Jump Game Guide",
+    "guide.title": "PongNyang Jump Game Guide",
     "guide.intro": "Keep your cloud combo going, build your score, and combine growth stats with skins and effects to shape your own play style.",
     "guide.toggle.open": "Open the full game guide",
     "guide.toggle.close": "Close the game guide",
@@ -96,7 +96,7 @@ window.GAME_GUIDE_T = {
   },
   "ko": {
     "guide.label": "게임 가이드",
-    "guide.title": "말랑냥이점프 게임 가이드",
+    "guide.title": "퐁냥점프 게임 가이드",
     "guide.intro": "구름 콤보를 이어 점수를 올리고, 성장 스탯과 스킨·효과를 조합해 나만의 플레이 스타일을 완성하세요.",
     "guide.toggle.open": "게임 가이드 펼치기",
     "guide.toggle.close": "게임 가이드 접기",

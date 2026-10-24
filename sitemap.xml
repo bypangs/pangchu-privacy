@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://pangchustudio.co.kr/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -17,7 +17,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ko/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ja/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/pt-br/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/zh-hk/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -77,7 +77,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/updates/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ko/updates/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -107,7 +107,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ja/updates/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/pt-br/updates/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -137,7 +137,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/zh-hk/updates/</loc>
-    <lastmod>2026-09-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -152,7 +152,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ko/videos/malangnyang-dash/</loc>
-    <lastmod>2026-09-24T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/malangnyang-dash/" />
@@ -160,8 +160,8 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/malangnyang-dash/" />
     <video:video>
       <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/malangnyang-dash-shorts.jpg</video:thumbnail_loc>
-      <video:title>귀여운 고양이 러닝 게임 | 말랑냥이 대쉬 3인 레이스 플레이 영상</video:title>
-      <video:description>귀여운 고양이 러닝 게임 '말랑냥이 대쉬'의 22초 플레이 영상. 옆으로 밀어 레인 이동, 위로 밀어 점프, 아래로 밀어 대쉬하며 3개 월드 60개 스테이지를 달리고 라이벌 고양이 둘과 3인 레이스에서 1등에 도전합니다.</video:description>
+      <video:title>귀여운 고양이 러닝 게임 | 퐁냥대쉬 3인 레이스 플레이 영상</video:title>
+      <video:description>귀여운 고양이 러닝 게임 '퐁냥대쉬'의 22초 플레이 영상. 옆으로 밀어 레인 이동, 위로 밀어 점프, 아래로 밀어 대쉬하며 3개 월드 60개 스테이지를 달리고 라이벌 고양이 둘과 3인 레이스에서 1등에 도전합니다.</video:description>
       <video:player_loc>https://www.youtube.com/embed/AFeRO-gEOvE</video:player_loc>
       <video:duration>22</video:duration>
       <video:publication_date>2026-09-24T00:00:00+09:00</video:publication_date>
@@ -173,7 +173,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/videos/malangnyang-dash/</loc>
-    <lastmod>2026-09-24T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/malangnyang-dash/" />
@@ -181,8 +181,8 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/malangnyang-dash/" />
     <video:video>
       <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/malangnyang-dash-shorts.jpg</video:thumbnail_loc>
-      <video:title>Cute Cat Runner Game | MalangNyang Dash 3-Cat Race Gameplay Video</video:title>
-      <video:description>A 22-second gameplay video of MalangNyang Dash, a cute cat running game. Swipe sideways to change lanes, up to jump and down to dash across 3 worlds and 60 stages, then race two rival cats for 1st place.</video:description>
+      <video:title>Cute Cat Runner Game | PongNyang Dash 3-Cat Race Gameplay Video</video:title>
+      <video:description>A 22-second gameplay video of PongNyang Dash, a cute cat running game. Swipe sideways to change lanes, up to jump and down to dash across 3 worlds and 60 stages, then race two rival cats for 1st place.</video:description>
       <video:player_loc>https://www.youtube.com/embed/AFeRO-gEOvE</video:player_loc>
       <video:duration>22</video:duration>
       <video:publication_date>2026-09-24T00:00:00+09:00</video:publication_date>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ko/videos/malangnyang-jump/</loc>
-    <lastmod>2026-09-24T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/malangnyang-jump/" />
@@ -202,8 +202,8 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/malangnyang-jump/" />
     <video:video>
       <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/malangnyang-jump-shorts.jpg</video:thumbnail_loc>
-      <video:title>귀여운 고양이 점프 게임 | 말랑냥이점프 4개 월드 플레이 영상</video:title>
-      <video:description>귀여운 고양이 점프 게임 '말랑냥이점프'의 20초 플레이 영상. 좌우 터치만으로 구름 발판을 밟으며 하늘 높이 올라가고 어드벤처 · 젤리 · 토이 · 오로라 설원 4개 월드에서 콤보를 이어 최고 기록에 도전합니다.</video:description>
+      <video:title>귀여운 고양이 점프 게임 | 퐁냥점프 4개 월드 플레이 영상</video:title>
+      <video:description>귀여운 고양이 점프 게임 '퐁냥점프'의 20초 플레이 영상. 좌우 터치만으로 구름 발판을 밟으며 하늘 높이 올라가고 어드벤처 · 젤리 · 토이 · 오로라 설원 4개 월드에서 콤보를 이어 최고 기록에 도전합니다.</video:description>
       <video:player_loc>https://www.youtube.com/embed/fKoPnAqLzOQ</video:player_loc>
       <video:duration>20</video:duration>
       <video:publication_date>2026-09-24T00:00:00+09:00</video:publication_date>
@@ -215,7 +215,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/videos/malangnyang-jump/</loc>
-    <lastmod>2026-09-24T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/malangnyang-jump/" />
@@ -223,8 +223,8 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/malangnyang-jump/" />
     <video:video>
       <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/malangnyang-jump-shorts.jpg</video:thumbnail_loc>
-      <video:title>Cute Cat Jump Game | MalangNyang Jump 4 Worlds Gameplay Video</video:title>
-      <video:description>A 20-second gameplay video of MalangNyang Jump, a cute cat jumping game. Tap left and right to hop across soft clouds, keep your combo going and climb through 4 worlds: Adventure, Jelly World, Toy World and Aurora Snowfield.</video:description>
+      <video:title>Cute Cat Jump Game | PongNyang Jump 4 Worlds Gameplay Video</video:title>
+      <video:description>A 20-second gameplay video of PongNyang Jump, a cute cat jumping game. Tap left and right to hop across soft clouds, keep your combo going and climb through 4 worlds: Adventure, Jelly World, Toy World and Aurora Snowfield.</video:description>
       <video:player_loc>https://www.youtube.com/embed/fKoPnAqLzOQ</video:player_loc>
       <video:duration>20</video:duration>
       <video:publication_date>2026-09-24T00:00:00+09:00</video:publication_date>
@@ -236,7 +236,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/privacy/</loc>
-    <lastmod>2026-06-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/privacy/" />
@@ -244,7 +244,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/support/</loc>
-    <lastmod>2026-06-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/support/" />
@@ -252,7 +252,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/terms/</loc>
-    <lastmod>2026-06-16T00:00:00+09:00</lastmod>
+    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/terms/" />

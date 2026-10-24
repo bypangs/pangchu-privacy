@@ -86,6 +86,17 @@
   font-size: 9px;
 }
 
+/* 태그 글자 길이(점프·대쉬·스튜디오)가 달라도 제목 시작 위치가 같게 칩 폭을 맞춘다 */
+.announce-summary .announce-game {
+  min-width: 60px;
+  text-align: center;
+}
+
+.notice-game {
+  min-width: 54px;
+  text-align: center;
+}
+
 .announce-summary::-webkit-details-marker {
   display: none;
 }
