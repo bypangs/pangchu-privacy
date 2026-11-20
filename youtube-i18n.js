@@ -1,6 +1,7 @@
 window.YOUTUBE_T = {
   en: {
-    'youtube.nav': 'YouTube',
+    'youtube.nav': 'Animation',
+    'youtube.episode': "Watch episode 1 · The Seed on the Windowsill",
     'youtube.label': 'PongNyang Animation',
     'youtube.title': 'PongNyang on YouTube',
     'youtube.description': 'A little white kitten with a golden halo and tiny wings. Follow PongNyang and friends through gentle everyday adventures, told through animation, music, and soft sounds, without dialogue.',
@@ -9,7 +10,8 @@ window.YOUTUBE_T = {
     'youtube.studioCta': 'PangChu Studio channel',
   },
   ko: {
-    'youtube.nav': '유튜브',
+    'youtube.nav': '퐁냥 애니메이션',
+    'youtube.episode': "1화 창턱의 씨앗 보기",
     'youtube.label': '퐁냥 애니메이션',
     'youtube.title': '퐁냥 PongNyang 공식 유튜브',
     'youtube.description': '금빛 후광과 작은 날개를 단 하얀 아기 고양이, 퐁냥. 친구들과 함께하는 포근한 일상의 모험을 만나보세요. 대사 없이 그림과 음악, 잔잔한 소리로 이야기를 전하는 애니메이션 채널입니다.',
@@ -18,7 +20,8 @@ window.YOUTUBE_T = {
     'youtube.studioCta': 'PangChu Studio 채널',
   },
   ja: {
-    'youtube.nav': 'YouTube',
+    'youtube.nav': 'アニメ',
+    'youtube.episode': "第1話 窓辺の種を見る",
     'youtube.label': 'PongNyangアニメーション',
     'youtube.title': 'PongNyang公式YouTube',
     'youtube.description': '金色の光の輪と小さな翼を持つ白い子ねこ、PongNyang。仲間たちと過ごす穏やかな日常の冒険を、セリフなしのアニメーションと音楽、やさしい音でお届けします。',
@@ -27,7 +30,8 @@ window.YOUTUBE_T = {
     'youtube.studioCta': 'PangChu Studioチャンネル',
   },
   zh: {
-    'youtube.nav': 'YouTube',
+    'youtube.nav': 'PongNyang 動畫',
+    'youtube.episode': "觀看第 1 集《窗台上的種子》",
     'youtube.label': 'PongNyang動畫',
     'youtube.title': 'PongNyang官方YouTube頻道',
     'youtube.description': '戴着金色光環、長着小翅膀的白色小貓PongNyang，與朋友一起展開溫暖的日常冒險。透過沒有對白的動畫、音樂與輕柔的聲音，分享一段段小故事。',
@@ -36,7 +40,8 @@ window.YOUTUBE_T = {
     'youtube.studioCta': 'PangChu Studio頻道',
   },
   pt: {
-    'youtube.nav': 'YouTube',
+    'youtube.nav': 'Animação',
+    'youtube.episode': "Veja o episódio 1 · A semente na janela",
     'youtube.label': 'Animação PongNyang',
     'youtube.title': 'Canal oficial PongNyang no YouTube',
     'youtube.description': 'Um gatinho branco com auréola dourada e pequenas asas. Acompanhe PongNyang e seus amigos em aventuras tranquilas do dia a dia, contadas com animação, música e sons suaves, sem diálogos.',

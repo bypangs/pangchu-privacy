@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://pangchustudio.co.kr/</loc>
-    <lastmod>2026-11-10T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -17,7 +17,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ko/</loc>
-    <lastmod>2026-11-10T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ja/</loc>
-    <lastmod>2026-11-10T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/pt-br/</loc>
-    <lastmod>2026-11-10T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/zh-hk/</loc>
-    <lastmod>2026-11-10T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/" />
@@ -77,7 +77,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/updates/</loc>
-    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ko/updates/</loc>
-    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -107,7 +107,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/ja/updates/</loc>
-    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/pt-br/updates/</loc>
-    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -137,7 +137,7 @@
   </url>
   <url>
     <loc>https://pangchustudio.co.kr/zh-hk/updates/</loc>
-    <lastmod>2026-10-24T00:00:00+09:00</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/updates/" />
@@ -257,5 +257,43 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/terms/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/terms/" />
+  </url>
+  <url>
+    <loc>https://pangchustudio.co.kr/videos/pongnyang-window-seed/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/pongnyang-window-seed/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/videos/pongnyang-window-seed/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/pongnyang-window-seed/" />
+    <video:video>
+      <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/pongnyang-window-seed.jpg</video:thumbnail_loc>
+      <video:title>The Seed on the Windowsill | PongNyang · Episode 1</video:title>
+      <video:description>A golden seed appears on PongNyang’s windowsill. The little winged cat and friends look for a place to plant it in this gentle animated episode without dialogue.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/7JJ8K5cqSL4</video:player_loc>
+      <video:duration>296</video:duration>
+      <video:publication_date>2026-10-23T20:55:44-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader info="https://pangchustudio.co.kr/">PangChu Studio</video:uploader>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://pangchustudio.co.kr/ko/videos/pongnyang-window-seed/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/videos/pongnyang-window-seed/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/videos/pongnyang-window-seed/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/videos/pongnyang-window-seed/" />
+    <video:video>
+      <video:thumbnail_loc>https://pangchustudio.co.kr/images/videos/pongnyang-window-seed.jpg</video:thumbnail_loc>
+      <video:title>창턱의 씨앗 | 퐁냥 애니메이션 1화</video:title>
+      <video:description>퐁냥은 친구들과 작은 금빛 씨앗을 심을 언덕을 찾아 나섭니다. 대사 없이 즐기는 포근한 고양이 애니메이션입니다.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/7JJ8K5cqSL4</video:player_loc>
+      <video:duration>296</video:duration>
+      <video:publication_date>2026-10-23T20:55:44-07:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader info="https://pangchustudio.co.kr/">PangChu Studio</video:uploader>
+      <video:live>no</video:live>
+    </video:video>
   </url>
 </urlset>

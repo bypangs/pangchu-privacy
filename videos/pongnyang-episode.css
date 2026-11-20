@@ -1,0 +1,53 @@
+:root {
+  color: #17324d;
+  background: #f5faff;
+  font-family: Inter, "Noto Sans KR", "Noto Sans JP", "Noto Sans TC", system-ui, sans-serif;
+}
+
+body { margin: 0; }
+
+a { color: #155a8f; }
+
+.watch-header, .watch-main {
+  width: min(880px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.watch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-block: 16px;
+  border-bottom: 1px solid #cce2f4;
+}
+
+.watch-header nav, .watch-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+
+.watch-brand { color: inherit; font-weight: 800; text-decoration: none; }
+.watch-header a[aria-current="page"] { color: inherit; font-weight: 800; text-decoration: none; }
+.watch-header nav a { padding-block: 6px; }
+.watch-main { padding-block: clamp(24px, 5vw, 46px); }
+.watch-series { margin: 0 0 6px; color: #365670; font-size: 14px; font-weight: 700; }
+h1 { margin: 0 0 18px; font-size: clamp(25px, 5vw, 40px); line-height: 1.18; }
+
+.watch-player {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0e1b2d;
+}
+
+.watch-player iframe { display: block; width: 100%; height: 100%; border: 0; }
+.watch-description { max-width: 660px; margin: 18px 0 14px; line-height: 1.7; }
+.watch-actions a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+
+@media (max-width: 480px) {
+  .watch-player { border-radius: 8px; }
+}

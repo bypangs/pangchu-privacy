@@ -25,6 +25,17 @@
 .youtube-copy { min-width: 0; }
 .youtube-title { margin: 8px 0 10px; font-size: 26px; line-height: 1.35; font-weight: 900; }
 .youtube-description { max-width: 660px; font-size: 14px; line-height: 1.8; color: var(--muted); }
+.youtube-episode {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 8px;
+  color: var(--primary-deep);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .youtube-channel { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
 .youtube-handle { font-size: 13px; font-weight: 700; color: var(--muted); }
 .youtube-cta {
@@ -48,7 +59,7 @@
 }
 .youtube-cta:hover { background: #b50027; }
 .youtube-cta svg { width: 20px; height: 20px; flex: 0 0 auto; }
-.youtube-cta:focus-visible, .youtube-studio-link:focus-visible { outline: 3px solid var(--primary-deep); outline-offset: 4px; }
+.youtube-cta:focus-visible, .youtube-episode:focus-visible, .youtube-studio-link:focus-visible { outline: 3px solid var(--primary-deep); outline-offset: 4px; }
 .youtube-studio {
   display: flex;
   align-items: center;
@@ -64,8 +75,23 @@
 .youtube-studio-link { display: inline-flex; align-items: center; gap: 7px; color: var(--primary-deep); font-weight: 800; }
 .youtube-studio-link svg { width: 16px; height: 16px; flex: 0 0 auto; }
 
+@media (max-width: 840px) {
+  .nav-inner { flex-wrap: wrap; row-gap: 4px; }
+  .nav-links { display: flex; order: 1; flex-basis: 100%; }
+  .nav-links a:not([href="#youtube"]) { display: none; }
+  .nav-links a[href="#youtube"] { padding: 10px 8px; color: var(--primary-deep); }
+  .youtube-section { scroll-margin-top: 160px; }
+}
+
 @media (max-width: 600px) {
   .youtube-intro { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .youtube-avatar { width: 136px; height: 136px; }
   .youtube-title { font-size: 23px; }
+}
+
+@media (max-width: 420px) {
+  .nav-inner { width: calc(100% - 24px); }
+  .nav-inner .brand { gap: 6px; font-size: 14px; }
+  .nav-inner .brand-mark { width: 30px; height: 30px; font-size: 14px; }
+  .nav-inner .lang-btn { padding-inline: 4px; }
 }
