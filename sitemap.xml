@@ -296,4 +296,18 @@
       <video:live>no</video:live>
     </video:video>
   </url>
+  <url>
+    <loc>https://pangchustudio.co.kr/about/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/about/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/about/" />
+  </url>
+  <url>
+    <loc>https://pangchustudio.co.kr/ko/about/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pangchustudio.co.kr/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pangchustudio.co.kr/about/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pangchustudio.co.kr/ko/about/" />
+  </url>
 </urlset>

@@ -1,0 +1,41 @@
+:root {
+  --font-sans: Inter, "Noto Sans KR", "Noto Sans JP", "Noto Sans TC", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg1), var(--bg2) 480px);
+}
+
+.profile-header, .profile-main {
+  width: min(720px, calc(100% - 36px));
+  margin-inline: auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--line-nav);
+}
+
+.profile-header nav, .profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+
+.profile-home, .profile-header [aria-current="page"] { font-weight: var(--fw-extrabold); }
+.profile-header a, .profile-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.profile-main { padding-block: clamp(28px, 6vw, 56px); }
+.profile-main h1 { margin-bottom: 16px; font-size: clamp(30px, 5vw, 48px); line-height: 1.15; }
+.profile-main section, .profile-links { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.profile-main dl { margin: 0; }
+.profile-main dt { font-weight: var(--fw-bold); }
+.profile-main dd { margin: 2px 0 14px; color: var(--color-fg2); }
+.profile-main a { color: #155a8f; text-decoration: underline; text-underline-offset: 3px; }
+.profile-main a:focus-visible, .profile-header a:focus-visible { outline: 2px solid #155a8f; outline-offset: 3px; }
