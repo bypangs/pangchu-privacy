@@ -485,6 +485,7 @@
     .announce-badge { flex-shrink: 0; padding: 4px 10px; border-radius: 999px; font-size: 10px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px; }
     .badge-notice { background: rgba(125,224,188,0.16); color: var(--accent-deep); }
     .badge-new { background: rgba(255,180,100,0.14); color: #c07020; }
+    .badge-important { background: rgba(255, 94, 125, 0.14); color: #c33b5c; }
     .announce-content { flex: 1; }
     .announce-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .announce-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
@@ -1009,25 +1010,25 @@
         <div class="section-sub" data-i18n="ann.sub">Últimas notícias e atualizações da PangChu Studio.</div>
         <div class="announce-list">
           <details class="announce-item announce-accordion">
+            <summary class="announce-summary"><span class="announce-badge badge-important" data-i18n="ann.badge.important">Importante</span><span class="announce-game" data-i18n="tag.music">Música</span><span class="announce-title" data-i18n="ann14.title">Álbum “오늘 하루도 애썼어요” de PongNyang aprovado</span><time class="announce-date" datetime="2026-11-24T19:31:32+09:00">2026.11.24</time><span class="announce-chevron" aria-hidden="true"></span></summary>
+            <div class="announce-desc"><span data-i18n="ann14.desc">O álbum “오늘 하루도 애썼어요”, de PongNyang, foi aprovado para lançamento. A data prevista é 29 de novembro de 2026.</span> <a class="announce-detail-link" href="updates/pongnyang-today-you-worked-hard/" data-i18n="ann14.link">Ver aviso do álbum</a></div>
+          </details>
+          <details class="announce-item announce-accordion">
             <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span><span class="announce-game" data-i18n="tag.studio">Estúdio</span><span class="announce-title" data-i18n="ann13.title">Novo nome em inglês e coreano: PongNyang</span><time class="announce-date">2026.10.24</time><span class="announce-chevron" aria-hidden="true"></span></summary>
             <div class="announce-desc"><span data-i18n="ann13.desc">O nome da série em inglês e coreano mudou de MalangNyang para PongNyang. No Brasil, os nomes Gatinho Pula-Pula e Gatinho Corre-Corre continuam os mesmos. Também abrimos o canal oficial PongNyang no YouTube.</span> <a class="announce-detail-link" href="https://www.youtube.com/@pongnyang" target="_blank" rel="noopener" data-i18n="ann13.link">Ver o canal no YouTube</a></div>
           </details>
           <details class="announce-item announce-accordion">
             <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span><span class="announce-game" data-i18n="tag.dash">Dash</span><span class="announce-title" data-i18n="ann12.title">Gatinho Corre-Corre já está disponível no Google Play</span><time class="announce-date">2026.09.14</time><span class="announce-chevron" aria-hidden="true"></span></summary>
-            <div class="announce-desc"><span data-i18n="ann12.desc">Gatinho Corre-Corre foi lançado no Google Play para Android. A versão para iPhone também já está disponível na App Store.</span> <a class="announce-detail-link" href="https://play.google.com/store/apps/details?id=com.malangnyangi.dash" target="_blank" rel="noopener" data-i18n="ann12.link">Baixar no Google Play</a> <a class="announce-detail-link" href="https://apps.apple.com/app/id6805716014" target="_blank" rel="noopener">App Store</a></div>
+            <div class="announce-desc"><span data-i18n="ann12.desc">Gatinho Corre-Corre foi lançado no Google Play para Android. A versão para iPhone também já está disponível na App Store.</span> <a class="announce-detail-link" href="https://play.google.com/store/apps/details?id=com.malangnyangi.dash" target="_blank" rel="noopener" data-i18n="ann12.link">Ver no Google Play</a> <a class="announce-detail-link" href="https://apps.apple.com/app/id6805716014" target="_blank" rel="noopener">App Store</a></div>
           </details>
           <details class="announce-item announce-accordion">
             <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span><span class="announce-game" data-i18n="tag.jump">Pula-Pula</span><span class="announce-title" data-i18n="ann11.title">Notas de atualização de Gatinho Pula-Pula</span><time class="announce-date">2026.08.13</time><span class="announce-chevron" aria-hidden="true"></span></summary>
-            <div class="announce-desc"><span data-i18n="ann11.desc">As mudanças de todas as versões ficam reunidas em uma única publicação, da mais recente para a mais antiga.</span> <a class="announce-detail-link" href="updates/#patch-notes" data-i18n="ann11.link">Ver todas as notas</a></div>
-          </details>
-          <details class="announce-item announce-accordion">
-            <summary class="announce-summary"><span class="announce-badge badge-new" data-i18n="ann.badge.new">Novo</span><span class="announce-game" data-i18n="tag.jump">Pula-Pula</span><span class="announce-title" data-i18n="ann10.title">Guia de Gatinho Pula-Pula publicado</span><time class="announce-date">2026.08.13</time><span class="announce-chevron" aria-hidden="true"></span></summary>
-            <div class="announce-desc"><span data-i18n="ann10.desc">Adicionamos ao site um guia visual com atributos de evolução, Sorte, combos, Carga, moedas e perguntas frequentes.</span></div>
+            <div class="announce-desc"><span data-i18n="ann11.desc">Todas as notas de versão ficam reunidas em um único post, da atualização mais recente para a mais antiga.</span> <a class="announce-detail-link" href="updates/#patch-notes" data-i18n="ann11.link">Ver todas as notas</a></div>
           </details>
         </div>
         <div class="announce-footer">
           <p class="announce-home-note" data-i18n="ann.homeNote">A página inicial mostra as quatro publicações mais recentes; as anteriores ficam no mural de avisos.</p>
-          <a class="announce-all-link" href="updates/"><span data-i18n="ann.all">Ver todas as atualizações</span><span class="announce-count">12</span><span aria-hidden="true">→</span></a>
+          <a class="announce-all-link" href="updates/"><span data-i18n="ann.all">Ver todas as atualizações</span><span class="announce-count">13</span><span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -1399,8 +1400,8 @@ Um novo ciclo começa após o Dia 7. O horário é 00:00 UTC, ou 9h na Coreia.</
         'feat3.title': 'Arcade rhythm', 'feat3.desc': 'Quick runs and score-focused challenge.',
         'ann.label': 'Announcements', 'ann.title': 'Updates & Notices',
         'ann.sub': 'Latest news and updates from PangChu Studio.',
-        'ann.badge.new': 'New', 'ann.badge.notice': 'Notice',
-        'ann12.title': 'PongNyang Dash is now available on Google Play', 'ann12.desc': 'PongNyang Dash launched on Google Play for Android. The iPhone version is now available on the App Store, too.', 'ann13.title': 'MalangNyang is now PongNyang', 'ann13.desc': 'The MalangNyang series has a new name: PongNyang. MalangNyang Jump is now PongNyang Jump, and MalangNyang Dash is becoming PongNyang Dash, with store names updating one by one. We have also opened the official PongNyang YouTube channel.', 'ann13.link': 'Visit the YouTube channel', 'tag.jump': 'Jump', 'tag.dash': 'Dash', 'tag.studio': 'Studio',
+        'ann.badge.new': 'New', 'ann.badge.notice': 'Notice', 'ann.badge.important': 'Important',
+        'ann12.title': 'PongNyang Dash is now available on Google Play', 'ann12.desc': 'PongNyang Dash launched on Google Play for Android. The iPhone version is now available on the App Store, too.', 'ann13.title': 'MalangNyang is now PongNyang', 'ann13.desc': 'The MalangNyang series has a new name: PongNyang. MalangNyang Jump is now PongNyang Jump, and MalangNyang Dash is becoming PongNyang Dash, with store names updating one by one. We have also opened the official PongNyang YouTube channel.', 'ann13.link': 'Visit the YouTube channel', 'ann14.title': 'PongNyang album “오늘 하루도 애썼어요” approved for release', 'ann14.desc': 'PongNyang’s album “오늘 하루도 애썼어요” has been approved for release. It is scheduled for release on November 29, 2026.', 'ann14.link': 'View album announcement', 'tag.jump': 'Jump', 'tag.dash': 'Dash', 'tag.studio': 'Studio', 'tag.music': 'Music',
         'ann6.title': 'PongNyang Dash is preparing to launch',
         'ann6.desc': 'PongNyang Dash is in store review. We will post here as soon as it is approved.',
         'ann7.title': 'PongNyang Jump is now available on the App Store for iPhone and Mac',
@@ -1502,8 +1503,8 @@ Um novo ciclo começa após o Dia 7. O horário é 00:00 UTC, ou 9h na Coreia.</
         'feat3.title': '아케이드 리듬', 'feat3.desc': '짧은 런과 점수 도전의 재미.',
         'ann.label': '공지사항', 'ann.title': '업데이트 및 공지',
         'ann.sub': '팡츄 스튜디오의 최신 소식을 확인하세요.',
-        'ann.badge.new': '신규', 'ann.badge.notice': '공지',
-        'ann12.title': '퐁냥대쉬 Google Play 정식 출시', 'ann12.desc': '퐁냥대쉬가 Google Play(Android)에 정식 출시되었습니다. iPhone 버전도 App Store에서 내려받을 수 있습니다.', 'ann13.title': '말랑냥이가 퐁냥으로 이름을 바꿨어요', 'ann13.desc': '말랑냥이 시리즈의 새 이름은 퐁냥입니다. 말랑냥이점프는 퐁냥점프로, 말랑냥이 대쉬는 퐁냥대쉬로 바뀌며 스토어 이름도 차례대로 바뀌고 있습니다. 퐁냥 공식 유튜브 채널도 새로 열었어요.', 'ann13.link': '유튜브 채널 보기', 'tag.jump': '점프', 'tag.dash': '대쉬', 'tag.studio': '스튜디오',
+        'ann.badge.new': '신규', 'ann.badge.notice': '공지', 'ann.badge.important': '중요',
+        'ann12.title': '퐁냥대쉬 Google Play 정식 출시', 'ann12.desc': '퐁냥대쉬가 Google Play(Android)에 정식 출시되었습니다. iPhone 버전도 App Store에서 내려받을 수 있습니다.', 'ann13.title': '말랑냥이가 퐁냥으로 이름을 바꿨어요', 'ann13.desc': '말랑냥이 시리즈의 새 이름은 퐁냥입니다. 말랑냥이점프는 퐁냥점프로, 말랑냥이 대쉬는 퐁냥대쉬로 바뀌며 스토어 이름도 차례대로 바뀌고 있습니다. 퐁냥 공식 유튜브 채널도 새로 열었어요.', 'ann13.link': '유튜브 채널 보기', 'ann14.title': '퐁냥 ‘오늘 하루도 애썼어요’ 앨범 발매 승인', 'ann14.desc': '퐁냥의 앨범 ‘오늘 하루도 애썼어요’가 발매 승인되었습니다. 발매 예정일은 2026년 11월 29일입니다.', 'ann14.link': '앨범 발매 공지 보기', 'tag.jump': '점프', 'tag.dash': '대쉬', 'tag.studio': '스튜디오', 'tag.music': '음악',
         'ann6.title': '퐁냥대쉬 출시 준비 중',
         'ann6.desc': '퐁냥대쉬가 스토어 심사를 받고 있습니다. 승인되면 이 페이지와 공지에서 바로 안내하겠습니다.',
         'ann7.title': '퐁냥점프 iPhone·Mac 버전 App Store 출시',
@@ -1605,8 +1606,8 @@ Um novo ciclo começa após o Dia 7. O horário é 00:00 UTC, ou 9h na Coreia.</
         'feat3.title': 'アーケードリズム', 'feat3.desc': 'テンポよくスコアを狙う楽しさ。',
         'ann.label': 'お知らせ', 'ann.title': 'アップデート＆お知らせ',
         'ann.sub': 'PangChu Studioの最新情報をお届けします。',
-        'ann.badge.new': '新着', 'ann.badge.notice': 'お知らせ',
-        'ann12.title': 'ぷにねこダッシュ Google Playで配信開始', 'ann12.desc': 'ぷにねこダッシュがGoogle Play（Android）で正式配信を開始しました。iPhone版もApp Storeで配信中です。', 'ann13.title': '英語・韓国語タイトルが「PongNyang」に', 'ann13.desc': 'シリーズの英語・韓国語タイトルが「MalangNyang」から「PongNyang」に変わりました。日本でのタイトル「ぷにねこジャンプ」「ぷにねこダッシュ」はこれまでどおりです。PongNyangの公式YouTubeチャンネルも開設しました。', 'ann13.link': 'YouTubeチャンネルを見る', 'tag.jump': 'ジャンプ', 'tag.dash': 'ダッシュ', 'tag.studio': 'スタジオ',
+        'ann.badge.new': '新着', 'ann.badge.notice': 'お知らせ', 'ann.badge.important': '重要',
+        'ann12.title': 'ぷにねこダッシュ Google Playで配信開始', 'ann12.desc': 'ぷにねこダッシュがGoogle Play（Android）で正式配信を開始しました。iPhone版もApp Storeで配信中です。', 'ann13.title': '英語・韓国語タイトルが「PongNyang」に', 'ann13.desc': 'シリーズの英語・韓国語タイトルが「MalangNyang」から「PongNyang」に変わりました。日本でのタイトル「ぷにねこジャンプ」「ぷにねこダッシュ」はこれまでどおりです。PongNyangの公式YouTubeチャンネルも開設しました。', 'ann13.link': 'YouTubeチャンネルを見る', 'ann14.title': 'PongNyang「오늘 하루도 애썼어요」アルバム配信承認', 'ann14.desc': 'PongNyangのアルバム「오늘 하루도 애썼어요」が配信承認されました。配信予定日は2026年11月29日です。', 'ann14.link': 'アルバムのお知らせを見る', 'tag.jump': 'ジャンプ', 'tag.dash': 'ダッシュ', 'tag.studio': 'スタジオ', 'tag.music': '音楽',
         'ann6.title': 'ぷにねこダッシュ リリース準備中',
         'ann6.desc': 'ぷにねこダッシュはストア審査中です。承認され次第、こちらのページとお知らせでご案内します。',
         'ann7.title': 'ぷにねこジャンプ iPhone・Mac版をApp Storeで配信開始',
@@ -1708,8 +1709,8 @@ Um novo ciclo começa após o Dia 7. O horário é 00:00 UTC, ou 9h na Coreia.</
         'feat3.title': '街機節奏', 'feat3.desc': '快節奏闖關，追求高分挑戰。',
         'ann.label': '公告', 'ann.title': '更新與公告',
         'ann.sub': '來自 PangChu Studio 的最新消息。',
-        'ann.badge.new': '新', 'ann.badge.notice': '公告',
-        'ann12.title': '《啫喱貓衝刺》已在 Google Play 正式上線', 'ann12.desc': '《啫喱貓衝刺》已在 Google Play（Android）正式上線，iPhone 版亦可在 App Store 下載。', 'ann13.title': '英文及韓文名稱更新為「PongNyang」', 'ann13.desc': '系列的英文及韓文名稱已由「MalangNyang」更新為「PongNyang」。香港地區的遊戲名稱《啫喱貓跳跳》與《啫喱貓衝刺》維持不變。我們亦已開設 PongNyang 官方 YouTube 頻道。', 'ann13.link': '前往 YouTube 頻道', 'tag.jump': '跳跳', 'tag.dash': '衝刺', 'tag.studio': '工作室',
+        'ann.badge.new': '新', 'ann.badge.notice': '公告', 'ann.badge.important': '重要',
+        'ann12.title': '《啫喱貓衝刺》已在 Google Play 正式上線', 'ann12.desc': '《啫喱貓衝刺》已在 Google Play（Android）正式上線，iPhone 版亦可在 App Store 下載。', 'ann13.title': '英文及韓文名稱更新為「PongNyang」', 'ann13.desc': '系列的英文及韓文名稱已由「MalangNyang」更新為「PongNyang」。香港地區的遊戲名稱《啫喱貓跳跳》與《啫喱貓衝刺》維持不變。我們亦已開設 PongNyang 官方 YouTube 頻道。', 'ann13.link': '前往 YouTube 頻道', 'ann14.title': 'PongNyang《오늘 하루도 애썼어요》專輯發行獲批', 'ann14.desc': 'PongNyang 專輯《오늘 하루도 애썼어요》已獲批准發行，預定於 2026 年 11 月 29 日推出。', 'ann14.link': '查看專輯發行公告', 'tag.jump': '跳跳', 'tag.dash': '衝刺', 'tag.studio': '工作室', 'tag.music': '音樂',
         'ann6.title': '《啫喱貓衝刺》準備推出',
         'ann6.desc': '《啫喱貓衝刺》正在商店審核中。通過後會第一時間在本頁與公告中通知。',
         'ann7.title': '啫喱貓跳跳 iPhone 與 Mac 版已於 App Store 上架',
@@ -1811,8 +1812,8 @@ Um novo ciclo começa após o Dia 7. O horário é 00:00 UTC, ou 9h na Coreia.</
         'feat3.title': 'Ritmo arcade', 'feat3.desc': 'Corridas rápidas e desafio focado em pontuação.',
         'ann.label': 'Comunicados', 'ann.title': 'Novidades e Avisos',
         'ann.sub': 'Últimas notícias e atualizações da PangChu Studio.',
-        'ann.badge.new': 'Novo', 'ann.badge.notice': 'Aviso',
-        'ann12.title': 'Gatinho Corre-Corre já está disponível no Google Play', 'ann12.desc': 'Gatinho Corre-Corre foi lançado no Google Play para Android. A versão para iPhone também já está disponível na App Store.', 'ann13.title': 'Novo nome em inglês e coreano: PongNyang', 'ann13.desc': 'O nome da série em inglês e coreano mudou de MalangNyang para PongNyang. No Brasil, os nomes Gatinho Pula-Pula e Gatinho Corre-Corre continuam os mesmos. Também abrimos o canal oficial PongNyang no YouTube.', 'ann13.link': 'Ver o canal no YouTube', 'tag.jump': 'Pula-Pula', 'tag.dash': 'Dash', 'tag.studio': 'Estúdio',
+        'ann.badge.new': 'Novo', 'ann.badge.notice': 'Aviso', 'ann.badge.important': 'Importante',
+        'ann12.title': 'Gatinho Corre-Corre já está disponível no Google Play', 'ann12.desc': 'Gatinho Corre-Corre foi lançado no Google Play para Android. A versão para iPhone também já está disponível na App Store.', 'ann13.title': 'Novo nome em inglês e coreano: PongNyang', 'ann13.desc': 'O nome da série em inglês e coreano mudou de MalangNyang para PongNyang. No Brasil, os nomes Gatinho Pula-Pula e Gatinho Corre-Corre continuam os mesmos. Também abrimos o canal oficial PongNyang no YouTube.', 'ann13.link': 'Ver o canal no YouTube', 'ann14.title': 'Álbum “오늘 하루도 애썼어요” de PongNyang aprovado', 'ann14.desc': 'O álbum “오늘 하루도 애썼어요”, de PongNyang, foi aprovado para lançamento. A data prevista é 29 de novembro de 2026.', 'ann14.link': 'Ver aviso do álbum', 'tag.jump': 'Pula-Pula', 'tag.dash': 'Dash', 'tag.studio': 'Estúdio', 'tag.music': 'Música',
         'ann6.title': 'Gatinho Corre-Corre em preparação para o lançamento',
         'ann6.desc': 'Gatinho Corre-Corre está em análise nas lojas. Avisaremos aqui assim que for aprovado.',
         'ann7.title': 'Gatinho Pula-Pula disponível na App Store para iPhone e Mac',
